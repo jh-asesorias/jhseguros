@@ -104,36 +104,66 @@
             margin-right: auto;
         }
         
-        /* Botones Misión y Visión */
+        /* Botones Misión, Visión y Valor con Iconos */
         .mission-vision {
             padding: 2rem 0;
             background-color: white;
             text-align: center;
         }
         
-        .mission-vision-buttons {
+        .mv-container {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
+            gap: 3rem;
             margin-top: 1.5rem;
             flex-wrap: wrap;
         }
         
-        .mv-button {
-            display: inline-block;
-            background-color: #2a5298;
-            color: white;
-            padding: 0.8rem 1.8rem;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.3s;
-            border: 2px solid #2a5298;
+        .mv-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 180px;
+            cursor: pointer;
+            transition: transform 0.3s;
         }
         
-        .mv-button:hover {
-            background-color: transparent;
+        .mv-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .mv-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #f0f0f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            border: 3px solid #2a5298;
+            overflow: hidden;
+            background-size: 60%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        .mv-icon.mision {
+            background-image: url('01-Mision-icon.png');
+        }
+        
+        .mv-icon.vision {
+            background-image: url('02-Vision-icon.png');
+        }
+        
+        .mv-icon.valor {
+            background-image: url('03-Valor-icon.png');
+        }
+        
+        .mv-name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
             color: #2a5298;
         }
         
@@ -412,14 +442,19 @@
                 border-bottom: 2px solid #2a5298;
             }
             
-            .mission-vision-buttons {
+            .mv-container {
                 flex-direction: column;
                 align-items: center;
+                gap: 2rem;
             }
             
-            .mv-button {
-                width: 80%;
-                text-align: center;
+            .mv-item {
+                width: 160px;
+            }
+            
+            .mv-icon {
+                width: 90px;
+                height: 90px;
             }
         }
     </style>
@@ -442,14 +477,23 @@
             </div>
         </header>
 
-        <!-- Sección Misión, Visión y Valor -->
+        <!-- Sección Misión, Visión y Valor con Iconos -->
         <section class="mission-vision">
             <div class="container">
                 <h2 class="section-title">Nuestra Filosofía</h2>
-                <div class="mission-vision-buttons">
-                    <a href="#" class="mv-button" data-page="vision">Visión</a>
-                    <a href="#" class="mv-button" data-page="mision">Misión</a>
-                    <a href="#" class="mv-button" data-page="valor">Valor</a>
+                <div class="mv-container">
+                    <div class="mv-item" data-page="vision">
+                        <div class="mv-icon vision"></div>
+                        <div class="mv-name">Visión</div>
+                    </div>
+                    <div class="mv-item" data-page="mision">
+                        <div class="mv-icon mision"></div>
+                        <div class="mv-name">Misión</div>
+                    </div>
+                    <div class="mv-item" data-page="valor">
+                        <div class="mv-icon valor"></div>
+                        <div class="mv-name">Valor</div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -549,7 +593,7 @@
         <section class="detail-section">
             <div class="container">
                 <div class="detail-content">
-                    <p>Ser la firma de asesoría e intermediación en seguros más confiable, cercana y valorada por nuestros clientes, estableciendo un nuevo estándar de servicio en la industria. Nos distinguimos por nuestra independencia frente a las aseguradoras, nuestro compromiso absoluto en defender los intereses del asegurado y nuestra labor incansable para garantizar que cada persona acceda a sus derechos y obtenga soluciones justas, completas y oportunas en cada etapa de su vida y ante cualquier percance.</p>
+                    <p>Ser la firma de asesoría e intermediación en seguros más confiable, cercana y valorada por nuestros clientes, estableciendo un nuevo estándar de servicio en la industria. Nos distinguimos por nuestra independencia frente a las aseguradoras y por nuestro compromiso absoluto en defender los intereses del asegurado, garantizando que cada persona acceda a sus derechos y obtenga soluciones justas, completas y oportunas en cada etapa de su vida y ante cualquier percance.</p>
                     
                     <a href="#" class="back-to-top" data-page="main">Volver al Menú Principal</a>
                 </div>
@@ -571,7 +615,7 @@
         <section class="detail-section">
             <div class="container">
                 <div class="detail-content">
-                    <p>Nuestra misión es brindar un servicio superior, integral y humano en la intermediación de seguros, actuando con total independencia y sin vínculos que sean parciales con las aseguradoras. Defendemos de manera incondicional los derechos e intereses de cada cliente, acompañándolos en sus decisiones, percances o siniestros. Utilizamos todos los recursos, herramientas y medios disponibles para garantizar que reciban un servicio excepcional, un trato justo y una solución acorde a las condiciones contractuales de sus productos, siempre que la razón respalde su situación.</p>
+                    <p>Brindar un servicio superior, integral y humano en la intermediación de seguros, actuando con total independencia y sin vínculos que comprometan nuestra objetividad. Acompañamos a cada cliente en sus decisiones, trámites, percances o siniestros, defendiendo sus derechos e intereses con profesionalismo y transparencia. Utilizamos todos los recursos y herramientas disponibles para asegurar un servicio excepcional, un trato justo y soluciones coherentes con las condiciones contractuales de sus productos, siempre que la razón respalde su situación.</p>
                     
                     <a href="#" class="back-to-top" data-page="main">Volver al Menú Principal</a>
                 </div>
@@ -593,7 +637,7 @@
         <section class="detail-section">
             <div class="container">
                 <div class="detail-content">
-                    <p>Brindamos un servicio superior e integral, acompañando de manera cercana y personal a cada cliente durante la contratación de sus pólizas, la gestión de sus trámites y la resolución de sus siniestros. Agotamos todos los recursos y herramientas disponibles para asegurar que reciba soluciones justas, completas y oportunas cuando la razón respalda su situación. Nos distinguimos por ofrecer un acompañamiento real, un análisis objetivo de sus necesidades, un seguimiento continuo y una asesoría preventiva que facilita decisiones informadas. Nuestro valor radica en ser un intermediario independiente, un defensor activo de los derechos del asegurado y un socio confiable que simplifica, respalda y resuelve cada acontecimiento con excelencia y compromiso total.</p>
+                    <p>Nuestro valor radica en ofrecer un acompañamiento real y cercano, basado en la transparencia, la objetividad y la defensa activa del asegurado. Analizamos a profundidad las necesidades de cada cliente, brindamos seguimiento continuo y ofrecemos asesoría preventiva que facilita decisiones informadas. Nos comprometemos a simplificar sus procesos, respaldarlos en cada acontecimiento y agotar todos los recursos necesarios para garantizar soluciones justas, completas y oportunas. Somos un intermediario independiente y un aliado confiable que actúa siempre con excelencia y compromiso total.</p>
                     
                     <a href="#" class="back-to-top" data-page="main">Volver al Menú Principal</a>
                 </div>
@@ -796,6 +840,14 @@
             document.querySelectorAll('[data-page]').forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
+                    const targetPage = this.getAttribute('data-page');
+                    showPage(targetPage);
+                });
+            });
+            
+            // Configurar iconos de Misión, Visión y Valor
+            document.querySelectorAll('.mv-item').forEach(item => {
+                item.addEventListener('click', function() {
                     const targetPage = this.getAttribute('data-page');
                     showPage(targetPage);
                 });
