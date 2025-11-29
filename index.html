@@ -3,453 +3,859 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema V25.0 (Reporte Ordenado)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+    <title>JH ASESORIAS - Rafael Jiménez Sánchez - Agente de Seguros | Asesorías que entienden tus necesidades</title>
+    <meta name="description" content="Agente de Seguros con cédula A H382035. Ofrecemos seguros de vida, para mujeres, ahorro, retiro, educación y gastos médicos mayores. Asesoría personalizada.">
+    <meta name="keywords" content="seguros, asesoría de seguros, seguro de vida, seguro para mujeres, ahorro, retiro, educación, gastos médicos, Rafael Jiménez, PPR">
+    <meta name="author" content="Rafael Jiménez Sánchez">
+    
+    <meta property="og:title" content="JH ASESORIAS - Rafael Jiménez Sánchez - Agente de Seguros">
+    <meta property="og:description" content="Asesorías simples que entienden tus necesidades. Seguros de vida, para mujeres, ahorro, retiro, educación y gastos médicos.">
+    <meta property="og:type" content="website">
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
     <style>
-        /* ESTILOS CSS */
-        :root { --primary: #0056b3; --bg: #f4f6f8; --text: #333; --edit: #ff9800; --danger: #dc3545; --view: #17a2b8; --success: #28a745; }
-        body { font-family: 'Roboto', sans-serif; background: var(--bg); margin: 0; color: var(--text); }
-        .hidden { display: none !important; }
-        .active { display: block !important; animation: fadeIn 0.4s; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
-        .container { max-width: 1000px; margin: 20px auto; padding: 0 15px; }
-        .card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); margin-bottom: 20px; }
+        /* Reset y estilos base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         
-        nav { background: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-bottom: 20px; }
-        nav span { font-weight: bold; color: var(--primary); font-size: 1.1rem; }
-        nav button { background: none; border: 1px solid #ccc; padding: 5px 15px; border-radius: 4px; cursor: pointer; color: #666; }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            scroll-behavior: smooth;
+        }
         
-        .menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
-        .menu-card { background: white; padding: 30px; border-radius: 12px; text-align: center; cursor: pointer; transition: transform 0.2s; border: 2px solid transparent; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .menu-card:hover { transform: translateY(-5px); border-color: var(--primary); }
-        .menu-card h3 { color: var(--primary); font-size: 1.3rem; margin-bottom: 10px; }
-
-        .section-title { font-size: 1.1rem; color: var(--primary); border-bottom: 2px solid #ddd; margin: 25px 0 15px 0; padding-bottom: 5px; font-weight: bold; }
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
-        .field { margin-bottom: 15px; }
-        label { display: block; font-weight: 500; font-size: 0.9rem; margin-bottom: 6px; }
-        input, select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; box-sizing: border-box; }
-        input:focus, select:focus { border-color: var(--primary); outline: none; }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
         
-        .btn-save { background: var(--primary); color: white; width: 100%; padding: 12px; border: none; font-size: 1rem; cursor: pointer; border-radius: 4px; margin-top: 20px; font-weight: bold; }
-        .btn-edit { background: var(--edit); color: white; border:none; padding:6px 10px; border-radius:4px; cursor:pointer; margin-right:3px; }
-        .btn-delete { background: var(--danger); color: white; border:none; padding:6px 10px; border-radius:4px; cursor:pointer; }
-        .btn-view { background: var(--view); color: white; border:none; padding:6px 10px; border-radius:4px; cursor:pointer; margin-right:3px; }
-        .btn-clear { background: #666; color: white; padding: 5px 10px; border-radius: 4px; border:none; cursor: pointer; font-size: 0.9rem; margin-left: 10px; }
+        /* Páginas */
+        .page {
+            display: none;
+        }
         
-        /* Botones de Edición en Línea (Detalle) */
-        .btn-inline-edit { background: none; border: none; cursor: pointer; font-size: 1.1rem; margin-right: 5px; color: var(--edit); }
-        .btn-inline-save { background: none; border: none; cursor: pointer; font-size: 1.2rem; margin-left: 5px; color: var(--success); }
-
-        .radio-group { display: flex; gap: 10px; margin-top: 5px; flex-wrap: wrap; }
-        .radio-group label { cursor: pointer; display: flex; align-items: center; gap: 5px; background: #f9f9f9; padding: 8px 12px; border-radius: 20px; border: 1px solid #eee; font-size: 0.9rem; }
-        .radio-group label:hover { background: #eef5ff; border-color: var(--primary); }
-        .radio-group input[type="radio"] { width: auto; margin: 0; }
-
-        .currency-toggle { display: flex; gap: 10px; margin-bottom: 10px; }
-        .currency-btn { padding: 5px 15px; border: 1px solid var(--primary); color: var(--primary); background: white; border-radius: 15px; cursor: pointer; font-size: 0.85rem; font-weight: bold; }
-        .currency-btn.selected { background: var(--primary); color: white; }
-
-        .hidden-section { display: none; }
-        .dynamic-section { background: #f0f7ff; padding: 20px; border-radius: 8px; margin-bottom: 20px; border: 1px dashed var(--primary); animation: fadeIn 0.3s; }
+        .page.active {
+            display: block;
+        }
         
-        .filter-bar { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
-        .filter-btn { flex: 1; padding: 12px; border: none; background: #e0e0e0; border-radius: 6px; cursor: pointer; font-weight: bold; color: #333; transition: all 0.3s; }
-        .filter-btn:focus, .filter-btn.active-filter { background: var(--primary); color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transform: translateY(-2px); }
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
         
-        .search-box-floating { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 20px; border: 1px solid #eee; display: block !important; }
-        .search-input-lg { width: 100%; padding: 15px 20px; border: 2px solid #b3d7ff; border-radius: 8px; font-size: 1.1rem; box-sizing: border-box; background-color: #fff; }
-        .search-input-lg:focus { border-color: var(--primary); outline: none; box-shadow: 0 0 0 4px rgba(0,86,179,0.1); }
-
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        th { background: #f4f4f4; text-align: left; padding: 12px; color: #555; border-bottom: 2px solid #ddd; }
-        td { padding: 10px 12px; border-bottom: 1px solid #eee; font-size: 0.9rem; vertical-align: middle; }
-        tr:hover { background-color: #f9f9f9; }
-        .table-responsive { overflow-x: auto; }
-
-        .charts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px; }
-        .chart-box { text-align: center; }
-        .chart-box h4 { margin-bottom: 15px; color: #555; }
-
-        .info-text, .preview-date { font-size: 0.8rem; color: #666; display: block; margin-top: 4px; text-align: right; }
-        .loader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.9); display: flex; justify-content: center; align-items: center; z-index: 1000; font-weight: bold; color: var(--primary); }
-        .toast { position: fixed; bottom: 30px; right: 30px; background: #333; color: white; padding: 15px 25px; border-radius: 8px; z-index: 1000; }
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
         
-        .modal-overlay { position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:2000; display:flex; justify-content:center; align-items:center; }
-        .modal-box { background:white; padding:30px; border-radius:8px; width:90%; max-width:500px; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.2); max-height: 90vh; overflow-y: auto; }
-        .modal-actions { display:flex; gap:10px; justify-content:center; margin-top:20px; }
-        .btn-confirm { background:var(--danger); color:white; border:none; padding:10px 20px; border-radius:4px; cursor:pointer; font-weight:bold; }
-        .btn-cancel { background:#ccc; color:#333; border:none; padding:10px 20px; border-radius:4px; cursor:pointer; font-weight:bold; }
-
-        /* ESTILOS VISTA DETALLE RENOVADOS */
-        .detail-table { width: 100%; border-collapse: collapse; }
-        .detail-table tr { border-bottom: 1px solid #eee; }
-        .detail-table td { padding: 10px 5px; vertical-align: middle; }
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
         
-        /* Columna 1: Botón Editar */
-        .col-action { width: 40px; text-align: center; }
-        /* Columna 2: Etiqueta (Nombre) */
-        .col-label { font-weight: bold; color: #555; width: 35%; }
-        /* Columna 3: Valor */
-        .col-value { width: 55%; color: #000; }
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
         
-        .detail-input { width: 100%; padding: 6px; border: 1px solid var(--primary); border-radius: 4px; font-size: 0.9rem; }
-        .blue-title { color: #0056b3; margin-top:0; border-bottom:1px solid #eee; padding-bottom:5px; }
-        .separator-row { background-color: #f9f9f9; height: 15px; border-bottom: 1px solid #ddd; }
+        .name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .title {
+            font-size: 1.4rem; /* Aumentado 2 puntos */
+            opacity: 0.9;
+            margin-bottom: 0.3rem;
+        }
+        
+        .tagline {
+            font-size: 1.7rem; /* Aumentado 2 puntos */
+            margin: 1.5rem 0;
+            font-weight: 500;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Botones Misión, Visión y Valor con Iconos */
+        .mission-vision {
+            padding: 2rem 0;
+            background-color: white;
+            text-align: center;
+        }
+        
+        .mv-container {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .mv-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 180px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .mv-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .mv-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #f0f0f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            border: 3px solid #2a5298;
+            overflow: hidden;
+            background-size: 60%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        .mv-icon.mision {
+            background-image: url('01-Mision-icon.png');
+        }
+        
+        .mv-icon.vision {
+            background-image: url('02-Vision-icon.png');
+        }
+        
+        .mv-icon.valor {
+            background-image: url('03-Valor-icon.png');
+        }
+        
+        .mv-name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2a5298;
+        }
+        
+        /* Servicios */
+        .services {
+            padding: 3rem 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: #2a5298;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+            border-top: 4px solid #2a5298;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2a5298;
+        }
+        
+        .service-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: #2a5298;
+        }
+        
+        .service-description {
+            color: #666;
+            font-size: 0.95rem;
+            flex-grow: 1;
+            margin-bottom: 1rem;
+        }
+        
+        .service-link {
+            display: inline-block;
+            color: #2a5298;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-top: auto;
+            padding: 0.5rem 1rem;
+            border: 1px solid #2a5298;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        
+        .service-link:hover {
+            background-color: #2a5298;
+            color: white;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #2a5298, #1e3c72);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .cta-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #ff6b6b;
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background-color 0.3s, transform 0.3s;
+            margin: 1rem 0;
+        }
+        
+        .cta-button:hover {
+            background-color: #ff5252;
+            transform: translateY(-3px);
+        }
 
-        section { display: none; }
-        #view-login { height: 100vh; align-items: center; justify-content: center; }
-        .login-box { background: white; padding: 40px; border-radius: 8px; width: 100%; max-width: 350px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        .login-box input { margin-bottom: 15px; }
-        .login-box button { background: var(--primary); color: white; border: none; padding: 12px; width: 100%; border-radius: 4px; cursor: pointer; font-weight: bold; }
-        .edit-mode-banner { background: var(--edit); color: white; padding: 10px; text-align: center; border-radius: 4px; margin-bottom: 15px; font-weight: bold; display: none; }
+        /* Detail Sections - Estilo de presentación */
+        .detail-section {
+            padding: 3rem 0;
+            background-color: #f0f0f5;
+        }
 
-        @media(max-width: 800px) { .grid-2, .grid-3, .menu-grid, .charts-grid { grid-template-columns: 1fr; } }
+        .detail-section .section-title {
+            margin-bottom: 3rem;
+            color: #1e3c72;
+            border-bottom: 2px solid #2a5298;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .detail-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+
+        .detail-content p, .detail-content ul {
+            margin-bottom: 1rem;
+            color: #444;
+        }
+
+        .detail-content ul {
+            margin-left: 20px;
+            list-style-type: disc;
+        }
+
+        .detail-content strong {
+            color: #2a5298;
+        }
+
+        .back-to-top {
+            display: inline-block;
+            background-color: #2a5298;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+            margin-top: 1rem;
+        }
+
+        .back-to-top:hover {
+            background-color: #1e3c72;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #1a1a2e;
+            color: white;
+            padding: 3rem 0 2rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .brand {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #ff6b6b;
+        }
+        
+        .contact-info {
+            margin: 1.5rem 0;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-info a:hover {
+            color: #ff6b6b;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            background-size: 60%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .social-icon.facebook {
+            background-image: url('facebook-icon.png');
+        }
+        
+        .social-icon.instagram {
+            background-image: url('instagram-icon.png');
+        }
+        
+        .social-icon.whatsapp {
+            background-image: url('whatsapp-icon.png');
+        }
+        
+        .social-icon.email {
+            background-image: url('email-icon.png');
+        }
+        
+        .social-icon:hover {
+            background-color: #ff6b6b;
+        }
+        
+        .copyright {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            width: 100%;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .name {
+                font-size: 1.8rem;
+            }
+            
+            .title {
+                font-size: 1.2rem;
+            }
+            
+            .tagline {
+                font-size: 1.5rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .detail-section .section-title {
+                padding-bottom: 0.5rem;
+                border-bottom: 2px solid #2a5298;
+            }
+            
+            .mv-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 2rem;
+            }
+            
+            .mv-item {
+                width: 160px;
+            }
+            
+            .mv-icon {
+                width: 90px;
+                height: 90px;
+            }
+        }
     </style>
 </head>
 <body>
-    <div id="loader" class="loader" style="display:none;">Procesando...</div>
-    <div id="toast" class="toast" style="display:none;"></div>
-
-    <div id="deleteModal" class="modal-overlay hidden" style="display:none;">
-        <div class="modal-box">
-            <h3 style="color:var(--danger); margin-top:0;">⚠️ Eliminar Registro</h3>
-            <p>¿Confirma que desea eliminar este registro?</p>
-            <div class="modal-actions">
-                <button class="btn-cancel" onclick="closeDeleteModal()">Cancelar</button>
-                <button class="btn-confirm" onclick="executeDelete()">Confirmar</button>
+    <!-- Página Principal -->
+    <div id="main-page" class="page active">
+        <header id="top">
+            <div class="container">
+                <div class="profile-container">
+                    <div class="profile-image">
+                        <img src="rafael-perfil.jpg" alt="Rafael Jiménez Sánchez - Agente de Seguros">
+                    </div>
+                    
+                    <h1 class="name">JH ASESORIAS - RAFAEL JIMÉNEZ SÁNCHEZ</h1>
+                    <p class="title">Agente de Seguros</p>
+                    <!-- Eliminado el cuadro de cédula -->
+                </div>
+                <p class="tagline">Asesorías simples que entienden tus necesidades</p>
             </div>
-        </div>
-    </div>
+        </header>
 
-    <datalist id="planesSMNYL"></datalist>
-    <datalist id="listAseguradoras">
-        <option value="AXA"><option value="Allianz México"><option value="Aserta"><option value="Insurgentes">
-        <option value="BBVA"><option value="Chubb"><option value="HDI"><option value="HSBC">
-        <option value="Inbursa"><option value="Mapfre"><option value="MetLife"><option value="Prudential">
-        <option value="Afirme"><option value="Quálitas"><option value="Azteca"><option value="Banamex">
-        <option value="Banorte"><option value="SMNYL"><option value="Sura"><option value="Zurich">
-    </datalist>
-
-    <section id="view-login">
-        <div class="login-box">
-            <h2>Acceso V25.0</h2>
-            <form id="loginForm">
-                <input type="text" id="u" placeholder="Usuario" required>
-                <input type="password" id="p" placeholder="Contraseña" required>
-                <button type="submit">Ingresar</button>
-            </form>
-        </div>
-    </section>
-
-    <section id="view-menu">
-        <nav><span>Menú Principal</span><button onclick="logout()">Salir</button></nav>
-        <div class="container">
-            <div class="menu-grid">
-                <div class="menu-card" onclick="goToForm(true)"><h3>(A).- Registro</h3><p>Nuevo Prospecto</p></div>
-                <div class="menu-card" onclick="goToQueries()"><h3>(B).- Consultas</h3><p>Base de Datos</p></div>
-                <div class="menu-card" onclick="goToStats()"><h3>(C).- Estadisticas</h3><p>Gráficas en Vivo</p></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="view-form">
-        <nav>
-            <div><button onclick="goBackToMenu()">← Menú</button><button onclick="clearForm()" class="btn-clear">Limpiar / Nuevo</button></div>
-            <span id="formTitle">Nuevo Prospecto</span>
-        </nav>
-        <div class="container">
-            <div class="card">
-                <div id="editBanner" class="edit-mode-banner">✏️ EDITANDO REGISTRO</div>
-                <form id="mainForm">
-                    <input type="hidden" id="uuid" value="">
-                    <div class="section-title">I.- Datos Personales</div>
-                    <div class="grid-3">
-                        <div class="field"><label>Nombre(s)</label><input type="text" id="nombre" class="text-only"></div>
-                        <div class="field"><label>Apellido Paterno</label><input type="text" id="paterno" class="text-only"></div>
-                        <div class="field"><label>Apellido Materno</label><input type="text" id="materno" class="text-only"></div>
+        <!-- Sección Misión, Visión y Valor con Iconos -->
+        <section class="mission-vision">
+            <div class="container">
+                <h2 class="section-title">Nuestra Filosofía</h2>
+                <div class="mv-container">
+                    <div class="mv-item" data-page="vision">
+                        <div class="mv-icon vision"></div>
+                        <div class="mv-name">Visión</div>
                     </div>
-                    <div class="grid-2">
-                        <div class="field"><label>Fecha Nacimiento (DD-MMM-AAAA)</label><input type="text" id="fnac" maxlength="11" class="date-input" placeholder="Ej: 15-Abr-1998"><small id="previewAge" class="info-text"></small></div>
-                        <div class="field"><label>Celular</label><input type="text" id="celular" maxlength="13" placeholder="834-111-22-33"></div>
+                    <div class="mv-item" data-page="mision">
+                        <div class="mv-icon mision"></div>
+                        <div class="mv-name">Misión</div>
                     </div>
-                    <div class="grid-2">
-                        <div class="field"><label>Correo Electrónico</label><input type="email" id="email"></div>
-                        <div class="field"><label>Referencia Personal</label><input type="text" id="referencia"></div>
+                    <div class="mv-item" data-page="valor">
+                        <div class="mv-icon valor"></div>
+                        <div class="mv-name">Valor</div>
                     </div>
-                    <div class="grid-2">
-                        <div class="field"><label>CURP (18 Dígitos)</label><input type="text" id="curp" maxlength="18" class="uppercase-input"></div>
-                        <div class="field"><label>RFC (13 Dígitos)</label><input type="text" id="rfc" maxlength="13" class="uppercase-input"></div>
-                    </div>
-                    <div class="section-title">II.- Mis Asegurados</div>
-                    <div class="field">
-                        <label>II.1.- ¿Esta asegurado actualmente?</label>
-                        <div class="radio-group"><label><input type="radio" name="es_asegurado_flag" value="Si" onchange="toggleInsuranceFlow(this.value)"> Si</label><label><input type="radio" name="es_asegurado_flag" value="No" checked onchange="toggleInsuranceFlow(this.value)"> No</label></div>
-                    </div>
-                    <div id="insuranceContainer" class="hidden-section">
-                        <div id="ins1_section" class="dynamic-section">
-                            <h4 id="lbl_ins1" class="blue-title">II.1 Estatus del Asegurado</h4>
-                            <div class="field" style="margin-bottom:15px; border-bottom:1px dashed #ccc; padding-bottom:10px;"><label style="color:var(--primary);">Rol del Asegurado:</label><select id="rol_general" style="border-color:var(--primary);"><option value="">Seleccione Rol...</option><option value="Contratante">Contratante</option><option value="Asegurado">Asegurado</option><option value="Beneficiario">Beneficiario</option></select></div>
-                            <div class="field"><label>Aseguradora</label><div class="radio-group"><label><input type="radio" name="aseguradora_1" value="AXA" onchange="toggleIns1Type(this.value)"> AXA</label><label><input type="radio" name="aseguradora_1" value="SMNYL" onchange="toggleIns1Type(this.value)"> SMNYL</label></div></div>
-                            <div id="ins1_smnyl_sub" class="hidden-section" style="margin-bottom:15px; border-left:3px solid var(--primary); padding-left:10px;"><label style="color:#0056b3;">Nombre del Plan SMNYL:</label><div class="currency-toggle"><button type="button" class="currency-btn" onclick="filterCurrency('UDIS', 1)" id="btnUDIS_1">UDIS</button><button type="button" class="currency-btn" onclick="filterCurrency('USD', 1)" id="btnUSD_1">USD</button></div><input type="text" id="plan_detalle_1" list="planesSMNYL" placeholder="Seleccione moneda..." style="background:#f0f8ff; border:1px solid #0056b3;"></div>
-                            <div class="grid-3"><div class="field"><label>Tipo de Seguro</label><select id="tipo_seguro_1"><option value="">Seleccione...</option><option value="Vida">Vida</option><option value="Gmm">Gmm</option><option value="Autos">Autos</option><option value="Daños">Daños</option><option value="Otros">Otros</option></select></div><div class="field"><label>Número de Póliza</label><input type="text" id="poliza_1"></div><div class="field"><label>Fecha Emisión (DD-MMM-AAAA)</label><input type="text" id="emision_1" maxlength="11" class="date-input"></div></div>
-                        </div>
-                        <div class="field" style="margin-top:20px;"><label>II.2.- ¿Tiene mas de un seguro?</label><div class="radio-group"><label><input type="radio" name="tiene_otros" value="Si" onchange="toggleMulti(this.value)"> Si</label><label><input type="radio" name="tiene_otros" value="No" checked onchange="toggleMulti(this.value)"> No</label></div></div>
-                        <div id="ins2_section" class="dynamic-section hidden-section" style="border-color:#ff9800;"><h4 class="blue-title" style="color:#e65100;">II.2.1 Capturar Segundo Seguro</h4><div class="field"><label>Aseguradora</label><div class="radio-group"><label><input type="radio" name="aseguradora_2" value="AXA" onchange="toggleIns2Type(this.value)"> AXA</label><label><input type="radio" name="aseguradora_2" value="SMNYL" onchange="toggleIns2Type(this.value)"> SMNYL</label></div></div><div id="ins2_smnyl_sub" class="hidden-section" style="margin-bottom:15px; border-left:3px solid #e65100; padding-left:10px;"><label style="color:#e65100;">Nombre del Plan SMNYL:</label><div class="currency-toggle"><button type="button" class="currency-btn" onclick="filterCurrency('UDIS', 2)" id="btnUDIS_2">UDIS</button><button type="button" class="currency-btn" onclick="filterCurrency('USD', 2)" id="btnUSD_2">USD</button></div><input type="text" id="plan_detalle_2" list="planesSMNYL" placeholder="Seleccione moneda..." style="background:#fff3e0; border:1px solid #e65100;"></div><div class="grid-3"><div class="field"><label>Tipo de Seguro</label><select id="tipo_seguro_2"><option value="">Seleccione...</option><option value="Vida">Vida</option><option value="Gmm">Gmm</option><option value="Autos">Autos</option><option value="Daños">Daños</option><option value="Otros">Otros</option></select></div><div class="field"><label>Número de Póliza</label><input type="text" id="poliza_2"></div><div class="field"><label>Fecha Emisión (DD-MMM-AAAA)</label><input type="text" id="emision_2" maxlength="11" class="date-input"></div></div></div>
-                        <div id="q3_container" class="hidden-section"><div class="field" style="margin-top:20px;"><label>II.3.- ¿Tiene otros seguros contratados?</label><div class="radio-group"><label><input type="radio" name="tiene_tercero" value="Si" onchange="toggleThird(this.value)"> Si</label><label><input type="radio" name="tiene_tercero" value="No" checked onchange="toggleThird(this.value)"> No</label></div></div><div id="ins3_section" class="dynamic-section hidden-section" style="border-color:#28a745;"><h4 class="blue-title" style="color:#28a745;">II.3.1 Capturar Tercer Seguro</h4><div class="grid-2"><div class="field"><label>Tipo de Seguro</label><select id="tipo_seguro_3"><option value="">Seleccione...</option><option value="Vida">Vida</option><option value="Gmm">Gmm</option><option value="Autos">Autos</option><option value="Daños">Daños</option><option value="Otros">Otros</option></select></div><div class="field"><label>Aseguradora (Busque en la lista)</label><input type="text" id="seg3_aseguradora" list="listAseguradoras" placeholder="Escriba para buscar..."></div></div><div id="ins3_smnyl_sub" class="hidden-section" style="margin-bottom:15px; border-left:3px solid #28a745; padding-left:10px;"><label style="color:#28a745;">Nombre del Plan SMNYL:</label><div class="currency-toggle"><button type="button" class="currency-btn" onclick="filterCurrency('UDIS', 3)" id="btnUDIS_3">UDIS</button><button type="button" class="currency-btn" onclick="filterCurrency('USD', 3)" id="btnUSD_3">USD</button></div><input type="text" id="plan_detalle_3" list="planesSMNYL" placeholder="Seleccione moneda..." style="background:#e8f5e9; border:1px solid #28a745;"></div><div class="grid-2"><div class="field"><label>Número de Póliza</label><input type="text" id="poliza_3"></div><div class="field"><label>Fecha Emisión (DD-MMM-AAAA)</label><input type="text" id="emision_3" maxlength="11" class="date-input"></div></div></div></div>
-                    </div>
-                    <div class="section-title">III. En Trámite nueva solicitud</div>
-                    <div class="field"><label>Producto Solicitado</label><div class="radio-group"><label><input type="radio" name="solicitud" value="Ninguno" checked onchange="toggleTramite(this.value)"> Ninguno</label><label><input type="radio" name="solicitud" value="AXA Vida" onchange="toggleTramite(this.value)"> AXA Vida</label><label><input type="radio" name="solicitud" value="SMNYL Vida" onchange="toggleTramite(this.value)"> SMNYL Vida</label><label><input type="radio" name="solicitud" value="AXA Gmm" onchange="toggleTramite(this.value)"> AXA Gmm</label><label><input type="radio" name="solicitud" value="SMNYL Gmm" onchange="toggleTramite(this.value)"> SMNYL Gmm</label></div></div>
-                    <div id="tramiteFields" class="hidden-section dynamic-section"><div id="smnylSubList" class="field hidden-section"><label style="color:#0056b3;">Nombre del Plan SMNYL:</label><div class="currency-toggle"><button type="button" class="currency-btn" onclick="filterCurrency('UDIS', 0)" id="btnUDIS_0">UDIS</button><button type="button" class="currency-btn" onclick="filterCurrency('USD', 0)" id="btnUSD_0">USD</button></div><input type="text" id="smnylProductoEspecifico" list="planesSMNYL" placeholder="Seleccione moneda primero..." style="background:#f0f8ff; border:1px solid #0056b3;"></div><div class="grid-2"><div class="field"><label>Número de Folio</label><input type="text" id="folio"></div><div class="field"><label>Fecha Solicitud (DD-MMM-AAAA)</label><input type="text" id="fsolicitud" maxlength="11" class="date-input"></div></div></div>
-                    <button type="submit" id="btnAction" class="btn-save">Guardar Registro</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <section id="view-queries">
-        <nav><button onclick="goBackToMenu()">← Menú</button><span>Consultas</span></nav>
-        <div class="container">
-            <div class="filter-bar">
-                <button class="filter-btn" onclick="setFilter('AXA')" id="btnFilterAXA">a).- Asegurados en AXA</button>
-                <button class="filter-btn" onclick="setFilter('SMNYL')" id="btnFilterSMNYL">b).- Asegurados en SMNYL</button>
-                <button class="filter-btn" onclick="setFilter('NO')" id="btnFilterNO">c).- Listado de Prospectos</button>
-                <button class="filter-btn" onclick="setFilter('TODOS')" id="btnFilterTODOS">d).- Todos</button>
-            </div>
-            <div class="search-box-floating">
-                <label style="font-weight:bold; color:#555; display:block; margin-bottom:5px;">🔍 BUSCADOR INTELIGENTE:</label>
-                <input type="text" id="searchInput" placeholder="Escriba un nombre para filtrar en tiempo real..." class="search-input-lg" onkeyup="applyFilters()">
-            </div>
-            <div class="card">
-                <h3 id="queryTitle" style="color:var(--primary); margin-top:0;">Seleccione una opción arriba</h3>
-                <div class="table-responsive">
-                    <table id="dataTable">
-                        <thead><tr><th width="50">No.</th><th>Nombre Completo</th><th>Celular</th><th>Detalle</th><th width="150">Acciones</th></tr></thead>
-                        <tbody><tr><td colspan="5">Esperando selección...</td></tr></tbody>
-                    </table>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="view-detail" class="hidden">
-        <nav>
-            <button onclick="closeDetailView()">← Regresar a Consultas</button>
-            <span>Visualización de Registro</span>
-        </nav>
-        <div class="container">
-            <div class="card">
-                <div id="detailContainer"></div>
+        <section class="services">
+            <div class="container">
+                <h2 class="section-title">MENÚ DE PRODUCTOS</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">❤️</div>
+                        <h3 class="service-title">Seguros de Vida</h3>
+                         <p class="service-description">Protección financiera para tu familia en caso de tu fallecimiento o de una incapacidad permanente. Tranquilidad para los que más quieres.</p>
+                        <a href="#" class="service-link" data-page="vida">Ver detalles</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">👩</div>
+                        <h3 class="service-title">Seguro para la Mujer (Vida Mujer)</h3>
+                        <p class="service-description">Coberturas diseñadas específicamente para las necesidades de la mujer moderna. Protección integral en todas las etapas de la vida.</p>
+                        <a href="#" class="service-link" data-page="mujer">Ver detalles</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">💰</div>
+                        <h3 class="service-title">Seguro con Ahorro y/o Retiro (PPR)</h3>
+                        <p class="service-description">Planifica tu futuro con instrumentos de ahorro e inversión a largo plazo. Planes Personalizados de Retiro con atractivos beneficios fiscales.</p>
+                        <a href="#" class="service-link" data-page="ppr">Ver detalles</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">🎓</div>
+                        <h3 class="service-title">Seguro para Educación</h3>
+                        <p class="service-description">Garantiza la educación de tus hijos sin importar lo que pase en tu futuro. Inversión segura para su desarrollo profesional.</p>
+                        <a href="#" class="service-link" data-page="educacion">Ver detalles</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">🏥</div>
+                        <h3 class="service-title">Gastos Médicos Mayores</h3>
+                        <p class="service-description">Protección ante gastos médicos elevados por enfermedades o accidentes. Cobertura amplia para tu salud y la de tu familia.</p>
+                        <a href="#" class="service-link" data-page="gmm">Ver detalles</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">✅</div>
+                        <h3 class="service-title">Validador Agentes de Seguros</h3>
+                        <p class="service-description">Verifica mi cédula y autorización como Agente de Seguros ante la Comisión Nacional de Seguros y Fianzas.</p>
+                        <a href="https://agentesajustadores.cnsf.gob.mx/Agentes" target="_blank" class="service-link">Validar Cédula</a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+        
+        <section class="cta-section">
+            <div class="container">
+                <h2 class="cta-title">¿Listo para proteger tu futuro?</h2>
+                <p>Recibe asesoría personalizada sin costo y descubre el plan perfecto para tus necesidades</p>
+                <a href="https://calendly.com/jhasesorias/seguritos-con-rafa" target="_blank" class="cta-button">Agenda tu asesoría</a>
+            </div>
+        </section>
 
-    <section id="view-stats">
-        <nav><button onclick="goBackToMenu()">← Menú</button><span>Estadísticas</span></nav>
-        <div class="container">
-            <div class="card">
-                <h3 style="text-align:center; color:var(--primary);">Análisis Global</h3>
-                <div class="charts-grid"><div class="chart-box"><h4>Distribución por Aseguradora</h4><canvas id="chartAseguradoras"></canvas></div><div class="chart-box"><h4>Distribución por Tipo de Seguro</h4><canvas id="chartTipos"></canvas></div></div>
+        <footer id="contacto">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="brand">Seguritos con Rafa</div>
+                    <div class="contact-info">
+                        <p>Email: <a href="mailto:jhasesorias@jhasesorias.com" target="_blank">jhasesorias@jhasesorias.com</a></p>
+                        <p>Teléfono: 834-311-7556</p>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/rafaeljimenezsanchezAS" target="_blank" class="social-icon facebook"></a>
+                        <a href="https://www.instagram.com/lord_seguritos/" target="_blank" class="social-icon instagram"></a>
+                        <a href="https://api.whatsapp.com/message/4ZPNDSQEJ7ENN1?autoload=1&app_absent=0" target="_blank" class="social-icon whatsapp"></a>
+                        <a href="mailto:jhasesorias@jhasesorias.com" target="_blank" class="social-icon email"></a>
+                    </div>
+                    
+                    <div class="copyright">
+                        <p>&copy; 2025 Rafael Jiménez Sánchez - Agente de Seguros Cédula A H382035 - Todos los derechos reservados</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </footer>
+    </div>
+
+    <!-- Página Visión -->
+    <div id="vision-page" class="page">
+        <header>
+            <div class="container">
+                <div class="profile-container">
+                    <h1 class="name">Visión</h1>
+                    <p class="tagline">Nuestro horizonte y aspiración</p>
+                </div>
+            </div>
+        </header>
+
+        <section class="detail-section">
+            <div class="container">
+                <div class="detail-content">
+                    <p>Ser la firma de asesoría e intermediación en seguros más confiable, cercana y valorada por nuestros clientes, estableciendo un nuevo estándar de servicio en la industria. Nos distinguimos por nuestra independencia frente a las aseguradoras y por nuestro compromiso absoluto en defender los intereses del asegurado, garantizando que cada persona acceda a sus derechos y obtenga soluciones justas, completas y oportunas en cada etapa de su vida y ante cualquier percance.</p>
+                    
+                    <a href="#" class="back-to-top" data-page="main">Volver al Menú Principal</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Página Misión -->
+    <div id="mision-page" class="page">
+        <header>
+            <div class="container">
+                <div class="profile-container">
+                    <h1 class="name">Misión</h1>
+                    <p class="tagline">Nuestro propósito y compromiso</p>
+                </div>
+            </div>
+        </header>
+
+        <section class="detail-section">
+            <div class="container">
+                <div class="detail-content">
+                    <p>Brindar un servicio superior, integral y humano en la intermediación de seguros, actuando con total independencia y sin vínculos que comprometan nuestra objetividad. Acompañamos a cada cliente en sus decisiones, trámites, percances o siniestros, defendiendo sus derechos e intereses con profesionalismo y transparencia. Utilizamos todos los recursos y herramientas disponibles para asegurar un servicio excepcional, un trato justo y soluciones coherentes con las condiciones contractuales de sus productos, siempre que la razón respalde su situación.</p>
+                    
+                    <a href="#" class="back-to-top" data-page="main">Volver al Menú Principal</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Página Valor -->
+    <div id="valor-page" class="page">
+        <header>
+            <div class="container">
+                <div class="profile-container">
+                    <h1 class="name">Valor</h1>
+                    <p class="tagline">Nuestra propuesta de valor</p>
+                </div>
+            </div>
+        </header>
+
+        <section class="detail-section">
+            <div class="container">
+                <div class="detail-content">
+                    <p>Nuestro valor radica en ofrecer un acompañamiento real y cercano, basado en la transparencia, la objetividad y la defensa activa del asegurado. Analizamos a profundidad las necesidades de cada cliente, brindamos seguimiento continuo y ofrecemos asesoría preventiva que facilita decisiones informadas. Nos comprometemos a simplificar sus procesos, respaldarlos en cada acontecimiento y agotar todos los recursos necesarios para garantizar soluciones justas, completas y oportunas. Somos un intermediario independiente y un aliado confiable que actúa siempre con excelencia y compromiso total.</p>
+                    
+                    <a href="#" class="back-to-top" data-page="main">Volver al Menú Principal</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Página Seguros de Vida -->
+    <div id="vida-page" class="page">
+        <header>
+            <div class="container">
+                <div class="profile-container">
+                    <h1 class="name">Seguros de Vida</h1>
+                    <p class="tagline">Protección financiera para tu familia</p>
+                </div>
+            </div>
+        </header>
+
+        <section class="detail-section">
+            <div class="container">
+                <div class="detail-content">
+                    <p>Planes que pueden <strong>retornar tu inversión</strong>, además de brindarte una fuerte protección económica. Te permiten generar ahorro durante el plazo contratado, con rendimientos garantizados del 1% al 2%, dependiendo de la moneda o unidad que elijas de contratación.</p>
+                   
+                    <p><strong>Protección por Invalidez Total y Permanente:</strong> Si por enfermedad o accidente sufres una invalidez total y permanente que te impide trabajar y seguir siendo el sustento de la familia, la compañía te pagará en vida la suma asegurada contratada por ITyP. Además, la compañía absorberá los pagos restantes del seguro, y continuarás protegido durante hasta los 60, 65 años de por vida dependiendo del plan contratado.</p>
+                    
+                    <p><strong>Protección por Fallecimiento (Vitalicia):</strong> Podemos configurar un plan con distintos plazos de pago, de manera que, una vez concluido ese periodo, quedes asegurado de por vida. Estarías cubierto por invalidez total y permanente hasta los 60 o 65 años y por fallecimiento durante toda tu vida.</p>
+                    
+                    <p><strong>Doble Protección:</strong> Si por una Invalidez Total y Permanente la Aseguradora ya hubiese pagado una suma asegurada y posteriormente a ello llegaras a fallecer dentro del plazo contratado, la compañía volverá a pagar la suma asegurada a los beneficiarios que hayas designado.</p>
+                    
+                    <a href="#" class="back-to-top" data-page="main">Volver al Menú Principal</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Página Seguro para la Mujer -->
+    <div id="mujer-page" class="page">
+        <header>
+            <div class="container">
+                <div class="profile-container">
+                    <h1 class="name">Seguro para la Mujer - Vida Mujer</h1>
+                    <p class="tagline">Protección diseñada especialmente para mujeres</p>
+                </div>
+            </div>
+        </header>
+
+        <section class="detail-section">
+            <div class="container">
+                <div class="detail-content">
+                    <p>Es un seguro de vida diseñado especialmente para mujeres, brindando protección financiera para tu bienestar y el de tu familia. Te ofrece respaldo en caso de fallecimiento, padecimientos y/o cáncer femenino, complicaciones del embarazo y más. Además, te permite generar ahorros periódicos con rendimientos atractivos en dólares o UDIS.</p>
+                    
+                    <p><strong>Beneficios Iniciales:</strong></p>
+                    <ul>
+                        <li>Protección por fallecimiento.</li>
+                        <li>Protección por cáncer femenino.</li>
+                        <li>Ahorro garantizado.</li>
+                        <li>Anticipo de dotes por matrimonio, nacimiento o adopción de un hijo antes del 5 año póliza.</li>
+                        <li>Contratación y cobertura en dólares o UDIS.</li>
+                        <li>Asistencia telefónica médica en EE.UU.</li>
+                        <li>Coberturas hasta los 70 años.</li>
+                    </ul>
+                    
+                    <p><strong>Coberturas Adicionales y Opcionales:</strong></p>
+                    <ul>
+                        <li>Protección por complicaciones del embarazo y padecimientos femeninos.</li>
+                        <li>Pérdida del ingreso por invalidez total y temporal.</li>
+                        <li>Cuidados a Largo Plazo.</li>
+                        <li>Protección por Viudez.</li>
+                        <li>Beneficio por Muerte Accidental.</li>
+                    </ul>
+                    
+                    <a href="#" class="back-to-top" data-page="main">Volver al Menú Principal</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Página PPR -->
+    <div id="ppr-page" class="page">
+        <header>
+            <div class="container">
+                <div class="profile-container">
+                    <h1 class="name">Seguro con Ahorro y/o Plan Personal para el Retiro (PPR)</h1>
+                    <p class="tagline">Planifica tu futuro con seguridad</p>
+                </div>
+            </div>
+        </header>
+
+        <section class="detail-section">
+            <div class="container">
+                <div class="detail-content">
+                    <p>El plan <strong>Imagina Ser</strong> es un contrato de seguro de vida integrado a un plan personal para el retiro (PPR) que te permite ahorrar según tus posibilidades, obteniendo beneficios fiscales atractivos y garantizando tranquilidad para ti y tu familia.</p>
+                    
+                    <p><strong>Características y Beneficios:</strong></p>
+                    <ul>
+                        <li><strong>Rendimientos Garantizados:</strong> 1% UDIS y 2% USD.</li>
+                        <li><strong>Protección:</strong> Por invalidez total y permanente, así como por fallecimiento desde el día 01.</li>
+                        <li><strong>Beneficio Fiscal:</strong> Opciones deducibles (Art. 151, 185 LISR, hasta 5 UMAs y $152,000 pesos anuales respectivamente) y no deducibles, lo cual ayuda a bajar tu carga fiscal antes el SAT y está usarla para tu Retiro, dependiendo de tu régimen fiscal</li>
+                        <li><strong>Flexibilidad en Retiro:</strong> Sí, puedes recibir tu ahorro en rentas vitalicias o en un solo pago al momento de tu retiro (a los 65 años)</li>
+                    </ul>
+                    <p>El plan funciona iniciando con el pago periódico de primas, teniendo garantizada tu suma asegurada desde el primer día. En la fase de retiro, recibes tu ahorro acumulado sumando a los rendimientos obtenidos.</p>
+                    
+                    <a href="#" class="back-to-top" data-page="main">Volver al Menú Principal</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Página Educación -->
+    <div id="educacion-page" class="page">
+        <header>
+            <div class="container">
+                <div class="profile-container">
+                    <h1 class="name">Seguro para Educación - Segubeca 18</h1>
+                    <p class="tagline">Garantiza la educación de tus hijos</p>
+                </div>
+            </div>
+        </header>
+
+        <section class="detail-section">
+            <div class="container">
+                <div class="detail-content">
+                    <p>El producto <strong>SEGUBECA 18</strong>, además de protegerte, te ayuda a cumplir sí o sí con la responsabilidad de ahorrar, administrar y asegurar la educación universitaria de tus hijos o nietos.</p>
+                    
+                    <p><strong>¿A quién puedo asegurar?:</strong> Niños de entre 0 y 13 años de edad. Se garantiza la suma asegurada para el asegurado a los 18 años de edad para sus estudios universitarios.</p>
+                    
+                    <p><strong>Beneficios clave:</strong></p>
+                    <ul>
+                        <li><strong>Entrega del ahorro</strong> a los 18 años del asegurado.</li>
+                        <li><strong>Exención de pagos</strong> en caso de invalidez total y permanente o fallecimiento del contratante.</li>
+                        <li>Protección de pago de la suma asegurada por fallecimiento del contratante.</li>
+                        <li>Beneficio mancomuando por fallecimeiento de mamá o papá no siendo este el contratante.</li>
+                        <li>Beneficio doble de suma asegurada por muerte accidental del contratante.</li>
+                        <li>Administración del ahorro.</li>
+                    </ul>
+                    
+                    <a href="#" class="back-to-top" data-page="main">Volver al Menú Principal</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Página Gastos Médicos -->
+    <div id="gmm-page" class="page">
+        <header>
+            <div class="container">
+                <div class="profile-container">
+                    <h1 class="name">Seguro de Gastos Médicos Mayores Individual (SGMMI)</h1>
+                    <p class="tagline">Protección ante gastos médicos elevados</p>
+                </div>
+            </div>
+        </header>
+
+        <section class="detail-section">
+            <div class="container">
+                <div class="detail-content">
+                    <p>Un SGMMI es un acuerdo entre el Asegurado y la Aseguradora para transferir parte del riesgo del impacto económico para recuperar la salud en caso de una enfermedad o accidente.</p>
+                    
+                    <p><strong>Funcionamiento:</strong> El Asegurado participa económicamente con un deducible. Después de esta suma, la aseguradora comienza a cubrir los gastos excedentes hasta el tope de la suma asegurada (más de 150 millones por cada padecimiento o enfermedad de cada miembro de la familia) participando de forma conjunta el asegurado con su coaseguro.</p>
+                    
+                    <p><strong>Contratación:</strong> Puede ser de forma personal o familiar (cónyuge e hijos).</p>
+                    
+                    <p><strong>Beneficios Básicos y Adicionales:</strong></p>
+                    <ul>
+                        <li>Medicamentos fuera de hospital.</li>
+                        <li>Pago directo a una amplia red de proveedores médicos con excelente nivel hospitalario y pagos directos.</li>
+                        <li>Cobertura de complicaciones del embarazo, parto y/o del recién nacido.</li>
+                        <li>Anticipo económico por maternidad.</li>
+                        <li>Protección Patrimonial.</li>
+                        <li>Reducción y/o cancelación de deducible por accidente.</li>
+                        <li>Servicio de traslado de ambulancia.</li>
+                        <li>Asistencia o Emergencias en el extranjero.</li>
+                        <li>Cobertura dental premium.</li>
+                        <li>Enfermedades cubiertas en el extranjero.</li>
+                    </ul>
+                    
+                    <a href="#" class="back-to-top" data-page="main">Volver al Menú Principal</a>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <script>
-        const API_URL = 'https://script.google.com/macros/s/AKfycbzuouWyVPO3Pomnfnxx0WLyuYTzyYN-G5G7pJcHkVYeskkK2NZIaXQ9ML1NdNmqdacU9w/exec'; 
-        
-        const ALL_PLANS = ["Dotal 10 UDIS","Dotal 20 UDIS","Imagina Ser E65 UDIS","Imagina Ser E70 UDIS","Imagina Ser PL 10 UDIS","Imagina Ser PL 15 UDIS","Imagina Ser PU UDIS 65","Objetivo Vida 10 UDIS","Objetivo Vida 15 UDIS","Objetivo Vida 65 Udis","Objetivo Vida TP UDIS","Orvi 10 UDIS","Orvi 20 UDIS","Orvi TP UDIS","Se Adapta UDIS","Segubeca18 UDIS","Temporal 10 UDIS","Temporal 20 UDIS","Vida Mujer UDIS","Dotal 10 USD","Dotal 15 USD","Dotal 20 USD","Dotal 5 USD","Imagina Ser E65 USD","Imagina Ser E70 USD","Imagina Ser PL 10 USD","Imagina Ser PL 15 USD","Imagina Ser PU USD 65","Objetivo Vida 10 USD","Objetivo Vida 15 USD","Objetivo Vida 65 USD","Objetivo Vida TP USD","Orvi 10 USD","Orvi 15 USD","Orvi 20 USD","Orvi 6 USD","Orvi Edad 60 USD","Orvi TP USD","Se Adapta USD","Segubeca18 USD","Temporal 1 USD","Temporal 20 USD","Temporal 5 USD","Temporal TP USD","Vida Mujer USD"];
-        const MONTHS_MAP = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
-        
-        let session = JSON.parse(localStorage.getItem('session')) || null;
-        let dbData = []; let recordToDelete = null; let currentFilterType = null; let charts = {}; let currentViewingUUID = null;
-
-        document.addEventListener('DOMContentLoaded', () => {
-            if (session) { window.showView('view-menu'); loadDataInBackground(); } else { window.showView('view-login'); }
-            setupInputs();
-            document.getElementById('loginForm').addEventListener('submit', doLogin);
-            document.getElementById('mainForm').addEventListener('submit', doSave);
-            document.getElementById('seg3_aseguradora').addEventListener('input', function(e) { const sub = document.getElementById('ins3_smnyl_sub'); if(this.value === 'SMNYL') sub.style.display = 'block'; else { sub.style.display = 'none'; document.getElementById('plan_detalle_3').value = ''; } });
-        });
-
-        window.showView = function(viewId) { document.querySelectorAll('section').forEach(s => { s.style.display='none'; s.classList.remove('active'); }); const active = document.getElementById(viewId); if(active) { active.style.display = (viewId==='view-login')?'flex':'block'; active.classList.add('active'); } }
-        window.goToForm = function(isNew) { window.showView('view-form'); if(isNew) window.clearForm(); }
-        window.goToQueries = function() { window.showView('view-queries'); }
-        window.goToStats = function() { window.showView('view-stats'); renderCharts(); }
-        window.goBackToMenu = function() { window.showView('view-menu'); }
-        window.logout = function() { localStorage.removeItem('session'); location.reload(); }
-
-        // --- VISTA DETALLE RENOVADA (BOTÓN IZQUIERDO) ---
-        window.viewRecord = function(uuid) {
-            currentViewingUUID = uuid;
-            const r = dbData.find(item => String(item.uuid) === String(uuid));
-            if(!r) return;
-            
-            let edad = "N/A";
-            if(r.f_nacimiento && r.f_nacimiento.includes('-')) {
-                const p = r.f_nacimiento.split('-');
-                if(p.length===3) {
-                    // Normalizar mes (Ago, ago, AGO -> Ago)
-                    const mStr = p[1].charAt(0).toUpperCase() + p[1].slice(1).toLowerCase();
-                    const mIdx = MONTHS_MAP.indexOf(mStr);
-                    if(mIdx > -1) edad = Math.abs(new Date(Date.now()-new Date(p[2],mIdx,p[0]).getTime()).getUTCFullYear()-1970);
-                }
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sistema de navegación SPA
+            function showPage(pageId) {
+                // Ocultar todas las páginas
+                document.querySelectorAll('.page').forEach(page => {
+                    page.classList.remove('active');
+                });
+                
+                // Mostrar la página seleccionada
+                document.getElementById(`${pageId}-page`).classList.add('active');
+                
+                // Desplazar hacia arriba
+                window.scrollTo(0, 0);
             }
-
-            // MAPEO EXACTO DE LA IMAGEN
-            // C=3, D=4, E=5, G=7, I=9, J=10, K=11, L=12, M=13, N=14, O=15, Q=17, R=18, S=19, P=16
-            // U=21, W=23, X=24, Y=25, V=22
-            // AA=27, AC=29, AD=30, AE=31, AB=28
-            // AF=32, AG=33, AH=34
-            const fields = [
-                { l: "1. Nombre", v: r.nombre, col: 3 },
-                { l: "2a. Paterno", v: r.paterno, col: 4 },
-                { l: "3b. Materno", v: r.materno, col: 5 },
-                { l: "4. Nacimiento", v: r.f_nacimiento, col: 7 },
-                { l: "5. Edad", v: edad, col: 0 },
-                { l: "6. Celular", v: r.celular, col: 9 },
-                { l: "7. Email", v: r.email, col: 10 },
-                { l: "8. Referencia", v: r.referencia, col: 11 },
-                { l: "9. CURP", v: r.curp, col: 12 },
-                { l: "10. RFC", v: r.rfc, col: 13 },
-                { l: "11. Rol", v: r.rol_general, col: 14 },
-                { l: "", v: "", col: -1 }, // Separator
-                { l: "12. Aseguradora 1", v: r.aseguradora_1, col: 15 },
-                { l: "13. Tipo Seguro", v: r.tipo_seguro_1, col: 17 },
-                { l: "14. No Póliza", v: r.poliza_1, col: 18 },
-                { l: "15. F. Emisión", v: r.emision_1, col: 19 },
-                { l: "16. Producto 1", v: r.plan_detalle_1, col: 16 },
-                { l: "", v: "", col: -1 },
-                { l: "17. Aseguradora 2", v: r.aseguradora_2, col: 21 },
-                { l: "18. Tipo Seguro", v: r.tipo_seguro_2, col: 23 },
-                { l: "19. No Póliza", v: r.poliza_2, col: 24 },
-                { l: "20. F. Emisión", v: r.emision_2, col: 25 },
-                { l: "21. Producto 2", v: r.plan_detalle_2, col: 22 },
-                { l: "", v: "", col: -1 },
-                { l: "22. Aseguradora 3", v: r.aseguradora_3, col: 27 },
-                { l: "23. Tipo Seguro", v: r.tipo_seguro_3, col: 29 },
-                { l: "24. No Póliza", v: r.poliza_3, col: 30 },
-                { l: "25. F. Emisión", v: r.emision_3, col: 31 },
-                { l: "26. Producto 3", v: r.plan_detalle_3, col: 28 },
-                { l: "", v: "", col: -1 },
-                { l: "27. Sol. Seg. Nuevo", v: r.solicitud, col: 32 },
-                { l: "28. F. Solicitud", v: r.f_solicitud, col: 33 },
-                { l: "29. Folio", v: r.folio, col: 34 }
-            ];
-
-            let html = `<h2 class="blue-title">Detalle del Registro</h2><table class="detail-table">`;
             
-            fields.forEach((f, idx) => {
-                if(f.col === -1) {
-                    html += `<tr><td colspan="3" class="separator-row"></td></tr>`;
-                } else {
-                    // Mostrar siempre, aunque esté vacío, para permitir editar
-                    html += `<tr>
-                        <td class="col-action">
-                            ${f.col > 0 ? `<button class="btn-inline-edit" onclick="enableEdit(${idx}, ${f.col}, '${f.v || ''}')">✏️</button>` : ''}
-                        </td>
-                        <td class="col-label">${f.l}</td>
-                        <td class="col-value" id="val_${idx}">${f.v || '-'}</td>
-                    </tr>`;
-                }
+            // Configurar enlaces de navegación
+            document.querySelectorAll('[data-page]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetPage = this.getAttribute('data-page');
+                    showPage(targetPage);
+                });
             });
-            html += `</table>`;
             
-            document.getElementById('detailContainer').innerHTML = html;
-            window.showView('view-detail');
-        }
-
-        window.closeDetailView = function() { window.showView('view-queries'); }
-
-        window.enableEdit = function(idx, colIndex, currentVal) {
-            const cell = document.getElementById(`val_${idx}`);
-            // Input field + Save button
-            cell.innerHTML = `
-                <div style="display:flex; align-items:center;">
-                    <input type="text" class="detail-input" id="input_${idx}" value="${currentVal}">
-                    <button class="btn-inline-save" onclick="saveField(${idx}, ${colIndex})">💾</button>
-                </div>`;
-            document.getElementById(`input_${idx}`).focus();
-        }
-
-        window.saveField = async function(idx, colIndex) {
-            const newVal = document.getElementById(`input_${idx}`).value;
-            toggleLoader(true);
-            try {
-                // Usamos endpoint para updateField
-                const res = await fetch(API_URL, { 
-                    method: 'POST', 
-                    body: JSON.stringify({ 
-                        action: 'updateField', 
-                        token: session.token, 
-                        uuid: currentViewingUUID,
-                        fieldIndex: colIndex,
-                        value: newVal
-                    }) 
-                }).then(r => r.json());
-
-                if(res.status === 'success') {
-                    showToast("Dato actualizado");
-                    // Reload local data to reflect change
-                    await loadDataInBackground();
-                    // Refresh detail view
-                    viewRecord(currentViewingUUID);
-                } else { showToast("Error: " + res.message); }
-            } catch(e) { showToast("Error conexión"); }
-            finally { toggleLoader(false); }
-        }
-
-        // --- FUNCIONES DE AYUDA Y NAVEGACIÓN ESTANDAR ---
-        window.clearForm = function() {
-            document.getElementById('mainForm').reset(); document.getElementById('uuid').value = "";
-            document.getElementById('editBanner').style.display = 'none';
-            document.getElementById('btnAction').textContent = "Guardar Registro";
-            document.getElementById('formTitle').textContent = "Nuevo Prospecto";
-            document.getElementById('previewAge').textContent = "";
-            window.toggleInsuranceFlow('No'); window.toggleTramite('Ninguno'); 
-            document.getElementById('ins1_smnyl_sub').style.display='none';
-            document.getElementById('ins2_smnyl_sub').style.display='none';
-            document.getElementById('ins3_smnyl_sub').style.display='none';
-        }
-        // Copiar toggle logic completa de V23
-        window.toggleStatus = function(v) { const s=document.getElementById('statusFields'); if(v==='AXA'||v==='SMNYL') s.style.display='block'; else s.style.display='none'; }
-        window.toggleTramite = function(v) { const s = document.getElementById('tramiteFields'); const sub = document.getElementById('smnylSubList'); if(v!=='Ninguno') { s.style.display='block'; if(v==='SMNYL Vida') sub.style.display='block'; else sub.style.display='none'; } else { s.style.display='none'; sub.style.display='none'; } }
-        window.toggleSecond = function(v) { const s = document.getElementById('secondInsuranceFields'); if(v==='SI' || v==='Si') s.style.display='block'; else s.style.display='none'; }
-        window.toggleThird = function(v) { const sec3 = document.getElementById('ins3_section'); if(v === 'Si') { sec3.classList.remove('hidden-section'); sec3.style.display = 'block'; } else { sec3.classList.add('hidden-section'); sec3.style.display = 'none'; } }
-        window.toggleInsuranceFlow = function(val) { const cont = document.getElementById('insuranceContainer'); if(val === 'Si') { cont.classList.remove('hidden-section'); cont.style.display = 'block'; const multi = document.querySelector(`input[name="tiene_otros"]:checked`); window.toggleMulti(multi ? multi.value : 'No'); } else { cont.classList.add('hidden-section'); cont.style.display = 'none'; } }
-        window.toggleMulti = function(val) { const lbl = document.getElementById('lbl_ins1'); const sec2 = document.getElementById('ins2_section'); const q3 = document.getElementById('q3_container'); if(val === 'Si') { lbl.textContent = "II.1.2 Capturar Primer Seguro"; sec2.classList.remove('hidden-section'); sec2.style.display = 'block'; q3.classList.remove('hidden-section'); q3.style.display = 'block'; const third = document.querySelector(`input[name="tiene_tercero"]:checked`); window.toggleThird(third ? third.value : 'No'); } else { lbl.textContent = "II.1 Estatus del Asegurado"; sec2.classList.add('hidden-section'); sec2.style.display = 'none'; q3.classList.add('hidden-section'); q3.style.display = 'none'; window.toggleThird('No'); } }
-        window.toggleIns1Type = function(val) { const sub = document.getElementById('ins1_smnyl_sub'); if(val === 'SMNYL') sub.style.display='block'; else { sub.style.display='none'; document.getElementById('plan_detalle_1').value=''; } }
-        window.toggleIns2Type = function(val) { const sub = document.getElementById('ins2_smnyl_sub'); if(val === 'SMNYL') sub.style.display='block'; else { sub.style.display='none'; document.getElementById('plan_detalle_2').value=''; } }
-
-        window.filterCurrency = function(currency, index) {
-            const datalist = document.getElementById('planesSMNYL');
-            let inputId = index === 0 ? 'smnylProductoEspecifico' : (index === 1 ? 'plan_detalle_1' : (index === 2 ? 'plan_detalle_2' : 'plan_detalle_3'));
-            const input = document.getElementById(inputId);
-            document.getElementById(`btnUSD_${index}`).classList.toggle('selected', currency === 'USD');
-            document.getElementById(`btnUDIS_${index}`).classList.toggle('selected', currency === 'UDIS');
-            datalist.innerHTML = '';
-            const filtered = ALL_PLANS.filter(plan => plan.toUpperCase().includes(currency));
-            filtered.forEach(plan => { const opt = document.createElement('option'); opt.value = plan; datalist.appendChild(opt); });
-            input.placeholder = `Escriba plan en ${currency}...`; input.value = ''; input.focus();
-        }
-        
-        window.editRecord = function(uuid) { /* Igual a V23 */ const r = dbData.find(item => String(item.uuid) === String(uuid)); if(!r) return; window.goToForm(false); document.getElementById('uuid').value = r.uuid; document.getElementById('editBanner').style.display = 'block'; document.getElementById('btnAction').textContent = "Actualizar Registro"; document.getElementById('formTitle').textContent = "Editando: " + r.nombre_completo; const setVal = (id, val) => { const el = document.getElementById(id); if(el) el.value = val || ""; }; setVal('nombre', r.nombre); setVal('paterno', r.paterno); setVal('materno', r.materno); setVal('fnac', r.f_nacimiento); setVal('celular', r.celular); setVal('email', r.email); setVal('referencia', r.referencia); setVal('curp', r.curp); setVal('rfc', r.rfc); setVal('rol_general', r.rol_general); setVal('tipo_seguro_1', r.tipo_seguro_1); setVal('poliza_1', r.poliza_1); setVal('emision_1', r.emision_1); setVal('plan_detalle_1', r.plan_detalle_1); setVal('tipo_seguro_2', r.tipo_seguro_2); setVal('poliza_2', r.poliza_2); setVal('emision_2', r.emision_2); setVal('plan_detalle_2', r.plan_detalle_2); setVal('tipo_seguro_3', r.tipo_seguro_3); setVal('poliza_3', r.poliza_3); setVal('emision_3', r.emision_3); setVal('seg3_aseguradora', r.aseguradora_3); setVal('plan_detalle_3', r.plan_detalle_3); setVal('femision', r.f_emision); setVal('folio', r.folio); setVal('fsolicitud', r.f_solicitud); const checkRadio = (name, val) => { let v = val; if(name.includes('tiene') && v==='SI') v='Si'; if(name.includes('tiene') && v==='NO') v='No'; const r = document.querySelector(`input[name="${name}"][value="${v}"]`); if(r) r.checked = true; }; const ins1 = r.aseguradora_1 || "No"; const isInsured = (ins1 !== "No") ? "Si" : "No"; checkRadio('es_asegurado_flag', isInsured); window.toggleInsuranceFlow(isInsured); if(ins1 !== "No") { checkRadio('aseguradora_1', ins1); window.toggleIns1Type(ins1); } const hasMulti = r.tiene_otros || "No"; checkRadio('tiene_otros', hasMulti); window.toggleMulti(hasMulti); if(hasMulti === 'Si') { const ins2 = r.aseguradora_2 || ""; if(ins2) { checkRadio('aseguradora_2', ins2); window.toggleIns2Type(ins2); } const hasThird = r.tiene_tercero || "No"; checkRadio('tiene_tercero', hasThird); window.toggleThird(hasThird); const ins3 = r.aseguradora_3 || ""; if(ins3 === 'SMNYL') document.getElementById('ins3_smnyl_sub').style.display = 'block'; } let sol = r.solicitud || "Ninguno"; const standardRadios = ["Ninguno", "AXA Vida", "SMNYL Vida", "AXA Gmm", "SMNYL Gmm"]; if (standardRadios.includes(sol)) { checkRadio('solicitud', sol); window.toggleTramite(sol); } else { checkRadio('solicitud', 'SMNYL Vida'); window.toggleTramite('SMNYL Vida'); document.getElementById('smnylProductoEspecifico').value = sol; } };
-
-        async function doSave(e) { e.preventDefault(); const getVal = id => { const el = document.getElementById(id); return el ? el.value : ""; }; const getRadio = name => { const el = document.querySelector(`input[name="${name}"]:checked`); return el ? el.value : ""; }; const seg3Val = getVal('seg3_aseguradora'); const tieneThird = getRadio('tiene_tercero'); if ((tieneThird === 'Si' || tieneThird === 'SI') && seg3Val) { const options = Array.from(document.getElementById('listAseguradoras').options).map(o => o.value); if (!options.includes(seg3Val)) { alert("⚠️ Error: La aseguradora del tercer seguro debe ser una de la lista."); document.getElementById('seg3_aseguradora').focus(); return; } } let sol = getRadio('solicitud'); const sub = getVal('smnylProductoEspecifico'); if (sol === 'SMNYL Vida' && sub) sol = sub; let tieneOtroStore = getRadio('tiene_otros'); if(tieneOtroStore==='SI') tieneOtroStore='Si'; if(tieneOtroStore==='NO') tieneOtroStore='No'; let tieneThirdStore = getRadio('tiene_tercero'); if(tieneThirdStore==='SI') tieneThirdStore='Si'; if(tieneThirdStore==='NO') tieneThirdStore='No'; let statusStore = getRadio('aseguradora_1'); const insuredFlag = getRadio('es_asegurado_flag'); if(insuredFlag === 'No') statusStore = 'No'; const payload = { uuid: getVal('uuid'), nombre: getVal('nombre'), paterno: getVal('paterno'), materno: getVal('materno'), f_nacimiento: getVal('fnac'), celular: getVal('celular'), email: getVal('email'), referencia: getVal('referencia'), curp: getVal('curp'), rfc: getVal('rfc'), rol_general: getVal('rol_general'), aseguradora_1: statusStore, tipo_seguro_1: getVal('tipo_seguro_1'), poliza_1: getVal('poliza_1'), emision_1: getVal('emision_1'), plan_detalle_1: getVal('plan_detalle_1'), tiene_otros: tieneOtroStore, aseguradora_2: getRadio('aseguradora_2'), tipo_seguro_2: getVal('tipo_seguro_2'), poliza_2: getVal('poliza_2'), emision_2: getVal('emision_2'), plan_detalle_2: getVal('plan_detalle_2'), tiene_tercero: tieneThirdStore, aseguradora_3: getVal('seg3_aseguradora'), tipo_seguro_3: getVal('tipo_seguro_3'), poliza_3: getVal('poliza_3'), emision_3: getVal('emision_3'), plan_detalle_3: getVal('plan_detalle_3'), solicitud: sol, folio: getVal('folio'), f_solicitud: getVal('fsolicitud'), f_emision: "" }; toggleLoader(true); try { const res = await fetch(API_URL, { method: 'POST', body: JSON.stringify({ action: 'save', user: session.user, token: session.token, data: payload }) }).then(r=>r.json()); if (res.status === 'success') { showToast(res.message); window.clearForm(); window.goBackToMenu(); loadDataInBackground(); } else showToast("Error: " + res.message); } catch(err) { showToast("Error conexión"); } finally { toggleLoader(false); } }
-        async function doLogin(e) { e.preventDefault(); toggleLoader(true); try { const res = await fetch(API_URL, { method: 'POST', body: JSON.stringify({ action: 'login', user: document.getElementById('u').value, pass: document.getElementById('p').value }) }).then(r=>r.json()); if(res.status==='success') { session=res; localStorage.setItem('session',JSON.stringify(session)); window.showView('view-menu'); loadDataInBackground(); } else showToast("Credenciales inválidas"); } catch(e) { showToast("Error conexión"); } finally { toggleLoader(false); } }
-        async function loadDataInBackground() { try { const r = await fetch(API_URL, { method: 'POST', body: JSON.stringify({ action: 'read', token: session.token }) }).then(j=>j.json()); if(r.status==='success') { dbData=r.data; window.applyFilters(); } } catch(e){} }
-        window.setFilter = function(type) { currentFilterType = type; document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active-filter')); document.getElementById(`btnFilter${type}`).classList.add('active-filter'); const title = document.getElementById('queryTitle'); if(type === 'TODOS') title.textContent = "d).- Todos (Base de Datos Global)"; else if(type === 'NO') title.textContent = "c).- Listado de Prospectos"; else if(type === 'AXA') title.textContent = "a).- Asegurados en AXA"; else if(type === 'SMNYL') title.textContent = "b).- Asegurados en SMNYL"; document.getElementById('searchInput').value = ''; window.applyFilters(); }
-        window.applyFilters = function() { if (!currentFilterType) return; const searchTerm = document.getElementById('searchInput').value.toLowerCase(); const tbody = document.querySelector('#dataTable tbody'); tbody.innerHTML = ''; let filtered = dbData.filter(i => { const match1 = i.aseguradora_1 === currentFilterType; const match2 = i.aseguradora_2 === currentFilterType; const match3 = i.aseguradora_3 === currentFilterType; if(currentFilterType === 'TODOS') return true; if(currentFilterType === 'NO') return (i.aseguradora_1 === 'No' || !i.aseguradora_1); return match1 || match2 || match3; }); if (searchTerm) filtered = filtered.filter(item => item.nombre_completo.toLowerCase().includes(searchTerm)); filtered.sort((a, b) => a.nombre_completo.localeCompare(b.nombre_completo)); if (filtered.length === 0) { tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;">Sin coincidencias</td></tr>'; return; } filtered.forEach((r, index) => { let info = (r.aseguradora_1 === 'No' || !r.aseguradora_1) ? 'Prospecto' : `${r.tipo_seguro_1||'-'} | ${r.poliza_1||'-'}`; if(r.aseguradora_2) info += ` + ${r.aseguradora_2}`; if(r.aseguradora_3) info += ` + ${r.aseguradora_3}`; tbody.innerHTML += `<tr><td><strong>${index + 1}</strong></td><td>${r.nombre_completo}</td><td>${r.celular}</td><td>${info}</td><td><button class="btn-view" onclick="viewRecord('${r.uuid}')">👁️</button><button class="btn-edit" onclick="editRecord('${r.uuid}')">✏️</button><button class="btn-delete" onclick="confirmDelete('${r.uuid}')">🗑️</button></td></tr>`; }); }
-        window.confirmDelete = function(uuid) { recordToDelete = uuid; document.getElementById('deleteModal').classList.remove('hidden'); document.getElementById('deleteModal').style.display='flex'; }
-        window.closeDeleteModal = function() { document.getElementById('deleteModal').classList.add('hidden'); document.getElementById('deleteModal').style.display='none'; recordToDelete = null; }
-        window.executeDelete = async function() { if(!recordToDelete) return; toggleLoader(true); try { const res = await fetch(API_URL, { method: 'POST', body: JSON.stringify({ action: 'delete', token: session.token, uuid: recordToDelete }) }).then(r=>r.json()); if(res.status==='success') { showToast("Eliminado"); loadDataInBackground(); closeDeleteModal(); } else { showToast("Error: " + res.message); } } catch(e) { showToast("Error conexión"); } finally { toggleLoader(false); } }
-        function renderCharts() { if(!dbData.length) return; let axa = 0, smnyl = 0; let types = { 'Vida':0, 'Gmm':0, 'Autos':0, 'Daños':0, 'Otros':0 }; dbData.forEach(r => { if(r.aseguradora_1 === 'AXA') axa++; if(r.aseguradora_1 === 'SMNYL') smnyl++; if(r.tipo_seguro_1 && types[r.tipo_seguro_1] !== undefined) types[r.tipo_seguro_1]++; if(r.aseguradora_2 === 'AXA') axa++; if(r.aseguradora_2 === 'SMNYL') smnyl++; if(r.tipo_seguro_2 && types[r.tipo_seguro_2] !== undefined) types[r.tipo_seguro_2]++; if(r.aseguradora_3 === 'AXA') axa++; if(r.aseguradora_3 === 'SMNYL') smnyl++; if(r.tipo_seguro_3 && types[r.tipo_seguro_3] !== undefined) types[r.tipo_seguro_3]++; }); if(charts.aseg) charts.aseg.destroy(); charts.aseg = new Chart(document.getElementById('chartAseguradoras'), { type: 'pie', data: { labels: ['AXA', 'SMNYL'], datasets: [{ data: [axa, smnyl], backgroundColor: ['#00008f', '#f37021'] }] } }); if(charts.tipo) charts.tipo.destroy(); charts.tipo = new Chart(document.getElementById('chartTipos'), { type: 'pie', data: { labels: Object.keys(types), datasets: [{ data: Object.values(types), backgroundColor: ['#4caf50','#2196f3','#ffc107','#9c27b0','#607d8b'] }] } }); }
-        function setupInputs() { document.querySelectorAll('.text-only').forEach(i=>i.addEventListener('input',e=>e.target.value=e.target.value.replace(/[^a-zA-ZñÑáéíóúÁÉÍÓÚ\s]/g,''))); document.querySelectorAll('.uppercase-input').forEach(i=>i.addEventListener('input',e=>e.target.value=e.target.value.toUpperCase())); document.getElementById('celular').addEventListener('input',e=>{ let v=e.target.value.replace(/\D/g,'').slice(0,10); if(v.length>8) e.target.value=`${v.slice(0,3)}-${v.slice(3,6)}-${v.slice(6,8)}-${v.slice(8)}`; else if(v.length>6) e.target.value=`${v.slice(0,3)}-${v.slice(3,6)}-${v.slice(6)}`; else if(v.length>3) e.target.value=`${v.slice(0,3)}-${v.slice(3)}`; else e.target.value=v; }); document.querySelectorAll('.date-input').forEach(i=>i.addEventListener('input',e=>{ let v = e.target.value; if (v.match(/^\d{2}$/) && e.inputType !== "deleteContentBackward") e.target.value = v + '-'; else if (v.match(/^\d{2}-[a-zA-Z]{3}$/) && e.inputType !== "deleteContentBackward") { const parts = v.split('-'); const m = parts[1]; const capM = m.charAt(0).toUpperCase() + m.slice(1); e.target.value = `${parts[0]}-${capM}-`; } if(i.id === 'fnac') { const prev = document.getElementById('previewAge'); if(v.match(/^\d{2}-[a-zA-Z]{3}-\d{4}$/)) { const p = v.split('-'); const mIdx = MONTHS_MAP.indexOf(p[1]); if(mIdx > -1) { const age = Math.abs(new Date(Date.now()-new Date(p[2],mIdx,p[0]).getTime()).getUTCFullYear()-1970); prev.textContent = `Edad: ${age} años`; prev.style.color = 'green'; } else prev.textContent = "Mes incorrecto"; } else prev.textContent = ""; } })); }
-        function toggleLoader(s) { document.getElementById('loader').style.display = s ? 'flex' : 'none'; }
-        function showToast(m) { const t=document.getElementById('toast'); t.textContent=m; t.style.display='block'; setTimeout(()=>t.style.display='none',3000); }
+            // Configurar iconos de Misión, Visión y Valor
+            document.querySelectorAll('.mv-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const targetPage = this.getAttribute('data-page');
+                    showPage(targetPage);
+                });
+            });
+            
+            // Inicializar con la página principal
+            showPage('main');
+        });
     </script>
 </body>
 </html>
