@@ -12,7 +12,7 @@
     
     <link rel="canonical" href="https://jhseguros.mx/" />
     <meta name="robots" content="index, follow">
-
+    
     <meta property="og:title" content="JH ASESORIAS - Rafael Jiménez Sánchez">
     <meta property="og:description" content="Protección Personal, Planes de Retiro, Gastos Médicos y Autos. Asesoría experta.">
     <meta property="og:type" content="website">
@@ -47,18 +47,20 @@
       }
     }
     </script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TU-ID-AQUI"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TU-ID-AQUI"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
-      gtag('config', 'G-TU-ID-AQUI');
+      
+      gtag('config', 'G-Z3GLCDV4F8');
     </script>
+
     <style>
         /* =========================================
            ESTILOS MAESTROS (Optimizados y ligeros)
-        ========================================== */
+           ========================================= */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Open Sans', sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; scroll-behavior: smooth; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
@@ -67,63 +69,64 @@
         .page { display: none; animation: fadeIn 0.4s ease-in; }
         .page.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-
+        
         /* HEADER */
         header { background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; padding: 2rem 0; text-align: center; }
         .profile-container { display: flex; flex-direction: column; align-items: center; margin-bottom: 1.5rem; }
         
-        .profile-image { 
-            width: 180px; height: 180px; border-radius: 50%; background-color: #fff; 
-            display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; 
-            border: 4px solid rgba(255, 255, 255, 0.3); overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        .profile-image {
+            width: 180px; height: 180px; border-radius: 50%; background-color: #fff;
+            display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;
+            border: 4px solid rgba(255, 255, 255, 0.3); overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
-        .profile-image img { width: 100%; height: 100%; object-fit: cover; } /* Se ajusta al círculo */
+        .profile-image img { width: 100%; height: 100%; object-fit: cover; }
         
         .name { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.2; }
         .title { font-size: 1.4rem; opacity: 0.9; margin-bottom: 0.3rem; }
         .tagline { font-size: 1.7rem; margin: 1.5rem 0; font-weight: 500; max-width: 800px; margin-left: auto; margin-right: auto; }
-
+        
         /* SECCIÓN FILOSOFÍA */
         .mission-vision { padding: 2rem 0; background-color: white; text-align: center; }
         .mv-container { display: flex; justify-content: center; gap: 3rem; margin-top: 1.5rem; flex-wrap: wrap; }
         .mv-item { display: flex; flex-direction: column; align-items: center; width: 180px; cursor: pointer; transition: transform 0.3s; }
         .mv-item:hover { transform: translateY(-5px); }
         
-        .mv-icon { 
-            width: 100px; height: 100px; border-radius: 50%; background-color: #f0f0f5; 
-            display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; 
-            border: 3px solid #2a5298; font-size: 3rem; 
+        .mv-icon {
+            width: 100px; height: 100px; border-radius: 50%; background-color: #f0f0f5;
+            display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;
+            border: 3px solid #2a5298; font-size: 3rem;
         }
         .mv-name { font-family: 'Montserrat', sans-serif; font-size: 1.2rem; font-weight: 600; color: #2a5298; }
-
+        
         /* SERVICIOS */
         .services { padding: 3rem 0; background-color: white; }
         .section-title { text-align: center; font-family: 'Montserrat', sans-serif; font-size: 1.8rem; margin-bottom: 2rem; color: #2a5298; }
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
-        .service-card { 
-            background: white; border-radius: 8px; padding: 1.5rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
-            transition: transform 0.3s, box-shadow 0.3s; text-align: center; border-top: 4px solid #2a5298; 
-            display: flex; flex-direction: column; height: 100%; 
+        .service-card {
+            background: white; border-radius: 8px; padding: 1.5rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s; text-align: center; border-top: 4px solid #2a5298;
+            display: flex; flex-direction: column; height: 100%;
         }
         .service-card:hover { transform: translateY(-5px); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12); }
         .service-icon { font-size: 2.5rem; margin-bottom: 1rem; color: #2a5298; }
         .service-title { font-family: 'Montserrat', sans-serif; font-size: 1.2rem; margin-bottom: 0.8rem; color: #2a5298; }
         .service-description { color: #666; font-size: 0.95rem; flex-grow: 1; margin-bottom: 1rem; }
-        .service-link { 
-            display: inline-block; color: #2a5298; text-decoration: none; font-weight: 600; font-size: 0.9rem; 
-            margin-top: auto; padding: 0.5rem 1rem; border: 1px solid #2a5298; border-radius: 4px; transition: all 0.3s; 
+        .service-link {
+            display: inline-block; color: #2a5298; text-decoration: none; font-weight: 600; font-size: 0.9rem;
+            margin-top: auto; padding: 0.5rem 1rem; border: 1px solid #2a5298; border-radius: 4px; transition: all 0.3s;
         }
         .service-link:hover { background-color: #2a5298; color: white; }
-
+        
         /* CTA & DETALLES */
         .cta-section { background: linear-gradient(135deg, #2a5298, #1e3c72); color: white; padding: 3rem 0; text-align: center; }
         .cta-title { font-family: 'Montserrat', sans-serif; font-size: 1.8rem; margin-bottom: 1.5rem; }
-        .cta-button { 
-            display: inline-block; background-color: #ff6b6b; color: white; padding: 0.8rem 2rem; border-radius: 30px; 
-            text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: background-color 0.3s, transform 0.3s; margin: 1rem 0; 
+        .cta-button {
+            display: inline-block; background-color: #ff6b6b; color: white; padding: 0.8rem 2rem; border-radius: 30px;
+            text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: background-color 0.3s, transform 0.3s; margin: 1rem 0;
         }
         .cta-button:hover { background-color: #ff5252; transform: translateY(-3px); }
-
+        
         .detail-section { padding: 3rem 0; background-color: #f0f0f5; min-height: 60vh; }
         .detail-section .section-title { margin-bottom: 3rem; color: #1e3c72; border-bottom: 2px solid #2a5298; padding-bottom: 0.5rem; display: inline-block; }
         .detail-content { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); margin-bottom: 2rem; }
@@ -132,7 +135,7 @@
         .detail-content strong { color: #2a5298; }
         .back-to-top { display: inline-block; background-color: #2a5298; color: white; padding: 0.7rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 600; transition: background-color 0.3s; margin-top: 1rem; }
         .back-to-top:hover { background-color: #1e3c72; }
-
+        
         /* FOOTER */
         footer { background-color: #1a1a2e; color: white; padding: 3rem 0 5rem; }
         .footer-content { display: flex; flex-direction: column; align-items: center; text-align: center; }
@@ -142,14 +145,14 @@
         .contact-info a:hover { color: #ff6b6b; }
         
         .social-links { display: flex; gap: 1rem; margin: 1.5rem 0; }
-        .social-icon { 
-            display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; 
-            background-color: rgba(255, 255, 255, 0.1); border-radius: 50%; color: white; text-decoration: none; 
+        .social-icon {
+            display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px;
+            background-color: rgba(255, 255, 255, 0.1); border-radius: 50%; color: white; text-decoration: none;
             transition: background-color 0.3s; font-size: 1.2rem;
         }
         .social-icon:hover { background-color: #ff6b6b; }
         .copyright { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.1); width: 100%; font-size: 0.9rem; opacity: 0.7; }
-
+        
         /* BOTÓN FLOTANTE WHATSAPP */
         .whatsapp-float {
             position: fixed; width: 60px; height: 60px; bottom: 20px; right: 20px;
@@ -159,7 +162,7 @@
             text-decoration: none; transition: all 0.3s;
         }
         .whatsapp-float:hover { background-color: #20ba5a; transform: scale(1.1); }
-
+        
         /* RESPONSIVE */
         @media (max-width: 768px) {
             .name { font-size: 1.8rem; }
@@ -178,7 +181,7 @@
             <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.081-.1.115-.173.171-.292.059-.115.03-.217-.015-.307-.045-.1-.445-1.074-.61-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
         </svg>
     </a>
-
+    
     <div id="main-page" class="page active">
         <header id="top">
             <div class="container">
@@ -193,7 +196,7 @@
                 <p class="tagline">Asesorías simples que entienden tus necesidades</p>
             </div>
         </header>
-
+        
         <section class="mission-vision">
             <div class="container">
                 <h2 class="section-title">Nuestra Filosofía</h2>
@@ -213,7 +216,7 @@
                 </div>
             </div>
         </section>
-
+        
         <section class="services">
             <div class="container">
                 <h2 class="section-title">MENÚ DE PRODUCTOS</h2>
@@ -221,7 +224,7 @@
                     <div class="service-card">
                         <div class="service-icon">❤️</div>
                         <h3 class="service-title">Seguros de Vida</h3>
-                         <p class="service-description">Protección financiera para tu familia en caso de tu fallecimiento o de una incapacidad permanente. Tranquilidad para los que más quieres.</p>
+                        <p class="service-description">Protección financiera para tu familia en caso de tu fallecimiento o de una incapacidad permanente. Tranquilidad para los que más quieres.</p>
                         <a href="#vida" class="service-link">Ver detalles</a>
                     </div>
                     
@@ -270,7 +273,7 @@
                 <a href="https://calendly.com/jhasesorias/seguritos-con-rafa" target="_blank" class="cta-button">Agenda tu asesoría</a>
             </div>
         </section>
-
+        
         <footer id="contacto">
             <div class="container">
                 <div class="footer-content">
@@ -294,7 +297,7 @@
             </div>
         </footer>
     </div>
-
+    
     <div id="vision-page" class="page">
         <header><div class="container"><div class="profile-container"><h1 class="name">Visión</h1><p class="tagline">Nuestro horizonte y aspiración</p></div></div></header>
         <section class="detail-section"><div class="container"><div class="detail-content">
@@ -302,7 +305,7 @@
             <a href="#main" class="back-to-top">Volver al Menú Principal</a>
         </div></div></section>
     </div>
-
+    
     <div id="mision-page" class="page">
         <header><div class="container"><div class="profile-container"><h1 class="name">Misión</h1><p class="tagline">Nuestro propósito y compromiso</p></div></div></header>
         <section class="detail-section"><div class="container"><div class="detail-content">
@@ -310,7 +313,7 @@
             <a href="#main" class="back-to-top">Volver al Menú Principal</a>
         </div></div></section>
     </div>
-
+    
     <div id="valor-page" class="page">
         <header><div class="container"><div class="profile-container"><h1 class="name">Valor</h1><p class="tagline">Nuestra propuesta de valor</p></div></div></header>
         <section class="detail-section"><div class="container"><div class="detail-content">
@@ -318,7 +321,7 @@
             <a href="#main" class="back-to-top">Volver al Menú Principal</a>
         </div></div></section>
     </div>
-
+    
     <div id="vida-page" class="page">
         <header><div class="container"><div class="profile-container"><h1 class="name">Seguros de Vida</h1><p class="tagline">Protección financiera para tu familia</p></div></div></header>
         <section class="detail-section"><div class="container"><div class="detail-content">
@@ -329,9 +332,9 @@
             <a href="#main" class="back-to-top">Volver al Menú Principal</a>
         </div></div></section>
     </div>
-
+    
     <div id="mujer-page" class="page">
-        <header><div class="container"><div class="profile-container"><h1 class="name">Seguro para la Mujer - Vida Mujer</h1><p class="tagline">Protección diseñada especialmente para mujeres</p></div></div></header>
+        <header><div class="container"><div class="profile-container"><h1 class="name">Seguro para la Mujer (Vida Mujer)</h1><p class="tagline">Protección diseñada especialmente para mujeres</p></div></div></header>
         <section class="detail-section"><div class="container"><div class="detail-content">
             <p>Es un seguro de vida diseñado especialmente para mujeres, brindando protección financiera para tu bienestar y el de tu familia. Te ofrece respaldo en caso de fallecimiento, padecimientos y/o cáncer femenino, complicaciones del embarazo y más. Además, te permite generar ahorros periódicos con rendimientos atractivos en dólares o UDIS.</p>
             <p><strong>Beneficios Iniciales:</strong></p>
@@ -355,7 +358,7 @@
             <a href="#main" class="back-to-top">Volver al Menú Principal</a>
         </div></div></section>
     </div>
-
+    
     <div id="ppr-page" class="page">
         <header><div class="container"><div class="profile-container"><h1 class="name">Seguro con Ahorro y/o Plan Personal para el Retiro (PPR)</h1><p class="tagline">Planifica tu futuro con seguridad</p></div></div></header>
         <section class="detail-section"><div class="container"><div class="detail-content">
@@ -371,7 +374,7 @@
             <a href="#main" class="back-to-top">Volver al Menú Principal</a>
         </div></div></section>
     </div>
-
+    
     <div id="educacion-page" class="page">
         <header><div class="container"><div class="profile-container"><h1 class="name">Seguro para Educación - Segubeca 18</h1><p class="tagline">Garantiza la educación de tus hijos</p></div></div></header>
         <section class="detail-section"><div class="container"><div class="detail-content">
@@ -389,7 +392,7 @@
             <a href="#main" class="back-to-top">Volver al Menú Principal</a>
         </div></div></section>
     </div>
-
+    
     <div id="gmm-page" class="page">
         <header><div class="container"><div class="profile-container"><h1 class="name">Seguro de Gastos Médicos Mayores Individual (SGMMI)</h1><p class="tagline">Protección ante gastos médicos elevados</p></div></div></header>
         <section class="detail-section"><div class="container"><div class="detail-content">
@@ -412,7 +415,7 @@
             <a href="#main" class="back-to-top">Volver al Menú Principal</a>
         </div></div></section>
     </div>
-
+    
     <script>
         // Lógica de Navegación Avanzada (Soporta botón "Atrás")
         document.addEventListener('DOMContentLoaded', function() {
@@ -433,7 +436,7 @@
                     document.getElementById('main-page').classList.add('active');
                 }
             }
-
+            
             // Escuchar cambios en la URL (Botón atrás/adelante)
             window.addEventListener('hashchange', handleHashChange);
             
