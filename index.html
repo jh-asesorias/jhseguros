@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>JH ASESORIAS - Rafael Jiménez Sánchez - Agente de Seguros | Asesorías que entienden tus necesidades</title>
+    <title>JH ASESORIAS - Rafael Jiménez Sánchez - Agente de Seguros</title>
     
     <meta name="description" content="Rafael Jiménez Sánchez (Cédula CNSF H382035). Especialista en Plan Personal de Retiro (PPR), Gastos Médicos Mayores, Seguros de Vida y Auto. Trabajamos con Seguros Monterrey, AXA y las mejores aseguradoras.">
     <meta name="keywords" content="Plan Personal de Retiro, Planes Personales para el Retiro, Seguro de Gastos Medicos, Gastos Medicos Mayores, Seguros de Auto, Seguros de Vida, Proteccion personal, Seguros Monterrey, Axa Seguros, Rafael Jiménez, JH Asesorias, Tamaulipas">
@@ -14,11 +14,12 @@
     <meta name="robots" content="index, follow">
 
     <meta property="og:title" content="JH ASESORIAS - Rafael Jiménez Sánchez">
-    <meta property="og:description" content="Protección Personal, Planes de Retiro, Gastos Médicos y Autos. Asesoría experta con Seguros Monterrey, AXA y más.">
+    <meta property="og:description" content="Protección Personal, Planes de Retiro, Gastos Médicos y Autos. Asesoría experta.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jhseguros.mx/">
+    <meta property="og:image" content="https://jhseguros.mx/rafael-perfil.jpg">
     
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
+    <link rel="icon" href="rafael-perfil.jpg" type="image/jpeg">
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     
@@ -38,7 +39,6 @@
         "addressCountry": "MX"
       },
       "description": "Agente de Seguros certificado en Planes de Retiro, Gastos Médicos, Autos y Vida. Aliado de Seguros Monterrey y AXA.",
-      "keywords": "Seguros Monterrey, Axa Seguros, Plan de Retiro, Gastos Medicos, Seguros de Auto",
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
@@ -50,13 +50,13 @@
 
     <style>
         /* =========================================
-           ESTILOS (CSS)
+           ESTILOS MAESTROS (Optimizados y ligeros)
         ========================================== */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Open Sans', sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; scroll-behavior: smooth; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         
-        /* SISTEMA DE NAVEGACIÓN (Páginas) */
+        /* SISTEMA DE NAVEGACIÓN (SPA) */
         .page { display: none; animation: fadeIn 0.4s ease-in; }
         .page.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
@@ -69,15 +69,14 @@
             width: 180px; height: 180px; border-radius: 50%; background-color: #fff; 
             display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; 
             border: 4px solid rgba(255, 255, 255, 0.3); overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            font-size: 3rem; color: #ccc; /* Por si no carga la imagen */
         }
-        .profile-image img { width: 100%; height: 100%; object-fit: cover; }
+        .profile-image img { width: 100%; height: 100%; object-fit: cover; } /* Se ajusta al círculo */
         
         .name { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.2; }
         .title { font-size: 1.4rem; opacity: 0.9; margin-bottom: 0.3rem; }
         .tagline { font-size: 1.7rem; margin: 1.5rem 0; font-weight: 500; max-width: 800px; margin-left: auto; margin-right: auto; }
 
-        /* MISIÓN / VISIÓN (Blindaje de Iconos con Emojis/CSS) */
+        /* SECCIÓN FILOSOFÍA */
         .mission-vision { padding: 2rem 0; background-color: white; text-align: center; }
         .mv-container { display: flex; justify-content: center; gap: 3rem; margin-top: 1.5rem; flex-wrap: wrap; }
         .mv-item { display: flex; flex-direction: column; align-items: center; width: 180px; cursor: pointer; transition: transform 0.3s; }
@@ -86,7 +85,7 @@
         .mv-icon { 
             width: 100px; height: 100px; border-radius: 50%; background-color: #f0f0f5; 
             display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; 
-            border: 3px solid #2a5298; font-size: 3rem; /* Tamaño del emoji */
+            border: 3px solid #2a5298; font-size: 3rem; 
         }
         .mv-name { font-family: 'Montserrat', sans-serif; font-size: 1.2rem; font-weight: 600; color: #2a5298; }
 
@@ -128,7 +127,7 @@
         .back-to-top:hover { background-color: #1e3c72; }
 
         /* FOOTER */
-        footer { background-color: #1a1a2e; color: white; padding: 3rem 0 5rem; /* Padding extra abajo para el botón flotante */ }
+        footer { background-color: #1a1a2e; color: white; padding: 3rem 0 5rem; }
         .footer-content { display: flex; flex-direction: column; align-items: center; text-align: center; }
         .brand { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; margin-bottom: 1rem; color: #ff6b6b; }
         .contact-info { margin: 1.5rem 0; }
@@ -136,7 +135,6 @@
         .contact-info a:hover { color: #ff6b6b; }
         
         .social-links { display: flex; gap: 1rem; margin: 1.5rem 0; }
-        /* Iconos sociales con Emoji/Texto para evitar imágenes rotas */
         .social-icon { 
             display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; 
             background-color: rgba(255, 255, 255, 0.1); border-radius: 50%; color: white; text-decoration: none; 
@@ -145,21 +143,13 @@
         .social-icon:hover { background-color: #ff6b6b; }
         .copyright { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.1); width: 100%; font-size: 0.9rem; opacity: 0.7; }
 
-        /* BOTÓN FLOTANTE DE WHATSAPP */
+        /* BOTÓN FLOTANTE WHATSAPP */
         .whatsapp-float {
-            position: fixed;
-            width: 60px; height: 60px;
-            bottom: 20px; right: 20px;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 35px;
-            box-shadow: 2px 2px 3px #999;
-            z-index: 1000;
+            position: fixed; width: 60px; height: 60px; bottom: 20px; right: 20px;
+            background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center;
+            font-size: 35px; box-shadow: 2px 2px 3px #999; z-index: 1000;
             display: flex; align-items: center; justify-content: center;
-            text-decoration: none;
-            transition: all 0.3s;
+            text-decoration: none; transition: all 0.3s;
         }
         .whatsapp-float:hover { background-color: #20ba5a; transform: scale(1.1); }
 
@@ -187,7 +177,7 @@
             <div class="container">
                 <div class="profile-container">
                     <div class="profile-image">
-                        <img src="rafael-perfil.jpg" alt="Rafael Jiménez Sánchez - Agente de Seguros" onerror="this.style.display='none'; this.parentNode.innerHTML='🛡️';">
+                        <img src="rafael-perfil.jpg" alt="Logo JH Asesorías">
                     </div>
                     
                     <h1 class="name">JH ASESORIAS - RAFAEL JIMÉNEZ SÁNCHEZ</h1>
