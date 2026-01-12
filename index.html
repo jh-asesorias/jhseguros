@@ -7,7 +7,8 @@
     <title>JH ASESORÍAS - Rafael Jiménez Sánchez - Agente de Seguros</title>
     
     <meta name="description" content="Rafael Jiménez Sánchez (Cédula CNSF H382035). Especialista en Plan Personal de Retiro (PPR), Gastos Médicos Mayores, Seguros de Vida y Auto. Trabajamos con Seguros Monterrey, AXA y las mejores aseguradoras.">
-<meta name="keywords" content="PPR, Planes Personales para el Retiro, Planes Personales del Retiro, Planes para la jubilacion, Planes para la vejez, Proteccion de Patrimonio, Seguros Monterrey, Axa Seguros, Rafael Jiménez, JH Asesorias, Tamaulipas">    <meta name="author" content="Rafael Jiménez Sánchez">
+    <meta name="keywords" content="PPR, Planes Personales para el Retiro, Planes Personales del Retiro, Planes para la jubilacion, Planes para la vejez, Proteccion de Patrimonio, Vida Mujer, Seguro de Cancer, Seguros Monterrey, Axa Seguros, Rafael Jiménez, JH Asesorias, Tamaulipas">
+    <meta name="author" content="Rafael Jiménez Sánchez">
     
     <link rel="canonical" href="https://jhseguros.mx/" />
     <meta name="robots" content="index, follow">
@@ -52,7 +53,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      
       gtag('config', 'G-Z3GLCDV4F8');
     </script>
 
@@ -108,7 +108,11 @@
             display: flex; flex-direction: column; height: 100%;
         }
         .service-card:hover { transform: translateY(-5px); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12); }
-        .service-icon { font-size: 2.5rem; margin-bottom: 1rem; color: #2a5298; }
+        
+        /* ICONOS SVG PROFESIONALES */
+        .service-icon { margin-bottom: 1rem; color: #2a5298; display: flex; justify-content: center; }
+        .service-icon svg { width: 60px; height: 60px; fill: currentColor; }
+
         .service-title { font-family: 'Montserrat', sans-serif; font-size: 1.2rem; margin-bottom: 0.8rem; color: #2a5298; }
         .service-description { color: #666; font-size: 0.95rem; flex-grow: 1; margin-bottom: 1rem; }
         .service-link {
@@ -132,8 +136,11 @@
         .detail-content p, .detail-content ul { margin-bottom: 1rem; color: #444; }
         .detail-content ul { margin-left: 20px; list-style-type: disc; }
         .detail-content strong { color: #2a5298; }
-        .back-to-top { display: inline-block; background-color: #2a5298; color: white;
-padding: 0.5rem 1.2rem; font-size: 0.9rem; border-radius: 20px; text-decoration: none; font-weight: 600; transition: background-color 0.3s; margin-top: 1rem; }
+        
+        /* BOTÓN MENÚ MÁS CHICO */
+        .back-to-top { display: inline-block; background-color: #2a5298; color: white; 
+        padding: 0.5rem 1.2rem; font-size: 0.9rem; border-radius: 20px; text-decoration: none; font-weight: 600; transition: background-color 0.3s; margin-top: 1rem; }
+        .back-to-top:hover { background-color: #1e3c72; }
         
         /* FOOTER */
         footer { background-color: #1a1a2e; color: white; padding: 3rem 0 5rem; }
@@ -194,9 +201,9 @@ padding: 0.5rem 1.2rem; font-size: 0.9rem; border-radius: 20px; text-decoration:
                 </div>
                 <p class="tagline">Asesorías simples que entienden tus necesidades</p>
                 <p style="font-size: 0.9rem; margin-top: 15px; opacity: 0.9;">
-    Respaldado por la solidez de: <br>
-    <strong>Seguros Monterrey New York Life</strong> (Clave de Agente Autorizado SMNYL: 111958)
-</p>
+                    Respaldado por la solidez de: <br>
+                    <strong>Seguros Monterrey New York Life</strong> (Clave de Agente Autorizado SMNYL: 111958)
+                </p>
             </div>
         </header>
         
@@ -224,43 +231,56 @@ padding: 0.5rem 1.2rem; font-size: 0.9rem; border-radius: 20px; text-decoration:
             <div class="container">
                 <h2 class="section-title">MENÚ DE PRODUCTOS</h2>
                 <div class="services-grid">
+                    
                     <div class="service-card">
-                        <div class="service-icon">❤️</div>
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        </div>
                         <h3 class="service-title">Seguros de Vida</h3>
                         <p class="service-description">Protección financiera para tu familia en caso de tu fallecimiento o de una incapacidad permanente. Tranquilidad para los que más quieres.</p>
                         <a href="#vida" class="service-link">Ver detalles</a>
                     </div>
                     
                     <div class="service-card">
-                        <div class="service-icon">👩</div>
-                        <h3 class="service-title">Seguro para la Mujer (Vida Mujer)</h3>
-                        <p class="service-description">Coberturas diseñadas específicamente para las necesidades de la mujer moderna. Protección integral en todas las etapas de la vida.</p>
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+                        </div>
+                        <h3 class="service-title">Vida Mujer: Ahorro, Protección vs Cáncer y Maternidad</h3>
+                        <p class="service-description">El seguro que te devuelve hasta el 115% de tu ahorro. Protección especializada contra Cáncer Femenino, complicaciones del embarazo y enfermedades del recién nacido.</p>
                         <a href="#mujer" class="service-link">Ver detalles</a>
                     </div>
                     
                     <div class="service-card">
-<div class="service-icon">💰</div>
-<h3 class="service-title">Planes Personales para el Retiro (PPR) y/o Jubilación</h3>
-<p class="service-description">Garantiza tu calidad de vida en la vejez y logra la máxima protección de patrimonio. Planes para la jubilación deducibles de impuestos con estrategias blindadas.</p>
-<a href="#ppr" class="service-link">Ver detalles</a>
-</div>
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
+                        </div>
+                        <h3 class="service-title">Planes Personales para el Retiro (PPR) y Jubilación</h3>
+                        <p class="service-description">Garantiza tu calidad de vida en la vejez y logra la máxima protección de patrimonio. Planes para la jubilación deducibles de impuestos con estrategias blindadas.</p>
+                        <a href="#ppr" class="service-link">Ver detalles</a>
+                    </div>
                     
                     <div class="service-card">
-                        <div class="service-icon">🎓</div>
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+                        </div>
                         <h3 class="service-title">Seguro para Educación</h3>
                         <p class="service-description">Garantiza la educación de tus hijos sin importar lo que pase en tu futuro. Inversión segura para su desarrollo profesional.</p>
                         <a href="#educacion" class="service-link">Ver detalles</a>
                     </div>
                     
                     <div class="service-card">
-                        <div class="service-icon">🏥</div>
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z"/></svg>
+                        </div>
                         <h3 class="service-title">Gastos Médicos Mayores</h3>
                         <p class="service-description">Protección ante gastos médicos elevados por enfermedades o accidentes. Cobertura amplia para tu salud y la de tu familia.</p>
                         <a href="#gmm" class="service-link">Ver detalles</a>
                     </div>
                     
                     <div class="service-card">
-                        <div class="service-icon">✅</div>
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                        </div>
                         <h3 class="service-title">Validador Agentes de Seguros</h3>
                         <p class="service-description">Verifica mi cédula (H382035). Esta es la autorización federal oficial como Agente de Seguros ante la Comisión Nacional de Seguros y Fianzas (CNSF).</p>
                         <a href="https://agentesajustadores.cnsf.gob.mx/Agentes" target="_blank" class="service-link">Validar Cédula</a>
@@ -330,53 +350,43 @@ padding: 0.5rem 1.2rem; font-size: 0.9rem; border-radius: 20px; text-decoration:
         <section class="detail-section"><div class="container"><div class="detail-content">
             <p>Planes que pueden <strong>retornar tu inversión</strong>, además de brindarte una fuerte protección económica. Te permiten generar ahorro durante el plazo contratado, con rendimientos garantizados del 1% al 2%, dependiendo de la moneda o unidad que elijas de contratación.</p>
             <p><strong>Protección por Invalidez Total y Permanente:</strong> Si por enfermedad o accidente sufres una invalidez total y permanente que te impide trabajar y seguir siendo el sustento de la familia, la compañía te pagará en vida la suma asegurada contratada por ITyP. Además, la compañía absorberá los pagos restantes del seguro, y continuarás protegido durante hasta los 60, 65 años de por vida dependiendo del plan contratado.</p>
-            <p><strong>Protección por Fallecimiento (Vitalicia):</strong> Podemos configurar un plan con distintos plazos de pago, de manera que, una vez concluido ese periodo, quedes asegurado de por vida. Estarías cubierto por invalidez total y permanente hasta los 65 años y por fallecimiento durante toda tu vida.</p>
+            <p><strong>Protección por Fallecimiento (Vitalicia):</strong> Podemos configurar un plan con distintos plazos de pago, de manera que, una vez concluido ese periodo, quedes asegurado de por vida. Estarías cubierto por invalidez total y permanente hasta los 60 o 65 años y por fallecimiento durante toda tu vida.</p>
             <p><strong>Doble Protección:</strong> Si por una Invalidez Total y Permanente la Aseguradora ya hubiese pagado una suma asegurada y posteriormente a ello llegaras a fallecer dentro del plazo contratado, la compañía volverá a pagar la suma asegurada a los beneficiarios que hayas designado.</p>
             <a href="#main" class="back-to-top">Menú</a>
         </div></div></section>
     </div>
     
     <div id="mujer-page" class="page">
-        <header><div class="container"><div class="profile-container"><h1 class="name">Seguro para la Mujer (Vida Mujer)</h1><p class="tagline">Protección diseñada especialmente para mujeres</p></div></div></header>
+        <header><div class="container"><div class="profile-container"><h1 class="name">Vida Mujer: Blindaje Total</h1><p class="tagline">Ahorro, Cáncer Femenino y Maternidad</p></div></div></header>
         <section class="detail-section"><div class="container"><div class="detail-content">
-            <p>Es un seguro de vida diseñado especialmente para mujeres, brindando protección financiera para tu bienestar y el de tu familia. Te ofrece respaldo en caso de fallecimiento, padecimientos y/o cáncer femenino, complicaciones del embarazo y más. Además, te permite generar ahorros periódicos con rendimientos atractivos en dólares o UDIS.</p>
-            <p><strong>Beneficios Iniciales:</strong></p>
+            <p><strong>Vida Mujer</strong> es el único plan en el mercado que te acompaña y te premia. Funciona como un sistema de <strong>Ahorro Garantizado</strong> donde recibes dinero en vida (hasta el 115% de la suma asegurada) mientras estás blindada contra los riesgos estadísticamente más altos para la mujer en México.</p>
+            
+            <p><strong>Coberturas Exclusivas (Seguros Monterrey):</strong></p>
             <ul>
-                <li>Protección por fallecimiento.</li>
-                <li>Protección por cáncer femenino.</li>
-                <li>Ahorro garantizado.</li>
-                <li>Anticipo de dotes por matrimonio, nacimiento o adopción de un hijo antes del 5 año póliza.</li>
-                <li>Contratación y cobertura en dólares o UDIS.</li>
-                <li>Asistencia telefónica médica en EE.UU.</li>
-                <li>Coberturas hasta los 70 años.</li>
-            </ul>
-            <p><strong>Coberturas Adicionales y Opcionales:</strong></p>
-            <ul>
-                <li>Protección por complicaciones del embarazo y padecimientos femeninos.</li>
-                <li>Pérdida del ingreso por invalidez total y temporal.</li>
-                <li>Cuidados a Largo Plazo.</li>
-                <li>Protección por Viudez.</li>
-                <li>Beneficio por Muerte Accidental.</li>
+                <li><strong>Protección Cáncer Femenino:</strong> Si se diagnostica Cáncer de Mama o Cérvico-Uterino (o en otros órganos femeninos), recibes un pago adicional inmediato para afrontar el tratamiento sin tocar tus ahorros.</li>
+                <li><strong>Maternidad Blindada:</strong> Protección financiera ante complicaciones del embarazo (parto prematuro, eclampsia) y padecimientos del recién nacido (como <strong>Síndrome de Down</strong>, espina bífida, entre otros).</li>
+                <li><strong>Dotes de Ahorro en Vida:</strong> Recibe dinero en efectivo a partir del 5º año. Además, obtienes un <strong>Adelanto de Dote</strong> (5%) si te casas o tienes un bebé.</li>
+                <li><strong>Seguridad Patrimonial:</strong> Protección por Viudez y cobertura de Cuidados a Largo Plazo para ti o tus padres. Ahorro disponible en <strong>Dólares o UDIS</strong> para vencer a la inflación.</li>
             </ul>
             <a href="#main" class="back-to-top">Menú</a>
         </div></div></section>
     </div>
     
     <div id="ppr-page" class="page">
-<header><div class="container"><div class="profile-container"><h1 class="name">Planes Personales del Retiro (PPR) y Estrategias de Jubilación</h1><p class="tagline">Protección de Patrimonio y Soluciones para la Vejez</p></div></div></header>
-<section class="detail-section"><div class="container"><div class="detail-content">
-<p>Nuestros <strong>Planes Personales para el Retiro (PPR)</strong>, respaldados por la solidez de <em>Imagina Ser</em>, son la herramienta definitiva para garantizar una <strong>jubilación</strong> digna. No solo ahorras, sino que inviertes en la <strong>protección de patrimonio</strong> más sólida de México.</p>
-<p><strong>¿Por qué elegir nuestros Planes para la Vejez?</strong></p>
-<ul>
-<li><strong>Deducibilidad Fiscal (PPR):</strong> Aprovecha los beneficios del Art. 151 y 185 de la LISR. El SAT te ayuda a pagar tu retiro devolviéndote impuestos.</li>
-<li><strong>Dinero Blindado:</strong> Tu dinero no pierde valor. Garantizamos rendimientos mínimos en <strong>UDIS</strong> (protección contra inflación) o <strong>Dólares</strong>.</li>
-<li><strong>Protección Total:</strong> Si llegas a faltar antes de la <strong>edad de retiro</strong>, tu familia recibe la Suma Asegurada. Si sufres invalidez, el plan continúa sin que pagues más.</li>
-<li><strong>Flexibilidad en la Jubilación:</strong> Al llegar a la edad de retiro 65 años, tú decides: recibes todo tu dinero en un solo pago o en <strong>rentas mensuales de por vida</strong>.</li>
-</ul>
-<p>No dejes tu futuro en manos de la suerte. Activa hoy un Plan Personal del Retiro que asegure tu independencia financiera en la vejez.</p>
-<a href="#main" class="back-to-top">Menú</a>
-</div></div></section>
-</div>
+        <header><div class="container"><div class="profile-container"><h1 class="name">Planes Personales del Retiro (PPR) y Estrategias de Jubilación</h1><p class="tagline">Protección de Patrimonio y Soluciones para la Vejez</p></div></div></header>
+        <section class="detail-section"><div class="container"><div class="detail-content">
+            <p>Nuestros <strong>Planes Personales para el Retiro (PPR)</strong>, respaldados por la solidez de <em>Imagina Ser</em>, son la herramienta definitiva para garantizar una <strong>jubilación</strong> digna. No solo ahorras, sino que inviertes en la <strong>protección de patrimonio</strong> más sólida de México.</p>
+            <p><strong>¿Por qué elegir nuestros Planes para la Vejez?</strong></p>
+            <ul>
+                <li><strong>Deducibilidad Fiscal (PPR):</strong> Aprovecha los beneficios del Art. 151 y 185 de la LISR. El SAT te ayuda a pagar tu retiro devolviéndote impuestos.</li>
+                <li><strong>Dinero Blindado:</strong> Tu dinero no pierde valor. Garantizamos rendimientos mínimos en <strong>UDIS</strong> (protección contra inflación) o <strong>Dólares</strong>.</li>
+                <li><strong>Protección Total:</strong> Si llegas a faltar antes de la <strong>edad de retiro</strong>, tu familia recibe la Suma Asegurada. Si sufres invalidez, el plan continúa sin que pagues más.</li>
+                <li><strong>Flexibilidad en la Jubilación:</strong> Al llegar a la edad de retiro (60, 65 o 70 años), tú decides: recibes todo tu dinero en un solo pago o en <strong>rentas mensuales de por vida</strong>.</li>
+            </ul>
+            <p>No dejes tu futuro en manos de la suerte. Activa hoy un Plan Personal del Retiro que asegure tu independencia financiera en la vejez.</p>
+            <a href="#main" class="back-to-top">Menú</a>
+        </div></div></section>
+    </div>
     
     <div id="educacion-page" class="page">
         <header><div class="container"><div class="profile-container"><h1 class="name">Seguro para Educación - Segubeca 18</h1><p class="tagline">Garantiza la educación de tus hijos</p></div></div></header>
