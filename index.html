@@ -219,6 +219,108 @@
             .profile-image { width: 150px; height: 150px; }
             .mv-container { flex-direction: column; align-items: center; gap: 2rem; }
         }
+        /* Estilos para el Acordeón y Numeración Automática */
+.faq-section {
+    margin-bottom: 40px;
+}
+
+.faq-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1e3a8a; /* Azul oscuro corporativo */
+    margin-bottom: 20px;
+    border-bottom: 2px solid #3b82f6;
+    padding-bottom: 10px;
+}
+
+/* El contenedor de la lista */
+.faq-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: faq-counter; /* Reinicia el contador a 0 en cada sección */
+}
+
+/* Cada elemento de pregunta */
+.faq-item {
+    border-bottom: 1px solid #e5e7eb;
+    padding: 15px 0;
+}
+
+/* El título de la pregunta (Summary) */
+.faq-question {
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none; /* Quita el triangulito por defecto si quieres */
+    color: #374151;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+/* MAGIA: Aquí se genera el número automático */
+.type-a .faq-question::before {
+    counter-increment: faq-counter;
+    content: "A." counter(faq-counter) ". ";
+    color: #2563eb; /* Azul brillante */
+    font-weight: bold;
+    margin-right: 10px;
+    min-width: 40px; /* Para alinear bien */
+}
+
+.type-b .faq-question::before {
+    counter-increment: faq-counter;
+    content: "B." counter(faq-counter) ". ";
+    color: #2563eb; 
+    font-weight: bold;
+    margin-right: 10px;
+    min-width: 40px;
+}
+
+.type-c .faq-question::before {
+    counter-increment: faq-counter;
+    content: "C." counter(faq-counter) ". ";
+    color: #2563eb;
+    font-weight: bold;
+    margin-right: 10px;
+    min-width: 40px;
+}
+
+.type-d .faq-question::before {
+    counter-increment: faq-counter;
+    content: "D." counter(faq-counter) ". ";
+    color: #2563eb;
+    font-weight: bold;
+    margin-right: 10px;
+    min-width: 40px;
+}
+
+.type-e .faq-question::before {
+    counter-increment: faq-counter;
+    content: "E." counter(faq-counter) ". ";
+    color: #2563eb;
+    font-weight: bold;
+    margin-right: 10px;
+    min-width: 40px;
+}
+
+/* La respuesta */
+.faq-answer {
+    padding: 15px 15px 15px 50px; /* Sangría para que quede debajo del texto */
+    color: #4b5563;
+    line-height: 1.6;
+    display: block; /* Asegura que se muestre */
+}
+
+/* Pequeña animación al abrir */
+details[open] summary ~ * {
+  animation: sweep .5s ease-in-out;
+}
+
+@keyframes sweep {
+  0%    {opacity: 0; margin-top: -10px}
+  100%  {opacity: 1; margin-top: 0px}
+}
     </style>
 </head>
 <body>
@@ -537,52 +639,387 @@
             <div class="container">
                 <div class="detail-content">
                     
-                    <h3 style="color:#2a5298; margin-top:0;">🏥 1. GASTOS MÉDICOS MAYORES</h3>
-                    <details><summary>1. ¿Qué es exactamente el Deducible y el Coaseguro y cómo afectan mi pago?</summary><p>R: Son tus participaciones en el costo del siniestro. El Deducible es una cantidad fija (tú eliges el monto en la contratación de la póliza para ajustar el precio de tu póliza) el cual pagas una sola vez por enfermedad. El Coaseguro es un porcentaje (usualmente 10%) del gasto restante. En nuestros planes el coaseguro tiene un "Tope Máximo", lo que significa que tu pago está limitado para proteger tu economía, sin importar qué tan alta sea la cuenta del hospital.</p></details>
-                    <details><summary>2. ¿Mi seguro cubre padecimientos preexistentes?</summary><p>R: Por regla general, los seguros cubren enfermedades que inician después de la contratación. Sin embargo, si vienes de otra aseguradora, te reconocemos tu antigüedad para eliminar los periodos de espera de ciertos padecimientos. Si es tu primera póliza, ciertos padecimientos se cubren después de un tiempo de espera (ej. 12 o 24 meses) especificado en las condiciones generales.</p></details>
-                    <details><summary>3. ¿Qué pasa si tengo una emergencia en el extranjero?</summary><p>R: Estás cubierto. Se pueden incluir la cobertura de Urgencia / Asistencia Médica en el Extranjero. En caso de una emergencia real (accidente o enfermedad súbita) mientras viajas, tienes una suma asegurada (ej. hasta $10,000 USD varían por coberturas y aseguradoras) para recibir atención hospitalaria inmediata.</p></details>
-                    <details><summary>4. ¿El seguro cubre maternidad (parto, cesárea)?</summary><p>R: Sí. Nuestros planes ofrecen una Ayuda para Maternidad que es un monto indemnizatorio (dinero en efectivo) que puedes usar para pagar el parto o la cesárea en el hospital de tu elección, sin deducible ni coaseguro. Lo más importante es que tu bebé nace con protección garantizada desde el primer día, cubriendo padecimientos congénitos o prematurez sin costo extra; después de terminado el tercer año puedes elegir que se pague la cuenta hospitalaria y tú participas con tu Deducible y Coaseguro. Si es una complicación del embarazo no se requiere este tiempo de espera, solo cumplir con el tiempo de espera por Maternidad.</p></details>
-                    <details><summary>5. ¿Qué sucede si tengo un accidente? ¿Tengo que pagar deducible?</summary><p>R: Tenemos una gran ventaja: Eliminación de Deducible por Accidente. Si el gasto del accidente supera cierto monto (ej. $2,000 o $3,000 pesos), la aseguradora cubre los gastos desde el primer peso y tú no pagas el deducible contratado, en caso de no contratarlo en caso de accidente participas solo con el 50% del valor del deducible y con el valor del coaseguro.</p></details>
-                    <details><summary>6. ¿Puedo atenderme en cualquier hospital de México?</summary><p>R: Tú tienes el control. Contamos con diferentes niveles de redes hospitalarias (desde planes que incluyen los hospitales más exclusivos como el ABC o Ángeles, hasta planes con redes costo-eficientes). Tú eliges el plan que se adapte a tu zona y presupuesto.</p></details>
-                    <details><summary>7. ¿Qué enfermedades tienen periodo de espera?</summary><p>R: Las enfermedades graves y accidentes se cubren desde el primer día. Padecimientos "lentos" como rodilla, columna, cataratas, hernias o padecimientos ginecológicos suelen tener un periodo de espera de 10, 12, 24 o 48 meses. Esto es estándar en la industria para mantener precios justos.</p></details>
-                    <details><summary>8. ¿El seguro cubre tratamientos de cáncer, quimioterapias y radioterapias?</summary><p>R: Sí, y es una de las razones principales para asegurarse. Cubrimos Cáncer (incluyendo quimio y radioterapia) hasta el límite de la suma asegurada contratada (que puede ser de decenas de millones de pesos), pagando directamente al hospital para que tú no desembolses esas cantidades millonarias.</p></details>
-                    <details><summary>9. ¿Cubre medicamentos fuera del hospital?</summary><p>R: Sí. Los medicamentos recetados para el tratamiento de una enfermedad cubierta o accidente (fuera del hospital) pueden ser reembolsados o surtidos a través de farmacias en convenio, dependiendo de tu plan.</p></details>
-                    <details><summary>10. ¿La póliza incluye servicio dental?</summary><p>R: Sí. Hay planes que incluyen una Membresía Dental (incluyen una o dos limpiezas al año y consultas de diagnóstico sin costo) y precios preferenciales en tratamientos mayores. También ofrece coberturas dentales adicionales a las básicas.</p></details>
-                    <details><summary>11. ¿Hasta qué edad puedo contratar un seguro de gastos médicos mayores?</summary><p>R: Lo ideal es contratarlo joven, pero recibimos solicitudes hasta los 64 años. Una vez contratado, la renovación es vitalicia garantizada, es decir, la aseguradora no puede cancelarte la póliza por edad o uso.</p></details>
-                    <details><summary>12. ¿Qué es el "Tope de Coaseguro"?</summary><p>R: Es tu "freno de mano" financiero. Aunque el coaseguro sea un porcentaje (ej. 10% o 15%), existe un monto máximo (Tope) que pagarás. Si la cuenta es de 5 millones, tú NO pagas 500 mil pesos, solo pagas el tope estipulado (ej. $500,000 o $90,000 pesos), protegiendo tus ahorros ante catástrofes, dependiendo de tu selección en la contratación.</p></details>
+                    <div class="faq-section">
+    <h2 class="faq-title">🏥 A. GASTOS MÉDICOS MAYORES</h2>
+    <div class="faq-list type-a">
+        
+        <details class="faq-item">
+            <summary class="faq-question">¿Qué significa SGMM o SGMMI?</summary>
+            <div class="faq-answer">
+                <p>Significa Seguro de Gastos Médicos Mayores o Seguro de Gastos Médicos Mayores Individuales. Es un producto financiero que te ayuda a proteger tu patrimonio familiar, ya que a través de él transfieres el riesgo de erogar altos costos médicos y hospitalarios por enfermedad o algún accidente, ofreciendo cubrir los gastos a través de una amplia red de médicos y hospitales en convenio con las aseguradoras.</p>
+            </div>
+        </details>
 
-                    <h3 style="color:#2a5298; margin-top:2rem;">👴 2. PLANES PERSONALES PARA EL RETIRO Y/O PPR</h3>
-                    <details><summary>13. ¿Cuál es la diferencia entre mi AFORE y un Plan Personal de Retiro (PPR)?</summary><p>R: Tu AFORE es una “prestación” obligatoria y limitada (aportas poco y los rendimientos son moderados). El PPR es un seguro de vida e invalidez con una estrategia privada complementaria donde tú decides cuánto ahorrar, con rendimientos garantizados en UDIS (protección vs inflación) o Dólares, y con beneficios fiscales que la AFORE no siempre maximiza.</p></details>
-                    <details><summary>14. ¿Es verdad que el SAT me devuelve dinero si ahorro para mi retiro?</summary><p>R: Sí. Bajo el Artículo 151 de la LISR, las aportaciones a tu PPR son deducibles de impuestos (hasta el 10% de tu ingreso anual o 5 UMAs) independiente a las deducciones autorizadas para personas físicas. Esto significa que al presentar tu declaración anual, el SAT puede devolverte un saldo a favor, haciendo que tu retiro se pague, en parte, con tus propios impuestos. Aplica restricciones de acuerdo al régimen fiscal que tributes.</p></details>
-                    <details><summary>15. ¿Mi dinero pierde valor con la inflación? ¿Qué son las UDIs?</summary><p>R: No, tu dinero no pierde valor. Nuestros planes están en UDIS (Unidades de Inversión), una “moneda” que crece a la par de la inflación. Si las cosas cuestan más en el futuro, tu ahorro valdrá más en la misma proporción, garantizando tu poder adquisitivo real.</p></details>
-                    <details><summary>16. ¿Qué son las UDIs?</summary><p>R: Las UDIS (Unidades de Inversión) en México son una unidad de cuenta creada por el Banco de México para ajustar valores monetarios a la inflación, protegiendo así el poder adquisitivo del dinero a lo largo del tiempo, y se usan comúnmente en créditos hipotecarios, inversiones y seguros para mantener el valor real de las cantidades frente a la pérdida por el alza de precios. Su valor se actualiza diariamente con base en el Índice Nacional de Precios al Consumidor (INPC).</p></details>
-                    <details><summary>17. ¿Puedo tener un PPR si soy freelance, emprendedor o no tengo nómina?</summary><p>R: ¡Es ideal para ti! Al no tener AFORE o pensión patronal, eres el único responsable de tu vejez. El PPR te permite construir tu propia pensión, deducir impuestos de tus facturas y garantizar un ingreso vitalicio sin depender del gobierno o una empresa.</p></details>
-                    <details><summary>18. ¿A qué edad puedo retirar mi dinero y cómo me lo entregan?</summary><p>R: Tú eliges la edad de retiro al contratar: 55, 60, 65 o 70 años. Al llegar a esa edad, puedes recibir todo el dinero en un solo pago o elegir Rentas Vitalicias (una pensión mensual de por vida). Lo más importante a considerar es que si eliges retiro a los 65 años con características PPR, el dinero puede ser libre de impuestos (LISR).</p></details>
-                    <details><summary>19. ¿Qué pasa si dejo de aportar por un tiempo?</summary><p>R: El plan es flexible. Puedes tener periodos de descanso, pero es importante retomarlo para no afectar tu meta. Además, planes como Imagina Ser permiten adelantar aportaciones o dar pagos adicionales cuando tengas excedentes y así tener una reserva, la cual cubrirá los periodos de “descanso”.</p></details>
-                    <details><summary>20. ¿El dinero de mi retiro se puede heredar si fallezco antes de cobrarlo?</summary><p>R: Sí. A diferencia de una pensión tradicional que a veces se pierde, en tu PPR el dinero es tuyo. Si falleces antes de retirarte, tus beneficiarios reciben la Suma Asegurada por Fallecimiento (que suele ser mayor a tu ahorro acumulado) libre de impuestos.</p></details>
+        <details class="faq-item">
+            <summary class="faq-question">¿Qué cubre un SGMM o Seguro de Gastos Médicos Mayores?</summary>
+            <div class="faq-answer">
+                <ul>
+                    <li><strong>Estudios y análisis:</strong> Diagnósticos, estudios de laboratorio, radiografías.</li>
+                    <li><strong>Atención hospitalaria:</strong> Gastos de hospitalización, quirófanos, atención médica y de enfermería.</li>
+                    <li><strong>Tratamientos y beneficios:</strong> Terapias, medicamentos, traslados de ambulancias, rehabilitaciones.</li>
+                    <li><strong>Otros beneficios:</strong> Se pueden agregar en algunos casos planes para maternidad, atención psicológica, nutrición y atención dental especial.</li>
+                </ul>
+            </div>
+        </details>
 
-                    <h3 style="color:#2a5298; margin-top:2rem;">🎓 3. EDUCACIÓN</h3>
-                    <details><summary>21. ¿Qué pasa con el ahorro de la universidad si yo (el papá/mamá “contratante”) llego a fallecer antes?</summary><p>R: El plan SeguBeca se blinda. Si falleces, la compañía: Paga una Suma Asegurada inmediata a tu familia. Cancela los pagos futuros (ya no se paga la póliza). Al llegar tu hijo a los 18 años, le entrega el 100% del ahorro pactado para su universidad. Es decir, el seguro paga dos veces y garantiza la educación.</p></details>
-                    <details><summary>22. ¿Qué sucede si sufro una invalidez y ya no puedo seguir pagando el seguro educativo?</summary><p>R: Aplica el mismo blindaje. Si sufres Invalidez Total y Permanente, dejas de pagar el seguro (la compañía paga por ti) y tu hijo recibe su dinero íntegro para la universidad a los 18 años. Además, puedes recibir una suma asegurada por invalidez para tus gastos.</p></details>
-                    <details><summary>23. ¿El dinero es exclusivo para pagar la colegiatura?</summary><p>R: No. El dinero se entrega en efectivo (cheque o transferencia) a tu hijo o a quien tú decidas. Pueden usarlo para pagar la universidad, manutención, estudios en el extranjero, emprender un negocio o lo que decidan. Es libertad total.</p></details>
-                    <details><summary>24. ¿Puedo usar el dinero si mi hijo decide estudiar en el extranjero?</summary><p>R: Sí, absolutamente. Al recibir el dinero en efectivo, pueden usarlo para pagar una universidad en cualquier parte del mundo. De hecho, ahorrar en Dólares es una excelente estrategia si tienen esta meta.</p></details>
-                    <details><summary>25. ¿Qué pasa si mi hijo no quiere estudiar la universidad? ¿Pierdo el dinero?</summary><p>R: No, nunca pierdes. El dinero es suyo. Si decide no estudiar, puede usar ese capital para iniciar un negocio, comprar una casa o cualquier proyecto de vida. El objetivo es garantizarle un piso financiero sólido al cumplir la mayoría de edad.</p></details>
-                    <details><summary>26. ¿Desde qué edad del niño me conviene contratar el seguro educativo?</summary><p>R: Lo antes posible (desde recién nacido es ideal). Entre más pequeño sea el niño, más tiempo tienes para ahorrar (hasta 18 años), lo que hace que las mensualidades sean más bajas y el rendimiento final sea mayor por el interés compuesto.</p></details>
+        <details class="faq-item">
+            <summary class="faq-question">¿Por qué es importante contar con un SGMM o Seguro de Gastos Médicos Mayores?</summary>
+            <div class="faq-answer">
+                <p>Para evitar que una enfermedad o accidente costoso quebrante tu patrimonio familiar. Además, te da acceso a los mejores tratamientos particulares a través de la red de atención médica con la que cuentan las aseguradoras, evitando así largas esperas en el sector público.</p>
+            </div>
+        </details>
 
-                    <h3 style="color:#2a5298; margin-top:2rem;">🛡️ 4. SEGUROS DE VIDA</h3>
-                    <details><summary>27. ¿Si fallezco, mis beneficiarios tienen que pagar impuestos por recibir el dinero?</summary><p>R: No. La indemnización por seguro de vida está 100% exenta de Impuesto Sobre la Renta (ISR) para personas físicas. Tu familia recibe el monto íntegro para su sustento.</p></details>
-                    <details><summary>28. ¿Existe un seguro de vida que me devuelva mi dinero si no me muero?</summary><p>R: Sí. Planes como Vida Mujer o Dotal están diseñados para pagarte "en vida". Si llegas al final del plazo (ej. 20 años), recibes tu ahorro más rendimientos garantizados. Es protección si faltas y ahorro si vives. Además de existir otros planes que tienen opción de aportación adicional y cuyo valor de rescate es alto.</p></details>
-                    <details><summary>29. ¿El seguro "Vida Mujer" es diferente a uno normal?</summary><p>R: Sí, es único. Además de vida y ahorro, Vida Mujer te protege ante enfermedades exclusivas como Cáncer de Mama o Cérvico-uterino (pagando un bono adicional) y complicaciones del embarazo/parto. Además, te da dinero en efectivo (dotes) cada ciertos años para que disfrutes tu ahorro.</p></details>
-                    <details><summary>30. ¿Qué es la cobertura de Invalidez Total y Permanente y por qué es tan importante?</summary><p>R: Es tu protección en vida. Si una enfermedad o accidente te impide volver a trabajar, el seguro te paga la Suma Asegurada en vida para que puedas mantenerte, y además, tu seguro de vida queda pagado (ya no pagas más primas durante el plazo contratado).</p></details>
-                    <details><summary>31. ¿Qué pasa si me diagnostican una enfermedad terminal?</summary><p>R: Nuestros planes incluyen el beneficio de Anticipo por Enfermedad Terminal. Si se diagnostica un padecimiento terminal, la compañía te adelanta un porcentaje de la suma asegurada (ej. 25% ) en vida para que lo uses en tratamientos, cuidados paliativos o cumplir sueños.</p></details>
-                    <details><summary>32. ¿Qué pasa si ya no puedo pagar mi seguro de vida?</summary><p>R: Depende del plan que hayas contratado, lo planes que incluyen el “ahorro” tienen un valor de rescate si lo cancelas antes del plazo establecido, aplicando las respectivas “penas” por cancelación anticipada.</p></details>
+        <details class="faq-item">
+            <summary class="faq-question">¿Qué es exactamente el Deducible y el Coaseguro y cómo afectan mi pago?</summary>
+            <div class="faq-answer">
+                <p>Son tus participaciones en el costo del siniestro.</p>
+                <ul>
+                    <li><strong>El Deducible:</strong> Es una cantidad fija (tú eliges el monto en la contratación para ajustar el precio de tu póliza) que pagas una sola vez por enfermedad.</li>
+                    <li><strong>El Coaseguro:</strong> Es un porcentaje (usualmente 10%) del gasto restante. En nuestros planes el coaseguro tiene un "Tope Máximo", lo que significa que tu pago está limitado para proteger tu economía, sin importar qué tan alta sea la cuenta del hospital.</li>
+                </ul>
+            </div>
+        </details>
 
-                    <h3 style="color:#2a5298; margin-top:2rem;">💼 5. SERVICIO Y CONFIANZA</h3>
-                    <details><summary>33. ¿Por qué contratar con un Agente y no directo con el banco?</summary><p>R: Porque el banco te vende un producto, yo te ofrezco una estrategia y acompañamiento. En un siniestro (un accidente a las 3 AM o un trámite hospitalario), no hablarás con un call center, hablarás directamente conmigo o mi equipo para resolverlo.</p></details>
-                    <details><summary>34. ¿Qué hago si la aseguradora no quiere pagar?</summary><p>R: Ese es mi trabajo. Como tu Agente Certificado ante la Comisión Nacional de Seguros y Fianzas (CNSF), mi deber es armar bien tu expediente desde el inicio para evitar rechazos y defender tus derechos contractuales ante la aseguradora para que se cumpla lo pactado. Todos los pagos o reembolsos están debidamente justificados y obligados a las condiciones generales del plan en la emisión de tu póliza.</p></details>
-                    <details><summary>35. ¿Cómo sé que mi póliza es real y estoy protegido?</summary><p>R: Siempre tu asesor te debe proporcionar las páginas oficiales de las aseguradoras y a través de ellas tú puedes darte de alta como cliente con los datos de tu póliza, en ellas o en sus APP móviles puedes validar que las pólizas están debidamente emitidas y vigentes.</p></details>
-                    <details><summary>36. ¿Tú o quién me ayuda a tramitar el reembolso o la reclamación si tengo un siniestro?</summary><p>R: Sí, al 100%. Mi asesoría y servicio se encarga de la gestión administrativa: apoyarte con las dudas del llenado de formatos, revisar el armado de expedientes médicos y gestionar el pago con la aseguradora para que tú solo te preocupes por tu salud.</p></details>
-                    <details><summary>37. ¿Dónde puedo ver las condiciones generales (letras chiquitas) antes de firmar?</summary><p>R: Siempre están disponibles y te las entregaré. Mi filosofía es "Cuentas Claras". Antes de que firmes, revisaremos juntos qué SÍ cubre y qué NO cubre tu póliza (exclusiones y periodos de espera) para que no haya sorpresas. Además que siempre te daré las páginas oficiales donde las puedes ver y descargar directamente del portal de la Aseguradora.</p></details>
+        <details class="faq-item">
+            <summary class="faq-question">¿Mi seguro cubre padecimientos preexistentes?</summary>
+            <div class="faq-answer">
+                <p>Por regla general, los seguros cubren enfermedades que inician después de la contratación. Sin embargo, si vienes de otra aseguradora, te reconocemos tu antigüedad para eliminar los periodos de espera de ciertos padecimientos. Si es tu primera póliza, ciertos padecimientos se cubren después de un tiempo de espera (ej. 12 o 24 meses) especificado en las condiciones generales.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Qué pasa si tengo una emergencia en el extranjero?</summary>
+            <div class="faq-answer">
+                <p>Estás cubierto. Se puede incluir la cobertura de Urgencia o Asistencia Médica en el Extranjero. En caso de una emergencia real (accidente o enfermedad súbita) mientras viajas, tienes una suma asegurada (ej. hasta $10,000 USD, varía por coberturas y aseguradoras) para recibir atención hospitalaria inmediata.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿El seguro cubre maternidad (parto, cesárea)?</summary>
+            <div class="faq-answer">
+                <p>Sí. Nuestros planes ofrecen una Ayuda para Maternidad, que es un monto indemnizatorio (dinero en efectivo) que puedes usar para pagar el parto o la cesárea en el hospital de tu elección, sin deducible ni coaseguro. Lo más importante es que tu bebé nace con protección garantizada desde el primer día.</p>
+                <p><em>Nota:</em> Después de terminado el tercer año, puedes elegir que se pague la cuenta hospitalaria y tú participas con tu Deducible y Coaseguro.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Qué sucede si tengo un accidente? ¿Tengo que pagar deducible?</summary>
+            <div class="faq-answer">
+                <p>Tenemos una gran ventaja: Eliminación de Deducible por Accidente. Si el gasto del accidente supera cierto monto (ej. $2,000 o $3,000 pesos), la aseguradora cubre los gastos desde el primer peso y tú no pagas el deducible contratado.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Puedo atenderme en cualquier hospital de México?</summary>
+            <div class="faq-answer">
+                <p>Tú tienes el control. Contamos con diferentes niveles de redes hospitalarias (desde planes que incluyen los hospitales más exclusivos como el ABC o Ángeles, hasta planes con redes costo-eficientes). Tú eliges el plan que se adapte a tu zona y presupuesto.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Qué enfermedades tienen periodo de espera?</summary>
+            <div class="faq-answer">
+                <p>Las enfermedades graves y accidentes se cubren desde el primer día. Padecimientos "lentos" como rodilla, columna, cataratas, hernias o padecimientos ginecológicos suelen tener un periodo de espera de 12, 24 o 48 meses. Esto es estándar en la industria para mantener precios justos.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿El seguro cubre tratamientos de cáncer, quimioterapias y radioterapias?</summary>
+            <div class="faq-answer">
+                <p>Sí, y es una de las razones principales para asegurarse. Cubrimos Cáncer (incluyendo quimio y radioterapia) hasta el límite de la suma asegurada contratada (que puede ser de decenas de millones de pesos), pagando directamente al hospital para que tú no desembolses esas cantidades millonarias.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Cubre medicamentos fuera del hospital?</summary>
+            <div class="faq-answer">
+                <p>Sí. Los medicamentos recetados para el tratamiento de una enfermedad cubierta o accidente (fuera del hospital) pueden ser reembolsados o surtidos a través de farmacias en convenio, dependiendo de tu plan.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿La póliza incluye servicio dental?</summary>
+            <div class="faq-answer">
+                <p>Sí. Hay planes que incluyen una Membresía Dental (incluyen una o dos limpiezas al año y consultas de diagnóstico sin costo) y precios preferenciales en tratamientos mayores.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Hasta qué edad puedo contratar un Seguro de Gastos Médicos Mayores?</summary>
+            <div class="faq-answer">
+                <p>Lo ideal es contratarlo joven, pero recibimos solicitudes hasta los 64 años. Una vez contratado, la renovación es vitalicia garantizada; es decir, la aseguradora no puede cancelarte la póliza por edad o uso.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Qué es el "Tope de Coaseguro"?</summary>
+            <div class="faq-answer">
+                <p>Es tu "freno de mano" financiero. Aunque el coaseguro sea un porcentaje (ej. 10% o 15%), existe un monto máximo (Tope) que pagarás. Si la cuenta es de 5 millones, tú NO pagas 500 mil pesos, solo pagas el tope estipulado (ej. $40,000 o $90,000 pesos, dependiendo de tu contratación), protegiendo tus ahorros ante catástrofes.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Son caros los SGMM o Seguros de Gastos Médicos Mayores?</summary>
+            <div class="faq-answer">
+                <p>El costo varía mucho, puede ir desde los $1,000 a $10,000 pesos mensuales; esto depende de la edad, género, coberturas, deducible y coaseguro. Considerando que los costos aumentan con la edad, es mejor realizar una cotización con un agente certificado.</p>
+                <p><strong>Ejemplo:</strong> Si tu costo total del seguro fuera de $36,500 anuales, el costo diario es de solo $100 pesos por tener un respaldo de más de $150,000,000 de suma asegurada.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Cuánto ronda el costo de un día de terapia intensiva en un hospital privado?</summary>
+            <div class="faq-answer">
+                <p>El costo varía mucho, puede ir desde los $15,000 a los $70,000 pesos diarios. 10 días de hospitalización en terapia intensiva podrían iniciar con costos de $150,000, muy por encima del costo anual de un seguro.</p>
+            </div>
+        </details>
+    </div>
+</div>
+
+<div class="faq-section">
+    <h2 class="faq-title">👴 B. PLANES PERSONALES PARA EL RETIRO Y/O PPR</h2>
+    <div class="faq-list type-b">
+        
+        <details class="faq-item">
+            <summary class="faq-question">¿Qué es un Plan Personal de Retiro (PPR)?</summary>
+            <div class="faq-answer">
+                <p>Un PPR es un Plan Personal de Retiro; es una herramienta privada que se contrata a través de una aseguradora y va enfocada al ahorro, protección e inversión a largo plazo, para obtener una suma de dinero adicional a la pensión o jubilación pública. Los PPR incluyen beneficios fiscales de ley.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Cuál es la diferencia entre mi AFORE y un Plan Personal de Retiro (PPR)?</summary>
+            <div class="faq-answer">
+                <p>Tu AFORE es una “prestación” obligatoria y limitada. El PPR es un seguro de vida e invalidez con una estrategia privada complementaria donde tú decides cuánto ahorrar, con rendimientos garantizados en UDIS o Dólares, y con beneficios fiscales superiores.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Es verdad que el SAT me devuelve dinero si ahorro para mi retiro?</summary>
+            <div class="faq-answer">
+                <p>Sí. Bajo el Artículo 151 de la LISR, las aportaciones a tu PPR son deducibles de impuestos. Esto significa que al presentar tu declaración anual, el SAT puede devolverte un saldo a favor, haciendo que tu retiro se pague, en parte, con tus propios impuestos.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Mi dinero pierde valor con la inflación? ¿Qué son las UDIs?</summary>
+            <div class="faq-answer">
+                <p>No, tu dinero no pierde valor. Nuestros planes están en UDIS (Unidades de Inversión), una “moneda” que crece a la par de la inflación. Si las cosas cuestan más en el futuro, tu ahorro valdrá más en la misma proporción.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Qué son las UDIs?</summary>
+            <div class="faq-answer">
+                <p>Las UDIS (Unidades de Inversión) en México son una unidad de cuenta creada por el Banco de México para ajustar valores monetarios a la inflación, protegiendo así el poder adquisitivo del dinero a lo largo del tiempo.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Puedo tener un PPR si soy freelance, emprendedor o no tengo nómina?</summary>
+            <div class="faq-answer">
+                <p>¡Es ideal para ti! Al no tener AFORE o pensión patronal, eres el único responsable de tu vejez. El PPR te permite construir tu propia pensión, deducir impuestos de tus facturas y garantizar un ingreso vitalicio.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿A qué edad puedo retirar mi dinero y cómo me lo entregan?</summary>
+            <div class="faq-answer">
+                <p>Tú eliges la edad de retiro al contratar: 55, 60, 65 o 70 años. Puedes recibir todo el dinero en un solo pago o elegir Rentas Vitalicias. Si eliges retiro a los 65 años con características PPR, el dinero puede ser libre de impuestos (LISR).</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Qué pasa si dejo de aportar por un tiempo?</summary>
+            <div class="faq-answer">
+                <p>El plan es flexible. Puedes tener periodos de descanso, pero es importante retomarlo para no afectar tu meta. Planes como <em>Imagina Ser</em> permiten adelantar aportaciones para cubrir futuros periodos de "descanso".</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿El dinero de mi retiro se puede heredar si fallezco antes de cobrarlo?</summary>
+            <div class="faq-answer">
+                <p>Sí. A diferencia de una pensión tradicional, en tu PPR el dinero es tuyo. Si falleces antes de retirarte, tus beneficiarios reciben la Suma Asegurada por Fallecimiento (que suele ser mayor a tu ahorro acumulado) libre de impuestos.</p>
+            </div>
+        </details>
+    </div>
+</div>
+
+<div class="faq-section">
+    <h2 class="faq-title">🎓 C. EDUCACIÓN</h2>
+    <div class="faq-list type-c">
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Qué es un seguro educativo, seguro universitario o SeguBeca?</summary>
+            <div class="faq-answer">
+                <p>Es un plan de seguros mediante el cual los padres o abuelos garantizan la educación de sus hijos. Es un instrumento financiero de ahorro con proyección a mediano y largo plazo (generalmente a los 18 años del niño).</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Qué beneficios tiene un seguro educativo?</summary>
+            <div class="faq-answer">
+                <p>Entregar el ahorro pactado para la universidad. Además, se puede contratar la entrega de una suma asegurada por fallecimiento mancomunado (Padre y Madre) al beneficiario.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Qué pasa con el ahorro de la universidad si yo (el papá/mamá) fallezco antes?</summary>
+            <div class="faq-answer">
+                <p>El plan SeguBeca se blinda. Si falleces, la compañía:</p>
+                <ol>
+                    <li>Paga una Suma Asegurada inmediata a tu familia.</li>
+                    <li>Cancela los pagos futuros (ya no pagan nada).</li>
+                    <li>Al llegar tu hijo a los 18 años, le entrega el 100% del ahorro pactado.</li>
+                </ol>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Qué sucede si sufro una invalidez y ya no puedo seguir pagando?</summary>
+            <div class="faq-answer">
+                <p>Aplica el mismo blindaje. Si sufres Invalidez Total y Permanente, dejas de pagar el seguro (la compañía paga por ti) y tu hijo recibe su dinero íntegro para la universidad a los 18 años.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿El dinero es exclusivo para pagar la colegiatura?</summary>
+            <div class="faq-answer">
+                <p>No. El dinero se entrega en efectivo a tu hijo o a quien tú decidas. Pueden usarlo para pagar la universidad, manutención, estudios en el extranjero o emprender un negocio. Es libertad total.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Puedo usar el dinero si mi hijo decide estudiar en el extranjero?</summary>
+            <div class="faq-answer">
+                <p>Sí, absolutamente. Al recibir el dinero en efectivo, pueden usarlo para pagar una universidad en cualquier parte del mundo.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Qué pasa si mi hijo no quiere estudiar la universidad?</summary>
+            <div class="faq-answer">
+                <p>No, nunca pierdes. El dinero es suyo. Si decide no estudiar, puede usar ese capital para iniciar un negocio, comprar una casa o cualquier proyecto de vida.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Desde qué edad del niño me conviene contratar?</summary>
+            <div class="faq-answer">
+                <p>Lo antes posible (desde recién nacido es ideal). Entre más pequeño sea el niño, más tiempo tienes para ahorrar, lo que hace que las mensualidades sean más bajas y el rendimiento mayor.</p>
+            </div>
+        </details>
+    </div>
+</div>
+
+<div class="faq-section">
+    <h2 class="faq-title">🛡️ D. SEGUROS DE VIDA</h2>
+    <div class="faq-list type-d">
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Qué es un seguro de vida y/o seguro de invalidez?</summary>
+            <div class="faq-answer">
+                <p>Es un contrato financiero a través del cual pagas a una aseguradora las primas, y esta se compromete a entregar la suma de dinero contratada a tus beneficiarios en caso de fallecimiento.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Quién puede ser mi beneficiario?</summary>
+            <div class="faq-answer">
+                <p>Generalmente familiares o dependientes económicos; es decir, tienen que demostrar un interés económico asegurable para con el asegurado.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Puedo asegurar alguna parte u órgano de mi cuerpo?</summary>
+            <div class="faq-answer">
+                <p>Sí. A través de coberturas de <strong>Pérdidas Orgánicas</strong> puedes proteger vista, manos o pies por cualquier accidente que pudiera ocurrir.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Si fallezco, mis beneficiarios tienen que pagar impuestos?</summary>
+            <div class="faq-answer">
+                <p>No. La indemnización por seguro de vida está 100% exenta de ISR. Tu familia recibe el monto íntegro.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Existe un seguro de vida que me devuelva mi dinero si no me muero?</summary>
+            <div class="faq-answer">
+                <p>Sí. Planes como <em>Vida Mujer</em> o <em>Dotal</em> están diseñados para pagarte "en vida". Si llegas al final del plazo, recibes tu ahorro más rendimientos garantizados.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿El seguro "Vida Mujer" es diferente a uno normal?</summary>
+            <div class="faq-answer">
+                <p>Sí. Además de vida y ahorro, <em>Vida Mujer</em> te protege ante enfermedades exclusivas como Cáncer de Mama o Cérvico-uterino y te da dinero en efectivo (dotes) cada ciertos años.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Qué es la cobertura de Invalidez Total y Permanente?</summary>
+            <div class="faq-answer">
+                <p>Es tu protección en vida. Si una enfermedad o accidente te impide volver a trabajar, el seguro te paga la Suma Asegurada en vida para que puedas mantenerte y tu seguro queda saldado.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Qué pasa si me diagnostican una enfermedad terminal?</summary>
+            <div class="faq-answer">
+                <p>La compañía te adelanta un porcentaje de la suma asegurada (ej. 25% o 30%) en vida para que lo uses en tratamientos o cuidados paliativos.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Qué pasa si ya no puedo pagar mi seguro de vida?</summary>
+            <div class="faq-answer">
+                <p>Depende del plan. Los planes que incluyen "ahorro" tienen un valor de rescate si lo cancelas antes del plazo establecido.</p>
+            </div>
+        </details>
+    </div>
+</div>
+
+<div class="faq-section">
+    <h2 class="faq-title">💼 E. SERVICIO Y CONFIANZA</h2>
+    <div class="faq-list type-e">
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Por qué contratar con un Agente y no directo con el banco?</summary>
+            <div class="faq-answer">
+                <p>Porque el banco te vende un producto genérico; yo te ofrezco una estrategia y acompañamiento. En un siniestro, no hablarás con un call center; hablarás directamente conmigo.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Qué hago si la aseguradora no quiere pagar?</summary>
+            <div class="faq-answer">
+                <p>Ese es mi trabajo. Como tu Agente Certificado, mi deber es defender tus derechos contractuales ante la aseguradora para que se cumpla lo pactado.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Cómo sé que mi póliza es real y estoy protegido?</summary>
+            <div class="faq-answer">
+                <p>A través de las páginas oficiales o Apps de las aseguradoras, tú puedes darte de alta como cliente y validar que tu póliza está vigente.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Tú me ayudas a tramitar el reembolso si tengo un siniestro?</summary>
+            <div class="faq-answer">
+                <p>Sí, al 100%. Mi asesoría incluye gestionar el pago con la aseguradora para que tú solo te preocupes por tu salud.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">¿Dónde puedo ver las condiciones generales antes de firmar?</summary>
+            <div class="faq-answer">
+                <p>Siempre están disponibles. Antes de firmar, revisaremos juntos qué SÍ cubre y qué NO cubre tu póliza para que no haya sorpresas.</p>
+            </div>
+        </details>
+    </div>
+</div>
 
                     <a href="#main" class="back-to-top">Menú</a>
                 </div>
