@@ -69,21 +69,55 @@
         .page.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         
-        /* HEADER */
-        header { background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; padding: 2rem 0; text-align: center; }
-        .profile-container { display: flex; flex-direction: column; align-items: center; margin-bottom: 1.5rem; }
+       /* HEADER PROFESIONAL CON MARCA DE AGUA */
+    header { 
+        position: relative; 
+        background: linear-gradient(135deg, #1e3c72 90%, #2a5298 100%); 
+        color: white; 
+        padding: 3rem 0; 
+        text-align: center; 
+        overflow: hidden; 
+        z-index: 1; 
+    }
+
+    /* EFECTO FOTO DE FONDO */
+    header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('rafael-perfil.jpg'); /* Tu foto aquí */
         
-        .profile-image {
-            width: 180px; height: 180px; border-radius: 50%; background-color: #fff;
-            display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;
-            border: 4px solid rgba(255, 255, 255, 0.3); overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-        .profile-image img { width: 100%; height: 100%; object-fit: cover; }
+        background-size: cover;      
+        background-position: center; 
+        background-repeat: no-repeat;
         
-        .name { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.2; }
-        .title { font-size: 1.4rem; opacity: 0.9; margin-bottom: 0.3rem; }
-        .tagline { font-size: 1.7rem; margin: 1.5rem 0; font-weight: 500; max-width: 800px; margin-left: auto; margin-right: auto; }
+        /* EL SECRETO: Opacidad baja + Blanco y Negro */
+        opacity: 0.15;               
+        filter: grayscale(100%);     
+        mix-blend-mode: luminosity;  
+        
+        z-index: -1; 
+    }
+
+    .profile-container { display: flex; flex-direction: column; align-items: center; margin-bottom: 1.5rem; }
+    
+    .profile-image {
+        width: 180px; height: 180px; border-radius: 50%; background-color: #fff;
+        display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;
+        border: 4px solid rgba(255, 255, 255, 0.3); overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        position: relative; 
+        z-index: 2;
+    }
+    .profile-image img { width: 100%; height: 100%; object-fit: cover; }
+    
+    /* TEXTOS CON SOMBRA PARA LEERSE MEJOR SOBRE LA FOTO */
+    .name { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.2; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+    .title { font-size: 1.4rem; opacity: 0.95; margin-bottom: 0.3rem; text-shadow: 0 1px 2px rgba(0,0,0,0.2); }
+    .tagline { font-size: 1.7rem; margin: 1.5rem 0; font-weight: 500; max-width: 800px; margin-left: auto; margin-right: auto; text-shadow: 0 1px 2px rgba(0,0,0,0.2); }
         
         /* SECCIÓN FILOSOFÍA */
         .mission-vision { padding: 2rem 0; background-color: white; text-align: center; }
