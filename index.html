@@ -174,8 +174,23 @@
         /* ESTILOS FAQ (PREGUNTAS FRECUENTES) */
         details { margin-bottom: 1rem; border-bottom: 1px solid #eee; padding-bottom: 1rem; }
         summary { font-weight: 600; color: #2a5298; cursor: pointer; font-size: 1.1rem; list-style: none; display: flex; align-items: center; justify-content: space-between; }
-        summary::after { content: '+'; font-weight: bold; font-size: 1.2rem; }
-        details[open] summary::after { content: '-'; }
+        summary { 
+    font-weight: 600; 
+    color: #2a5298; 
+    cursor: pointer; 
+    font-size: 1.1rem; 
+    list-style: none; 
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-start; /* <--- Alinea todo a la izquierda (junta número y texto) */
+}
+
+summary::after { 
+    content: '+'; 
+    font-weight: bold; 
+    font-size: 1.2rem; 
+    margin-left: auto; /* <--- EMPUJA EL "+" HASTA LA DERECHA */
+}
         details p { margin-top: 10px; color: #555; font-size: 0.95rem; text-align: justify; }
         
         /* BOTÓN MENÚ MÁS CHICO */
@@ -260,12 +275,12 @@
 
 /* MAGIA: Aquí se genera el número automático */
 .type-a .faq-question::before {
-    counter-increment: faq-counter;
+    counter-increment: faq-counter;  /* <--- ESTA ES LA CLAVE PARA QUE SUME 1, 2, 3... */
     content: "A." counter(faq-counter) ". ";
-    color: #2563eb; /* Azul brillante */
+    color: #2563eb; 
     font-weight: bold;
     margin-right: 10px;
-    min-width: 40px; /* Para alinear bien */
+    min-width: 40px;
 }
 
 .type-b .faq-question::before {
