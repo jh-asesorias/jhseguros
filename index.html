@@ -7,7 +7,7 @@
     <title>JH ASESORÍAS - Rafael Jiménez Sánchez - Agente de Seguros</title>
     
     <meta name="description" content="Rafael Jiménez Sánchez (Cédula CNSF H382035). Especialista en Plan Personal de Retiro (PPR), Gastos Médicos Mayores, Seguros de Vida y Auto. Trabajamos con Seguros Monterrey, AXA y las mejores aseguradoras.">
-    <meta name="keywords" content="PPR, Planes Personales para el Retiro, Planes Personales del Retiro, Planes para la jubilacion, Planes para la vejez, Proteccion de Patrimonio, Vida Mujer, Seguro de Cancer, Seguros Monterrey, Axa Seguros, Rafael Jiménez, JH Asesorias, Tamaulipas">
+    <meta name="keywords" content="SeguBeca, Ahorro Universitario, Seguro Educativo, PPR, Planes Personales para el Retiro, Jubilacion, Vejez, Proteccion de Patrimonio, Vida Mujer, Seguro de Cancer, Gastos Medicos Mayores, Servicios Hospitalarios, Seguros Monterrey, Axa Seguros, Rafael Jiménez, JH Asesorias, Tamaulipas">
     <meta name="author" content="Rafael Jiménez Sánchez">
     
     <link rel="canonical" href="https://jhseguros.mx/" />
@@ -136,6 +136,13 @@
         .detail-content p, .detail-content ul { margin-bottom: 1rem; color: #444; }
         .detail-content ul { margin-left: 20px; list-style-type: disc; }
         .detail-content strong { color: #2a5298; }
+
+        /* ESTILOS FAQ (PREGUNTAS FRECUENTES) */
+        details { margin-bottom: 1rem; border-bottom: 1px solid #eee; padding-bottom: 1rem; }
+        summary { font-weight: 600; color: #2a5298; cursor: pointer; font-size: 1.1rem; list-style: none; display: flex; align-items: center; justify-content: space-between; }
+        summary::after { content: '+'; font-weight: bold; font-size: 1.2rem; }
+        details[open] summary::after { content: '-'; }
+        details p { margin-top: 10px; color: #555; font-size: 0.95rem; text-align: justify; }
         
         /* BOTÓN MENÚ MÁS CHICO */
         .back-to-top { display: inline-block; background-color: #2a5298; color: white; 
@@ -233,22 +240,22 @@
                 <div class="services-grid">
                     
                     <div class="service-card">
-    <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-    </div>
-    <h3 class="service-title">Seguros de Vida: Alta Protección y Ahorro</h3>
-    <p class="service-description">Tú eliges la estrategia: <strong>Máxima Protección al menor costo</strong> (Temporal) o planes de <strong>Ahorro con Rendimientos Garantizados</strong> (Dotal) donde recuperas tu inversión.</p>
-    <a href="#vida" class="service-link">Ver detalles</a>
-</div>
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        </div>
+                        <h3 class="service-title">Seguros de Vida: Alta Protección y Ahorro</h3>
+                        <p class="service-description">Tú eliges la estrategia: <strong>Máxima Protección al menor costo</strong> (Temporal) o planes de <strong>Ahorro con Rendimientos Garantizados</strong> (Dotal) donde recuperas tu inversión.</p>
+                        <a href="#vida" class="service-link">Ver detalles</a>
+                    </div>
                     
                     <div class="service-card">
                         <div class="service-icon">
                             <svg viewBox="0 0 24 24"><path d="M12 4a6 6 0 0 1 6 6c0 2.97-2.16 5.44-5 5.92V18h2v2h-2v2h-2v-2H9v-2h2v-2.08c-2.84-.48-5-2.95-5-5.92a6 6 0 0 1 6-6m0 2a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4z"/></svg>
                         </div>
-                        <h3 class="service-title">Vida Mujer: Ahorro, Protección vs Cáncer y Maternidad</h3>
+                        <h3 class="service-title">Vida Mujer: Ahorro, Desempleo y Blindaje Femenino</h3>
                         <p class="service-description">El seguro que te devuelve hasta el 115% de tu ahorro. Protección especializada contra Desempleo, complicaciones de maternidad y cobertura de 19 padecimientos exclusivos de la mujer.</p>
-    <a href="#mujer" class="service-link">Ver detalles</a>
-</div>
+                        <a href="#mujer" class="service-link">Ver detalles</a>
+                    </div>
                     
                     <div class="service-card">
                         <div class="service-icon">
@@ -260,22 +267,22 @@
                     </div>
                     
                     <div class="service-card">
-    <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
-    </div>
-    <h3 class="service-title">Seguro Educativo (SeguBeca): Ahorro Universitario Blindado</h3>
-    <p class="service-description">Garantiza la universidad de tus hijos pase lo que pase. Ahorro en UDIS/Dólares que incluye protección por fallecimiento, invalidez y desempleo de los padres.</p>
-    <a href="#educacion" class="service-link">Ver detalles</a>
-</div>
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+                        </div>
+                        <h3 class="service-title">Seguro Educativo (SeguBeca): Ahorro Universitario Blindado</h3>
+                        <p class="service-description">Garantiza la universidad de tus hijos pase lo que pase. Ahorro en UDIS/Dólares que incluye protección por fallecimiento, invalidez y desempleo de los padres.</p>
+                        <a href="#educacion" class="service-link">Ver detalles</a>
+                    </div>
                     
                     <div class="service-card">
-    <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z"/></svg>
-    </div>
-    <h3 class="service-title">Gastos Médicos Mayores</h3>
-    <p class="service-description">Acceso a la mejor medicina privada de México. Alto Blindaje Financiero ante Accidentes, Cáncer, Hospitalización y Maternidad. Tu salud en los mejores hospitales.</p>
-    <a href="#gmm" class="service-link">Ver detalles</a>
-</div>
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z"/></svg>
+                        </div>
+                        <h3 class="service-title">Gastos Médicos Mayores</h3>
+                        <p class="service-description">Acceso a la mejor medicina privada de México. Alto Blindaje Financiero ante Accidentes, Cáncer, Hospitalización y Maternidad. Tu salud en los mejores hospitales.</p>
+                        <a href="#gmm" class="service-link">Ver detalles</a>
+                    </div>
                     
                     <div class="service-card">
                         <div class="service-icon">
@@ -285,6 +292,25 @@
                         <p class="service-description">Verifica mi cédula (H382035). Esta es la autorización federal oficial como Agente de Seguros ante la Comisión Nacional de Seguros y Fianzas (CNSF).</p>
                         <a href="https://agentesajustadores.cnsf.gob.mx/Agentes" target="_blank" class="service-link">Validar Cédula</a>
                     </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>
+                        </div>
+                        <h3 class="service-title">Preguntas Frecuentes</h3>
+                        <p class="service-description">Resolvemos tus dudas sobre deducibles, impuestos, coberturas y más. Información clara para tomar la mejor decisión.</p>
+                        <a href="#faq" class="service-link">Ver Preguntas</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z"/></svg>
+                        </div>
+                        <h3 class="service-title">Link de Servicios hospitalarios</h3>
+                        <p class="service-description">Accede a los directorios médicos de Seguros Monterrey y AXA. Encuentra hospitales y médicos en convenio.</p>
+                        <a href="#hospitales" class="service-link">Buscar Servicios</a>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -346,80 +372,57 @@
     </div>
     
     <div id="vida-page" class="page">
-    <header>
-        <div class="container">
-            <div class="profile-container">
-                <h1 class="name">Seguros de Vida: Estrategias de Blindaje y Acumulación de Riqueza</h1>
-                <p class="tagline">¿Buscas dejar una herencia millonaria a bajo costo o prefieres un plan que te devuelva tu dinero en vida?</p>
-            </div>
-        </div>
-    </header>
-    <section class="detail-section">
-        <div class="container">
-            <div class="detail-content">
-                <p>No todos los seguros son iguales. Diseñamos tu póliza basándonos en tu etapa financiera actual. Ya sea que busques la <strong>prima más accesible</strong> del mercado para una cobertura alta, o un instrumento financiero que funcione como <strong>inversión segura</strong>.</p>
-                
-                <p><strong>Nuestras 3 Soluciones Estratégicas:</strong></p>
-                <ul>
-                    <li><strong>🛡️ Opción 1: Alta Protección a Bajo Costo (Star Temporal):</strong>
-                        <ul>
-                            <li><strong>Ideal para:</strong> Jefes de familia jóvenes, protección de hipotecas o créditos.</li>
-                            <li><strong>Beneficio:</strong> Obtienes una <strong>Suma Asegurada Millonaria</strong> pagando una prima muy pequeña. Es la forma más económica de blindar a tu familia por un tiempo definido (10, 20 años o edad 65).</li>
-                            <li><strong>Garantía:</strong> Si faltas, tu familia recibe el 100% del dinero libre de impuestos.</li>
-                        </ul>
-                    </li>
-                    
-                    <li><strong>💰 Opción 2: Seguros con Retorno de Inversión (Star Dotal / Objetivo Vida):</strong>
-                        <ul>
-                            <li><strong>Ideal para:</strong> Ahorrar para una meta (casa, negocio, viaje) con seguro incluido.</li>
-                            <li><strong>Beneficio:</strong> Si llegas al final del plazo, <strong>RECIBES TU AHORRO + RENDIMIENTOS</strong> garantizados en vida. El seguro te paga por vivir.</li>
-                            <li><strong>Flexibilidad:</strong> Plazos desde 5 hasta 20 años para cumplir metas específicas.</li>
-                        </ul>
-                    </li>
-
-                    <li><strong>♾️ Opción 3: Protección Vitalicia (Orvi 99):</strong>
-                        <ul>
-                            <li><strong>Ideal para:</strong> Dejar un legado seguro y vitalicio.</li>
-                            <li><strong>Beneficio:</strong> Cobertura garantizada hasta los 99 años. Pagas solo unos años y quedas asegurado de por vida, generando valores en efectivo crecientes.</li>
-                        </ul>
-                    </li>
-                </ul>
-                <a href="#main" class="back-to-top">Menú</a>
-            </div>
-        </div>
-    </section>
-</div>
+        <header><div class="container"><div class="profile-container"><h1 class="name">Seguros de Vida: Estrategias de Blindaje y Acumulación de Riqueza</h1><p class="tagline">¿Buscas dejar una herencia millonaria a bajo costo o prefieres un plan que te devuelva tu dinero en vida?</p></div></div></header>
+        <section class="detail-section"><div class="container"><div class="detail-content">
+            <p>No todos los seguros son iguales. Diseñamos tu póliza basándonos en tu etapa financiera actual. Ya sea que busques la <strong>prima más accesible</strong> del mercado para una cobertura alta, o un instrumento financiero que funcione como <strong>inversión segura</strong>.</p>
+            <p><strong>Nuestras 3 Soluciones Estratégicas:</strong></p>
+            <ul>
+                <li><strong>🛡️ Opción 1: Alta Protección a Bajo Costo (Star Temporal):</strong>
+                    <ul>
+                        <li><strong>Ideal para:</strong> Jefes de familia jóvenes, protección de hipotecas o créditos.</li>
+                        <li><strong>Beneficio:</strong> Obtienes una <strong>Suma Asegurada Millonaria</strong> pagando una prima muy pequeña. Es la forma más económica de blindar a tu familia por un tiempo definido (10, 20 años o edad 65).</li>
+                        <li><strong>Garantía:</strong> Si faltas, tu familia recibe el 100% del dinero libre de impuestos.</li>
+                    </ul>
+                </li>
+                <li><strong>💰 Opción 2: Seguros con Retorno de Inversión (Star Dotal / Objetivo Vida):</strong>
+                    <ul>
+                        <li><strong>Ideal para:</strong> Ahorrar para una meta (casa, negocio, viaje) con seguro incluido.</li>
+                        <li><strong>Beneficio:</strong> Si llegas al final del plazo, <strong>RECIBES TU AHORRO + RENDIMIENTOS</strong> garantizados en vida. El seguro te paga por vivir.</li>
+                        <li><strong>Flexibilidad:</strong> Plazos desde 5 hasta 20 años para cumplir metas específicas.</li>
+                    </ul>
+                </li>
+                <li><strong>♾️ Opción 3: Protección Vitalicia (Orvi 99):</strong>
+                    <ul>
+                        <li><strong>Ideal para:</strong> Dejar un legado seguro y vitalicio.</li>
+                        <li><strong>Beneficio:</strong> Cobertura garantizada hasta los 99 años. Pagas solo unos años y quedas asegurado de por vida, generando valores en efectivo crecientes.</li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="#main" class="back-to-top">Menú</a>
+        </div></div></section>
+    </div>
     
     <div id="mujer-page" class="page">
-        <header><div class="container"><div class="profile-container"><h1 class="name">Vida Mujer: Blindaje Total</h1>
-            <p class="tagline">Respaldo Financiero con Ahorro y Protección por Cáncer Femenino y de maternidad (En total 19 eventualidades más críticas de la mujer).</p>
-            </div>
-        </div>
-    </header>
-    <section class="detail-section">
-        <div class="container">
-            <div class="detail-content">
-                <p><strong>Vida Mujer</strong> es el único plan en el mercado diseñado biológicamente para ti. Funciona como un sistema de <strong>Ahorro Garantizado</strong> donde recibes dinero en vida (hasta el 115% de la suma asegurada) mientras estás blindada contra los riesgos estadísticos más altos.</p>
-                
-                <p><strong>Coberturas Exclusivas (Seguros Monterrey):</strong></p>
-                <ul>
-                    <li><strong>🛡️ Blindaje contra 19 Padecimientos:</strong> Protección financiera específica para:
-                        <ul>
-                            <li><strong>Cáncer Femenino:</strong> Cobertura en Mama, Ovario, Útero y otros órganos femeninos.</li>
-                            <li><strong>Padecimientos Propios de la Mujer:</strong> Como Fibroadenomas, Endometriosis o Prolapso genital.</li>
-                            <li><strong>Complicaciones del Embarazo:</strong> Parto prematuro, Eclampsia, Embarazo ectópico, entre otros.</li>
-                            <li><strong>Recién Nacido:</strong> Protección para tu bebé ante Síndrome de Down, Espina Bífida o Labio Leporino.</li>
-                        </ul>
-                    </li>
-                    <li><strong>💼 Cobertura por Desempleo:</strong> Si pierdes tu empleo involuntariamente, el plan protege tus finanzas cubriendo tus primas para que no pierdas tu antigüedad ni tu protección.</li>
-                    <li><strong>💰 Dotes de Ahorro en Vida:</strong> Recibe dinero en efectivo a partir del 5º año. Además, obtienes un <strong>Adelanto de Dote</strong> (5%) si te casas o tienes un bebé.</li>
-                    <li><strong>🏛️ Seguridad Patrimonial:</strong> Protección por Viudez y cobertura de Cuidados a Largo Plazo para ti o tus padres. Ahorro disponible en <strong>Dólares o UDIS</strong> para vencer a la inflación.</li>
-                </ul>
-                <a href="#main" class="back-to-top">Menú</a>
-            </div>
-        </div>
-    </section>
-</div>
+        <header><div class="container"><div class="profile-container"><h1 class="name">Vida Mujer: Protección Integral contra Cáncer, Desempleo y Maternidad</h1><p class="tagline">Respaldo Financiero con Ahorro y Protección por Cáncer Femenino y de maternidad (En total 19 eventualidades más críticas de la mujer).</p></div></div></header>
+        <section class="detail-section"><div class="container"><div class="detail-content">
+            <p><strong>Vida Mujer</strong> es el único plan en el mercado diseñado biológicamente para ti. Funciona como un sistema de <strong>Ahorro Garantizado</strong> donde recibes dinero en vida (hasta el 115% de la suma asegurada) mientras estás blindada contra los riesgos estadísticos más altos.</p>
+            <p><strong>Coberturas Exclusivas (Seguros Monterrey):</strong></p>
+            <ul>
+                <li><strong>🛡️ Blindaje contra 19 Padecimientos:</strong> Protección financiera específica para:
+                    <ul>
+                        <li><strong>Cáncer Femenino:</strong> Cobertura en Mama, Ovario, Útero y otros órganos femeninos.</li>
+                        <li><strong>Padecimientos Propios de la Mujer:</strong> Como Fibroadenomas, Endometriosis o Prolapso genital.</li>
+                        <li><strong>Complicaciones del Embarazo:</strong> Parto prematuro, Eclampsia, Embarazo ectópico, entre otros.</li>
+                        <li><strong>Recién Nacido:</strong> Protección para tu bebé ante Síndrome de Down, Espina Bífida o Labio Leporino.</li>
+                    </ul>
+                </li>
+                <li><strong>💼 Cobertura por Desempleo:</strong> Si pierdes tu empleo involuntariamente, el plan protege tus finanzas cubriendo tus primas para que no pierdas tu antigüedad ni tu protección.</li>
+                <li><strong>💰 Dotes de Ahorro en Vida:</strong> Recibe dinero en efectivo a partir del 5º año. Además, obtienes un <strong>Adelanto de Dote</strong> (5%) si te casas o tienes un bebé.</li>
+                <li><strong>🏛️ Seguridad Patrimonial:</strong> Protección por Viudez y cobertura de Cuidados a Largo Plazo para ti o tus padres. Ahorro disponible en <strong>Dólares o UDIS</strong> para vencer a la inflación.</li>
+            </ul>
+            <a href="#main" class="back-to-top">Menú</a>
+        </div></div></section>
+    </div>
     
     <div id="ppr-page" class="page">
         <header><div class="container"><div class="profile-container"><h1 class="name">Planes Personales del Retiro (PPR) y Estrategias de Jubilación</h1><p class="tagline">Protección de Patrimonio y Soluciones para la Vejez</p></div></div></header>
@@ -438,81 +441,138 @@
     </div>
     
     <div id="educacion-page" class="page">
-    <header>
-        <div class="container">
-            <div class="profile-container">
-                <h1 class="name">SeguBeca: Garantía Universitaria y Protección Familiar</h1>
-                <p class="tagline">El único plan que paga la universidad aunque tú no estés</p>
-            </div>
-        </div>
-    </header>
-    <section class="detail-section">
-        <div class="container">
-            <div class="detail-content">
-                <p>La educación es la única herencia que nadie puede quitarle a tus hijos. <strong>SeguBeca</strong> es la estrategia financiera líder en México que blinda el futuro académico de tus pequeños (de 0 a 13 años) mediante un sistema de capitalización garantizada en <strong>UDIS (protección contra inflación)</strong> o Dólares.</p>
-                
-                <p><strong>¿Por qué es el plan educativo más completo del mercado?</strong></p>
-                <ul>
-                    <li><strong>🛡️ Garantía de Educación (Exención de Pagos):</strong> Si el contratante (papá/mamá) llega a faltar o sufre invalidez total, el plan <strong>SE PAGA SOLO</strong>. La compañía cubre todas las aportaciones restantes hasta que el hijo cumpla 18 años.</li>
-                    
-                    <li><strong>💰 Doble Protección Financiera:</strong> 
-                        <ul>
-                            <li><strong>Al momento:</strong> En caso de fallecimiento del contratante, la familia recibe la Suma Asegurada Inmediata para mantener su calidad de vida.</li>
-                            <li><strong>A los 18 años:</strong> El hijo recibe <strong>EL 100% DEL AHORRO</strong> para la universidad. ¡El seguro paga dos veces!</li>
-                        </ul>
-                    </li>
-                    
-                    <li><strong>💼 Coberturas Especiales (Desempleo e Invalidez):</strong>
-                        <ul>
-                            <li><strong>Desempleo:</strong> Si pierdes tu empleo involuntariamente, el plan cubre tus mensualidades hasta por 3 meses para que no pierdas tu antigüedad.</li>
-                            <li><strong>Pérdida de Ingreso:</strong> Si sufres una invalidez temporal (accidente/enfermedad) que te impida trabajar, recibes una renta mensual para sustituir tu sueldo.</li>
-                        </ul>
-                    </li>
-                    
-                    <li><strong>🎓 Administración Inteligente del Ahorro:</strong> Al llegar a los 18 años, tú decides: recibes todo el dinero en un solo pago o en <strong>mensualidades con rendimientos</strong> durante 4 años para pagar colegiaturas, libros y manutención.</li>
-                    
-                    <li><strong>✅ Garantía de Contratación Futura:</strong> Tu hijo tendrá derecho a contratar su propio seguro de vida al ser adulto sin exámenes médicos, garantizando su asegurabilidad de por vida.</li>
-                </ul>
-                <a href="#main" class="back-to-top">Menú</a>
-            </div>
-        </div>
-    </section>
-</div>
+        <header><div class="container"><div class="profile-container"><h1 class="name">SeguBeca: Garantía Universitaria y Protección Familiar</h1><p class="tagline">El único plan que paga la universidad aunque tú no estés</p></div></div></header>
+        <section class="detail-section"><div class="container"><div class="detail-content">
+            <p>La educación es la única herencia que nadie puede quitarle a tus hijos. <strong>SeguBeca</strong> es la estrategia financiera líder en México que blinda el futuro académico de tus pequeños (de 0 a 13 años) mediante un sistema de capitalización garantizada en <strong>UDIS (protección contra inflación)</strong> o Dólares.</p>
+            <p><strong>¿Por qué es el plan educativo más completo del mercado?</strong></p>
+            <ul>
+                <li><strong>🛡️ Garantía de Educación (Exención de Pagos):</strong> Si el contratante (papá/mamá) llega a faltar o sufre invalidez total, el plan <strong>SE PAGA SOLO</strong>. La compañía cubre todas las aportaciones restantes hasta que el hijo cumpla 18 años.</li>
+                <li><strong>💰 Doble Protección Financiera:</strong> 
+                    <ul>
+                        <li><strong>Al momento:</strong> En caso de fallecimiento del contratante, la familia recibe la Suma Asegurada Inmediata para mantener su calidad de vida.</li>
+                        <li><strong>A los 18 años:</strong> El hijo recibe <strong>EL 100% DEL AHORRO</strong> para la universidad. ¡El seguro paga dos veces!</li>
+                    </ul>
+                </li>
+                <li><strong>💼 Coberturas Especiales (Desempleo e Invalidez):</strong>
+                    <ul>
+                        <li><strong>Desempleo:</strong> Si pierdes tu empleo involuntariamente, el plan cubre tus mensualidades hasta por 3 meses para que no pierdas tu antigüedad.</li>
+                        <li><strong>Pérdida de Ingreso:</strong> Si sufres una invalidez temporal (accidente/enfermedad) que te impida trabajar, recibes una renta mensual para sustituir tu sueldo.</li>
+                    </ul>
+                </li>
+                <li><strong>🎓 Administración Inteligente del Ahorro:</strong> Al llegar a los 18 años, tú decides: recibes todo el dinero en un solo pago o en <strong>mensualidades con rendimientos</strong> durante 4 años para pagar colegiaturas, libros y manutención.</li>
+                <li><strong>✅ Garantía de Contratación Futura:</strong> Tu hijo tendrá derecho a contratar su propio seguro de vida al ser adulto sin exámenes médicos, garantizando su asegurabilidad de por vida.</li>
+            </ul>
+            <a href="#main" class="back-to-top">Menú</a>
+        </div></div></section>
+    </div>
     
     <div id="gmm-page" class="page">
-    <header>
-        <div class="container">
-            <div class="profile-container">
-                <h1 class="name">Gastos Médicos Mayores: Salud Privada y Protección Patrimonial</h1>
-                <p class="tagline">La tranquilidad de atenderte en los mejores hospitales sin poner en riesgo tus finanzas</p>
+        <header><div class="container"><div class="profile-container"><h1 class="name">Gastos Médicos Mayores: Salud Privada y Protección Patrimonial</h1><p class="tagline">La tranquilidad de atenderte en los mejores hospitales sin poner en riesgo tus finanzas</p></div></div></header>
+        <section class="detail-section"><div class="container"><div class="detail-content">
+            <p>Una enfermedad grave o un accidente imprevisto pueden desequilibrar cualquier economía familiar en cuestión de días. Según cifras recientes del sector asegurador, padecimientos como una <strong>Leucemia</strong> pueden superar costos de <strong>$14 Millones de Pesos</strong> y la atención de un <strong>Bebé Prematuro</strong> puede elevarse por encima de los <strong>$11 Millones</strong>. ¿Tu patrimonio está listo para enfrentar esto por su cuenta?</p>
+            <p>Nuestra solución de <strong>Gastos Médicos Mayores</strong> te brinda el acceso a la medicina privada de élite, transfiriendo ese riesgo económico para que tú solo te enfoques en recuperar tu salud.</p>
+            <p><strong>Coberturas y Beneficios Clave:</strong></p>
+            <ul>
+                <li><strong>Cobertura Integral:</strong> Protección financiera ilimitada (según plan contratado) ante <strong>Enfermedades Graves</strong> (Cáncer, Infartos, Cerebrovasculares), Accidentes, Prótesis y Trasplantes.</li>
+                <li><strong>Maternidad y Recién Nacido:</strong> Respaldo para <strong>Parto o Cesárea</strong>, y lo más importante: protección garantizada para tu bebé desde el nacimiento ante padecimientos congénitos y prematurez.</li>
+                <li><strong>Flexibilidad Hospitalaria:</strong> Tú decides dónde atenderte. Contamos con acceso a redes hospitalarias que se adaptan a tu presupuesto, desde cobertura total nacional hasta redes prácticas.</li>
+                <li><strong>Beneficios Adicionales:</strong>
+                    <ul>
+                        <li><strong>Cero Deducible por Accidente:</strong> Si el gasto supera el monto mínimo estipulado, no pagas deducible en caso de accidente.</li>
+                        <li><strong>Emergencias en el Extranjero:</strong> Cobertura de hasta $100,000 USD para urgencias médicas cuando viajas fuera de México.</li>
+                        <li><strong>Servicios Dentales:</strong> Acceso a precios preferenciales y servicios básicos incluidos.</li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="#main" class="back-to-top">Menú</a>
+        </div></div></section>
+    </div>
+
+    <div id="faq-page" class="page">
+        <header><div class="container"><div class="profile-container"><h1 class="name">Preguntas Frecuentes</h1><p class="tagline">Resolvemos tus dudas con claridad</p></div></div></header>
+        <section class="detail-section">
+            <div class="container">
+                <div class="detail-content">
+                    
+                    <h3 style="color:#2a5298; margin-top:0;">🏥 1. GASTOS MÉDICOS MAYORES</h3>
+                    <details><summary>1. ¿Qué es exactamente el Deducible y el Coaseguro y cómo afectan mi pago?</summary><p>R: Son tus participaciones en el costo del siniestro. El Deducible es una cantidad fija (tú eliges el monto en la contratación de la póliza para ajustar el precio de tu póliza) el cual pagas una sola vez por enfermedad. El Coaseguro es un porcentaje (usualmente 10%) del gasto restante. En nuestros planes el coaseguro tiene un "Tope Máximo", lo que significa que tu pago está limitado para proteger tu economía, sin importar qué tan alta sea la cuenta del hospital.</p></details>
+                    <details><summary>2. ¿Mi seguro cubre padecimientos preexistentes?</summary><p>R: Por regla general, los seguros cubren enfermedades que inician después de la contratación. Sin embargo, si vienes de otra aseguradora, te reconocemos tu antigüedad para eliminar los periodos de espera de ciertos padecimientos. Si es tu primera póliza, ciertos padecimientos se cubren después de un tiempo de espera (ej. 12 o 24 meses) especificado en las condiciones generales.</p></details>
+                    <details><summary>3. ¿Qué pasa si tengo una emergencia en el extranjero?</summary><p>R: Estás cubierto. Se pueden incluir la cobertura de Urgencia / Asistencia Médica en el Extranjero. En caso de una emergencia real (accidente o enfermedad súbita) mientras viajas, tienes una suma asegurada (ej. hasta $10,000 USD varían por coberturas y aseguradoras) para recibir atención hospitalaria inmediata.</p></details>
+                    <details><summary>4. ¿El seguro cubre maternidad (parto, cesárea)?</summary><p>R: Sí. Nuestros planes ofrecen una Ayuda para Maternidad que es un monto indemnizatorio (dinero en efectivo) que puedes usar para pagar el parto o la cesárea en el hospital de tu elección, sin deducible ni coaseguro. Lo más importante es que tu bebé nace con protección garantizada desde el primer día, cubriendo padecimientos congénitos o prematurez sin costo extra; después de terminado el tercer año puedes elegir que se pague la cuenta hospitalaria y tú participas con tu Deducible y Coaseguro. Si es una complicación del embarazo no se requiere este tiempo de espera, solo cumplir con el tiempo de espera por Maternidad.</p></details>
+                    <details><summary>5. ¿Qué sucede si tengo un accidente? ¿Tengo que pagar deducible?</summary><p>R: Tenemos una gran ventaja: Eliminación de Deducible por Accidente. Si el gasto del accidente supera cierto monto (ej. $2,000 o $3,000 pesos), la aseguradora cubre los gastos desde el primer peso y tú no pagas el deducible contratado, en caso de no contratarlo en caso de accidente participas solo con el 50% del valor del deducible y con el valor del coaseguro.</p></details>
+                    <details><summary>6. ¿Puedo atenderme en cualquier hospital de México?</summary><p>R: Tú tienes el control. Contamos con diferentes niveles de redes hospitalarias (desde planes que incluyen los hospitales más exclusivos como el ABC o Ángeles, hasta planes con redes costo-eficientes). Tú eliges el plan que se adapte a tu zona y presupuesto.</p></details>
+                    <details><summary>7. ¿Qué enfermedades tienen periodo de espera?</summary><p>R: Las enfermedades graves y accidentes se cubren desde el primer día. Padecimientos "lentos" como rodilla, columna, cataratas, hernias o padecimientos ginecológicos suelen tener un periodo de espera de 10, 12, 24 o 48 meses. Esto es estándar en la industria para mantener precios justos.</p></details>
+                    <details><summary>8. ¿El seguro cubre tratamientos de cáncer, quimioterapias y radioterapias?</summary><p>R: Sí, y es una de las razones principales para asegurarse. Cubrimos Cáncer (incluyendo quimio y radioterapia) hasta el límite de la suma asegurada contratada (que puede ser de decenas de millones de pesos), pagando directamente al hospital para que tú no desembolses esas cantidades millonarias.</p></details>
+                    <details><summary>9. ¿Cubre medicamentos fuera del hospital?</summary><p>R: Sí. Los medicamentos recetados para el tratamiento de una enfermedad cubierta o accidente (fuera del hospital) pueden ser reembolsados o surtidos a través de farmacias en convenio, dependiendo de tu plan.</p></details>
+                    <details><summary>10. ¿La póliza incluye servicio dental?</summary><p>R: Sí. Hay planes que incluyen una Membresía Dental (incluyen una o dos limpiezas al año y consultas de diagnóstico sin costo) y precios preferenciales en tratamientos mayores. También ofrece coberturas dentales adicionales a las básicas.</p></details>
+                    <details><summary>11. ¿Hasta qué edad puedo contratar un seguro de gastos médicos mayores?</summary><p>R: Lo ideal es contratarlo joven, pero recibimos solicitudes hasta los 64 años. Una vez contratado, la renovación es vitalicia garantizada, es decir, la aseguradora no puede cancelarte la póliza por edad o uso.</p></details>
+                    <details><summary>12. ¿Qué es el "Tope de Coaseguro"?</summary><p>R: Es tu "freno de mano" financiero. Aunque el coaseguro sea un porcentaje (ej. 10% o 15%), existe un monto máximo (Tope) que pagarás. Si la cuenta es de 5 millones, tú NO pagas 500 mil pesos, solo pagas el tope estipulado (ej. $500,000 o $90,000 pesos), protegiendo tus ahorros ante catástrofes, dependiendo de tu selección en la contratación.</p></details>
+
+                    <h3 style="color:#2a5298; margin-top:2rem;">👴 2. PLANES PERSONALES PARA EL RETIRO Y/O PPR</h3>
+                    <details><summary>13. ¿Cuál es la diferencia entre mi AFORE y un Plan Personal de Retiro (PPR)?</summary><p>R: Tu AFORE es una “prestación” obligatoria y limitada (aportas poco y los rendimientos son moderados). El PPR es un seguro de vida e invalidez con una estrategia privada complementaria donde tú decides cuánto ahorrar, con rendimientos garantizados en UDIS (protección vs inflación) o Dólares, y con beneficios fiscales que la AFORE no siempre maximiza.</p></details>
+                    <details><summary>14. ¿Es verdad que el SAT me devuelve dinero si ahorro para mi retiro?</summary><p>R: Sí. Bajo el Artículo 151 de la LISR, las aportaciones a tu PPR son deducibles de impuestos (hasta el 10% de tu ingreso anual o 5 UMAs) independiente a las deducciones autorizadas para personas físicas. Esto significa que al presentar tu declaración anual, el SAT puede devolverte un saldo a favor, haciendo que tu retiro se pague, en parte, con tus propios impuestos. Aplica restricciones de acuerdo al régimen fiscal que tributes.</p></details>
+                    <details><summary>15. ¿Mi dinero pierde valor con la inflación? ¿Qué son las UDIs?</summary><p>R: No, tu dinero no pierde valor. Nuestros planes están en UDIS (Unidades de Inversión), una “moneda” que crece a la par de la inflación. Si las cosas cuestan más en el futuro, tu ahorro valdrá más en la misma proporción, garantizando tu poder adquisitivo real.</p></details>
+                    <details><summary>16. ¿Qué son las UDIs?</summary><p>R: Las UDIS (Unidades de Inversión) en México son una unidad de cuenta creada por el Banco de México para ajustar valores monetarios a la inflación, protegiendo así el poder adquisitivo del dinero a lo largo del tiempo, y se usan comúnmente en créditos hipotecarios, inversiones y seguros para mantener el valor real de las cantidades frente a la pérdida por el alza de precios. Su valor se actualiza diariamente con base en el Índice Nacional de Precios al Consumidor (INPC).</p></details>
+                    <details><summary>17. ¿Puedo tener un PPR si soy freelance, emprendedor o no tengo nómina?</summary><p>R: ¡Es ideal para ti! Al no tener AFORE o pensión patronal, eres el único responsable de tu vejez. El PPR te permite construir tu propia pensión, deducir impuestos de tus facturas y garantizar un ingreso vitalicio sin depender del gobierno o una empresa.</p></details>
+                    <details><summary>18. ¿A qué edad puedo retirar mi dinero y cómo me lo entregan?</summary><p>R: Tú eliges la edad de retiro al contratar: 55, 60, 65 o 70 años. Al llegar a esa edad, puedes recibir todo el dinero en un solo pago o elegir Rentas Vitalicias (una pensión mensual de por vida). Lo más importante a considerar es que si eliges retiro a los 65 años con características PPR, el dinero puede ser libre de impuestos (LISR).</p></details>
+                    <details><summary>19. ¿Qué pasa si dejo de aportar por un tiempo?</summary><p>R: El plan es flexible. Puedes tener periodos de descanso, pero es importante retomarlo para no afectar tu meta. Además, planes como Imagina Ser permiten adelantar aportaciones o dar pagos adicionales cuando tengas excedentes y así tener una reserva, la cual cubrirá los periodos de “descanso”.</p></details>
+                    <details><summary>20. ¿El dinero de mi retiro se puede heredar si fallezco antes de cobrarlo?</summary><p>R: Sí. A diferencia de una pensión tradicional que a veces se pierde, en tu PPR el dinero es tuyo. Si falleces antes de retirarte, tus beneficiarios reciben la Suma Asegurada por Fallecimiento (que suele ser mayor a tu ahorro acumulado) libre de impuestos.</p></details>
+
+                    <h3 style="color:#2a5298; margin-top:2rem;">🎓 3. EDUCACIÓN</h3>
+                    <details><summary>21. ¿Qué pasa con el ahorro de la universidad si yo (el papá/mamá “contratante”) llego a fallecer antes?</summary><p>R: El plan SeguBeca se blinda. Si falleces, la compañía: Paga una Suma Asegurada inmediata a tu familia. Cancela los pagos futuros (ya no se paga la póliza). Al llegar tu hijo a los 18 años, le entrega el 100% del ahorro pactado para su universidad. Es decir, el seguro paga dos veces y garantiza la educación.</p></details>
+                    <details><summary>22. ¿Qué sucede si sufro una invalidez y ya no puedo seguir pagando el seguro educativo?</summary><p>R: Aplica el mismo blindaje. Si sufres Invalidez Total y Permanente, dejas de pagar el seguro (la compañía paga por ti) y tu hijo recibe su dinero íntegro para la universidad a los 18 años. Además, puedes recibir una suma asegurada por invalidez para tus gastos.</p></details>
+                    <details><summary>23. ¿El dinero es exclusivo para pagar la colegiatura?</summary><p>R: No. El dinero se entrega en efectivo (cheque o transferencia) a tu hijo o a quien tú decidas. Pueden usarlo para pagar la universidad, manutención, estudios en el extranjero, emprender un negocio o lo que decidan. Es libertad total.</p></details>
+                    <details><summary>24. ¿Puedo usar el dinero si mi hijo decide estudiar en el extranjero?</summary><p>R: Sí, absolutamente. Al recibir el dinero en efectivo, pueden usarlo para pagar una universidad en cualquier parte del mundo. De hecho, ahorrar en Dólares es una excelente estrategia si tienen esta meta.</p></details>
+                    <details><summary>25. ¿Qué pasa si mi hijo no quiere estudiar la universidad? ¿Pierdo el dinero?</summary><p>R: No, nunca pierdes. El dinero es suyo. Si decide no estudiar, puede usar ese capital para iniciar un negocio, comprar una casa o cualquier proyecto de vida. El objetivo es garantizarle un piso financiero sólido al cumplir la mayoría de edad.</p></details>
+                    <details><summary>26. ¿Desde qué edad del niño me conviene contratar el seguro educativo?</summary><p>R: Lo antes posible (desde recién nacido es ideal). Entre más pequeño sea el niño, más tiempo tienes para ahorrar (hasta 18 años), lo que hace que las mensualidades sean más bajas y el rendimiento final sea mayor por el interés compuesto.</p></details>
+
+                    <h3 style="color:#2a5298; margin-top:2rem;">🛡️ 4. SEGUROS DE VIDA</h3>
+                    <details><summary>27. ¿Si fallezco, mis beneficiarios tienen que pagar impuestos por recibir el dinero?</summary><p>R: No. La indemnización por seguro de vida está 100% exenta de Impuesto Sobre la Renta (ISR) para personas físicas. Tu familia recibe el monto íntegro para su sustento.</p></details>
+                    <details><summary>28. ¿Existe un seguro de vida que me devuelva mi dinero si no me muero?</summary><p>R: Sí. Planes como Vida Mujer o Dotal están diseñados para pagarte "en vida". Si llegas al final del plazo (ej. 20 años), recibes tu ahorro más rendimientos garantizados. Es protección si faltas y ahorro si vives. Además de existir otros planes que tienen opción de aportación adicional y cuyo valor de rescate es alto.</p></details>
+                    <details><summary>29. ¿El seguro "Vida Mujer" es diferente a uno normal?</summary><p>R: Sí, es único. Además de vida y ahorro, Vida Mujer te protege ante enfermedades exclusivas como Cáncer de Mama o Cérvico-uterino (pagando un bono adicional) y complicaciones del embarazo/parto. Además, te da dinero en efectivo (dotes) cada ciertos años para que disfrutes tu ahorro.</p></details>
+                    <details><summary>30. ¿Qué es la cobertura de Invalidez Total y Permanente y por qué es tan importante?</summary><p>R: Es tu protección en vida. Si una enfermedad o accidente te impide volver a trabajar, el seguro te paga la Suma Asegurada en vida para que puedas mantenerte, y además, tu seguro de vida queda pagado (ya no pagas más primas durante el plazo contratado).</p></details>
+                    <details><summary>31. ¿Qué pasa si me diagnostican una enfermedad terminal?</summary><p>R: Nuestros planes incluyen el beneficio de Anticipo por Enfermedad Terminal. Si se diagnostica un padecimiento terminal, la compañía te adelanta un porcentaje de la suma asegurada (ej. 25% ) en vida para que lo uses en tratamientos, cuidados paliativos o cumplir sueños.</p></details>
+                    <details><summary>32. ¿Qué pasa si ya no puedo pagar mi seguro de vida?</summary><p>R: Depende del plan que hayas contratado, lo planes que incluyen el “ahorro” tienen un valor de rescate si lo cancelas antes del plazo establecido, aplicando las respectivas “penas” por cancelación anticipada.</p></details>
+
+                    <h3 style="color:#2a5298; margin-top:2rem;">💼 5. SERVICIO Y CONFIANZA</h3>
+                    <details><summary>33. ¿Por qué contratar con un Agente y no directo con el banco?</summary><p>R: Porque el banco te vende un producto, yo te ofrezco una estrategia y acompañamiento. En un siniestro (un accidente a las 3 AM o un trámite hospitalario), no hablarás con un call center, hablarás directamente conmigo o mi equipo para resolverlo.</p></details>
+                    <details><summary>34. ¿Qué hago si la aseguradora no quiere pagar?</summary><p>R: Ese es mi trabajo. Como tu Agente Certificado ante la Comisión Nacional de Seguros y Fianzas (CNSF), mi deber es armar bien tu expediente desde el inicio para evitar rechazos y defender tus derechos contractuales ante la aseguradora para que se cumpla lo pactado. Todos los pagos o reembolsos están debidamente justificados y obligados a las condiciones generales del plan en la emisión de tu póliza.</p></details>
+                    <details><summary>35. ¿Cómo sé que mi póliza es real y estoy protegido?</summary><p>R: Siempre tu asesor te debe proporcionar las páginas oficiales de las aseguradoras y a través de ellas tú puedes darte de alta como cliente con los datos de tu póliza, en ellas o en sus APP móviles puedes validar que las pólizas están debidamente emitidas y vigentes.</p></details>
+                    <details><summary>36. ¿Tú o quién me ayuda a tramitar el reembolso o la reclamación si tengo un siniestro?</summary><p>R: Sí, al 100%. Mi asesoría y servicio se encarga de la gestión administrativa: apoyarte con las dudas del llenado de formatos, revisar el armado de expedientes médicos y gestionar el pago con la aseguradora para que tú solo te preocupes por tu salud.</p></details>
+                    <details><summary>37. ¿Dónde puedo ver las condiciones generales (letras chiquitas) antes de firmar?</summary><p>R: Siempre están disponibles y te las entregaré. Mi filosofía es "Cuentas Claras". Antes de que firmes, revisaremos juntos qué SÍ cubre y qué NO cubre tu póliza (exclusiones y periodos de espera) para que no haya sorpresas. Además que siempre te daré las páginas oficiales donde las puedes ver y descargar directamente del portal de la Aseguradora.</p></details>
+
+                    <a href="#main" class="back-to-top">Menú</a>
+                </div>
             </div>
-        </div>
-    </header>
-    <section class="detail-section">
-        <div class="container">
-            <div class="detail-content">
-                <p>Una enfermedad grave o un accidente imprevisto pueden desequilibrar cualquier economía familiar en cuestión de días. Según cifras recientes del sector asegurador, padecimientos como una <strong>Leucemia</strong> pueden superar costos de <strong>$14 Millones de Pesos</strong> y la atención de un <strong>Bebé Prematuro</strong> puede elevarse por encima de los <strong>$11 Millones</strong>. ¿Tu patrimonio está listo para enfrentar esto por su cuenta?</p>
-                
-                <p>Nuestra solución de <strong>Gastos Médicos Mayores</strong> te brinda el acceso a la medicina privada de élite, transfiriendo ese riesgo económico para que tú solo te enfoques en recuperar tu salud.</p>
-                
-                <p><strong>Coberturas y Beneficios Clave:</strong></p>
-                <ul>
-                    <li><strong>Cobertura Integral:</strong> Protección financiera por monto (según plan contratado) ante <strong>Enfermedades Graves</strong> (Cáncer, Infartos, Cerebrovasculares), Accidentes, Prótesis y Trasplantes.</li>
-                    <li><strong>Maternidad y Recién Nacido:</strong> Respaldo para <strong>Parto o Cesárea</strong>, y lo más importante: protección garantizada para tu bebé desde el nacimiento ante padecimientos congénitos y prematurez.</li>
-                    <li><strong>Flexibilidad Hospitalaria:</strong> Tú decides dónde atenderte. Contamos con acceso a redes hospitalarias que se adaptan a tu presupuesto, desde cobertura total nacional hasta redes prácticas.</li>
-                    <li><strong>Beneficios Adicionales:</strong>
-                        <ul>
-                            <li><strong>Cero Deducible por Accidente:</strong> Si el gasto supera el monto mínimo estipulado, no pagas deducible en caso de accidente.</li>
-                            <li><strong>Emergencias en el Extranjero:</strong> Cobertura de hasta $100,000 USD para urgencias médicas cuando viajas fuera de México.</li>
-                            <li><strong>Servicios Dentales:</strong> Acceso a precios preferenciales y servicios básicos incluidos.</li>
-                        </ul>
-                    </li>
-                </ul>
-                <a href="#main" class="back-to-top">Menú</a>
+        </section>
+    </div>
+
+    <div id="hospitales-page" class="page">
+        <header><div class="container"><div class="profile-container"><h1 class="name">Servicios Hospitalarios</h1><p class="tagline">Encuentra médicos y hospitales de tu red</p></div></div></header>
+        <section class="detail-section">
+            <div class="container">
+                <div class="detail-content">
+                    <p>Accede directamente a los portales oficiales de nuestras aseguradoras aliadas para encontrar hospitales, médicos y laboratorios en convenio cerca de ti.</p>
+                    
+                    <div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div style="padding: 1.5rem; border: 1px solid #eee; border-radius: 8px;">
+                            <h3 style="color:#2a5298;">Seguros Monterrey New York Life</h3>
+                            <p>Consulta la red médica, hospitales y farmacias en convenio.</p>
+                            <a href="https://www.mnyl.com.mx" target="_blank" style="display: inline-block; background-color: #2a5298; color: white; padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none; margin-top: 10px;">Ir al Buscador SMNYL</a>
+                        </div>
+
+                        <div style="padding: 1.5rem; border: 1px solid #eee; border-radius: 8px;">
+                            <h3 style="color:#2a5298;">AXA Seguros</h3>
+                            <p>Directorio médico, red de hospitales y servicios auxiliares.</p>
+                            <a href="https://axa.mx/servicios/buscador-de-servicios" target="_blank" style="display: inline-block; background-color: #00008f; color: white; padding: 0.5rem 1rem; border-radius: 4px; text-decoration: none; margin-top: 10px;">Ir al Buscador AXA</a>
+                        </div>
+                    </div>
+
+                    <a href="#main" class="back-to-top">Menú</a>
+                </div>
             </div>
-        </div>
-    </section>
-</div>
+        </section>
+    </div>
     
     <script>
         // Lógica de Navegación Avanzada (Soporta botón "Atrás")
