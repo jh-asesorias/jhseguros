@@ -461,23 +461,86 @@ details[open] summary ~ * {
                         <p class="service-description">Accede a los directorios médicos de Seguros Monterrey y AXA. Encuentra hospitales y médicos en convenio.</p>
                         <a href="#hospitales" class="service-link">Buscar Servicios</a>
                     </div>
-
+<div class="service-card">
+    <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+    </div>
+    <h3 class="service-title">Blog del Experto</h3>
+    <p class="service-description">Artículos, consejos y guías sobre finanzas personales, deducciones y cómo usar tus seguros.</p>
+    <a href="#blog" class="service-link">Leer Artículos</a>
+</div>
                 </div>
             </div>
         </section>
         
         <section class="cta-section">
-            <div class="container">
-                <h2 class="cta-title">¿Listo para proteger tu futuro?</h2>
-                <p>Recibe asesoría personalizada sin costo y descubre el plan perfecto para tus necesidades</p>
-                <a href="https://calendly.com/jhasesorias/seguritos-con-rafa" target="_blank" class="cta-button">Agenda tu asesoría</a>
-            </div>
-        </section>
-        
+    <div class="container">
+        <h2 class="cta-title">¿Listo para proteger tu futuro?</h2>
+    </div>
+</section>
+        <section id="contacto-form" class="detail-section" style="background-color: #f8f9fa; padding: 4rem 0;">
+    <div class="container">
+        <h2 class="section-title" style="text-align: center; color: #1e3c72;">📩 Asesoría Profesional Gratuita</h2>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto 30px; color: #666;">
+            Deja tus datos. Como tu Agente Certificado, analizaré tu caso y te contactaré personalmente para darte una estrategia a tu medida.
+        </p>
+
+        <div style="max-width: 600px; margin: 0 auto; background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 5px solid #2a5298;">
+            
+            <form action="https://formspree.io/f/xgooobzp" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+                
+                <div>
+                    <label for="nombre" style="font-weight: 700; color: #1e3c72; display: block; margin-bottom: 8px;">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ej. Juan Pérez"
+                           style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem;">
+                </div>
+
+                <div>
+                    <label for="telefono" style="font-weight: 700; color: #1e3c72; display: block; margin-bottom: 8px;">WhatsApp / Celular:</label>
+                    <input type="tel" id="telefono" name="telefono" required placeholder="Para contactarte rápidamente"
+                           style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem;">
+                </div>
+
+                <div>
+                    <label for="email" style="font-weight: 700; color: #1e3c72; display: block; margin-bottom: 8px;">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com"
+                           style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem;">
+                </div>
+
+                <div>
+                    <label for="interes" style="font-weight: 700; color: #1e3c72; display: block; margin-bottom: 8px;">Me interesa información sobre:</label>
+                    <select id="interes" name="interes" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem; background-color: white;">
+                        <option value="Retiro / PPR">👴 Planeación de Retiro (PPR)</option>
+                        <option value="Gastos Médicos">🏥 Gastos Médicos Mayores</option>
+                        <option value="Seguro Educativo">🎓 Educación / SeguBeca</option>
+                        <option value="Seguro de Vida">🛡️ Seguro de Vida / Ahorro</option>
+                        <option value="Otro">🤔 Otra consulta</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="mensaje" style="font-weight: 700; color: #1e3c72; display: block; margin-bottom: 8px;">Tu duda o comentario:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntame brevemente qué necesitas..."
+                              style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem; font-family: inherit;"></textarea>
+                </div>
+
+                <button type="submit" style="background-color: #2a5298; color: white; padding: 15px; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 1.1rem; margin-top: 10px; transition: background 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    ENVIAR SOLICITUD
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
         <footer id="contacto">
             <div class="container">
                 <div class="footer-content">
-                    <div class="brand">Seguritos con Rafa</div>
+                    <div class="brand" style="font-weight: 900; font-size: 2.2rem; letter-spacing: 1px;">Seguritos con Rafa</div>
+
+<a href="https://calendly.com/jhasesorias/seguritos-con-rafa" target="_blank" class="cta-button" style="margin-top: 10px; margin-bottom: 15px;">Agenda directamente tu Asesoría</a>
+
+<p style="font-size: 0.95rem; margin-bottom: 30px; max-width: 600px; color: #ccc; line-height: 1.4;">
+    Recibe asesoría personalizada sin costo y descubre el plan perfecto para tus necesidades
+</p>
                     <div class="contact-info">
                         <p>Email: <a href="mailto:jhasesorias@jhasesorias.com" target="_blank">jhasesorias@jhasesorias.com</a></p>
                         <p>Teléfono: 834-311-7556</p>
@@ -1069,7 +1132,45 @@ details[open] summary ~ * {
             </div>
         </section>
     </div>
+    <div id="blog-page" class="page">
+    <header>
+        <div class="container">
+            <div class="profile-container">
+                <h1 class="name">Blog del Experto</h1>
+                <p class="tagline">Información financiera clara para tomar decisiones inteligentes</p>
+            </div>
+        </div>
+    </header>
     
+    <section class="detail-section">
+        <div class="container">
+            <div class="detail-content" style="margin-bottom: 30px;">
+                <h2 style="color: #2a5298; margin-bottom: 15px;">🔍 Errores Comunes al Contratar un PPR</h2>
+                <p style="font-size: 0.9rem; color: #888; margin-bottom: 15px;">Publicado por: Rafael Jiménez</p>
+                
+                <p>Muchas personas inician su ahorro para el retiro con buenas intenciones, pero cometen errores que les cuestan dinero. Aquí te explico los principales:</p>
+                <ul>
+                    <li><strong>No hacerlo deducible:</strong> Estás dejando dinero en la mesa. El SAT puede devolverte hasta el 35% de lo que ahorras.</li>
+                    <li><strong>Ahorrar en pesos:</strong> La inflación se comerá tu dinero. Siempre busca UDIS o Dólares.</li>
+                    <li><strong>Empezar tarde:</strong> El factor más importante es el tiempo, no la cantidad.</li>
+                </ul>
+                <p><strong>¿Quieres saber cuánto te devolvería el SAT este año?</strong> Agenda una asesoría y hacemos el cálculo.</p>
+            </div>
+
+            <div class="detail-content" style="margin-bottom: 30px;">
+                <h2 style="color: #2a5298; margin-bottom: 15px;">🏥 ¿Deducible o Coaseguro? Entendiéndolo fácil</h2>
+                <p style="font-size: 0.9rem; color: #888; margin-bottom: 15px;">Publicado por: Rafael Jiménez</p>
+                
+                <p>Es la duda número 1 en Gastos Médicos. Imagina que el deducible es tu "boleto de entrada" para usar el seguro. Es una cantidad fija.</p>
+                <p>El coaseguro es tu participación "socia" en el gasto restante, pero tranquilo, en mis pólizas siempre le ponemos un tope para que no pagues millones.</p>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#main" class="back-to-top">Volver al Menú</a>
+            </div>
+        </div>
+    </section>
+</div>
     <script>
         // Lógica de Navegación Avanzada (Soporta botón "Atrás")
         document.addEventListener('DOMContentLoaded', function() {
