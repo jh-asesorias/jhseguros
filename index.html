@@ -336,6 +336,36 @@ details[open] summary ~ * {
   0%    {opacity: 0; margin-top: -10px}
   100%  {opacity: 1; margin-top: 0px}
 }
+
+/* ANIMACION DE SERVICIOS (TICKER) */
+.services-ticker {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1; 
+    display: flex;
+    pointer-events: none; 
+    opacity: 0.6; 
+}
+.ticker-track {
+    display: flex;
+    width: max-content;
+    gap: 50px;
+    padding-left: 50px;
+    animation: scrollTicker 25s linear infinite;
+}
+.ticker-track img {
+    height: 60px; 
+    width: auto;
+    object-fit: contain;
+}
+@keyframes scrollTicker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } 
+}
     </style>
 </head>
 <body>
@@ -348,7 +378,25 @@ details[open] summary ~ * {
     
     <div id="main-page" class="page active">
         <header id="top">
-            <div class="container">
+            <div class="services-ticker">
+                <div class="ticker-track">
+                    <img src="SConstrccion.png" alt="Construcción">
+                    <img src="SHogar.png" alt="Hogar">
+                    <img src="SVida.png" alt="Vida">
+                    <img src="SEmbarcacion.png" alt="Embarcación">
+                    <img src="SAuto.png" alt="Auto">
+                    <img src="SGMMi.png" alt="Gastos Médicos">
+                    <img src="SAP.png" alt="Ahorro y Protección">
+                    <img src="SConstrccion.png" alt="Construcción">
+                    <img src="SHogar.png" alt="Hogar">
+                    <img src="SVida.png" alt="Vida">
+                    <img src="SEmbarcacion.png" alt="Embarcación">
+                    <img src="SAuto.png" alt="Auto">
+                    <img src="SGMMi.png" alt="Gastos Médicos">
+                    <img src="SAP.png" alt="Ahorro y Protección">
+                </div>
+            </div>
+            <div class="container" style="position: relative; z-index: 3;">
                 <div class="profile-container">
                     <div class="profile-image">
                         <img src="rafael-perfil.jpg" alt="Logo JH Asesorías">
