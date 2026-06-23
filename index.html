@@ -1865,15 +1865,18 @@ details[open] summary ~ * {
     </section>
 </div>
    <div id="recursos-page" class="page">
-       <header><div class="container"><div class="profile-container"><h1 class="name">Guías, Consejos y Recursos</h1><p class="tagline">Respuestas claras y herramientas prácticas a tu alcance</p></div></div></header>
-       <section class="detail-section">
-           <div class="container">
-               <div style="text-align: center; margin-top: 30px;">
-                   <a href="#main" class="back-to-top">Volver al Menú</a>
+           <header><div class="container"><div class="profile-container"><h1 class="name">Guías, Consejos y Recursos</h1><p class="tagline">Respuestas claras y herramientas prácticas a tu alcance</p></div></div></header>
+           <section class="detail-section">
+               <div class="container">
+                   <div id="grid-dinamico-guias" class="services-grid">
+                       <p style="text-align:center; grid-column:1/-1; color:#666;">Cargando guías desde el repositorio oficial...</p>
+                   </div>
+                   <div style="text-align: center; margin-top: 30px;">
+                       <a href="#main" class="back-to-top">Volver al Menú</a>
+                   </div>
                </div>
-           </div>
-       </section>
-   </div>
+           </section>
+       </div>
        <div id="redes-page" class="page">
            <header><div class="container"><div class="profile-container"><h1 class="name">Redes Sociales</h1><p class="tagline">Conéctate conmigo y sigamos la conversación</p></div></div></header>
            <section class="detail-section">
@@ -2041,6 +2044,50 @@ details[open] summary ~ * {
                 });
             }
             
+            const fetchGuias = () => {
+                const repoUrl = "https://api.github.com/repos/jh-asesorias/jhseguros/contents/Guias-Consejos-y-Recursos";
+                const grid = document.getElementById('grid-dinamico-guias');
+                if (!grid) return;
+
+                fetch(repoUrl, {
+                    headers: {
+                        "Accept": "application/vnd.github+json",
+                        "X-GitHub-Api-Version": "2022-11-28"
+                    }
+                })
+                .then(res => {
+                    if (!res.ok) throw new Error("Error en conexión");
+                    return res.json();
+                })
+                .then(files => {
+                    grid.innerHTML = "";
+                    const mdFiles = files.filter(f => f.name.endsWith('.md'));
+                    
+                    if (mdFiles.length === 0) {
+                        grid.innerHTML = "<p style='text-align:center; grid-column: 1/-1; color:#666;'>Muy pronto cargaremos nuevas guías para ti.</p>";
+                        return;
+                    }
+
+                    mdFiles.forEach(file => {
+                        const nombreLimpio = file.name.replace('.md', '').replace(/-/g, ' ');
+                        const tarjetaHTML = `
+                            <div class="service-card">
+                                <div class="service-icon" style="color:#2a5298;">
+                                    <svg viewBox="0 0 24 24" style="width:60px;height:60px;fill:currentColor;"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+                                </div>
+                                <h3 class="service-title" style="text-transform: capitalize;">${nombreLimpio}</h3>
+                                <p class="service-description">Guía informativa oficial generada automáticamente en formato digital Markdown.</p>
+                                <a href="${file.html_url}" target="_blank" class="service-link" style="background-color:#2a5298; color:white;">Leer en GitHub</a>
+                            </div>
+                        `;
+                        grid.innerHTML += tarjetaHTML;
+                    });
+                })
+                .catch(err => {
+                    grid.innerHTML = "<p style='text-align:center; grid-column: 1/-1; color:#ff6b6b;'>Ocurrió un detalle al cargar las guías de protección.</p>";
+                });
+            };
+            
             function handleHashChange() {
                 const pageId = window.location.hash.substring(1) || 'main';
                 document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
@@ -2050,6 +2097,10 @@ details[open] summary ~ * {
                     window.scrollTo(0, 0);
                 } else {
                     document.getElementById('main-page').classList.add('active');
+                }
+
+                if (pageId === 'recursos') {
+                    fetchGuias();
                 }
             }
             
