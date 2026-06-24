@@ -582,7 +582,7 @@ details[open] summary ~ * {
           <div class="service-icon">
               <svg viewBox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/></svg>
           </div>
-          <h3 class="service-title">Guías, Consejos y Recursos "EN CONSTRUCCION"</h3>
+          <h3 class="service-title">Guías, Consejos y Recursos</h3>
           <p class="service-description">Explora nuestra biblioteca dinámica de contenidos. Respuestas claras y herramientas prácticas a tu alcance.</p>
           <a href="#recursos" class="service-link">Explorar Biblioteca</a>
       </div>
@@ -2060,18 +2060,15 @@ details[open] summary ~ * {
                 });
             }
 
-            // CORRECCIÓN: Definimos fetchGuias formalmente para que funcione en toda la web
             window.fetchGuias = function() {
                 const repoUrl = "https://api.github.com/repos/jh-asesorias/jhseguros/contents/Guias";
-                const contenedorCards = document.getElementById('grid-dinamico-guias'); // CORREGIDO: Ahora sí coincide con tu HTML
+                const contenedorCards = document.getElementById('grid-dinamico-guias');
 
                 if (!contenedorCards) return;
 
                 fetch(repoUrl)
                     .then(response => {
-                        if (!response.ok) {
-                            throw new Error("Error al consultar el repositorio de guías");
-                        }
+                        if (!response.ok) throw new Error("Error al consultar el repositorio");
                         return response.json();
                     })
                     .then(files => {
@@ -2086,34 +2083,47 @@ details[open] summary ~ * {
                         contenedorCards.innerHTML = '';
 
                         guiasFiles.forEach((file, index) => {
-                            // Limpia el nombre gcr-001 para la presentación estética de la tarjeta
-                            const nombreLimpio = file.name.replace(/\.[^/.]+$/, "").replace(/-/g, ' ');
+                            let pivoteCodigo = "";
+                            let tituloGuia = "";
+
+                            // Si el archivo usa nuestro separador inteligente ___
+                            if (file.name.includes('___')) {
+                                const parts = file.name.replace('.md', '').split('___');
+                                pivoteCodigo = parts[0].toUpperCase(); // EJ: JHS-001
+                                // Transforma "como-elegir-tu-seguro" a "Como Elegir Tu Seguro"
+                                tituloGuia = parts[1].replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                            } else {
+                                // Soporte para archivos viejos sin separador
+                                pivoteCodigo = "RECURSO";
+                                tituloGuia = file.name.replace('.md', '').replace(/-/g, ' ');
+                            }
        
                             const card = document.createElement('div');
                             card.className = 'col-md-6 col-lg-4 mb-4';
+                            card.style.display = 'flex';
                         
+                            // CORRECCIÓN: Tarjeta maquetada exactamente con tus requerimientos de diseño
                             card.innerHTML = `
-                                <div class="card h-100 shadow-sm border-0 dynamic-card">
-                                    <div class="card-body d-flex flex-column justify-content-between p-4">
-                                        <div>
-                                            <div class="badge bg-primary mb-2 text-uppercase font-weight-bold">Recurso Informativo</div>
-                                            <h4 class="card-title text-dark font-weight-bold mb-3" style="font-size: 1.25rem;">${nombreLimpio}</h4>
-                                            <p class="card-text text-muted" style="font-size: 0.95rem;">Haz clic abajo para leer este artículo completo y proteger tu patrimonio.</p>
-                                        </div>
-                                        <button onclick="cargarArticuloPorIndex(${index})" class="btn btn-outline-primary btn-block mt-4 text-uppercase font-weight-bold" style="letter-spacing: 1px;">Ver Guía Completa</button>
+                                <div class="card h-100 shadow-sm border-0 dynamic-card" style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); border-top: 4px solid #2a5298; width: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+                                    <div>
+                                        <p style="font-size: 0.95rem; margin-bottom: 0.6rem; color: #333;">
+                                            <strong>Recurso Informativo ${pivoteCodigo}</strong>
+                                        </p>
+                                        <h4 class="card-title font-weight-bold mb-3" style="font-size: 1.3rem; font-family: 'Montserrat', sans-serif; color: #2a5298; line-height: 1.4; font-weight: 700;">${tituloGuia}</h4>
+                                        <p class="card-text text-muted" style="font-size: 0.95rem; line-height: 1.5;">Haz clic abajo para leer este artículo completo y proteger tu patrimonio.</p>
                                     </div>
+                                    <button onclick="cargarArticuloPorIndex(${index})" class="btn btn-outline-primary btn-block mt-4 text-uppercase font-weight-bold" style="letter-spacing: 1px; padding: 0.6rem 1.2rem; border: 1px solid #2a5298; background: white; color: #2a5298; border-radius: 4px; font-weight: 600; cursor: pointer; transition: all 0.3s; width: 100%;">Ver Guía Completa</button>
                                 </div>
-                            `; // CORREGIDO: verArticulo cambiado a cargarArticuloPorIndex para que coincida con la función real
+                            `;
                             contenedorCards.appendChild(card);
                         });
                     })
                     .catch(error => {
-                        console.error("Error cargando guías dinámicas:", error);
+                        console.error("Error cargando guías:", error);
                         contenedorCards.innerHTML = '<p style="text-align:center; color:#666; font-size:1.1rem; padding: 40px 0;">Muy pronto cargaremos nuevas guías para ti.</p>';
                     });
             };
 
-            // Cargar las guías automáticamente al abrir la página
             window.fetchGuias();
 
             function handleHashChange() {
@@ -2128,7 +2138,7 @@ details[open] summary ~ * {
                 }
 
                 if (pageId === 'recursos') {
-                    window.fetchGuias(); // CORREGIDO: Ahora ejecuta la función real de actualización sin fallar
+                    window.fetchGuias();
                 }
             }
 
@@ -2140,13 +2150,20 @@ details[open] summary ~ * {
             const file = window.guiasCache[index];
             if (!file) return;
 
-            const nombreLimpio = file.name.replace('.md', '').replace(/-/g, ' ');
+            let tituloGuia = "";
+            if (file.name.includes('___')) {
+                tituloGuia = file.name.replace('.md', '').split('___')[1].replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+            } else {
+                tituloGuia = file.name.replace('.md', '').replace(/-/g, ' ');
+            }
+
             const contenedorContenido = document.getElementById('articulo-contenido');
             const contenedorTitulo = document.getElementById('articulo-titulo');
 
             if (contenedorContenido && contenedorTitulo) {
-                contenedorTitulo.innerText = nombreLimpio;
-                contenedorContenido.innerHTML = '<p style="text-align:center; color:#666; padding: 40px 0;">⏳ Cargando contenido del artículo...</p>';
+                // CORRECCIÓN: Coloca el título real en grande arriba de la guía completa
+                contenedorTitulo.innerText = tituloGuia;
+                contenedorContenido.innerHTML = '<p style="text-align:center; color:#666; padding: 40px 0;">⏳ Cargando contenido de protección...</p>';
                 window.location.hash = 'articulo';
 
                 fetch(file.download_url)
@@ -2155,7 +2172,7 @@ details[open] summary ~ * {
                         return res.text();
                     })
                     .then(htmlTexto => {
-                        contenedorContenido.innerHTML = htmlTexto; // Inyecta el HTML limpio que generamos en GitHub
+                        contenedorContenido.innerHTML = htmlTexto; 
                     })
                     .catch(err => {
                         contenedorContenido.innerHTML = '<p style="text-align:center; color:#ff6b6b; padding: 40px 0;">❌ Detalle al abrir el artículo. Por favor, intenta de nuevo.</p>';
