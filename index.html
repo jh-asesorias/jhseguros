@@ -2060,57 +2060,61 @@ details[open] summary ~ * {
                 });
             }
 
-        document.addEventListener("DOMContentLoaded", function() {
-            const repoUrl = "https://api.github.com/repos/jh-asesorias/jhseguros/contents/Guias";
-            const contenedorCards = document.getElementById('guias-cards-container');
+            // CORRECCIÓN: Definimos fetchGuias formalmente para que funcione en toda la web
+            window.fetchGuias = function() {
+                const repoUrl = "https://api.github.com/repos/jh-asesorias/jhseguros/contents/Guias";
+                const contenedorCards = document.getElementById('grid-dinamico-guias'); // CORREGIDO: Ahora sí coincide con tu HTML
 
-            if (!contenedorCards) return;
+                if (!contenedorCards) return;
 
-            fetch(repoUrl)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error("Error al consultar el repositorio de guías");
-                    }
-                    return response.json();
-                })
-                .then(files => {
-                    // Filtra archivos válidos ignorando ocultos
-                    const guiasFiles = files.filter(f => f.type === 'file' && !f.name.startsWith('.'));
+                fetch(repoUrl)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error("Error al consultar el repositorio de guías");
+                        }
+                        return response.json();
+                    })
+                    .then(files => {
+                        const guiasFiles = files.filter(f => f.type === 'file' && !f.name.startsWith('.'));
 
-                    if (guiasFiles.length === 0) {
-                        contenedorCards.innerHTML = '<p style="text-align:center; color:#666; font-size:1.1rem; padding: 40px 0;">Muy pronto cargaremos nuevas guías para ti.</p>';
-                        return;
-                    }
+                        if (guiasFiles.length === 0) {
+                            contenedorCards.innerHTML = '<p style="text-align:center; color:#666; font-size:1.1rem; padding: 40px 0;">Muy pronto cargaremos nuevas guías para ti.</p>';
+                            return;
+                        }
 
-                    window.guiasCache = guiasFiles;
-                    contenedorCards.innerHTML = '';
+                        window.guiasCache = guiasFiles;
+                        contenedorCards.innerHTML = '';
 
-                    guiasFiles.forEach((file, index) => {
-                        // Limpia el nombre del archivo para usarlo como título provisional si es necesario
-                        const nombreLimpio = file.name.replace(/\.[^/.]+$/, "").replace(/-/g, ' ');
+                        guiasFiles.forEach((file, index) => {
+                            // Limpia el nombre gcr-001 para la presentación estética de la tarjeta
+                            const nombreLimpio = file.name.replace(/\.[^/.]+$/, "").replace(/-/g, ' ');
+       
+                            const card = document.createElement('div');
+                            card.className = 'col-md-6 col-lg-4 mb-4';
                         
-                        const card = document.createElement('div');
-                        card.className = 'col-md-6 col-lg-4 mb-4';
-                        card.innerHTML = `
-                            <div class="card h-100 shadow-sm border-0 dynamic-card">
-                                <div class="card-body d-flex flex-column justify-content-between p-4">
-                                    <div>
-                                        <div class="badge bg-primary mb-2 text-uppercase font-weight-bold">Recurso Informativo</div>
-                                        <h4 class="card-title text-dark font-weight-bold mb-3" style="font-size: 1.25rem;">${nombreLimpio}</h4>
-                                        <p class="card-text text-muted" style="font-size: 0.95rem;">Haz clic abajo para leer este artículo completo y proteger tu patrimonio.</p>
+                            card.innerHTML = `
+                                <div class="card h-100 shadow-sm border-0 dynamic-card">
+                                    <div class="card-body d-flex flex-column justify-content-between p-4">
+                                        <div>
+                                            <div class="badge bg-primary mb-2 text-uppercase font-weight-bold">Recurso Informativo</div>
+                                            <h4 class="card-title text-dark font-weight-bold mb-3" style="font-size: 1.25rem;">${nombreLimpio}</h4>
+                                            <p class="card-text text-muted" style="font-size: 0.95rem;">Haz clic abajo para leer este artículo completo y proteger tu patrimonio.</p>
+                                        </div>
+                                        <button onclick="cargarArticuloPorIndex(${index})" class="btn btn-outline-primary btn-block mt-4 text-uppercase font-weight-bold" style="letter-spacing: 1px;">Ver Guía Completa</button>
                                     </div>
-                                    <button onclick="verArticulo(${index})" class="btn btn-outline-primary btn-block mt-4 text-uppercase font-weight-bold" style="letter-spacing: 1px;">Ver Guía Completa</button>
                                 </div>
-                            </div>
-                        `;
-                        contenedorCards.appendChild(card);
+                            `; // CORREGIDO: verArticulo cambiado a cargarArticuloPorIndex para que coincida con la función real
+                            contenedorCards.appendChild(card);
+                        });
+                    })
+                    .catch(error => {
+                        console.error("Error cargando guías dinámicas:", error);
+                        contenedorCards.innerHTML = '<p style="text-align:center; color:#666; font-size:1.1rem; padding: 40px 0;">Muy pronto cargaremos nuevas guías para ti.</p>';
                     });
-                })
-                .catch(error => {
-                    console.error("Error cargando guías dinámicas:", error);
-                    contenedorCards.innerHTML = '<p style="text-align:center; color:#666; font-size:1.1rem; padding: 40px 0;">Muy pronto cargaremos nuevas guías para ti.</p>';
-                });
-        });
+            };
+
+            // Cargar las guías automáticamente al abrir la página
+            window.fetchGuias();
 
             function handleHashChange() {
                 const pageId = window.location.hash.substring(1) || 'main';
@@ -2124,7 +2128,7 @@ details[open] summary ~ * {
                 }
 
                 if (pageId === 'recursos') {
-                    fetchGuias();
+                    window.fetchGuias(); // CORREGIDO: Ahora ejecuta la función real de actualización sin fallar
                 }
             }
 
@@ -2151,7 +2155,7 @@ details[open] summary ~ * {
                         return res.text();
                     })
                     .then(htmlTexto => {
-                        contenedorContenido.innerHTML = htmlTexto;
+                        contenedorContenido.innerHTML = htmlTexto; // Inyecta el HTML limpio que generamos en GitHub
                     })
                     .catch(err => {
                         contenedorContenido.innerHTML = '<p style="text-align:center; color:#ff6b6b; padding: 40px 0;">❌ Detalle al abrir el artículo. Por favor, intenta de nuevo.</p>';
