@@ -1,0 +1,30 @@
+[
+  {
+    "pivote": "JHS-001",
+    "titulo": "¿Tu casa o negocio sobrevivirá a la temporada de huracanes y ciclones 2026 sin daños?",
+    "metaDesc": "Descubre cómo la cobertura de Fenómenos Hidrometeorológicos de AXA y CHUBB protege tu casa o PYME ante huracanes y ciclones en Tamaulipas.",
+    "aseguradora": "AXA, CHUBB",
+    "filename": "jhs-001.md"
+  },
+  {
+    "pivote": "JHS-002",
+    "titulo": "Seguro de auto para viajar a Texas: ¿Sirve tu póliza mexicana o necesitas otra adicional?",
+    "metaDesc": "¿Viajas de Ciudad a Texas este verano? Conoce cómo usar la Responsabilidad Civil Extranjera de tu seguro HDI o Chubb gratis y sin complicaciones.",
+    "aseguradora": "CHUBB, HDI",
+    "filename": "jhs-002.md"
+  },
+  {
+    "pivote": "JHS-003",
+    "titulo": "Alerta por dengue en Tamaulipas: ¿Cuánto cuesta hospitalizarse y cómo ayuda tu seguro médico?",
+    "metaDesc": "Ante el repunte de dengue en 2026, descubre cómo AXA Seguros, HDI-BUPA y Seguros Monterrey New York Life cubren tus gastos de hospitalización de urgencia en Tamaulipas.",
+    "aseguradora": "AXA, SMNYL",
+    "filename": "jhs-003.md"
+  },
+  {
+    "pivote": "JHS-004",
+    "titulo": "Seguro de CAPUFE vs. seguro de auto cobertura amplia: ¿Qué te cubre realmente en carretera?",
+    "metaDesc": "Vacaciones de verano: Comparamos la cobertura de la caseta de CAPUFE contra el seguro amplio de AXA, HDI y CHUBB. No viajes desprotegido.",
+    "aseguradora": "AXA, HDI, CHUBB",
+    "filename": "jhs-004.md"
+  }
+]
