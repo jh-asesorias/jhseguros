@@ -2099,17 +2099,17 @@ details[open] summary ~ * {
                             card.className = 'col-md-6 col-lg-4 mb-4';
                             card.style.display = 'flex';
                         
-                            // CORRECCIÓN SOLICITADA EN TARJETAS:
-                            // - Encabezado en la misma línea, color AZUL (#2a5298) y negrita.
-                            // - Título de la guía abajo en letras grandes y negritas (font-weight: 700).
-                            // - Se remueve el texto "Haz clic abajo..."
+                            // DISEÑO DE TARJETA CORREGIDO:
+                            // - "Recurso Informativo JHS-001" en la misma línea, azul (#2a5298) y negrita (700)
+                            // - Título de la guía abajo en tamaño normal y SIN negritas (400)
+                            // - Se elimina por completo el texto descriptivo intermedio
                             card.innerHTML = `
                                 <div class="card h-100 shadow-sm border-0 dynamic-card" style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); border-top: 4px solid #2a5298; width: 100%; display: flex; flex-direction: column; justify-content: space-between;">
                                     <div>
-                                        <p style="font-size: 0.95rem; margin-bottom: 0.6rem; color: #2a5298; font-weight: 700;">
+                                        <p style="font-size: 1rem; margin-bottom: 0.8rem; color: #2a5298; font-weight: 700;">
                                             Recurso Informativo ${pivoteCodigo}
                                         </p>
-                                        <h4 class="card-title mb-3" style="font-size: 1.35rem; font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.4; font-weight: 700;">${tituloGuia}</h4>
+                                        <h4 class="card-title mb-3" style="font-size: 1.15rem; font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.5; font-weight: 400;">${tituloGuia}</h4>
                                     </div>
                                     <button onclick="cargarArticuloPorIndex(${index})" class="btn btn-outline-primary btn-block mt-4 text-uppercase font-weight-bold" style="letter-spacing: 1px; padding: 0.6rem 1.2rem; border: 1px solid #2a5298; background: white; color: #2a5298; border-radius: 4px; font-weight: 600; cursor: pointer; transition: all 0.3s; width: 100%;">Ver Guía Completa</button>
                                 </div>
@@ -2164,7 +2164,7 @@ details[open] summary ~ * {
                 contenedorContenido.innerHTML = '<p style="text-align:center; color:#666; padding: 40px 0;">⏳ Cargando contenido de protección...</p>';
                 window.location.hash = 'articulo';
 
-                // CORRECCIÓN INTERNA SOLICITADA: Oculta dinámicamente la línea "Biblioteca Digital del Asesor..."
+                // DISEÑO INTERNO CORREGIDO: Oculta por completo la línea "Biblioteca Digital del Asesor..."
                 const tagline = document.querySelector('#articulo-page .tagline');
                 if (tagline) tagline.style.display = 'none';
 
