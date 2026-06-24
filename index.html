@@ -2089,7 +2089,8 @@ details[open] summary ~ * {
                             if (file.name.includes('___')) {
                                 const parts = file.name.replace('.md', '').split('___');
                                 pivoteCodigo = parts[0].toUpperCase(); 
-                                tituloGuia = parts[1].replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                                // RECONSTRUCCIÓN DE SIGNOS: Cambia los guiones por espacios y regresa el ? y : originales
+                                tituloGuia = parts[1].replace(/-/g, ' ').replace(/_q_/g, '?').replace(/_c_/g, ':');
                             } else {
                                 pivoteCodigo = "RECURSO";
                                 tituloGuia = file.name.replace('.md', '').replace(/-/g, ' ');
@@ -2099,10 +2100,7 @@ details[open] summary ~ * {
                             card.className = 'col-md-6 col-lg-4 mb-4';
                             card.style.display = 'flex';
                         
-                            // DISEÑO DE TARJETA CORREGIDO:
-                            // - "Recurso Informativo JHS-001" en la misma línea, azul (#2a5298) y negrita (700)
-                            // - Título de la guía abajo en tamaño normal y SIN negritas (400)
-                            // - Se elimina por completo el texto descriptivo intermedio
+                            // DISEÑO SOLICITADO: Encabezado azul/negrita, título abajo en tamaño normal sin negritas
                             card.innerHTML = `
                                 <div class="card h-100 shadow-sm border-0 dynamic-card" style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); border-top: 4px solid #2a5298; width: 100%; display: flex; flex-direction: column; justify-content: space-between;">
                                     <div>
@@ -2151,7 +2149,7 @@ details[open] summary ~ * {
 
             let tituloGuia = "";
             if (file.name.includes('___')) {
-                tituloGuia = file.name.replace('.md', '').split('___')[1].replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                tituloGuia = file.name.replace('.md', '').split('___')[1].replace(/-/g, ' ').replace(/_q_/g, '?').replace(/_c_/g, ':');
             } else {
                 tituloGuia = file.name.replace('.md', '').replace(/-/g, ' ');
             }
@@ -2164,7 +2162,7 @@ details[open] summary ~ * {
                 contenedorContenido.innerHTML = '<p style="text-align:center; color:#666; padding: 40px 0;">⏳ Cargando contenido de protección...</p>';
                 window.location.hash = 'articulo';
 
-                // DISEÑO INTERNO CORREGIDO: Oculta por completo la línea "Biblioteca Digital del Asesor..."
+                // ELIMINA LÍNEA: Oculta dinámicamente "Biblioteca Digital del Asesor..."
                 const tagline = document.querySelector('#articulo-page .tagline');
                 if (tagline) tagline.style.display = 'none';
 
