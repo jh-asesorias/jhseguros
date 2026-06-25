@@ -1838,7 +1838,7 @@ details[open] summary ~ * {
                        Cargando texto de protección...
                    </div>
                    <div style="text-align: center; margin-top: 30px;">
-                       <a href="#recursos" class="back-to-top">Volver a Tendencias</a>
+                       <a href="/recursos" class="back-to-top router-link">Volver a Tendencias</a>
                    </div>
                </div>
            </section>
@@ -2082,9 +2082,20 @@ details[open] summary ~ * {
             window.handleCustomRouting = function() {
                 const path = window.location.pathname;
                 const hash = window.location.hash;
-                document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+                
+                if (path === '/recursos' || path === '/recursos/') {
+                    document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+                    const targetPage = document.getElementById('recursos-page');
+                    if (targetPage) {
+                        targetPage.classList.add('active');
+                        window.scrollTo(0, 0);
+                        window.fetchGuias();
+                    }
+                    return;
+                }
 
                 if (path.startsWith('/recursos/')) {
+                    document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
                     const fileSlug = path.replace('/recursos/', '');
                     const targetPage = document.getElementById('articulo-page');
                     if (targetPage) {
@@ -2092,19 +2103,21 @@ details[open] summary ~ * {
                         window.scrollTo(0, 0);
                         window.cargarArticuloPorSlug(fileSlug);
                     }
-                } else {
-                    const pageId = hash.substring(1) || 'main';
-                    const targetPage = document.getElementById(pageId + '-page');
-                    if (targetPage) {
-                        targetPage.classList.add('active');
-                        window.scrollTo(0, 0);
-                    } else {
-                        document.getElementById('main-page').classList.add('active');
-                    }
+                    return;
+                }
 
+                document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+                const pageId = hash.substring(1) || 'main';
+                const targetPage = document.getElementById(pageId + '-page');
+                
+                if (targetPage) {
+                    targetPage.classList.add('active');
+                    window.scrollTo(0, 0);
                     if (pageId === 'recursos') {
                         window.fetchGuias();
                     }
+                } else {
+                    document.getElementById('main-page').classList.add('active');
                 }
             };
 
