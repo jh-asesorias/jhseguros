@@ -449,8 +449,7 @@ details[open] summary ~ * {
         <a href="#certificaciones" class="mobile-nav-link">🎓 Certificaciones</a>
         <a href="#faq" class="mobile-nav-link">❓ Preguntas Frecuentes</a>
         <a href="#hospitales" class="mobile-nav-link">🏥 Servicios Hospitalarios</a>
-        <a href="#hospitales" class="mobile-nav-link">🏥 Servicios Hospitalarios</a>
-        <a href="#recursos" class="mobile-nav-link">📚 Tendencias de Búsquedas de Seguros</a></a>
+        <a href="#recursos" class="mobile-nav-link">📚 Tendencias de Búsquedas de Seguros</a>
         <a href="#redes" class="mobile-nav-link">🌐 Redes Sociales</a>
         <a href="#contacto-form" class="mobile-nav-link">📩 Contacto</a>
     </div>
@@ -570,14 +569,6 @@ details[open] summary ~ * {
                         <p class="service-description">Accede a los directorios médicos de Seguros Monterrey, AXA Seguros, HDI Seguros - BUPA México. Encuentra hospitales y médicos en convenio.</p>
                         <a href="#hospitales" class="service-link">Buscar Servicios</a>
                     </div>
-<div class="service-card">
-          <div class="service-icon">
-              <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
-          </div>
-          <h3 class="service-title">Blog del Experto</h3>
-          <p class="service-description">Artículos, consejos y guías sobre finanzas personales, deducciones y cómo usar tus seguros.</p>
-          <a href="#blog" class="service-link">Leer Artículos</a>
-      </div>
       <div class="service-card">
           <div class="service-icon">
               <svg viewBox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/></svg>
@@ -1825,47 +1816,8 @@ details[open] summary ~ * {
             </div>
         </section>
     </div>
-    <div id="blog-page" class="page">
-    <header>
-        <div class="container">
-            <div class="profile-container">
-                <h1 class="name">Biblioteca de Protección</h1>
-                <p class="tagline">Información financiera clara para tomar decisiones inteligentes</p>
-            </div>
-        </div>
-    </header>
-    
-    <section class="detail-section">
-        <div class="container">
-            <div class="detail-content" style="margin-bottom: 30px;">
-                <h2 style="color: #2a5298; margin-bottom: 15px;">🔍 Errores Comunes al Contratar un PPR</h2>
-                <p style="font-size: 0.9rem; color: #888; margin-bottom: 15px;">Publicado por: Rafael Jiménez</p>
-                
-                <p>Muchas personas inician su ahorro para el retiro con buenas intenciones, pero cometen errores que les cuestan dinero. Aquí te explico los principales:</p>
-                <ul>
-                    <li><strong>No hacerlo deducible:</strong> Estás dejando dinero en la mesa. El SAT puede devolverte hasta el 35% de lo que ahorras.</li>
-                    <li><strong>Ahorrar en pesos:</strong> La inflación se comerá tu dinero. Siempre busca UDIS o Dólares.</li>
-                    <li><strong>Empezar tarde:</strong> El factor más importante es el tiempo, no la cantidad.</li>
-                </ul>
-                <p><strong>¿Quieres saber cuánto te devolvería el SAT este año?</strong> Agenda una asesoría y hacemos el cálculo.</p>
-            </div>
-
-            <div class="detail-content" style="margin-bottom: 30px;">
-                <h2 style="color: #2a5298; margin-bottom: 15px;">🏥 ¿Deducible o Coaseguro? Entendiéndolo fácil</h2>
-                <p style="font-size: 0.9rem; color: #888; margin-bottom: 15px;">Publicado por: Rafael Jiménez</p>
-                
-                <p>Es la duda número 1 en Gastos Médicos. Imagina que el deducible es tu "boleto de entrada" para usar el seguro. Es una cantidad fija.</p>
-                <p>El coaseguro es tu participación "socia" en el gasto restante, pero tranquilo, en mis pólizas siempre le ponemos un tope para que no pagues millones.</p>
-            </div>
-
-            <div style="text-align: center; margin-top: 30px;">
-                    <a href="#main" class="back-to-top">Volver al Menú</a>
-            </div>
-        </div>
-    </section>
-</div>
    <div id="recursos-page" class="page">
-           <header><div class="container"><div class="profile-container"><h1 class="name">Tendencias de Búsquedas de Seguros</h1><p class="tagline">Respuestas claras y herramientas prácticas a tu alcance</p></div></div></header>
+           <header><div class="container"><div class="profile-container"><h1 class="name">Tendencias de Búsquedas de Seguros</a></h1><p class="tagline">Respuestas claras y herramientas prácticas a tu alcance</p></div></div></header>
            <section class="detail-section">
                <div class="container">
                    <div id="grid-dinamico-guias" class="services-grid">
@@ -2082,34 +2034,29 @@ details[open] summary ~ * {
                         window.guiasCache = guiasFiles;
                         contenedorCards.innerHTML = '';
 
-                        guiasFiles.forEach((file, index) => {
+                        guiasFiles.forEach((file) => {
                             let pivoteCodigo = "";
                             let tituloGuia = "";
 
                             if (file.name.includes('___')) {
                                 const parts = file.name.replace('.md', '').split('___');
-                                pivoteCodigo = parts[0].toUpperCase(); 
-                                // RECONSTRUCCIÓN DE SIGNOS: Cambia los guiones por espacios y regresa el ? y : originales
+                                pivoteCodigo = parts[0].toLowerCase();
                                 tituloGuia = parts[1].replace(/-/g, ' ').replace(/_q_/g, '?').replace(/_c_/g, ':');
                             } else {
-                                pivoteCodigo = "RECURSO";
+                                pivoteCodigo = "recurso";
                                 tituloGuia = file.name.replace('.md', '').replace(/-/g, ' ');
                             }
-       
+
                             const card = document.createElement('div');
-                            card.className = 'col-md-6 col-lg-4 mb-4';
                             card.style.display = 'flex';
-                        
-                            // DISEÑO SOLICITADO: Encabezado azul/negrita, título abajo en tamaño normal sin negritas
                             card.innerHTML = `
                                 <div class="card h-100 shadow-sm border-0 dynamic-card" style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); border-top: 4px solid #2a5298; width: 100%; display: flex; flex-direction: column; justify-content: space-between;">
                                     <div>
-                                        <p style="font-size: 1rem; margin-bottom: 0.8rem; color: #2a5298; font-weight: 700;">
-                                            Recurso Informativo ${pivoteCodigo}
-                                        </p>
-                                        <h4 class="card-title mb-3" style="font-size: 1.15rem; font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.5; font-weight: 400;">${tituloGuia}</h4>
+                                        <h4 class="card-title mb-3" style="font-size: 1.15rem; font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.5; font-weight: 400; text-transform: none;">
+                                            <strong>${pivoteCodigo}.-</strong> ${tituloGuia}
+                                        </h4>
                                     </div>
-                                    <button onclick="cargarArticuloPorIndex(${index})" class="btn btn-outline-primary btn-block mt-4 text-uppercase font-weight-bold" style="letter-spacing: 1px; padding: 0.6rem 1.2rem; border: 1px solid #2a5298; background: white; color: #2a5298; border-radius: 4px; font-weight: 600; cursor: pointer; transition: all 0.3s; width: 100%;">Ver Tendencia</button>
+                                    <a href="#recursos/${file.name.replace('.md', '')}" class="service-link" style="text-align:center; display:block; margin-top:auto; font-weight:600; text-decoration:none;">Ver Tendencia</a>
                                 </div>
                             `;
                             contenedorCards.appendChild(card);
@@ -2121,21 +2068,31 @@ details[open] summary ~ * {
                     });
             };
 
-            window.fetchGuias();
-
             function handleHashChange() {
-                const pageId = window.location.hash.substring(1) || 'main';
+                const hash = window.location.hash;
                 document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
-                const targetPage = document.getElementById(pageId + '-page');
-                if (targetPage) {
-                    targetPage.classList.add('active');
-                    window.scrollTo(0, 0);
-                } else {
-                    document.getElementById('main-page').classList.add('active');
-                }
 
-                if (pageId === 'recursos') {
-                    window.fetchGuias();
+                if (hash.startsWith('#recursos/')) {
+                    const fileSlug = hash.replace('#recursos/', '');
+                    const targetPage = document.getElementById('articulo-page');
+                    if (targetPage) {
+                        targetPage.classList.add('active');
+                        window.scrollTo(0, 0);
+                        window.cargarArticuloPorSlug(fileSlug);
+                    }
+                } else {
+                    const pageId = hash.substring(1) || 'main';
+                    const targetPage = document.getElementById(pageId + '-page');
+                    if (targetPage) {
+                        targetPage.classList.add('active');
+                        window.scrollTo(0, 0);
+                    } else {
+                        document.getElementById('main-page').classList.add('active');
+                    }
+
+                    if (pageId === 'recursos') {
+                        window.fetchGuias();
+                    }
                 }
             }
 
@@ -2143,15 +2100,12 @@ details[open] summary ~ * {
             handleHashChange();
         });
 
-        window.cargarArticuloPorIndex = function(index) {
-            const file = window.guiasCache[index];
-            if (!file) return;
-
+        window.cargarArticuloPorSlug = function(slug) {
             let tituloGuia = "";
-            if (file.name.includes('___')) {
-                tituloGuia = file.name.replace('.md', '').split('___')[1].replace(/-/g, ' ').replace(/_q_/g, '?').replace(/_c_/g, ':');
+            if (slug.includes('___')) {
+                tituloGuia = slug.split('___')[1].replace(/-/g, ' ').replace(/_q_/g, '?').replace(/_c_/g, ':');
             } else {
-                tituloGuia = file.name.replace('.md', '').replace(/-/g, ' ');
+                tituloGuia = slug.replace(/-/g, ' ');
             }
 
             const contenedorContenido = document.getElementById('articulo-contenido');
@@ -2160,22 +2114,22 @@ details[open] summary ~ * {
             if (contenedorContenido && contenedorTitulo) {
                 contenedorTitulo.innerText = tituloGuia;
                 contenedorContenido.innerHTML = '<p style="text-align:center; color:#666; padding: 40px 0;">⏳ Cargando contenido de protección...</p>';
-                window.location.hash = 'articulo';
 
-                // ELIMINA LÍNEA: Oculta dinámicamente "Biblioteca Digital del Asesor..."
                 const tagline = document.querySelector('#articulo-page .tagline');
                 if (tagline) tagline.style.display = 'none';
 
-                fetch(file.download_url)
+                const downloadUrl = `https://raw.githubusercontent.com/jh-asesorias/jhseguros/main/Guias/${slug}.md`;
+
+                fetch(downloadUrl)
                     .then(res => {
                         if (!res.ok) throw new Error("No se pudo obtener el texto");
                         return res.text();
                     })
                     .then(htmlTexto => {
-                        contenedorContenido.innerHTML = htmlTexto; 
+                        contenedorContenido.innerHTML = htmlTexto;
                     })
                     .catch(err => {
-                        contenedorContenido.innerHTML = '<p style="text-align:center; color:#ff6b6b; padding: 40px 0;">❌ Detalle al abrir el artículo. Por favor, intenta de nuevo.</p>';
+                        contenedorContenido.innerHTML = '<p style="text-align:center; color:#ff6b6b; padding: 40px 0;">❌ Detalle al abrir el artículo o el recurso no existe.</p>';
                     });
             }
         };
