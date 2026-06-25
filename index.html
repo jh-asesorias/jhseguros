@@ -2038,13 +2038,15 @@ details[open] summary ~ * {
                             let pivoteCodigo = "";
                             let tituloGuia = "";
 
-                            if (file.name.includes('___')) {
-                                const parts = file.name.replace('.md', '').split('___');
+                            const nameDecodificado = decodeURIComponent(file.name);
+
+                            if (nameDecodificado.includes('___')) {
+                                const parts = nameDecodificado.replace('.md', '').split('___');
                                 pivoteCodigo = parts[0].toLowerCase();
                                 tituloGuia = parts[1].replace(/-/g, ' ').replace(/_q_/g, '?').replace(/_c_/g, ':');
                             } else {
                                 pivoteCodigo = "recurso";
-                                tituloGuia = file.name.replace('.md', '').replace(/-/g, ' ');
+                                tituloGuia = nameDecodificado.replace('.md', '').replace(/-/g, ' ').replace(/_q_/g, '?').replace(/_c_/g, ':');
                             }
 
                             const card = document.createElement('div');
@@ -2052,11 +2054,11 @@ details[open] summary ~ * {
                             card.innerHTML = `
                                 <div class="card h-100 shadow-sm border-0 dynamic-card" style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); border-top: 4px solid #2a5298; width: 100%; display: flex; flex-direction: column; justify-content: space-between;">
                                     <div>
-                                        <h4 class="card-title mb-3" style="font-size: 1.15rem; font-family: 'Montserrat', sans-serif; color: #333; line-height: 1.5; font-weight: 400; text-transform: none;">
+                                        <h4 class="card-title mb-3" style="font-size: 1.15rem; font-family: 'Open Sans', sans-serif; color: #333; line-height: 1.5; font-weight: 400; text-transform: none;">
                                             <strong>${pivoteCodigo}.-</strong> ${tituloGuia}
                                         </h4>
                                     </div>
-                                    <a href="#recursos/${file.name.replace('.md', '')}" class="service-link" style="text-align:center; display:block; margin-top:auto; font-weight:600; text-decoration:none;">Ver Tendencia</a>
+                                    <a href="#recursos/${file.name.replace('.md', '')}" class="service-link" style="text-align:center; display:block; margin-top:auto; font-weight:600; text-decoration:none; padding: 0.5rem 1rem; border: 1px solid #2a5298; color: #2a5298; border-radius: 4px;">Ver Tendencia</a>
                                 </div>
                             `;
                             contenedorCards.appendChild(card);
@@ -2067,6 +2069,8 @@ details[open] summary ~ * {
                         contenedorCards.innerHTML = '<p style="text-align:center; color:#666; font-size:1.1rem; padding: 40px 0;">Muy pronto cargaremos nuevas guías para ti.</p>';
                     });
             };
+
+            window.fetchGuias();
 
             function handleHashChange() {
                 const hash = window.location.hash;
@@ -2103,7 +2107,7 @@ details[open] summary ~ * {
         window.cargarArticuloPorSlug = function(slug) {
             let tituloGuia = "";
             if (slug.includes('___')) {
-                tituloGuia = slug.split('___')[1].replace(/-/g, ' ').replace(/_q_/g, '?').replace(/_c_/g, ':');
+                tituloGuia = slug.split('___')[1].replace(/-/g, ' ');
             } else {
                 tituloGuia = slug.replace(/-/g, ' ');
             }
