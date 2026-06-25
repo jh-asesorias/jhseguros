@@ -1,1 +1,61 @@
+name: Generador Automatico de Sitemap SEO
 
+on:
+  push:
+    paths:
+      - 'Guias/**' # Se activa en automático cada que tu Apps Script suba algo aquí
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Clonar el repositorio
+      uses: actions/checkout@v3
+
+    - name: Configurar Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16
+
+    - name: Ejecutar script de mapeo masivo
+      run: |
+        node -e "
+        const fs = require('fs');
+        const path = require('path');
+
+        const folderPath = path.join(process.cwd(), 'Guias');
+        const domain = 'https://jhseguros.mx';
+        
+        let xml = '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n';
+        xml += '<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n';
+        
+        // Registro de la página de inicio
+        xml += '  <url>\n';
+        xml += '    <loc>' + domain + '/</loc>\n';
+        xml += '    <priority>1.0</priority>\n';
+        xml += '  </url>\n';
+
+        if (fs.existsSync(folderPath)) {
+            const files = fs.readdirSync(folderPath).filter(f => f.endsWith('.md') && !f.startsWith('.'));
+            
+            files.forEach(file => {
+                const slug = file.replace('.md', '');
+                
+                xml += '  <url>\n';
+                xml += '    <loc>' + domain + '/recursos/' + encodeURIComponent(slug) + '</loc>\n';
+                xml += '    <priority>0.8</priority>\n';
+                xml += '  </url>\n';
+            });
+        }
+
+        xml += '</urlset>';
+        fs.writeFileSync(path.join(process.cwd(), 'sitemap.xml'), xml);
+        console.log('Sitemap.xml generado con éxito en la raíz.');
+        "
+
+    - name: Guardar y subir cambios al repositorio
+      run: |
+        git config --global user.name 'GitHub Actions Bot'
+        git config --global user.email 'actions@github.com'
+        git add sitemap.xml
+        git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 SEO: Sitemap actualizado automáticamente por cambios en Guías" && git push)
