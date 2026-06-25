@@ -2106,10 +2106,13 @@ details[open] summary ~ * {
 
         window.cargarArticuloPorSlug = function(slug) {
             let tituloGuia = "";
-            if (slug.includes('___')) {
-                tituloGuia = slug.split('___')[1].replace(/-/g, ' ');
+            
+            const slugDecodificado = decodeURIComponent(slug);
+
+            if (slugDecodificado.includes('___')) {
+                tituloGuia = slugDecodificado.split('___')[1].replace(/-/g, ' ').replace(/_q_/g, '?').replace(/_c_/g, ':');
             } else {
-                tituloGuia = slug.replace(/-/g, ' ');
+                tituloGuia = slugDecodificado.replace(/-/g, ' ').replace(/_q_/g, '?').replace(/_c_/g, ':');
             }
 
             const contenedorContenido = document.getElementById('articulo-contenido');
