@@ -2073,32 +2073,45 @@ details[open] summary ~ * {
             window.fetchGuias();
 
             function handleHashChange() {
-                const hash = window.location.hash;
+            const hash = window.location.hash;
+
+            if (hash.startsWith('#recursos/')) {
+                document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+                const fileSlug = hash.replace('#recursos/', '');
+                const targetPage = document.getElementById('articulo-page');
+                if (targetPage) {
+                    targetPage.classList.add('active');
+                    window.scrollTo(0, 0);
+                    window.cargarArticuloPorSlug(fileSlug);
+                }
+            } else {
+                const pageId = hash.substring(1) || 'main';
+                const targetPage = document.getElementById(pageId + '-page');
+                
                 document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
 
-                if (hash.startsWith('#recursos/')) {
-                    const fileSlug = hash.replace('#recursos/', '');
-                    const targetPage = document.getElementById('articulo-page');
-                    if (targetPage) {
-                        targetPage.classList.add('active');
-                        window.scrollTo(0, 0);
-                        window.cargarArticuloPorSlug(fileSlug);
-                    }
+                if (targetPage) {
+                    targetPage.classList.add('active');
+                    window.scrollTo(0, 0);
                 } else {
-                    const pageId = hash.substring(1) || 'main';
-                    const targetPage = document.getElementById(pageId + '-page');
-                    if (targetPage) {
-                        targetPage.classList.add('active');
-                        window.scrollTo(0, 0);
+                    // MÁGIA DE ENFOQUE: Si el ID es un elemento interno (como "contacto-form"), activa el menú principal primero
+                    document.getElementById('main-page').classList.add('active');
+                    const elementoInterno = document.getElementById(pageId);
+                    if (elementoInterno) {
+                        // Le damos 50 milisegundos para que pase de oculto a visible y el navegador calcule la posición exacta
+                        setTimeout(() => {
+                            elementoInterno.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }, 50);
                     } else {
-                        document.getElementById('main-page').classList.add('active');
-                    }
-
-                    if (pageId === 'recursos') {
-                        window.fetchGuias();
+                        window.scrollTo(0, 0);
                     }
                 }
+
+                if (pageId === 'recursos') {
+                    window.fetchGuias();
+                }
             }
+        }
 
             window.addEventListener('hashchange', handleHashChange);
             handleHashChange();
