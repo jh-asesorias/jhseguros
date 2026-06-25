@@ -1,1 +1,16 @@
-
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <title>Cargando Recurso Seguro...</title>
+    <script type="text/javascript">
+        // Guarda la ruta limpia que pidió el buscador o usuario y la manda al index
+        var pathName = window.location.pathname;
+        var hostUrl = window.location.protocol + '//' + window.location.hostname + (window.location.port ? ':' + window.location.port : '');
+        window.location.replace(hostUrl + '?fallback_path=' + encodeURIComponent(pathName));
+    </script>
+</head>
+<body>
+    <p style="text-align:center; font-family:sans-serif; color:#666; margin-top:100px;">⏳ Conectando con la guía de protección patrimonial...</p>
+</body>
+</html>
