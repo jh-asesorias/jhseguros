@@ -2015,7 +2015,6 @@ details[open] summary ~ * {
             window.fetchGuias = function() {
                 const repoUrl = "https://api.github.com/repos/jh-asesorias/jhseguros/contents/Guias";
                 const contenedorCards = document.getElementById('grid-dinamico-guias');
-
                 if (!contenedorCards) return;
 
                 fetch(repoUrl)
@@ -2025,7 +2024,6 @@ details[open] summary ~ * {
                     })
                     .then(files => {
                         const guiasFiles = files.filter(f => f.type === 'file' && !f.name.startsWith('.'));
-
                         if (guiasFiles.length === 0) {
                             contenedorCards.innerHTML = '<p style="text-align:center; color:#666; font-size:1.1rem; padding: 40px 0;">Muy pronto cargaremos nuevas guías para ti.</p>';
                             return;
@@ -2037,31 +2035,40 @@ details[open] summary ~ * {
                         guiasFiles.forEach((file) => {
                             let pivoteCodigo = "";
                             let tituloGuia = "";
-
                             const nameDecodificado = decodeURIComponent(file.name);
 
                             if (nameDecodificado.includes('___')) {
                                 const parts = nameDecodificado.replace('.md', '').split('___');
-                                pivoteCodigo = parts[0].toLowerCase();
+                                pivoteCodigo = parts[0].toUpperCase();
                                 tituloGuia = parts[1].replace(/-/g, ' ').replace(/_q_/g, '?').replace(/_c_/g, ':');
                             } else {
-                                pivoteCodigo = "recurso";
+                                pivoteCodigo = "JHS";
                                 tituloGuia = nameDecodificado.replace('.md', '').replace(/-/g, ' ').replace(/_q_/g, '?').replace(/_c_/g, ':');
                             }
 
+                            const slugUrl = file.name.replace('.md', '');
                             const card = document.createElement('div');
                             card.style.display = 'flex';
                             card.innerHTML = `
                                 <div class="card h-100 shadow-sm border-0 dynamic-card" style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); border-top: 4px solid #2a5298; width: 100%; display: flex; flex-direction: column; justify-content: space-between;">
                                     <div>
-                                        <h4 class="card-title mb-3" style="font-size: 1.15rem; font-family: 'Open Sans', sans-serif; color: #333; line-height: 1.5; font-weight: 400; text-transform: none;">
+                                        <h4 class="card-title mb-3" style="font-size: 1.15rem; font-family: 'Open Sans', sans-serif; color: #000000; line-height: 1.5; font-weight: 400; text-transform: none;">
                                             <strong>${pivoteCodigo}.-</strong> ${tituloGuia}
                                         </h4>
                                     </div>
-                                    <a href="#recursos/${file.name.replace('.md', '')}" class="service-link" style="text-align:center; display:block; margin-top:auto; font-weight:600; text-decoration:none; padding: 0.5rem 1rem; border: 1px solid #2a5298; color: #2a5298; border-radius: 4px;">Ver Tendencia</a>
+                                    <a href="/recursos/${slugUrl}" class="service-link router-link" style="text-align:center; display:block; margin-top:auto; font-weight:600; text-decoration:none; padding: 0.5rem 1rem; border: 1px solid #2a5298; color: #2a5298; border-radius: 4px;">Quiero Saber Más</a>
                                 </div>
                             `;
                             contenedorCards.appendChild(card);
+                        });
+
+                        document.querySelectorAll('.router-link').forEach(link => {
+                            link.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                const targetPath = this.getAttribute('href');
+                                history.pushState(null, '', targetPath);
+                                window.handleCustomRouting();
+                            });
                         });
                     })
                     .catch(error => {
@@ -2072,54 +2079,42 @@ details[open] summary ~ * {
 
             window.fetchGuias();
 
-            function handleHashChange() {
-            const hash = window.location.hash;
-
-            if (hash.startsWith('#recursos/')) {
-                document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
-                const fileSlug = hash.replace('#recursos/', '');
-                const targetPage = document.getElementById('articulo-page');
-                if (targetPage) {
-                    targetPage.classList.add('active');
-                    window.scrollTo(0, 0);
-                    window.cargarArticuloPorSlug(fileSlug);
-                }
-            } else {
-                const pageId = hash.substring(1) || 'main';
-                const targetPage = document.getElementById(pageId + '-page');
-                
+            window.handleCustomRouting = function() {
+                const path = window.location.pathname;
+                const hash = window.location.hash;
                 document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
 
-                if (targetPage) {
-                    targetPage.classList.add('active');
-                    window.scrollTo(0, 0);
-                } else {
-                    // MÁGIA DE ENFOQUE: Si el ID es un elemento interno (como "contacto-form"), activa el menú principal primero
-                    document.getElementById('main-page').classList.add('active');
-                    const elementoInterno = document.getElementById(pageId);
-                    if (elementoInterno) {
-                        // Le damos 50 milisegundos para que pase de oculto a visible y el navegador calcule la posición exacta
-                        setTimeout(() => {
-                            elementoInterno.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        }, 50);
-                    } else {
+                if (path.startsWith('/recursos/')) {
+                    const fileSlug = path.replace('/recursos/', '');
+                    const targetPage = document.getElementById('articulo-page');
+                    if (targetPage) {
+                        targetPage.classList.add('active');
                         window.scrollTo(0, 0);
+                        window.cargarArticuloPorSlug(fileSlug);
+                    }
+                } else {
+                    const pageId = hash.substring(1) || 'main';
+                    const targetPage = document.getElementById(pageId + '-page');
+                    if (targetPage) {
+                        targetPage.classList.add('active');
+                        window.scrollTo(0, 0);
+                    } else {
+                        document.getElementById('main-page').classList.add('active');
+                    }
+
+                    if (pageId === 'recursos') {
+                        window.fetchGuias();
                     }
                 }
+            };
 
-                if (pageId === 'recursos') {
-                    window.fetchGuias();
-                }
-            }
-        }
-
-            window.addEventListener('hashchange', handleHashChange);
-            handleHashChange();
+            window.addEventListener('popstate', window.handleCustomRouting);
+            window.addEventListener('hashchange', window.handleCustomRouting);
+            window.handleCustomRouting();
         });
 
         window.cargarArticuloPorSlug = function(slug) {
             let tituloGuia = "";
-            
             const slugDecodificado = decodeURIComponent(slug);
 
             if (slugDecodificado.includes('___')) {
