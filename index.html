@@ -2092,7 +2092,60 @@ details[open] summary ~ * {
                     });
             };
 
-            window.activarInterceptoresEnlaces();
+            window.handleCustomRouting = function() {
+                const urlParams = new URLSearchParams(window.location.search);
+                let path = window.location.pathname;
+                
+                if (urlParams.has('fallback_path')) {
+                    path = decodeURIComponent(urlParams.get('fallback_path'));
+                    window.history.replaceState(null, '', path);
+                }
+
+                document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+
+                if (path === '/' || path === '/index.html') {
+                    document.getElementById('main-page').classList.add('active');
+                } else if (path === '/recursos' || path === '/recursos/') {
+                    const targetPage = document.getElementById('recursos-page');
+                    if (targetPage) {
+                        targetPage.classList.add('active');
+                        window.fetchGuias();
+                    }
+                } else if (path.startsWith('/recursos/')) {
+                    const fileSlug = path.replace('/recursos/', '');
+                    const targetPage = document.getElementById('articulo-page');
+                    if (targetPage) {
+                        targetPage.classList.add('active');
+                        window.cargarArticuloPorSlug(fileSlug);
+                    }
+                } else if (path.startsWith('/faq')) {
+                    const targetPage = document.getElementById('faq-page');
+                    if (targetPage) {
+                        targetPage.classList.add('active');
+                        if (path.startsWith('/faq/')) {
+                            const faqSlug = path.replace('/faq/', '').replace(/\/$/, ""); 
+                            const targetDetails = document.querySelector(`details[data-slug="${faqSlug}"]`);
+                            if (targetDetails) {
+                                targetDetails.setAttribute('open', 'true');
+                                setTimeout(() => {
+                                    targetDetails.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                }, 300);
+                            }
+                        }
+                    }
+                } else {
+                    const subPageId = path.substring(1).replace(/\/$/, "");
+                    const targetPage = document.getElementById(subPageId + '-page');
+                    if (targetPage) {
+                        targetPage.classList.add('active');
+                    } else {
+                        document.getElementById('main-page').classList.add('active');
+                    }
+                }
+                
+                window.scrollTo(0, 0);
+                window.activarInterceptoresEnlaces();
+            };
 
             window.cargarArticuloPorSlug = function(slug) {
                 let tituloGuia = "";
