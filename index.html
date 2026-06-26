@@ -2033,6 +2033,24 @@ details[open] summary ~ * {
                 });
             };
 
+            // 🔗 MAGIA VISUAL: Detecta cuándo abres una pregunta y actualiza la barra de direcciones al instante
+            document.querySelectorAll('.faq-item').forEach(details => {
+                details.addEventListener('toggle', function() {
+                    if (this.open) {
+                        const slug = this.getAttribute('data-slug');
+                        if (slug && window.location.pathname !== `/faq/${slug}`) {
+                            history.pushState(null, '', `/faq/${slug}`);
+                        }
+                    } else {
+                        // Si se cierran todas las preguntas de la sección, regresa la barra a /faq limpio
+                        const openTabs = document.querySelectorAll('.faq-item[open]');
+                        if (openTabs.length === 0 && window.location.pathname.startsWith('/faq/')) {
+                            history.pushState(null, '', '/faq');
+                        }
+                    }
+                });
+            });
+
             window.fetchGuias = function() {
                 const repoUrl = "https://api.github.com/repos/jh-asesorias/jhseguros/contents/Guias";
                 const contenedorCards = document.getElementById('grid-dinamico-guias');
@@ -2125,6 +2143,7 @@ details[open] summary ~ * {
                         if (path.startsWith('/faq/')) {
                             const faqSlug = path.replace('/faq/', '').replace(/\/$/, ""); 
                             const targetDetails = document.querySelector(`details[data-slug="${faqSlug}"]`);
+                            // Realiza una validación segura: si existe el acordeón lo expande y centra, si no, deja la pantalla FAQ lista de forma limpia
                             if (targetDetails) {
                                 targetDetails.setAttribute('open', 'true');
                                 setTimeout(() => {
