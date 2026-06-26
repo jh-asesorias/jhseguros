@@ -4,9 +4,10 @@ on:
   push:
     paths:
       - 'Guias/**'
+      - 'index.html' # Se activa automáticamente al actualizar la estructura de la web
 
 permissions:
-  contents: write
+  contents: write # Permisos de escritura corporativa desbloqueados
 
 jobs:
   build:
@@ -26,15 +27,18 @@ jobs:
         const fs = require('fs');
         const path = require('path');
         const folderPath = path.join(process.cwd(), 'Guias');
+        const htmlPath = path.join(process.cwd(), 'index.html'); // Archivo origen de la web
         const domain = 'https://jhseguros.mx';        
         let xml = '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n';
         xml += '<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n';
         
+        // 1. Registro de la página de inicio
         xml += '  <url>\n';
         xml += '    <loc>' + domain + '/</loc>\n';
         xml += '    <priority>1.0</priority>\n';
         xml += '  </url>\n';
 
+        // 2. Inyección de tus secciones principales del Menú
         const seccionesFijas = ['danos', 'productos-vida', 'faq', 'hospitales', 'autorizaciones', 'certificaciones', 'recursos'];
         seccionesFijas.forEach(seccion => {
             xml += '  <url>\n';
@@ -43,6 +47,21 @@ jobs:
             xml += '  </url>\n';
         });
 
+        // 🔥 3. ESCANEO DINÁMICO: Extrae en automático las 48 preguntas frecuentes del HTML
+        if (fs.existsSync(htmlPath)) {
+            const htmlContent = fs.readFileSync(htmlPath, 'utf8');
+            const regex = /data-slug=\"([^\"]+)\"/g;
+            let match;
+            while ((match = regex.exec(htmlContent)) !== null) {
+                const faqSlug = match[1];
+                xml += '  <url>\n';
+                xml += '    <loc>' + domain + '/faq/' + faqSlug + '</loc>\n';
+                xml += '    <priority>0.8</priority>\n';
+                xml += '  </url>\n';
+            }
+        }
+
+        // 4. Registro dinámico de tus artículos de Google Sheets
         if (fs.existsSync(folderPath)) {
             const files = fs.readdirSync(folderPath);
             files.forEach(file => {
@@ -58,11 +77,12 @@ jobs:
 
         xml += '</urlset>';
         fs.writeFileSync(path.join(process.cwd(), 'sitemap.xml'), xml);
-        console.log('Sitemap.xml generado con éxito.');
+        console.log('Sitemap.xml generado con éxito incluyendo rutas dinámicas.');
         "
 
     - name: Commit and push sitemap
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
-        commit_message: "🤖 SEO: Automated sitemap update [skip ci]"
+        # Lleva la regla [skip ci] para que Netlify no gaste minutos de tu hosting en bucle
+        commit_message: "🤖 SEO: Automated sitemap update with FAQ Clean URLs [skip ci]"
         file_pattern: 'sitemap.xml'
