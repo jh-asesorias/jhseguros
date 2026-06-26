@@ -1998,6 +1998,20 @@ details[open] summary ~ * {
     </section>
 </div>
     <script>
+        <div id="faq-articulo-page" class="page" style="background-color: #f8f9fa; min-height: 100vh; padding: 4rem 0;">
+        <div class="container">
+            <div class="detail-content" style="background: white; padding: 3rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); max-width: 800px; margin: 0 auto;">
+                <h1 id="faq-articulo-titulo" style="font-family: 'Montserrat', sans-serif; color: #1e3c72; margin-bottom: 20px; font-size: 1.7rem; line-height: 1.4; border-bottom: 2px solid #2a5298; padding-bottom: 15px; text-align: left; font-weight: 700;"></h1>
+                <div id="faq-articulo-respuesta" style="font-size: 1.1rem; line-height: 1.7; color: #333; text-align: justify; margin-bottom: 30px;"></div>
+                <div style="text-align: center; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 40px; border-top: 1px solid #eee; padding-top: 25px;">
+                    <a href="/faq" class="back-to-top router-link" style="background-color: #2a5298; color: white; padding: 0.6rem 1.5rem; border-radius: 20px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">↩️ Volver a FAQ</a>
+                    <a href="/" class="back-to-top router-link" style="background-color: #1a1a2e; color: white; padding: 0.6rem 1.5rem; border-radius: 20px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">🏠 Ir al Menú</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
         window.guiasCache = [];
 
         document.addEventListener('DOMContentLoaded', function() {
@@ -2033,20 +2047,19 @@ details[open] summary ~ * {
                 });
             };
 
-            document.querySelectorAll('.faq-item').forEach(details => {
-                details.addEventListener('toggle', function() {
-                    if (this.open) {
-                        const slug = this.getAttribute('data-slug');
-                        if (slug && window.location.pathname !== `/faq/${slug}`) {
+            // Intercepta clics en los acordeones para desviarlos a la pantalla dedicada limpia
+            document.querySelectorAll('.faq-item').forEach(item => {
+                const summary = item.querySelector('summary');
+                if (summary) {
+                    summary.addEventListener('click', function(e) {
+                        e.preventDefault(); 
+                        const slug = item.getAttribute('data-slug');
+                        if (slug) {
                             history.pushState(null, '', `/faq/${slug}`);
+                            window.handleCustomRouting();
                         }
-                    } else {
-                        const openTabs = document.querySelectorAll('.faq-item[open]');
-                        if (openTabs.length === 0 && window.location.pathname.startsWith('/faq/')) {
-                            history.pushState(null, '', '/faq');
-                        }
-                    }
-                });
+                    });
+                }
             });
 
             window.fetchGuias = function() {
@@ -2135,26 +2148,26 @@ details[open] summary ~ * {
                         window.cargarArticuloPorSlug(fileSlug);
                     }
                 } else if (path.startsWith('/faq')) {
-                    const targetPage = document.getElementById('faq-page');
-                    if (targetPage) {
-                        targetPage.classList.add('active');
-                        if (path.startsWith('/faq/')) {
-                            const faqSlug = path.replace('/faq/', '').replace(/\/$/, ""); 
-                            const targetDetails = document.querySelector(`details[data-slug="${faqSlug}"]`);
-                            if (targetDetails) {
-                                targetDetails.setAttribute('open', 'true');
-                                if (path.startsWith('/faq/')) {
-                            const faqSlug = path.replace('/faq/', '').replace(/\/$/, "");
-                            const targetDetails = document.querySelector(`details[data-slug="${faqSlug}"]`);
-                            if (targetDetails) {
-                                targetDetails.setAttribute('open', 'true');
-                                // CORREGIDO: Se añade el cierre }, 300); que faltaba
-                                setTimeout(() => {
-                                    targetDetails.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                                }, 300); 
-                            }
+                    if (path.startsWith('/faq/')) {
+                        const faqSlug = path.replace('/faq/', '').replace(/\/$/, "");
+                        const targetDetails = document.querySelector(`details[data-slug="${faqSlug}"]`);
+                        const targetPage = document.getElementById('faq-articulo-page');
+                        
+                        if (targetDetails && targetPage) {
+                            const questionText = targetDetails.querySelector('.faq-question').textContent;
+                            const answerHtml = targetDetails.querySelector('.faq-answer').innerHTML;
+                            
+                            document.getElementById('faq-articulo-titulo').innerText = questionText;
+                            document.getElementById('faq-articulo-respuesta').innerHTML = answerHtml;
+                            
+                            targetPage.classList.add('active');
+                        } else {
+                            const faqPage = document.getElementById('faq-page');
+                            if (faqPage) faqPage.classList.add('active');
                         }
-                        }
+                    } else {
+                        const faqPage = document.getElementById('faq-page');
+                        if (faqPage) faqPage.classList.add('active');
                     }
                 } else {
                     const subPageId = path.substring(1).replace(/\/$/, "");
