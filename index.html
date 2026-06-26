@@ -2143,10 +2143,17 @@ details[open] summary ~ * {
                             const targetDetails = document.querySelector(`details[data-slug="${faqSlug}"]`);
                             if (targetDetails) {
                                 targetDetails.setAttribute('open', 'true');
+                                if (path.startsWith('/faq/')) {
+                            const faqSlug = path.replace('/faq/', '').replace(/\/$/, "");
+                            const targetDetails = document.querySelector(`details[data-slug="${faqSlug}"]`);
+                            if (targetDetails) {
+                                targetDetails.setAttribute('open', 'true');
+                                // CORREGIDO: Se añade el cierre }, 300); que faltaba
                                 setTimeout(() => {
                                     targetDetails.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                                }, 300);
+                                }, 300); 
                             }
+                        }
                         }
                     }
                 } else {
