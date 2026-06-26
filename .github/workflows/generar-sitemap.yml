@@ -5,6 +5,9 @@ on:
     paths:
       - 'recursos/**/index.html' # Se activa al detectar nuevos index.html físicos inyectados por tu Sheet
 
+permissions:
+  contents: write # 👑 LA CLAVE: Otorga permisos físicos de escritura al robot para desbloquear el "git push"
+
 jobs:
   build:
     runs-on: ubuntu-latest
