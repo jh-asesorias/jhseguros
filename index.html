@@ -442,16 +442,16 @@ details[open] summary ~ * {
     </button>
     <div class="mobile-backdrop" id="menuBackdrop"></div>
     <div class="mobile-overlay" id="menuOverlay">
-        <a href="#main" class="mobile-nav-link">🏠 Inicio</a>
-        <a href="#danos" class="mobile-nav-link">🚗 Módulo Autos y Daños</a>
-        <a href="#productos-vida" class="mobile-nav-link">🛡️ Vida y Gastos Médicos</a>
-        <a href="#autorizaciones" class="mobile-nav-link">🏅 Autorizaciones</a>
-        <a href="#certificaciones" class="mobile-nav-link">🎓 Certificaciones</a>
-        <a href="#faq" class="mobile-nav-link">❓ Preguntas Frecuentes</a>
-        <a href="#hospitales" class="mobile-nav-link">🏥 Servicios Hospitalarios</a>
-        <a href="#recursos" class="mobile-nav-link">📚 Tendencias de Búsquedas de Seguros</a>
-        <a href="#redes" class="mobile-nav-link">🌐 Redes Sociales</a>
-        <a href="#contacto-form" class="mobile-nav-link">📩 Contacto</a>
+        <a href="/" class="mobile-nav-link router-link">🏠 Inicio</a>
+        <a href="/danos" class="mobile-nav-link router-link">🚗 Módulo Autos y Daños</a>
+        <a href="/productos-vida" class="mobile-nav-link router-link">🛡️ Vida y Gastos Médicos</a>
+        <a href="/autorizaciones" class="mobile-nav-link router-link">🏅 Autorizaciones</a>
+        <a href="/certificaciones" class="mobile-nav-link router-link">🎓 Certificaciones</a>
+        <a href="/faq" class="mobile-nav-link router-link">❓ Preguntas Frecuentes</a>
+        <a href="/hospitales" class="mobile-nav-link router-link">🏥 Servicios Hospitalarios</a>
+        <a href="/recursos" class="mobile-nav-link router-link">📚 Tendencias de Búsquedas de Seguros</a>
+        <a href="/redes" class="mobile-nav-link router-link">🌐 Redes Sociales</a>
+        <a href="/contacto-form" class="mobile-nav-link router-link">📩 Contacto</a>
     </div>
     
     <div id="main-page" class="page active">
@@ -495,15 +495,15 @@ details[open] summary ~ * {
             <div class="container">
                 <h2 class="section-title">Nuestra Filosofía</h2>
                 <div class="mv-container">
-                    <div class="mv-item" onclick="window.location.hash='vision'">
+                    <div class="mv-item" onclick="history.pushState(null, '', '/vision'); window.handleCustomRouting();">
                         <div class="mv-icon">👁️</div>
                         <div class="mv-name">Visión</div>
                     </div>
-                    <div class="mv-item" onclick="window.location.hash='mision'">
+                    <div class="mv-item" onclick="history.pushState(null, '', '/mision'); window.handleCustomRouting();">
                         <div class="mv-icon">🎯</div>
                         <div class="mv-name">Misión</div>
                     </div>
-                    <div class="mv-item" onclick="window.location.hash='valor'">
+                    <div class="mv-item" onclick="history.pushState(null, '', '/valor'); window.handleCustomRouting();">
                         <div class="mv-icon">💎</div>
                         <div class="mv-name">Valor</div>
                     </div>
@@ -522,7 +522,7 @@ details[open] summary ~ * {
                         </div>
                         <h3 class="service-title">Módulo Autos y Daños</h3>
                         <p class="service-description">Explora nuestra gama de protección patrimonial: Autos, Embarcaciones, Hogar, Negocio, Responsabilidad Civil en un solo lugar (Aquí algunos ejemplos y descripciones de los mismos).</p>
-                        <a href="#danos" class="service-link">Acceder al Portafolio</a>
+                        <a href="/danos" class="service-link router-link">Acceder al Portafolio</a>
                     </div>
 
                     <div class="service-card">
@@ -531,16 +531,16 @@ details[open] summary ~ * {
                         </div>
                         <h3 class="service-title">Productos Vida y Gastos Médicos</h3>
                         <p class="service-description">Explora nuestra gama de protección personal: Vida, Retiro, Educación y Salud en un solo lugar.</p>
-                        <a href="#productos-vida" class="service-link">Acceder al Portafolio</a>
+                        <a href="/productos-vida" class="service-link router-link">Acceder al Portafolio</a>
                     </div>
-                    
+
                     <div class="service-card">
                         <div class="service-icon">
                             <svg viewBox="0 0 24 24"><path d="M12 2C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V22l4-2 4 2v-7.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2 15.38L12 14l-2 1.38V12c.63.24 1.3.38 2 .38s1.37-.14 2-.38v3.38zM12 11c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg>
                         </div>
                         <h3 class="service-title">Autorizaciones / Validaciones </h3>
                         <p class="service-description">Autorizaciones Cédula(s) / Verificador de las mismas (H382035 y Y415335). Esta es la autorización oficial como Agente de Seguros ante la Comisión Nacional de Seguros y Fianzas (CNSF).</p>
-                        <a href="#autorizaciones" class="service-link">Acceder</a>
+                        <a href="/autorizaciones" class="service-link router-link">Acceder</a>
                     </div>
 
                     <div class="service-card">
@@ -549,7 +549,7 @@ details[open] summary ~ * {
                         </div>
                         <h3 class="service-title">Capacitaciones / Certificaciones</h3>
                         <p class="service-description">Diplomados y especializaciones académicas de alto nivel. Formación continua en materia fiscal, financiera y de seguros para ofrecerte una asesoría respaldada y de excelencia.</p>
-                        <a href="#certificaciones" class="service-link">Acceder</a>
+                        <a href="/certificaciones" class="service-link router-link">Acceder</a>
                     </div>
 
                     <div class="service-card">
@@ -558,7 +558,7 @@ details[open] summary ~ * {
                         </div>
                         <h3 class="service-title">Preguntas Frecuentes</h3>
                         <p class="service-description">Resolvemos tus dudas sobre deducibles, impuestos, coberturas y más. Información clara para tomar la mejor decisión.</p>
-                        <a href="#faq" class="service-link">Ver Preguntas</a>
+                        <a href="/faq" class="service-link router-link">Ver Preguntas</a>
                     </div>
 
                     <div class="service-card">
@@ -567,24 +567,26 @@ details[open] summary ~ * {
                         </div>
                         <h3 class="service-title">Link de Servicios hospitalarios</h3>
                         <p class="service-description">Accede a los directorios médicos de Seguros Monterrey, AXA Seguros, HDI Seguros - BUPA México. Encuentra hospitales y médicos en convenio.</p>
-                        <a href="#hospitales" class="service-link">Buscar Servicios</a>
+                        <a href="/hospitales" class="service-link router-link">Buscar Servicios</a>
                     </div>
-      <div class="service-card">
-          <div class="service-icon">
-              <svg viewBox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/></svg>
-          </div>
-          <h3 class="service-title">Tendencias de Búsquedas de Seguros</h3>
-          <p class="service-description">Explora las principales búsquedas, tendencias e inquietudes del mercado asegurador en México.</p>
-          <a href="#recursos" class="service-link">Explorar Biblioteca</a>
-      </div>
-   <div class="service-card">
-       <div class="service-icon">
-           <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-       </div>
-       <h3 class="service-title">Redes Sociales</h3>
-       <p class="service-description">Conéctate directamente conmigo. Sígueme en Facebook, Instagram, WhatsApp o escríbeme por correo electrónico.</p>
-       <a href="#redes" class="service-link">Conectarse</a>
-   </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/></svg>
+                        </div>
+                        <h3 class="service-title">Tendencias de Búsquedas de Seguros</h3>
+                        <p class="service-description">Explora las principales búsquedas, tendencias e inquietudes del mercado asegurador en México.</p>
+                        <a href="/recursos" class="service-link router-link">Explorar Biblioteca</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                        </div>
+                        <h3 class="service-title">Redes Sociales</h3>
+                        <p class="service-description">Conéctate directamente conmigo. Sígueme en Facebook, Instagram, WhatsApp o escríbeme por correo electrónico.</p>
+                        <a href="/redes" class="service-link router-link">Conectarse</a>
+                    </div>
                    </div>
             </div>
         </section>
@@ -697,7 +699,7 @@ details[open] summary ~ * {
         <section class="detail-section"><div class="container"><div class="detail-content">
             <p>Ser la firma de asesoría e intermediación en seguros más confiable, cercana y valorada por nuestros clientes, estableciendo un nuevo estándar de servicio en el ramo asegurador. Nos distinguimos por nuestra independencia frente a las aseguradoras y por nuestro compromiso absoluto en defender los intereses del asegurado, garantizando que cada persona acceda a sus derechos y obtenga soluciones justas, completas y oportunas en cada etapa de su vida y ante cualquier percance, cumpliendo con la normatividad en la materia.</p>
             <div style="text-align: center; margin-top: 30px;">
-                    <a href="#main" class="back-to-top">Volver al Menú</a>
+                    <a href="/" class="back-to-top router-link">Volver al Menú</a>
         </div></div></section>
     </div>
     
@@ -706,7 +708,7 @@ details[open] summary ~ * {
         <section class="detail-section"><div class="container"><div class="detail-content">
             <p>Brindar un servicio superior, integral y humano en la intermediación de seguros, actuando con total independencia y sin vínculos que comprometan nuestra objetividad e imparcilidad. Acompañamos a cada cliente en sus decisiones, trámites, percances o siniestros, defendiendo sus derechos e intereses con profesionalismo y transparencia. Utilizamos todos los recursos y herramientas disponibles para asegurar un servicio excepcional, un trato justo y soluciones coherentes con las condiciones contractuales de sus productos, siempre que la razón respalde su situación.</p>
             <div style="text-align: center; margin-top: 30px;">
-                    <a href="#main" class="back-to-top">Volver al Menú</a>
+                    <a href="/" class="back-to-top router-link">Volver al Menú</a>
         </div></div></section>
     </div>
     
@@ -715,7 +717,7 @@ details[open] summary ~ * {
         <section class="detail-section"><div class="container"><div class="detail-content">
             <p>Nuestro valor radica en ofrecer un acompañamiento real y cercano, basado en la transparencia, la objetividad y la defensa activa del asegurado. Analizamos a profundidad las necesidades de cada cliente, brindamos seguimiento continuo y ofrecemos asesoría preventiva que facilita y tomar decisiones informadas. Nos comprometemos a simplificar los procesos, respaldarlos en cada acontecimiento y agotar todos los recursos necesarios para garantizar soluciones justas, completas y oportunas. Somos un intermediario independiente y un aliado confiable que actúa siempre con excelencia y compromiso total.</p>
            <div style="text-align: center; margin-top: 30px;">
-                    <a href="#main" class="back-to-top">Volver al Menú</a>
+                    <a href="/" class="back-to-top router-link">Volver al Menú</a>
         </div></div></section>
     </div>
     
@@ -781,7 +783,7 @@ details[open] summary ~ * {
                 </div>
                 
                 <div style="text-align: center; margin-top: 30px;">
-                    <a href="#main" class="back-to-top">Volver al Menú</a>
+                    <a href="/" class="back-to-top router-link">Volver al Menú</a>
                 </div>
             </div>
         </section>
@@ -841,7 +843,7 @@ details[open] summary ~ * {
                     </div>
                 </div>
                 <div style="text-align: center; margin-top: 30px;">
-                    <a href="#main" class="back-to-top">Volver al Menú</a>
+                    <a href="/" class="back-to-top router-link">Volver al Menú</a>
                 </div>
             </div>
         </section>
@@ -1705,7 +1707,7 @@ details[open] summary ~ * {
 </div>
 
                     <div style="text-align: center; margin-top: 30px;">
-                    <a href="#main" class="back-to-top">Volver al Menú</a>
+                    <a href="/" class="back-to-top router-link">Volver al Menú</a>
                 </div>
             </div>
         </section>
@@ -1741,7 +1743,7 @@ details[open] summary ~ * {
                         </div>
 
                     <div style="text-align: center; margin-top: 30px;">
-                    <a href="#main" class="back-to-top">Volver al Menú</a>
+                    <a href="/" class="back-to-top router-link">Volver al Menú</a>
                 </div>
             </div>
         </section>
@@ -1765,7 +1767,7 @@ details[open] summary ~ * {
                 </div>
 
                 <div style="text-align: center; margin-top: 30px;">
-                    <a href="#main" class="back-to-top">Volver al Menú</a>
+                    <a href="/" class="back-to-top router-link">Volver al Menú</a>
                 </div>
             </div>
         </section>
@@ -1811,7 +1813,7 @@ details[open] summary ~ * {
                      <p style="text-align: justify; color: #444; margin-bottom: 0;">Certificación técnica en el aseguramiento de equipo pesado, camiones y tractocamiones, garantizando la protección de las mercancías y la continuidad operativa del sector empresarial.</p>
                  </div>
                 <div style="text-align: center; margin-top: 30px;">
-                    <a href="#main" class="back-to-top">Volver al Menú</a>
+                    <a href="/" class="back-to-top router-link">Volver al Menú</a>
                 </div>
             </div>
         </section>
@@ -1824,7 +1826,7 @@ details[open] summary ~ * {
                        <p style="text-align:center; grid-column:1/-1; color:#666;">Cargando guías desde el repositorio oficial...</p>
                    </div>
                    <div style="text-align: center; margin-top: 30px;">
-                       <a href="#main" class="back-to-top">Volver al Menú</a>
+                       <a href="/" class="back-to-top router-link">Volver al Menú</a>
                    </div>
                </div>
            </section>
@@ -1855,7 +1857,7 @@ details[open] summary ~ * {
                        <a href="mailto:jhseguros@jhasesorias.com" style="display: block; background-color: #2a5298; color: white; padding: 14px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">📩 jhseguros@jhasesorias.com</a>
                    </div>
                    <div style="text-align: center; margin-top: 30px;">
-                       <a href="#main" class="back-to-top">Volver al Menú</a>
+                       <a href="/" class="back-to-top router-link">Volver al Menú</a>
                    </div>
                </div>
            </section>
@@ -1982,7 +1984,7 @@ details[open] summary ~ * {
             </div>
 
             <div style="text-align: center; margin-top: 30px;">
-                    <a href="#main" class="back-to-top">Volver al Menú</a>
+                    <a href="/" class="back-to-top router-link">Volver al Menú</a>
             </div>
         </div>
     </section>
@@ -1996,6 +1998,7 @@ details[open] summary ~ * {
             const backdrop = document.getElementById('menuBackdrop');
 
             function toggleMenu() {
+                if (!overlay || !backdrop || !btn) return;
                 overlay.classList.toggle('open');
                 backdrop.classList.toggle('open');
                 const isOpen = overlay.classList.contains('open');
@@ -2007,10 +2010,20 @@ details[open] summary ~ * {
             if (btn && overlay && backdrop) {
                 btn.addEventListener('click', toggleMenu);
                 backdrop.addEventListener('click', toggleMenu);
-                document.querySelectorAll('.mobile-nav-link').forEach(link => {
-                    link.addEventListener('click', toggleMenu);
-                });
             }
+
+            window.activarInterceptoresEnlaces = function() {
+                document.querySelectorAll('.router-link').forEach(link => {
+                    if (link.dataset.rutado) return;
+                    link.dataset.rutado = "true";
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const targetPath = this.getAttribute('href');
+                        history.pushState(null, '', targetPath);
+                        window.handleCustomRouting();
+                    });
+                });
+            };
 
             window.fetchGuias = function() {
                 const repoUrl = "https://api.github.com/repos/jh-asesorias/jhseguros/contents/Guias";
@@ -2024,6 +2037,7 @@ details[open] summary ~ * {
                     })
                     .then(files => {
                         const guiasFiles = files.filter(f => f.type === 'file' && !f.name.startsWith('.'));
+                     
                         if (guiasFiles.length === 0) {
                             contenedorCards.innerHTML = '<p style="text-align:center; color:#666; font-size:1.1rem; padding: 40px 0;">Muy pronto cargaremos nuevas guías para ti.</p>';
                             return;
@@ -2062,14 +2076,7 @@ details[open] summary ~ * {
                             contenedorCards.appendChild(card);
                         });
 
-                        document.querySelectorAll('.router-link').forEach(link => {
-                            link.addEventListener('click', function(e) {
-                                e.preventDefault();
-                                const targetPath = this.getAttribute('href');
-                                history.pushState(null, '', targetPath);
-                                window.handleCustomRouting();
-                            });
-                        });
+                        window.activarInterceptoresEnlaces();
                     })
                     .catch(error => {
                         console.error("Error cargando guías:", error);
@@ -2077,90 +2084,85 @@ details[open] summary ~ * {
                     });
             };
 
-            window.fetchGuias();
-
             window.handleCustomRouting = function() {
-                const path = window.location.pathname;
-                const hash = window.location.hash;
+                const urlParams = new URLSearchParams(window.location.search);
+                let path = window.location.pathname;
                 
-                if (path === '/recursos' || path === '/recursos/') {
-                    document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+                if (urlParams.has('fallback_path')) {
+                    path = decodeURIComponent(urlParams.get('fallback_path'));
+                    window.history.replaceState(null, '', path);
+                }
+
+                document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+
+                if (path === '/' || path === '/index.html') {
+                    document.getElementById('main-page').classList.add('active');
+                } else if (path === '/recursos' || path === '/recursos/') {
                     const targetPage = document.getElementById('recursos-page');
                     if (targetPage) {
                         targetPage.classList.add('active');
-                        window.scrollTo(0, 0);
                         window.fetchGuias();
                     }
-                    return;
-                }
-
-                if (path.startsWith('/recursos/')) {
-                    document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+                } else if (path.startsWith('/recursos/')) {
                     const fileSlug = path.replace('/recursos/', '');
                     const targetPage = document.getElementById('articulo-page');
                     if (targetPage) {
                         targetPage.classList.add('active');
-                        window.scrollTo(0, 0);
                         window.cargarArticuloPorSlug(fileSlug);
                     }
-                    return;
+                } else {
+                    const subPageId = path.substring(1).replace(/\/$/, "");
+                    const targetPage = document.getElementById(subPageId + '-page');
+                    if (targetPage) {
+                        targetPage.classList.add('active');
+                    } else {
+                        document.getElementById('main-page').classList.add('active');
+                    }
+                }
+                
+                window.scrollTo(0, 0);
+                window.activarInterceptoresEnlaces();
+            };
+
+            window.cargarArticuloPorSlug = function(slug) {
+                let tituloGuia = "";
+                const slugDecodificado = decodeURIComponent(slug);
+
+                if (slugDecodificado.includes('___')) {
+                    tituloGuia = slugDecodificado.split('___')[1].replace(/-/g, ' ').replace(/_q_/g, '?').replace(/_c_/g, ':');
+                } else {
+                    tituloGuia = slugDecodificado.replace(/-/g, ' ').replace(/_q_/g, '?').replace(/_c_/g, ':');
                 }
 
-                document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
-                const pageId = hash.substring(1) || 'main';
-                const targetPage = document.getElementById(pageId + '-page');
-                
-                if (targetPage) {
-                    targetPage.classList.add('active');
-                    window.scrollTo(0, 0);
-                    if (pageId === 'recursos') {
-                        window.fetchGuias();
-                    }
-                } else {
-                    document.getElementById('main-page').classList.add('active');
+                const contenedorContenido = document.getElementById('articulo-contenido');
+                const contenedorTitulo = document.getElementById('articulo-titulo');
+
+                if (contenedorContenido && contenedorTitulo) {
+                    contenedorTitulo.innerText = tituloGuia;
+                    contenedorContenido.innerHTML = '<p style="text-align:center; color:#666; padding: 40px 0;">⏳ Cargando contenido de protección...</p>';
+
+                    const tagline = document.querySelector('#articulo-page .tagline');
+                    if (tagline) tagline.style.display = 'none';
+
+                    const downloadUrl = `https://raw.githubusercontent.com/jh-asesorias/jhseguros/main/Guias/${slug}.md`;
+
+                    fetch(downloadUrl)
+                        .then(res => {
+                            if (!res.ok) throw new Error("No se pudo obtener el texto");
+                            return res.text();
+                        })
+                        .then(htmlTexto => {
+                            contenedorContenido.innerHTML = htmlTexto;
+                        })
+                        .catch(err => {
+                            contenedorContenido.innerHTML = '<p style="text-align:center; color:#ff6b6b; padding: 40px 0;">❌ Detalle al abrir el artículo o el recurso no existe.</p>';
+                        });
                 }
             };
 
             window.addEventListener('popstate', window.handleCustomRouting);
-            window.addEventListener('hashchange', window.handleCustomRouting);
             window.handleCustomRouting();
         });
-
-        window.cargarArticuloPorSlug = function(slug) {
-            let tituloGuia = "";
-            const slugDecodificado = decodeURIComponent(slug);
-
-            if (slugDecodificado.includes('___')) {
-                tituloGuia = slugDecodificado.split('___')[1].replace(/-/g, ' ').replace(/_q_/g, '?').replace(/_c_/g, ':');
-            } else {
-                tituloGuia = slugDecodificado.replace(/-/g, ' ').replace(/_q_/g, '?').replace(/_c_/g, ':');
-            }
-
-            const contenedorContenido = document.getElementById('articulo-contenido');
-            const contenedorTitulo = document.getElementById('articulo-titulo');
-
-            if (contenedorContenido && contenedorTitulo) {
-                contenedorTitulo.innerText = tituloGuia;
-                contenedorContenido.innerHTML = '<p style="text-align:center; color:#666; padding: 40px 0;">⏳ Cargando contenido de protección...</p>';
-
-                const tagline = document.querySelector('#articulo-page .tagline');
-                if (tagline) tagline.style.display = 'none';
-
-                const downloadUrl = `https://raw.githubusercontent.com/jh-asesorias/jhseguros/main/Guias/${slug}.md`;
-
-                fetch(downloadUrl)
-                    .then(res => {
-                        if (!res.ok) throw new Error("No se pudo obtener el texto");
-                        return res.text();
-                    })
-                    .then(htmlTexto => {
-                        contenedorContenido.innerHTML = htmlTexto;
-                    })
-                    .catch(err => {
-                        contenedorContenido.innerHTML = '<p style="text-align:center; color:#ff6b6b; padding: 40px 0;">❌ Detalle al abrir el artículo o el recurso no existe.</p>';
-                    });
-            }
-        };
     </script>
 </body>
 </html>
