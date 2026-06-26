@@ -685,7 +685,7 @@ details[open] summary ~ * {
                     <div class="copyright">
                         <p>&copy; 2025 Rafael Jiménez Sánchez - Agente de Seguros Cédula A H382035 y B Y415335 - Todos los derechos reservados</p>
                         <p style="margin-top: 15px;">
-                            <a href="#privacidad" style="color: #ccc; text-decoration: none; font-weight: bold; margin-right: 20px; transition: color 0.3s;" onmouseover="this.style.color='#ff6b6b'" onmouseout="this.style.color='#ccc'">🔒 Aviso de Privacidad</a>
+                            <a href="/privacidad" style="color: #ccc; text-decoration: none; font-weight: bold; margin-right: 20px; transition: color 0.3s;" onmouseover="this.style.color='#ff6b6b'" onmouseout="this.style.color='#ccc'" class="router-link">🔒 Aviso de Privacidad</a>
                             <a href="https://jhseguros.mx/reserva-datos.pdf" target="_blank" download="reserva-datos.pdf" style="color: #ccc; text-decoration: none; font-weight: bold; transition: color 0.3s;" onmouseover="this.style.color='#ff6b6b'" onmouseout="this.style.color='#ccc'">📄 Política de Reserva de Datos (ARCO)</a>
                         </p>
                     </div>
@@ -740,18 +740,18 @@ details[open] summary ~ * {
                             <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1s.67-1 1.5-1 1.5.67 1.5 1-.67 1-1.5 1zm11 0c-.83 0-1.5-.67-1.5-1s.67-1 1.5-1 1.5.67 1.5 1-.67 1-1.5 1zM5 11l1.5-4.5h11L19 11H5z"/></svg>
                         </div>
                         <h3 class="service-title">Seguro de Auto</h3>
-                    <p class="service-description">Protección integral para tu vehículo, conductor y pasajeros ante colisiones, robo o daños a terceros en México.</p>
-                    <a href="#auto" class="service-link">Conoce tu Seguro</a>
-                </div>
+                        <p class="service-description">Protección integral para tu vehicle, conductor y pasajeros ante colisiones, robo o daños a terceros en México.</p>
+                        <a href="/auto" class="service-link router-link">Conoce tu Seguro</a>
+                    </div>
                     
                     <div class="service-card">
                         <div class="service-icon">
                             <svg viewBox="0 0 24 24"><path d="M20 21c-1.39 0-2.78-.53-3.84-1.59L12.35 15.6c-.2-.2-.51-.2-.71 0l-3.83 3.82C6.77 20.47 5.38 21 4 21H2v-2h2c.85 0 1.69-.32 2.34-.97l3.83-3.82c.98-.98 2.56-.98 3.54 0l3.83 3.82c.65.65 1.5 1 2.34 1h2v2h-2zm2-16.5L12 1 2 4.5V11c0 6.16 4.28 11.91 10 13 5.72-1.09 10-6.84 10-13V4.5zM12 6c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z"/></svg>
                         </div>
                         <h3 class="service-title">Embarcaciones</h3>
-                    <p class="service-description">Seguridad a flote para lanchas, yates o motos acuáticas. Cobertura en aguas nacionales contra pérdidas y accidentes.</p>
-                    <a href="#embarcaciones" class="service-link">Conoce tu Seguro</a>
-                </div>
+                        <p class="service-description">Seguridad a flote para lanchas, yates o motos acuáticas. Cobertura en aguas nacionales contra pérdidas y accidentes.</p>
+                        <a href="/embarcaciones" class="service-link router-link">Conoce tu Seguro</a>
+                    </div>
                     
                     <div class="service-card">
                         <div class="service-icon">
@@ -759,7 +759,7 @@ details[open] summary ~ * {
                         </div>
                         <h3 class="service-title">Seguro de Hogar</h3>
                         <p class="service-description">Blindaje total para tu casa o departamento. Protege la estructura y tus pertenencias contra incendios, sismos o robos.</p>
-                        <a href="#hogar" class="service-link">Conoce tu Seguro</a>
+                        <a href="/hogar" class="service-link router-link">Conoce tu Seguro</a>
                     </div>
                     
                     <div class="service-card">
@@ -768,7 +768,16 @@ details[open] summary ~ * {
                         </div>
                         <h3 class="service-title">Seguro de Negocio / Empresa</h3>
                         <p class="service-description">Garantiza la continuidad de tu empresa. Resguardo de mercancías, maquinaria y locales ante imprevistos materiales.</p>
-                        <a href="#negocio" class="service-link">Conoce tu Seguro</a>
+                        <a href="/negocio" class="service-link router-link">Conoce tu Seguro</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        </div>
+                        <h3 class="service-title">Responsabilidad Civil</h3>
+                        <p class="service-description">Respaldo legal y económico ante daños involuntarios ocasionados a terceros en tus actividades personales o comerciales.</p>
+                        <a href="/rc" class="service-link router-link">Conoce tu Seguro</a>
                     </div>
                     
                     <div class="service-card">
@@ -807,7 +816,7 @@ details[open] summary ~ * {
                         </div>
                         <h3 class="service-title">Seguros de Vida: Alta Protección y Ahorro</h3>
                         <p class="service-description">Tú eliges la estrategia: <strong>Máxima Protección al menor costo</strong> (Temporal) o planes de <strong>Ahorro con Rendimientos Garantizados</strong> (Dotal).</p>
-                        <a href="#vida" class="service-link">Ver detalles</a>
+                        <a href="/vida" class="service-link router-link">Ver detalles</a>
                     </div>
                     <div class="service-card">
                         <div class="service-icon">
@@ -815,7 +824,7 @@ details[open] summary ~ * {
                         </div>
                         <h3 class="service-title">Vida Mujer: Ahorro, Desempleo y Blindaje Femenino</h3>
                         <p class="service-description">El seguro que te devuelve hasta el 115% de tu ahorro y protección especializada contra riesgos femeninos.</p>
-                        <a href="#mujer" class="service-link">Ver detalles</a>
+                        <a href="/mujer" class="service-link router-link">Ver detalles</a>
                     </div>
                     <div class="service-card">
                         <div class="service-icon">
@@ -823,7 +832,7 @@ details[open] summary ~ * {
                         </div>
                         <h3 class="service-title">Planes Personales para el Retiro (PPR) y Jubilación</h3>
                         <p class="service-description">Garantiza tu calidad de vida en la vejez y logra la máxima protección de patrimonio con beneficios fiscales.</p>
-                        <a href="#ppr" class="service-link">Ver detalles</a>
+                        <a href="/ppr" class="service-link router-link">Ver detalles</a>
                     </div>
                     <div class="service-card">
                         <div class="service-icon">
@@ -831,7 +840,7 @@ details[open] summary ~ * {
                         </div>
                         <h3 class="service-title">Seguro Educativo (SeguBeca): Ahorro Universitario Blindado</h3>
                         <p class="service-description">Garantiza la universidad de tus hijos pase lo que pase con ahorro en UDIS/Dólares.</p>
-                        <a href="#educacion" class="service-link">Ver detalles</a>
+                        <a href="/educacion" class="service-link router-link">Ver detalles</a>
                     </div>
                     <div class="service-card">
                         <div class="service-icon">
@@ -839,7 +848,7 @@ details[open] summary ~ * {
                         </div>
                         <h3 class="service-title">Gastos Médicos Mayores</h3>
                         <p class="service-description">Acceso a la mejor medicina privada de México y alto blindaje financiero ante enfermedades graves.</p>
-                        <a href="#gmm" class="service-link">Ver detalles</a>
+                        <a href="/gmm" class="service-link router-link">Ver detalles</a>
                     </div>
                 </div>
                 <div style="text-align: center; margin-top: 30px;">
@@ -876,7 +885,7 @@ details[open] summary ~ * {
                 </li>
             </ul>
             <div style="text-align: center; margin-top: 30px;">
-                <a href="#productos-vida" class="back-to-top">Volver V-GM</a>
+                <a href="/productos-vida" class="back-to-top router-link">Volver V-GM</a>
             </div>
         </div></div></section>
     </div>
@@ -936,8 +945,8 @@ details[open] summary ~ * {
                     </ul>
                     
                     <div style="text-align: center; margin-top: 30px;">
-                        <a href="#productos-vida" class="back-to-top">Volver V-GM</a>
-                    </div>
+                <a href="/productos-vida" class="back-to-top router-link">Volver V-GM</a>
+            </div>
                 </div>
             </div>
         </section>
@@ -956,7 +965,7 @@ details[open] summary ~ * {
             </ul>
             <p>No dejes tu futuro en manos de la suerte. Activa hoy un Plan Personal del Retiro que asegure tu independencia financiera en la vejez.</p>
             <div style="text-align: center; margin-top: 30px;">
-                <a href="#productos-vida" class="back-to-top">Volver V-GM</a>
+                <a href="/productos-vida" class="back-to-top router-link">Volver V-GM</a>
             </div>
         </div></div></section>
     </div>
@@ -1017,7 +1026,7 @@ details[open] summary ~ * {
             </ul>
             
             <div style="text-align: center; margin-top: 30px;">
-                <a href="#productos-vida" class="back-to-top">Volver V-GM</a>
+                <a href="/productos-vida" class="back-to-top router-link">Volver V-GM</a>
             </div>
         </div></div></section>
     </div>
@@ -1068,7 +1077,7 @@ details[open] summary ~ * {
                     </ul>
                     
                     <div style="text-align: center; margin-top: 30px;">
-                        <a href="#productos-vida" class="back-to-top">Volver V-GM</a>
+                        <a href="/productos-vida" class="back-to-top router-link">Volver V-GM</a>
                     </div>
                 </div>
             </div>
@@ -1119,7 +1128,7 @@ details[open] summary ~ * {
                     </ul>
                     
                     <div style="text-align: center; margin-top: 30px;">
-                        <a href="#danos" class="back-to-top">Volver a Daños</a>
+                        <a href="/danos" class="back-to-top router-link">Volver a Daños</a>
                     </div>
                 </div>
             </div>
@@ -1162,7 +1171,7 @@ details[open] summary ~ * {
                     </ul>
                     
                     <div style="text-align: center; margin-top: 30px;">
-                        <a href="#danos" class="back-to-top">Volver a Daños</a>
+                        <a href="/danos" class="back-to-top router-link">Volver a Daños</a>
                     </div>
                 </div>
             </div>
@@ -1206,7 +1215,7 @@ details[open] summary ~ * {
                     </ul>
                     
                     <div style="text-align: center; margin-top: 30px;">
-                        <a href="#danos" class="back-to-top">Volver a Daños</a>
+                        <a href="/danos" class="back-to-top router-link">Volver a Daños</a>
                     </div>
                 </div>
             </div>
@@ -1262,7 +1271,7 @@ details[open] summary ~ * {
                     </ul>
                     
                     <div style="text-align: center; margin-top: 30px;">
-                        <a href="#danos" class="back-to-top">Volver a Daños</a>
+                        <a href="/danos" class="back-to-top router-link">Volver a Daños</a>
                     </div>
                 </div>
             </div>
@@ -1301,7 +1310,7 @@ details[open] summary ~ * {
                     </ul>
                     
                     <div style="text-align: center; margin-top: 30px;">
-                        <a href="#danos" class="back-to-top">Volver a Daños</a>
+                        <a href="/danos" class="back-to-top router-link">Volver a Daños</a>
                     </div>
                 </div>
             </div>
