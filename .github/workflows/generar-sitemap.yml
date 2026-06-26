@@ -3,7 +3,7 @@ name: Generador Automatico de Sitemap SEO
 on:
   push:
     paths:
-      - 'Guias/**' # Se activa en automático cada que tu Apps Script suba algo aquí
+      - 'recursos/**/index.html' # Se activa al detectar nuevos index.html físicos inyectados por tu Sheet
 
 jobs:
   build:
@@ -23,7 +23,7 @@ jobs:
         const fs = require('fs');
         const path = require('path');
 
-        const folderPath = path.join(process.cwd(), 'Guias');
+        const folderPath = path.join(process.cwd(), 'recursos');
         const domain = 'https://jhseguros.mx';
         
         let xml = '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n';
@@ -36,21 +36,23 @@ jobs:
         xml += '  </url>\n';
 
         if (fs.existsSync(folderPath)) {
-            const files = fs.readdirSync(folderPath).filter(f => f.endsWith('.md') && !f.startsWith('.'));
-            
-            files.forEach(file => {
-                const slug = file.replace('.md', '');
-                
-                xml += '  <url>\n';
-                xml += '    <loc>' + domain + '/recursos/' + encodeURIComponent(slug) + '</loc>\n';
-                xml += '    <priority>0.8</priority>\n';
-                xml += '  </url>\n';
+            const items = fs.readdirSync(folderPath);
+            items.forEach(item => {
+                const subPath = path.join(folderPath, item);
+                if (fs.statSync(subPath).isDirectory()) {
+                    if (fs.existsSync(path.join(subPath, 'index.html'))) {
+                        xml += '  <url>\n';
+                        xml += '    <loc>' + domain + '/recursos/' + encodeURIComponent(item) + '/</loc>\n';
+                        xml += '    <priority>0.8</priority>\n';
+                        xml += '  </url>\n';
+                    }
+                }
             });
         }
 
         xml += '</urlset>';
         fs.writeFileSync(path.join(process.cwd(), 'sitemap.xml'), xml);
-        console.log('Sitemap.xml generado con éxito en la raíz.');
+        console.log('Sitemap.xml generado con éxito en la raíz para carpetas físicas.');
         "
 
     - name: Guardar y subir cambios al repositorio
@@ -58,4 +60,4 @@ jobs:
         git config --global user.name 'GitHub Actions Bot'
         git config --global user.email 'actions@github.com'
         git add sitemap.xml
-        git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 SEO: Sitemap actualizado automáticamente por cambios en Guías" && git push)
+        git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 SEO: Sitemap actualizado por automatización de carpetas físicas en Netlify" && git push origin HEAD:main)
