@@ -87,7 +87,7 @@ jobs:
             });
         }
 
-        xml += '</set>'; // Nota: corregido cierre a urlset en string literal abajo
+        xml += '</set>';
         xml = xml.replace('</set>', '</urlset>');
         fs.writeFileSync(path.join(process.cwd(), 'sitemap.xml'), xml);
         console.log('Sitemap.xml actualizado con éxito.');
