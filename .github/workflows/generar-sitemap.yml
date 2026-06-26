@@ -66,6 +66,10 @@ jobs:
             let match;
             while ((match = regex.exec(htmlContent)) !== null) {
                 const faqSlug = match[1];
+                
+                // 🌟 LÍNEA CORRECTORA: Si el slug es una variable de JavaScript, la ignoramos
+                if (faqSlug.includes('${')) continue; 
+                
                 xml += '  <url>\n';
                 xml += '    <loc>' + domain + '/faq/' + faqSlug + '</loc>\n';
                 xml += '    <priority>0.8</priority>\n';
