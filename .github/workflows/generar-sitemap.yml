@@ -3,10 +3,10 @@ name: Generador Automatico de Sitemap SEO
 on:
   push:
     paths:
-      - 'recursos/**/index.html'
+      - 'Guias/**' # Se activa cuando tu Google Sheet sube o modifica un archivo en Guias
 
 permissions:
-  contents: write
+  contents: write # Otorga permisos al robot para guardar el sitemap físicamente
 
 jobs:
   build:
@@ -25,41 +25,49 @@ jobs:
         node -e "
         const fs = require('fs');
         const path = require('path');
-
-        const folderPath = path.join(process.cwd(), 'recursos');
+        const folderPath = path.join(process.cwd(), 'Guias'); // Busca en la carpeta real de tus celdas
         const domain = 'https://jhseguros.mx';
         
         let xml = '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n';
         xml += '<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n';
         
-        // Registro de la página de inicio
+        // 1. Registro de la página de inicio
         xml += '  <url>\n';
         xml += '    <loc>' + domain + '/</loc>\n';
         xml += '    <priority>1.0</priority>\n';
         xml += '  </url>\n';
 
+        // 2. Inyección de tus secciones principales para indexación en Google
+        const seccionesFijas = ['danos', 'productos-vida', 'faq', 'hospitales', 'autorizaciones', 'certificaciones', 'recursos'];
+        seccionesFijas.forEach(seccion => {
+            xml += '  <url>\n';
+            xml += '    <loc>' + domain + '/' + seccion + '</loc>\n';
+            xml += '    <priority>0.9</priority>\n';
+            xml += '  </url>\n';
+        });
+
+        // 3. Registro dinámico de tus artículos de Sheets
         if (fs.existsSync(folderPath)) {
-            const items = fs.readdirSync(folderPath);
-            items.forEach(item => {
-                const subPath = path.join(folderPath, item);
-                if (fs.statSync(subPath).isDirectory()) {
-                    if (fs.existsSync(path.join(subPath, 'index.html'))) {
-                        xml += '  <url>\n';
-                        xml += '    <loc>' + domain + '/recursos/' + encodeURIComponent(item) + '/</loc>\n';
-                        xml += '    <priority>0.8</priority>\n';
-                        xml += '  </url>\n';
-                    }
+            const files = fs.readdirSync(folderPath);
+            files.forEach(file => {
+                if (file.endsWith('.md') && !file.startsWith('.')) {
+                    const slug = file.replace('.md', '');
+                    xml += '  <url>\n';
+                    // Sin diagonal al final para no romper el enrutador de tu sitio web
+                    xml += '    <loc>' + domain + '/recursos/' + slug + '</loc>\n';
+                    xml += '    <priority>0.8</priority>\n';
+                    xml += '  </url>\n';
                 }
             });
         }
 
         xml += '</urlset>';
         fs.writeFileSync(path.join(process.cwd(), 'sitemap.xml'), xml);
-        console.log('Sitemap.xml generado con éxito en la raíz para carpetas físicas.');
+        console.log('Sitemap.xml generado con éxito leyendo la carpeta Guias.');
         "
 
     - name: Commit and push sitemap
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
-        commit_message: "🤖 SEO: Automated sitemap update (Netlify Compatible)"
+        commit_message: "🤖 SEO: Automated sitemap update (Netlify & SPA Compatible)"
         file_pattern: 'sitemap.xml'
