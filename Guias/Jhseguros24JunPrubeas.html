@@ -1428,7 +1428,7 @@ details[open] summary ~ * {
                 <div class="profile-container" style="width: 100%;">
                     <h1 class="name">Tendencias de Búsquedas de Seguros</h1>
                     <p class="tagline" style="max-width: 100%; width: 100%; text-align: center; font-size: 0.90rem; line-height: 1.6; margin-top: 12px; color: #e0e0e0; font-family: 'Open Sans', sans-serif;">
-                        <em>*Nota: These respuestas son de referencia y fines ilustrativos, por lo que no sustituyen las Condiciones Generales de la aseguradora.<br>
+                        <em>*Nota: Estas respuestas son de referencia y fines ilustrativos, por lo que no sustituyen las Condiciones Generales de la aseguradora.<br>
                         Para dudas puntuales, mejor escríbeme y lo revisamos a detalle.</em>
                     </p>
                 </div>
@@ -1436,13 +1436,16 @@ details[open] summary ~ * {
         </header>
         <section class="detail-section">
             <div class="container">
-                <div class="detail-content" style="max-width: 800px; margin: 0 auto; padding: 1.5rem 0;">
+                <div class="detail-content" style="max-width: 850px; margin: 0 auto; padding: 1rem 0;">
                     <ul id="lista-dinamica-recursos" style="list-style: none; padding: 0; margin: 0;">
                         <p style="text-align:center; color:#666; font-family: 'Open Sans', sans-serif;">⏳ Cargando biblioteca de conocimientos...</p>
                     </ul>
                 </div>
-                <div style="text-align: center; margin-top: 40px;">
+                
+                <div style="text-align: center; margin-top: 40px; display: flex; flex-direction: column; align-items: center; gap: 12px;">
                     <a href="/" class="back-to-top router-link">Volver al Menú</a>
+                    <p style="margin: 20px 0 0 0; font-size: 0.95rem; color: #333; font-weight: 600; font-family: 'Open Sans', sans-serif;">*Déjanos tus datos y te contactaremos.*</p>
+                    <a href="/contacto-form" class="router-link" style="display: inline-block; background-color: #e67e22; color: white; padding: 0.8rem 2.5rem; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 1.1rem; font-family: 'Montserrat', sans-serif; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: background-color 0.2s;">SOLICITAR ASESORÍA</a>
                 </div>
             </div>
         </section>
@@ -1696,7 +1699,7 @@ details[open] summary ~ * {
                             let tituloGuia = "";
                             const nameDecodificado = decodeURIComponent(file.name);
 
-                            // Separación limpia: omitimos el identificador JHS-XXX y conservamos el título original
+                            // Omitimos el prefijo de indexación interna JHS-XXX
                             if (nameDecodificado.includes('___')) {
                                 const parts = nameDecodificado.replace('.md', '').split('___');
                                 tituloGuia = parts[1].replace(/-/g, ' ').replace(/_q_/g, '?').replace(/_c_/g, ':');
@@ -1707,15 +1710,18 @@ details[open] summary ~ * {
                             const slugUrl = file.name.replace('.md', '');
                             const item = document.createElement('li');
                             
-                            // Estilo de fila minimalista con divisor inferior y distribución equilibrada
-                            item.style.borderBottom = '1px solid #eee';
-                            item.style.padding = '12px 0';
+                            // Estructuración limpia: divisor inferior y alineación simétrica con signos en los extremos
+                            item.style.borderBottom = '1px solid #e0e0e0';
+                            item.style.padding = '16px 0';
                             item.innerHTML = `
-                                <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-                                    <a href="/recursos/${slugUrl}" class="router-link" style="text-decoration: none; font-weight: 500; color: #2a5298; font-size: 1.1rem; display: block; flex-grow: 1; font-family: 'Open Sans', sans-serif; transition: color 0.2s; padding-right: 15px;">
-                                        ${tituloGuia}
-                                    </a>
-                                    <span style="color: #2a5298; font-weight: bold; font-size: 1.1rem; flex-shrink: 0;">➔</span>
+                                <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; font-family: 'Open Sans', sans-serif;">
+                                    <div style="display: flex; align-items: center; gap: 14px; flex-grow: 1; padding-right: 20px;">
+                                        <span style="color: #000000; font-weight: bold; font-size: 1.2rem; flex-shrink: 0;">+</span>
+                                        <a href="/recursos/${slugUrl}" class="router-link" style="text-decoration: none; font-weight: bold; color: #000000; font-size: 1.15rem; line-height: 1.4; transition: color 0.15s;">
+                                            ${tituloGuia}
+                                        </a>
+                                    </div>
+                                    <span style="color: #000000; font-weight: bold; font-size: 1.3rem; flex-shrink: 0; padding-left: 10px;">-</span>
                                 </div>
                             `;
                             contenedorLista.appendChild(item);
