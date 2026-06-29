@@ -1623,6 +1623,43 @@ details[open] summary ~ * {
     <script>
         window.guiasCache = [];
 
+        // 🌟 EL EMBELLECEDOR AUTOMÁTICO INTELIGENTE
+        window.formatearTituloEstetico = function(slug) {
+            let texto = slug.replace(/-/g, ' ').trim();
+            
+            // 1. Corrección de siglas y palabras clave de seguros
+            texto = texto.replace(/\bsgmm\b/gi, 'SGMM')
+                         .replace(/\bsgmmi\b/gi, 'SGMMI')
+                         .replace(/\bppr\b/gi, 'PPR')
+                         .replace(/\bsat\b/gi, 'SAT')
+                         .replace(/\budis\b/gi, 'UDIS')
+                         .replace(/\bgmm\b/gi, 'GMM')
+                         .replace(/\bhdi\b/gi, 'HDI')
+                         .replace(/\bmexico\b/gi, 'México')
+                         .replace(/\bcesarea\b/gi, 'Cesárea')
+                         .replace(/\bpoliza\b/gi, 'Póliza');
+
+            // 2. Capitalizar la primera letra
+            texto = texto.charAt(0).toUpperCase() + texto.slice(1);
+
+            // 3. Detectar si estructuralmente es una pregunta para ponerle signos y acentos correctos
+            const disparadores = ['Que ', 'Por que ', 'Como ', 'Cual ', 'Cuanto ', 'Donde ', 'Quien ', 'Mi seguro ', 'Hasta que ', 'Desde que ', 'Tu me ', 'Si fallezco '];
+            const esPregunta = disparadores.some(d => texto.startsWith(d));
+
+            if (esPregunta) {
+                texto = texto.replace(/^Que /, 'Qué ')
+                             .replace(/^Por que /, 'Por qué ')
+                             .replace(/^Como /, 'Cómo ')
+                             .replace(/^Cual /, 'Cuál ')
+                             .replace(/^Cuanto /, 'Cuánto ')
+                             .replace(/^Hasta que /, 'Hasta qué ')
+                             .replace(/^Desde que /, 'Desde qué ')
+                             .replace(/^Tu me /, 'Tú me ');
+                return '¿' + texto + '?';
+            }
+            return texto;
+        };
+
         document.addEventListener('DOMContentLoaded', function() {
             const btn = document.getElementById('menuToggle');
             const overlay = document.getElementById('menuOverlay');
@@ -1656,7 +1693,6 @@ details[open] summary ~ * {
                 });
             };
 
-            // Intercepta clics en los acordeones para desviarlos a la pantalla dedicada limpia
             document.querySelectorAll('.faq-item').forEach(item => {
                 const summary = item.querySelector('summary');
                 if (summary) {
@@ -1683,7 +1719,6 @@ details[open] summary ~ * {
                     })
                     .then(files => {
                         const guiasFiles = files.filter(f => f.type === 'file' && !f.name.startsWith('.'));
-                     
                         if (guiasFiles.length === 0) {
                             contenedorLista.innerHTML = '<p style="text-align:center; color:#666; font-size:1.1rem; padding: 40px 0;">Muy pronto cargaremos nuevas guías para ti.</p>';
                             return;
@@ -1693,23 +1728,16 @@ details[open] summary ~ * {
                         contenedorLista.innerHTML = '';
 
                         guiasFiles.forEach((file) => {
-                            let tituloGuia = "";
                             const nameDecodificado = decodeURIComponent(file.name);
-
-                            // Omitimos el prefijo de indexación interna JHS-XXX
-                            if (nameDecodificado.includes('___')) {
-                                const parts = nameDecodificado.replace('.md', '').split('___');
-                                tituloGuia = parts[1].replace(/-/g, ' ').replace(/_q_/g, '?').replace(/_c_/g, ':');
-                            } else {
-                                tituloGuia = nameDecodificado.replace('.md', '').replace(/-/g, ' ').replace(/_q_/g, '?').replace(/_c_/g, ':');
-                            }
-
                             const slugUrl = file.name.replace('.md', '');
-                            const item = document.createElement('li');
+                            let rawTitulo = nameDecodificado.includes('___') ? nameDecodificado.replace('.md', '').split('___')[1] : nameDecodificado.replace('.md', '');
                             
-                            // 🌟 CAMBIO ESTÉTICO: Agregamos 14px de espacio interno a los lados para separar los signos del borde blanco
+                            // 🌟 Aplicar embellecedor en la lista general
+                            let tituloGuia = window.formatearTituloEstetico(rawTitulo);
+
+                            const item = document.createElement('li');
                             item.style.borderBottom = '1px solid #e0e0e0';
-                            item.style.padding = '16px 14px'; 
+                            item.style.padding = '16px 14px';
                             item.innerHTML = `
                                 <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; font-family: 'Open Sans', sans-serif;">
                                     <div style="display: flex; align-items: center; gap: 14px; flex-grow: 1; padding-right: 20px;">
@@ -1795,14 +1823,11 @@ details[open] summary ~ * {
             };
 
             window.cargarArticuloPorSlug = function(slug) {
-                let tituloGuia = "";
                 const slugDecodificado = decodeURIComponent(slug);
-
-                if (slugDecodificado.includes('___')) {
-                    tituloGuia = slugDecodificado.split('___')[1].replace(/-/g, ' ').replace(/_q_/g, '?').replace(/_c_/g, ':');
-                } else {
-                    tituloGuia = slugDecodificado.replace(/-/g, ' ').replace(/_q_/g, '?').replace(/_c_/g, ':');
-                }
+                let rawTitulo = slugDecodificado.includes('___') ? slugDecodificado.split('___')[1] : slugDecodificado;
+                
+                // 🌟 Aplicar embellecedor en el encabezado de detalles
+                let tituloGuia = window.formatearTituloEstetico(rawTitulo);
 
                 const contenedorContenido = document.getElementById('articulo-contenido');
                 const contenedorTitulo = document.getElementById('articulo-titulo');
