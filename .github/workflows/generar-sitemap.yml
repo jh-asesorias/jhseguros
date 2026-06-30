@@ -102,3 +102,7 @@ jobs:
       with:
         commit_message: "🤖 SEO: Automated sitemap update with FAQ Clean URLs [skip ci]"
         file_pattern: 'sitemap.xml'
+
+    - name: ⚡ Notificar a Bing (IndexNow)
+      run: |
+        curl -L "https://www.bing.com/ping?sitemap=https://jhseguros.mx/sitemap.xml"
