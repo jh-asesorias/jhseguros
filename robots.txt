@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Allow: /recursos/
+Allow: /faq/
+
+Sitemap: https://jhseguros.mx/sitemap.txt
