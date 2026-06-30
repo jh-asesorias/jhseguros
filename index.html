@@ -173,7 +173,6 @@
 
         /* ESTILOS FAQ (PREGUNTAS FRECUENTES) */
         details { margin-bottom: 1rem; border-bottom: 1px solid #eee; padding-bottom: 1rem; }
-        summary { font-weight: 600; color: #2a5298; cursor: pointer; font-size: 1.1rem; list-style: none; display: flex; align-items: center; justify-content: space-between; }
         summary { 
     font-weight: 600; 
     color: #2a5298; 
@@ -182,14 +181,14 @@
     list-style: none; 
     display: flex; 
     align-items: center; 
-    justify-content: flex-start; /* <--- Alinea todo a la izquierda (junta número y texto) */
+    justify-content: flex-start;
 }
 
 summary::after { 
     content: '+'; 
     font-weight: bold; 
     font-size: 1.2rem; 
-    margin-left: auto; /* <--- EMPUJA EL "+" HASTA LA DERECHA */
+    margin-left: auto;
 }
         details p { margin-top: 10px; color: #555; font-size: 0.95rem; text-align: justify; }
         
@@ -242,40 +241,36 @@ summary::after {
 .faq-title {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #1e3a8a; /* Azul oscuro corporativo */
+    color: #1e3a8a;
     margin-bottom: 20px;
     border-bottom: 2px solid #3b82f6;
     padding-bottom: 10px;
 }
 
-/* El contenedor de la lista */
 .faq-list {
     list-style: none;
     padding: 0;
     margin: 0;
-    counter-reset: faq-counter; /* Reinicia el contador a 0 en cada sección */
+    counter-reset: faq-counter;
 }
 
-/* Cada elemento de pregunta */
 .faq-item {
     border-bottom: 1px solid #e5e7eb;
     padding: 15px 0;
 }
 
-/* El título de la pregunta (Summary) */
 .faq-question {
     font-weight: 600;
     cursor: pointer;
-    list-style: none; /* Quita el triangulito por defecto si quieres */
+    list-style: none;
     color: #374151;
     font-size: 1.1rem;
     display: flex;
     align-items: center;
 }
 
-/* MAGIA: Aquí se genera el número automático */
 .type-a .faq-question::before {
-    counter-increment: faq-counter;  /* <--- ESTA ES LA CLAVE PARA QUE SUME 1, 2, 3... */
+    counter-increment: faq-counter;
     content: "A." counter(faq-counter) ". ";
     color: #2563eb; 
     font-weight: bold;
@@ -319,15 +314,13 @@ summary::after {
     min-width: 40px;
 }
 
-/* La respuesta */
 .faq-answer {
-    padding: 15px 15px 15px 50px; /* Sangría para que quede debajo del texto */
+    padding: 15px 15px 15px 50px;
     color: #4b5563;
     line-height: 1.6;
-    display: block; /* Asegura que se muestre */
+    display: block;
 }
 
-/* Pequeña animación al abrir */
 details[open] summary ~ * {
   animation: sweep .5s ease-in-out;
 }
@@ -337,7 +330,6 @@ details[open] summary ~ * {
   100%  {opacity: 1; margin-top: 0px}
 }
 
-/* ANIMACION DE SERVICIOS (TICKER) */
 .services-ticker {
     position: absolute;
     top: calc(3rem + 90px);
@@ -431,8 +423,8 @@ details[open] summary ~ * {
 </head>
 <body>
     
+    <a href="https://api.whatsapp.com/send?phone=528343117556&text=Hola%20Rafael,%20me%20interesa%20una%20asesor%C3%ADa." class="whatsapp-float" target="_blank" aria-label="Chat en WhatsApp"></a>
     <a href="https://api.whatsapp.com/send?phone=528343117556&text=Hola%20Rafael,%20me%20interesa%20una%20asesor%C3%ADa." class="whatsapp-float" target="_blank" aria-label="Chat en WhatsApp">
-   <a href="https://api.whatsapp.com/send?phone=528343117556&text=Hola%20Rafael,%20me%20interesa%20una%20asesor%C3%ADa." class="whatsapp-float" target="_blank" aria-label="Chat en WhatsApp">
         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" viewBox="0 0 16 16">
             <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.081-.1.115-.173.171-.292.059-.115.03-.217-.015-.307-.045-.1-.445-1.074-.61-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
         </svg>
@@ -590,7 +582,7 @@ details[open] summary ~ * {
     <div class="container">
         <h2 class="section-title" style="text-align: center; color: #1e3c72;">📩 Asesoría Profesional Gratuita</h2>
         <p style="text-align: center; max-width: 700px; margin: 0 auto 30px; color: #666;">
-            Deja tus datos. Como tu Agente Certificado, analizaré tu caso y te contactaré personalmente para darte una estrategia a tu medida.
+            Deja tus datos. Como tu Agente Certificado, analizaré tu caso y te contactaré personalmente para darte una strategy a tu medida.
         </p>
 
         <div style="max-width: 600px; margin: 0 auto; background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 5px solid #2a5298;">
@@ -685,7 +677,7 @@ details[open] summary ~ * {
     </div>
     
     <div id="vision-page" class="page">
-        <header><div class="container"><div class="profile-container"><h1 class="name">Visión</h1><p class="tagline">Nuestro horizonte y aspiración</p></div></div></header>
+        <header><div class="container"><div class="profile-container"><h2 class="name">Visión</h2><p class="tagline">Nuestro horizonte y aspiración</p></div></div></header>
         <section class="detail-section"><div class="container"><div class="detail-content">
             <p>Ser la firma de asesoría e intermediación en seguros más confiable, cercana y valorada por nuestros clientes, estableciendo un nuevo estándar de servicio en el ramo asegurador. Nos distinguimos por nuestra independencia frente a las aseguradoras y por nuestro compromiso absoluto en defender los intereses del asegurado, garantizando que cada persona acceda a sus derechos y obtenga soluciones justas, completas y oportunas en cada etapa de su vida y ante cualquier percance, cumpliendo con la normatividad en la materia.</p>
             <div style="text-align: center; margin-top: 30px;">
@@ -694,16 +686,16 @@ details[open] summary ~ * {
     </div>
     
     <div id="mision-page" class="page">
-        <header><div class="container"><div class="profile-container"><h1 class="name">Misión</h1><p class="tagline">Nuestro propósito y compromiso</p></div></div></header>
+        <header><div class="container"><div class="profile-container"><h2 class="name">Misión</h2><p class="tagline">Nuestro propósito y compromiso</p></div></div></header>
         <section class="detail-section"><div class="container"><div class="detail-content">
-            <p>Brindar un servicio superior, integral y humano en la intermediación de seguros, actuando con total independencia y sin vínculos que comprometan nuestra objetividad e imparcilidad. Acompañamos a cada cliente en sus decisiones, trámites, percances o siniestros, defendiendo sus derechos e intereses con profesionalismo y transparencia. Utilizamos todos los recursos y herramientas disponibles para asegurar un servicio excepcional, un trato justo y soluciones coherentes con las condiciones contractuales de sus productos, siempre que la razón respalde su situación.</p>
+            <p>Brindar un servicio superior, integral y humano en la intermediación de seguros, actuando con total independencia y sin vínculos que comprometan nuestra objetividad e imparcilidad. Acompañamos a cada cliente en sus decisiones, trámites, percances o siniestros, defendiendo sus derechos e intereses con profesionalismo y transparencia. Utilizamos todos los recursos y herramientas disponibles para asegurar un servicio exceptional, un trato justo y soluciones coherentes con las condiciones contractuales de sus productos, siempre que la razón respalde su situación.</p>
             <div style="text-align: center; margin-top: 30px;">
                     <a href="/" class="back-to-top router-link">Volver al Menú</a>
         </div></div></section>
     </div>
     
     <div id="valor-page" class="page">
-        <header><div class="container"><div class="profile-container"><h1 class="name">Valor</h1><p class="tagline">Nuestra propuesta de valor</p></div></div></header>
+        <header><div class="container"><div class="profile-container"><h2 class="name">Valor</h2><p class="tagline">Nuestra propuesta de valor</p></div></div></header>
         <section class="detail-section"><div class="container"><div class="detail-content">
             <p>Nuestro valor radica en ofrecer un acompañamiento real y cercano, basado en la transparencia, la objetividad y la defensa activa del asegurado. Analizamos a profundidad las necesidades de cada cliente, brindamos seguimiento continuo y ofrecemos asesoría preventiva que facilita y tomar decisiones informadas. Nos comprometemos a simplificar los procesos, respaldarlos en cada acontecimiento y agotar todos los recursos necesarios para garantizar soluciones justas, completas y oportunas. Somos un intermediario independiente y un aliado confiable que actúa siempre con excelencia y compromiso total.</p>
            <div style="text-align: center; margin-top: 30px;">
@@ -715,7 +707,7 @@ details[open] summary ~ * {
         <header>
             <div class="container">
                 <div class="profile-container">
-                    <h1 class="name">Seguros de Daños y Protección Patrimonial</h1>
+                    <h2 class="name">Seguros de Daños y Protección Patrimonial</h2>
                     <p class="tagline">Protege los bienes que tanto te ha costado construir</p>
                 </div>
             </div>
@@ -792,7 +784,7 @@ details[open] summary ~ * {
         <header>
             <div class="container">
                 <div class="profile-container">
-                    <h1 class="name">Productos Vida y Gastos Médicos</h1>
+                    <h2 class="name">Productos Vida y Gastos Médicos</h2>
                     <p class="tagline">Protección integral para ti y tu familia</p>
                 </div>
             </div>
@@ -848,7 +840,7 @@ details[open] summary ~ * {
         </section>
     </div>
         <div id="vida-page" class="page">
-        <header><div class="container"><div class="profile-container"><h1 class="name">Seguros de Vida: Estrategias de Blindaje y Acumulación de Riqueza</h1><p class="tagline">¿Buscas dejar una herencia millonaria a bajo costo o prefieres un plan que te devuelva tu dinero en vida?</p></div></div></header>
+        <header><div class="container"><div class="profile-container"><h2 class="name">Seguros de Vida: Estrategias de Blindaje y Acumulación de Riqueza</h2><p class="tagline">¿Buscas dejar una herencia millonaria a bajo costo o prefieres un plan que te devuelva tu dinero en vida?</p></div></div></header>
         <section class="detail-section"><div class="container"><div class="detail-content">
             <p>No todos los seguros son iguales. Diseñamos tu póliza basándonos en tu etapa financiera actual. Ya sea que busques la <strong>prima más accesible</strong> del mercado para una cobertura alta, o un instrumento financiero que funcione como <strong>inversión segura</strong>.</p>
             <p><strong>Nuestras 3 Soluciones Estratégicas:</strong></p>
@@ -882,7 +874,7 @@ details[open] summary ~ * {
     </div>
     
     <div id="mujer-page" class="page">
-        <header><div class="container"><div class="profile-container"><h1 class="name">Vida Mujer: Protección Integral contra Cáncer, Desempleo y Maternidad</h1><p class="tagline">Respaldo Financiero con Ahorro y Protección por Cáncer Femenino y de maternidad (En total 19 eventualidades más críticas de la mujer).</p></div></div></header>
+        <header><div class="container"><div class="profile-container"><h2 class="name">Vida Mujer: Protección Integral contra Cáncer, Desempleo y Maternidad</h2><p class="tagline">Respaldo Financiero con Ahorro y Protección por Cáncer Femenino y de maternidad (En total 19 eventualidades más críticas de la mujer).</p></div></div></header>
         
         <section class="services">
             <div class="container">
@@ -932,7 +924,7 @@ details[open] summary ~ * {
                     <ul style="margin-left: 20px; margin-bottom: 20px; list-style-type: disc;">
                         <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Exención de Pagos y Respaldo por Invalidez Total y Permanente:</strong> Si sufres una invalidez definitiva, puedes elegir que tu seguro se siga pagando solo, que te entreguen una suma asegurada de apoyo inmediato, ¡o ambas opciones reunidas!</li>
                         <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Muerte Accidental y Pérdidas Orgánicas:</strong> Duplica la indemnización para tu familia si el fallecimiento es por accidente (y se triplica si es un accidente colectivo), además de protegerte con indemnizaciones si sufres la pérdida de algún miembro del cuerpo.</li>
-                        <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Fondo de Ahorro Adicional Potenciado:</strong> Te permite realizar aportaciones extras a tu ritmo para proyectos a corto o mediano plazo, garantizándote rendimientos fijos y seguros por tu dinero.</li>
+                        <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Fondo de Ahorro Acondicionado Potenciado:</strong> Te permite realizar aportaciones extras a tu ritmo para proyectos a corto o mediano plazo, garantizándote rendimientos fijos y seguros por tu dinero.</li>
                     </ul>
                     
                     <div style="text-align: center; margin-top: 30px;">
@@ -945,7 +937,7 @@ details[open] summary ~ * {
     </div>
     
     <div id="ppr-page" class="page">
-        <header><div class="container"><div class="profile-container"><h1 class="name">Planes Personales del Retiro (PPR) y Estrategias de Jubilación</h1><p class="tagline">Protección de Patrimonio y Soluciones para la Vejez</p></div></div></header>
+        <header><div class="container"><div class="profile-container"><h2 class="name">Planes Personales del Retiro (PPR) y Estrategias de Jubilación</h2><p class="tagline">Protección de Patrimonio y Soluciones para la Vejez</p></div></div></header>
         <section class="detail-section"><div class="container"><div class="detail-content">
             <p>Nuestros <strong>Planes Personales para el Retiro (PPR)</strong>, respaldados por la solidez de <em>Imagina Ser</em>, son la herramienta definitiva para garantizar una <strong>jubilación</strong> digna. No solo ahorras, sino que inviertes en la <strong>protección de patrimonio</strong> más sólida de México.</p>
             <p><strong>¿Por qué elegir nuestros Planes para la Vejez?</strong></p>
@@ -964,7 +956,7 @@ details[open] summary ~ * {
     </div>
     
     <div id="educacion-page" class="page">
-        <header><div class="container"><div class="profile-container"><h1 class="name">SeguBeca: Garantía Universitaria y Protección Familiar</h1><p class="tagline">El único plan que paga la universidad aunque tú no estés</p></div></div></header>
+        <header><div class="container"><div class="profile-container"><h2 class="name">SeguBeca: Garantía Universitaria y Protección Familiar</h2><p class="tagline">El único plan que paga la universidad aunque tú no estés</p></div></div></header>
         <section class="detail-section"><div class="container"><div class="detail-content">
             <p>La educación es la única herencia que nadie puede quitarle a tus hijos. <strong>SeguBeca</strong> es la estrategia financiera líder en México que blinda el futuro académico de tus pequeños (de 0 a 13 años) mediante un sistema de capitalización garantizada en <strong>UDIS (protección contra inflación)</strong> o Dólares.</p>
             
@@ -1029,7 +1021,7 @@ details[open] summary ~ * {
         <header>
             <div class="container">
                 <div class="profile-container">
-                    <h1 class="name">Gastos Médicos Mayores: Salud Privada y Protección Patrimonial</h1>
+                    <h2 class="name">Gastos Médicos Mayores: Salud Privada y Protección Patrimonial</h2>
                     <p class="tagline">La tranquilidad de atenderte en los mejores hospitales sin poner en riesgo tus finanzas</p>
                 </div>
             </div>
@@ -1083,7 +1075,7 @@ details[open] summary ~ * {
         <header>
             <div class="container">
                 <div class="profile-container">
-                    <h1 class="name">Seguro de Auto</h1>
+                    <h2 class="name">Seguro de Auto</h2>
                     <p class="tagline">Protección integral y a la medida para tu vehículo, conductor y pasajeros</p>
                 </div>
             </div>
@@ -1099,7 +1091,7 @@ details[open] summary ~ * {
                         <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Daños Materiales (Totales o Parciales):</strong> Ampara la reparación o indemnización de tu vehículo por daños derivados de colisiones, vuelcos, incendios, vandalismo, huelgas, rotura de cristales y fenómenos de la naturaleza (como inundaciones, sismos, huracanes o granizo). Puede contratarse para cubrir cualquier daño (pérdida parcial y total) o limitarse exclusivamente a protegerte si el auto es declarado Pérdida Total.</li>
                         <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Robo Total:</strong> Te indemniza en caso de robo total del vehículo y cubre los daños materiales que sufra la unidad en caso de ser recuperada.</li>
                         <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Responsabilidad Civil por Daños a Terceros:</strong> Protege tu patrimonio frente a la responsabilidad legal si causas daños a los bienes de otras personas, o si les provocas lesiones corporales o el fallecimiento en un accidente, cumpliendo con los requisitos de la ley federal.</li>
-                        <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Gastos Médicos a Ocupantes:</strong> Cubre la atención médica, hospitalización, honorarios médicos, ambulancia y gastos funerarios para todos los pasajeros del vehículo que resulten lesionados en un accidente o durante un intento de robo.</li>
+                        <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Gastos Médicos a Ocupantes:</strong> Cubre la atención médica, hospitalización, honorarios médicos, ambulancia and gastos funerarios para todos los pasajeros del vehículo que resulten lesionados en un accidente o durante un intento de robo.</li>
                         <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Asistencia Vial y en Viajes:</strong> Brinda servicios de emergencia en el camino, tales como arrastre de grúa, paso de corriente, envío de gasolina, cambio de llanta, servicio de cerrajero y apoyos logísticos durante tus viajes por descompostura del auto.</li>
                         <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Asistencia Legal y Jurídica:</strong> Provee la defensa legal mediante abogados las 24 horas para gestionar la libertad provisional, trámites ante las autoridades y el pago de fianzas o cauciones derivadas de un accidente de tránsito.</li>
                     </ul>
@@ -1135,7 +1127,7 @@ details[open] summary ~ * {
         <header>
             <div class="container">
                 <div class="profile-container">
-                    <h1 class="name">Seguro de Embarcaciones</h1>
+                    <h2 class="name">Seguro de Embarcaciones</h2>
                     <p class="tagline">Seguridad a flote para lanchas, yates y motos acuáticas con alta protección marítima</p>
                 </div>
             </div>
@@ -1179,7 +1171,7 @@ details[open] summary ~ * {
         <header>
             <div class="container">
                 <div class="profile-container">
-                    <h1 class="name">Seguro de Hogar</h1>
+                    <h2 class="name">Seguro de Hogar</h2>
                     <p class="tagline">Protección principal que resguarda la estructura de tu casa y tu estilo de vida</p>
                 </div>
             </div>
@@ -1224,7 +1216,7 @@ details[open] summary ~ * {
         <header>
             <div class="container">
                 <div class="profile-container">
-                    <h1 class="name">Seguro de Negocio / Empresa</h1>
+                    <h2 class="name">Seguro de Negocio / Empresa</h2>
                     <p class="tagline">Garantiza la continuidad y protege la operación de tu negocio ante cualquier eventualidad</p>
                 </div>
             </div>
@@ -1241,7 +1233,7 @@ details[open] summary ~ * {
                         <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Daños por Impacto de Inseguridad:</strong> Te respalda ante los daños físicos y materiales que sufran tus instalaciones o bienes asegurados a consecuencia de armas de fuego o artefactos explosivos derivados de hechos delictivos o enfrentamientos en la zona.</li>
                         <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Responsabilidad Civil General (Actividades e Inmuebles):</strong> Asume la defensa legal y el pago de indemnizaciones por daños materiales, lesiones corporales o fallecimiento que tu empresa cause accidentalmente a terceros (como clientes, proveedores o visitantes) debido al desarrollo de tus actividades comerciales o fallas en el inmueble.</li>
                         <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Robo con Violencia y Asalto:</strong> Te indemniza por la sustracción forzada de mercancías, inventarios, mobiliario, maquinaria o herramientas propias de tu actividad, siempre que existan señales físicas de forcejeo en los accesos del local, o bien, si ocurre un asalto directo al personal.</li>
-                        <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Protección de Maquinaria y Equipo Electrónico Base:</strong> Ampara los equipos de cómputo fijos, pantallas, sistemas de comunicación y maquinaria indispensable para operar frente a daños imprevistos por cortocircuitos, descargas eléctricas, variaciones de voltaje o errores accidentales de manejo.</li>
+                        <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Protección de Maquinaria y Equipo Electrónico Base:</strong> Ampara los equipos de cómputo fijos, pantallas, sistemas de comunicación y maquinaria indispensable para operar frente a daños imprevistos por cortocorticuitos, descargas eléctricas, variaciones de voltaje o errores accidentales de manejo.</li>
                         <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Remoción de Escombros:</strong> Cubre los gastos necesarios para desmontar, demoler, limpiar y retirar los desechos de los bienes afectados tras un siniestro, dejando el terreno listo para su reconstrucción o reparación.</li>
                     </ul>
                     
@@ -1281,7 +1273,7 @@ details[open] summary ~ * {
         <header>
             <div class="container">
                 <div class="profile-container">
-                    <h1 class="name">Responsabilidad Civil</h1>
+                    <h2 class="name">Responsabilidad Civil</h2>
                     <p class="tagline">El escudo de protección patrimonial y legal indispensable para el ejercicio seguro de tu actividad</p>
                 </div>
             </div>
@@ -1318,7 +1310,7 @@ details[open] summary ~ * {
     </div>
 
     <div id="hospitales-page" class="page">
-        <header><div class="container"><div class="profile-container"><h1 class="name">Red de Servicios Médicos y/o Hospitalarios</h1><p class="tagline">Encuentra médicos y hospitales de tu Póliza de Gastos Médicos Mayores</p></div></div></header>
+        <header><div class="container"><div class="profile-container"><h2 class="name">Red de Servicios Médicos y/o Hospitalarios</h2><p class="tagline">Encuentra médicos y hospitales de tu Póliza de Gastos Médicos Mayores</p></div></div></header>
         <section class="detail-section">
             <div class="container">
                 <div class="detail-content">
@@ -1354,7 +1346,7 @@ details[open] summary ~ * {
     </div>
 
     <div id="autorizaciones-page" class="page">
-        <header><div class="container"><div class="profile-container"><h1 class="name">Autorizaciones / Validaciones</h1><p class="tagline">Autorizaciones Federales en calidad de Intermediario de Seguros</p></div></div></header>
+        <header><div class="container"><div class="profile-container"><h2 class="name">Autorizaciones / Validaciones</h2><p class="tagline">Autorizaciones Federales en calidad de Intermediario de Seguros</p></div></div></header>
         <section class="detail-section">
             <div class="container">
                 
@@ -1362,7 +1354,6 @@ details[open] summary ~ * {
                     <img src="Cedula B No Y415335.png" alt="Cédula B Agente de Seguros" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 20px;">
                     <p style="text-align: justify; color: #444; margin-bottom: 0;">Cédula otorgada por la Comisión Nacional de Seguros y Fianzas para poder realizar las actividades de intermediación de seguros en materia de Riesgos Individuales y Empresariales de Seguros Personales y Daños; y Riesgos Empresariales de Seguros Personales y Daños; como son Seguros de Gastos Médicos Mayores, Seguros de Vida, Autos Individuales y/o Flotilla, Embarcaciones, Hogar, en forma de Individual o de Grupo y/o Colectivos.</p>
                 </div>
-
 
                 <div class="detail-content" style="text-align: center;">
                     <img src="Cedula A1 No H382035.png" alt="Cédula A1 Agente de Seguros" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 20px;">
@@ -1377,7 +1368,7 @@ details[open] summary ~ * {
         </section>
    </div>
     <div id="certificaciones-page" class="page">
-        <header><div class="container"><div class="profile-container"><h1 class="name">Capacitaciones / Certificaciones</h1><p class="tagline">Especialización continua para brindarte una asesoría de excelencia</p></div></div></header>
+        <header><div class="container"><div class="profile-container"><h2 class="name">Capacitaciones / Certificaciones</h2><p class="tagline">Especialización continua para brindarte una asesoría de excelencia</p></div></div></header>
         <section class="detail-section">
             <div class="container">
                 <div class="detail-content" style="text-align: center;">
@@ -1426,7 +1417,7 @@ details[open] summary ~ * {
         <header>
             <div class="container">
                 <div class="profile-container" style="width: 100%;">
-                    <h1 class="name">Tendencias de Búsquedas de Seguros</h1>
+                    <h2 class="name">Tendencias de Búsquedas de Seguros</h2>
                     <p class="tagline" style="max-width: 100%; width: 100%; text-align: center; font-size: 0.90rem; line-height: 1.6; margin-top: 12px; color: #e0e0e0; font-family: 'Open Sans', sans-serif;">
                         <em>*Nota: Estas respuestas son de referencia y fines ilustrativos, por lo que no sustituyen las Condiciones Generales de la aseguradora.<br>
                         Para dudas puntuales, mejor escríbeme y lo revisamos a detalle.</em>
@@ -1449,7 +1440,7 @@ details[open] summary ~ * {
     </div>
    
        <div id="articulo-page" class="page">
-           <header><div class="container"><div class="profile-container"><h1 class="name" id="articulo-titulo">Cargando...</h1><p class="tagline">Biblioteca Digital del Asesor - Rafael Jiménez Sánchez</p></div></div></header>
+           <header><div class="container"><div class="profile-container"><h2 class="name" id="articulo-titulo">Cargando...</h2><p class="tagline">Biblioteca Digital del Asesor - Rafael Jiménez Sánchez</p></div></div></header>
            <section class="detail-section">
                <div class="container">
                    <div class="detail-content" id="articulo-contenido" style="padding: 2.5rem; background: #ffffff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); font-family:'Open Sans', sans-serif;">
@@ -1464,7 +1455,7 @@ details[open] summary ~ * {
        </div>
 
        <div id="redes-page" class="page">
-           <header><div class="container"><div class="profile-container"><h1 class="name">Redes Sociales</h1><p class="tagline">Conéctate conmigo y sigamos la conversación</p></div></div></header>
+           <header><div class="container"><div class="profile-container"><h2 class="name">Redes Sociales</h2><p class="tagline">Conéctate conmigo y sigamos la conversación</p></div></div></header>
            <section class="detail-section">
                <div class="container">
                    <div class="detail-content" style="text-align: center; display: flex; flex-direction: column; gap: 15px; max-width: 450px; margin: 0 auto;">
@@ -1484,7 +1475,7 @@ details[open] summary ~ * {
     <header>
         <div class="container">
             <div class="profile-container">
-                <h1 class="name">Aviso de Privacidad - Rafael Jiménez Sánchez</h1>
+                <h2 class="name">Aviso de Privacidad - Rafael Jiménez Sánchez</h2>
             </div>
         </div>
     </header>
@@ -1541,7 +1532,7 @@ details[open] summary ~ * {
                     <li>Promotores, con la finalidad de dar servicio, asesoría y apoyo a los agentes y Clientes para que puedan cumplir con las obligaciones contractuales vigentes.</li>
                 </ol>
                 <p><strong>B. Transferencias que requieren consentimiento:</strong></p>
-                <p>Para el caso de Clientes y Prospectos, La Institución requerirá el consentimiento para transferir sus Datos sólo en caso de que exista alguna transferencia que no se encuentre prevista en el presente Aviso de Privacidad, en todos los casos la transferencia se limitará únicamente a la finalidad que sea indicada en la obtención del consentimiento.</p>
+                <p>Para el caso de Clientes and Prospectos, La Institución requerirá el consentimiento para transferir sus Datos sólo en caso de que exista alguna transferencia que no se encuentre prevista en el presente Aviso de Privacidad, en todos los casos la transferencia se limitará únicamente a la finalidad que sea indicada en la obtención del consentimiento.</p>
 
                 <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
 
@@ -1610,7 +1601,7 @@ details[open] summary ~ * {
         <div id="faq-articulo-page" class="page" style="background-color: #f8f9fa; min-height: 100vh; padding: 4rem 0;">
         <div class="container">
             <div class="detail-content" style="background: white; padding: 3rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); max-width: 800px; margin: 0 auto;">
-                <h1 id="faq-articulo-titulo" style="font-family: 'Montserrat', sans-serif; color: #1e3c72; margin-bottom: 20px; font-size: 1.7rem; line-height: 1.4; border-bottom: 2px solid #2a5298; padding-bottom: 15px; text-align: left; font-weight: 700;"></h1>
+                <h2 id="faq-articulo-titulo" style="font-family: 'Montserrat', sans-serif; color: #1e3c72; margin-bottom: 20px; font-size: 1.7rem; line-height: 1.4; border-bottom: 2px solid #2a5298; padding-bottom: 15px; text-align: left; font-weight: 700;"></h2>
                 <div id="faq-articulo-respuesta" style="font-size: 1.1rem; line-height: 1.7; color: #333; text-align: justify; margin-bottom: 30px;"></div>
                 <div style="text-align: center; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 40px; border-top: 1px solid #eee; padding-top: 25px;">
                     <a href="/faq" class="back-to-top router-link" style="background-color: #2a5298; color: white; padding: 0.6rem 1.5rem; border-radius: 20px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">↩️ Volver a FAQ</a>
@@ -1761,66 +1752,72 @@ details[open] summary ~ * {
             };
 
             window.handleCustomRouting = function() {
-                const urlParams = new URLSearchParams(window.location.search);
-                let path = window.location.pathname;
-                
-                if (urlParams.has('fallback_path')) {
-                    path = decodeURIComponent(urlParams.get('fallback_path'));
-                    window.history.replaceState(null, '', path);
+            const urlParams = new URLSearchParams(window.location.search);
+            let path = window.location.pathname;
+            
+            if (urlParams.has('fallback_path')) {
+                path = decodeURIComponent(urlParams.get('fallback_path'));
+                window.history.replaceState(null, '', path);
+            }
+
+            // ⚡ COMPATIBILIDAD EN VIVO: Esto corrige el error en Google y Bing actualizando el tag canonical
+            let canonicalLink = document.querySelector('link[rel="canonical"]');
+            if (canonicalLink) {
+                canonicalLink.setAttribute('href', window.location.origin + path);
+            }
+
+            document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+
+            if (path === '/' || path === '/index.html') {
+                document.getElementById('main-page').classList.add('active');
+            } else if (path === '/recursos' || path === '/recursos/') {
+                const targetPage = document.getElementById('recursos-page');
+                if (targetPage) {
+                    targetPage.classList.add('active');
+                    window.fetchGuias();
                 }
-
-                document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
-
-                if (path === '/' || path === '/index.html') {
-                    document.getElementById('main-page').classList.add('active');
-                } else if (path === '/recursos' || path === '/recursos/') {
-                    const targetPage = document.getElementById('recursos-page');
-                    if (targetPage) {
-                        targetPage.classList.add('active');
-                        window.fetchGuias();
-                    }
-                } else if (path.startsWith('/recursos/')) {
-                    const fileSlug = path.replace('/recursos/', '');
-                    const targetPage = document.getElementById('articulo-page');
-                    if (targetPage) {
-                        targetPage.classList.add('active');
-                        window.cargarArticuloPorSlug(fileSlug);
-                    }
-                } else if (path.startsWith('/faq')) {
-                    if (path.startsWith('/faq/')) {
-                        const faqSlug = path.replace('/faq/', '').replace(/\/$/, "");
-                        const targetDetails = document.querySelector(`details[data-slug="${faqSlug}"]`);
-                        const targetPage = document.getElementById('faq-articulo-page');
+            } else if (path.startsWith('/recursos/')) {
+                const fileSlug = path.replace('/recursos/', '');
+                const targetPage = document.getElementById('articulo-page');
+                if (targetPage) {
+                    targetPage.classList.add('active');
+                    window.cargarArticuloPorSlug(fileSlug);
+                }
+            } else if (path.startsWith('/faq')) {
+                if (path.startsWith('/faq/')) {
+                    const faqSlug = path.replace('/faq/', '').replace(/\/$/, "");
+                    const targetDetails = document.querySelector(`details[data-slug="${faqSlug}"]`);
+                    const targetPage = document.getElementById('faq-articulo-page');
+                    
+                    if (targetDetails && targetPage) {
+                        const questionText = targetDetails.querySelector('.faq-question').textContent;
+                        const answerHtml = targetDetails.querySelector('.faq-answer').innerHTML;
                         
-                        if (targetDetails && targetPage) {
-                            const questionText = targetDetails.querySelector('.faq-question').textContent;
-                            const answerHtml = targetDetails.querySelector('.faq-answer').innerHTML;
-                            
-                            document.getElementById('faq-articulo-titulo').innerText = questionText;
-                            document.getElementById('faq-articulo-respuesta').innerHTML = answerHtml;
-                            
-                            targetPage.classList.add('active');
-                        } else {
-                            const faqPage = document.getElementById('faq-page');
-                            if (faqPage) faqPage.classList.add('active');
-                        }
+                        document.getElementById('faq-articulo-titulo').innerText = questionText;
+                        document.getElementById('faq-articulo-respuesta').innerHTML = answerHtml;
+                        
+                        targetPage.classList.add('active');
                     } else {
                         const faqPage = document.getElementById('faq-page');
                         if (faqPage) faqPage.classList.add('active');
                     }
                 } else {
-                    const subPageId = path.substring(1).replace(/\/$/, "");
-                    const targetPage = document.getElementById(subPageId + '-page');
-                    if (targetPage) {
-                        targetPage.classList.add('active');
-                    } else {
-                        document.getElementById('main-page').classList.add('active');
-                    }
+                    const faqPage = document.getElementById('faq-page');
+                    if (faqPage) faqPage.classList.add('active');
                 }
-                
-                window.scrollTo(0, 0);
-                window.activarInterceptoresEnlaces();
-            };
+            } else {
+                const subPageId = path.substring(1).replace(/\/$/, "");
+                const targetPage = document.getElementById(subPageId + '-page');
+                if (targetPage) {
+                    targetPage.classList.add('active');
+                } else {
+                    document.getElementById('main-page').classList.add('active');
+                }
+            }
+            
+            window.scrollTo(0, 0);
+            window.activarInterceptoresEnlaces();
+        };
 
             window.cargarArticuloPorSlug = function(slug) {
                 const slugDecodificado = decodeURIComponent(slug);
@@ -1858,6 +1855,6 @@ details[open] summary ~ * {
             window.addEventListener('popstate', window.handleCustomRouting);
             window.handleCustomRouting();
         });
-    </script>
+    </script>a
 </body>
 </html>
