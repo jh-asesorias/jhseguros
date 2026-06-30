@@ -10,7 +10,6 @@
     <meta name="keywords" content="SeguBeca, Ahorro Universitario, Seguro Educativo, PPR, Planes Personales para el Retiro, Jubilacion, Vejez, Proteccion de Patrimonio, Vida Mujer, Seguro de Cancer, Gastos Medicos Mayores, Servicios Hospitalarios, Seguros Monterrey, Axa Seguros, Rafael Jiménez, JH Asesorias, Tamaulipas">
     <meta name="author" content="Rafael Jiménez Sánchez">
     
-    <link rel="canonical" href="https://jhseguros.mx/" />
     <meta name="robots" content="index, follow">
     
     <meta property="og:title" content="JH ASESORIAS - Rafael Jiménez Sánchez">
@@ -1760,11 +1759,14 @@ details[open] summary ~ * {
                 window.history.replaceState(null, '', path);
             }
 
-            // ⚡ COMPATIBILIDAD EN VIVO: Esto corrige el error en Google y Bing actualizando el tag canonical
+            // ⚡ Esto creará la etiqueta limpia para cada guía en automático sin bloquear a Bing
             let canonicalLink = document.querySelector('link[rel="canonical"]');
-            if (canonicalLink) {
-                canonicalLink.setAttribute('href', window.location.origin + path);
+            if (!canonicalLink) {
+            canonicalLink = document.createElement('link');
+            canonicalLink.rel = 'canonical';
+            document.head.appendChild(canonicalLink);
             }
+            canonicalLink.href = window.location.origin + path;
 
             document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
 
@@ -1855,6 +1857,6 @@ details[open] summary ~ * {
             window.addEventListener('popstate', window.handleCustomRouting);
             window.handleCustomRouting();
         });
-    </script>
+    </script>a
 </body>
 </html>
