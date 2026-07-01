@@ -1847,8 +1847,21 @@ details[open] summary ~ * {
                             return res.text();
                         })
                         .then(htmlTexto => {
-                            // 🌟 Filtro purificador: Remueve las comillas dobles duplicadas para activar las clases de los iconos
-                            let htmlLimpio = htmlTexto.replace(/""/g, '"');
+                            // 🌟 PURIFICADOR ULTRA-AVANZADO: Limpia bordes, comillas y fuerza compatibilidad con Font Awesome 6
+                            let htmlLimpio = htmlTexto.trim();
+                            
+                            // 1. Remover comillas literales del GEM en los extremos si existen
+                            if (htmlLimpio.startsWith('"') && htmlLimpio.endsWith('"')) {
+                                htmlLimpio = htmlLimpio.substring(1, htmlLimpio.length - 1);
+                            }
+                            
+                            // 2. Corregir las comillas dobles repetidas de Excel
+                            htmlLimpio = htmlLimpio.replace(/""/g, '"');
+                            
+                            // 3. Forzar conversión automática al estándar moderno (fas -> fa-solid)
+                            htmlLimpio = htmlLimpio.replace(/class="fas fa-/g, 'class="fa-solid fa-');
+                            htmlLimpio = htmlLimpio.replace(/class=""fas fa-/g, 'class="fa-solid fa-');
+                            
                             contenedorContenido.innerHTML = htmlLimpio;
                         })
                         .catch(err => {
