@@ -21,6 +21,7 @@
     <link rel="icon" href="rafael-perfil.jpg" type="image/jpeg">
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <script type="application/ld+json">
     {
@@ -1846,7 +1847,9 @@ details[open] summary ~ * {
                             return res.text();
                         })
                         .then(htmlTexto => {
-                            contenedorContenido.innerHTML = htmlTexto;
+                            // 🌟 Filtro purificador: Remueve las comillas dobles duplicadas para activar las clases de los iconos
+                            let htmlLimpio = htmlTexto.replace(/""/g, '"');
+                            contenedorContenido.innerHTML = htmlLimpio;
                         })
                         .catch(err => {
                             contenedorContenido.innerHTML = '<p style="text-align:center; color:#ff6b6b; padding: 40px 0;">❌ Detalle al abrir el artículo o el recurso no existe.</p>';
