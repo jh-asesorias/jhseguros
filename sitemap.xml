@@ -5,6 +5,22 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://jhseguros.mx/recursos</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://jhseguros.mx/mision</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jhseguros.mx/vision</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jhseguros.mx/valor</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://jhseguros.mx/danos</loc>
     <priority>0.9</priority>
   </url>
@@ -13,255 +29,299 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq</loc>
-    <priority>0.9</priority>
+    <loc>https://jhseguros.mx/auto</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jhseguros.mx/embarcaciones</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jhseguros.mx/hogar</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jhseguros.mx/negocio</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jhseguros.mx/rc</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jhseguros.mx/vida</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jhseguros.mx/mujer</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jhseguros.mx/ppr</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jhseguros.mx/educacion</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jhseguros.mx/gmm</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jhseguros.mx/autorizaciones</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jhseguros.mx/certificaciones</loc>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://jhseguros.mx/hospitales</loc>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/autorizaciones</loc>
+    <loc>https://jhseguros.mx/redes</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jhseguros.mx/contacto-form</loc>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/certificaciones</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://jhseguros.mx/recursos</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://jhseguros.mx/faq/que-significa-sgmm-o-sgmmi</loc>
+    <loc>https://jhseguros.mx/privacidad</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/que-cubre-un-sgmm-o-seguro-de-gastos-medicos-mayores</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-001___que-significa-sgmm-o-sgmmi</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/por-que-is-importante-contar-con-un-sgmm-o-seguro-de-gastos-medicos-mayores</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-002___que-cubre-un-sgmm-o-seguro-de-gastos-medicos-mayores</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/que-es-exactamente-el-deducible-y-el-coaseguro-y-como-afectan-mi-pago</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-003___por-que-es-importante-contar-con-un-sgmm-o-seguro-de-gastos-medicos-mayores</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/mi-seguro-cubre-padecimientos-preexistentes</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-004___que-es-el-deducible-y-coaseguro-en-gastos-medicos-mayores-gmm</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/que-pasa-si-tengo-una-emergencia-en-el-extranjero</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-005___que-sucede-si-tengo-un-accidente-tengo-que-pagar-deducible</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/el-seguro-cubre-maternidad-parto-cesarea</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-006___mi-seguro-cubre-padecimientos-preexistentes</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/que-sucede-si-tengo-un-accidente-tengo-que-pagar-deducible</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-007___que-pasa-si-tengo-una-emergencia-en-el-extranjero</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/puedo-atenderme-en-cualquier-hospital-de-mexico</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-008___el-seguro-cubre-maternidad-parto-o-cesarea</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/que-enfermedades-tienen-periodo-de-espera</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-009___puedo-atenderme-en-cualquier-hospital-de-mexico</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/el-seguro-cubre-tratamientos-de-cancer-quimioterapias-y-radioterapias</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-010___que-enfermedades-tienen-periodo-de-espera</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/cubre-medicamentos-fuera-del-hospital</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-011___el-seguro-cubre-tratamientos-de-cancer-quimioterapias-y-radioterapias</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/la-poliza-incluye-servicio-dental</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-012___cubre-medicamentos-fuera-del-hospital</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/hasta-que-edad-puedo-contratar-un-seguro-de-gastos-medicos-mayores</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-013___la-poliza-incluye-servicio-dental</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/que-es-el-tope-de-coaseguro</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-014___hasta-que-edad-puedo-contratar-un-seguro-de-gastos-medicos-mayores</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/son-caros-los-sgmm-o-seguros-de-gastos-medicos-mayores</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-015___que-es-el-tope-de-coaseguro-en-seguros-de-gastos-medicos-mayores</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/cuanto-ronda-el-costo-de-un-dia-de-terapia-intensiva-en-un-hospital-privado</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-016___son-caros-los-sgmm-o-seguros-de-gastos-medicos-mayores</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/que-es-un-plan-personal-de-retiro-ppr</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-017___cuanto-ronda-el-costo-de-un-dia-de-terapia-intensiva-en-un-hospital-privado</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/cual-es-la-diferencia-entre-mi-afore-y-un-plan-personal-de-retiro-ppr</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-018___que-es-un-plan-personal-de-retiro-ppr</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/es-verdad-que-el-sat-me-devuelve-dinero-si-ahorro-para-mi-retiro</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-019___cual-es-la-diferencia-entre-mi-afore-y-un-plan-personal-de-retiro-ppr</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/mi-dinero-pierde-valor-con-la-inflacion-que-son-las-udis</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-020___es-verdad-que-el-sat-me-devuelve-dinero-si-ahorro-para-mi-retiro</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/que-son-las-udis</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-021___mi-dinero-pierde-valor-con-la-inflacion-que-son-las-udis</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/puedo-tener-un-ppr-si-soy-freelance-emprendedor-o-no-tengo-nomina</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-022___que-son-las-udis</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/a-que-edad-puedo-retirar-mi-dinero-y-como-me-lo-entregan</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-023___puedo-tener-un-ppr-si-soy-freelance-entrepreneur-o-no-tengo-nomina</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/que-pasa-si-dejo-de-aportar-por-un-tiempo</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-024___a-que-edad-puedo-retirar-mi-dinero-y-como-me-lo-entregan</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/el-dinero-de-mi-retiro-se-puede-heredar-si-fallezco-antes-de-cobrarlo</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-025___que-pasa-si-dejo-de-aportar-por-un-tiempo</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/que-es-un-seguro-educativo-seguro-universitario-o-segubeca</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-026___el-dinero-de-mi-retiro-se-puede-heredar-si-fallezco-antes-de-cobrarlo</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/que-beneficios-tiene-un-seguro-educativo</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-027___que-es-un-seguro-educativo-seguro-universitario-o-segubeca</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/que-pasa-con-el-ahorro-de-la-universidad-si-yo-fallezco-antes</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-028___que-beneficios-tiene-un-seguro-educativo</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/que-sucede-si-sufro-una-invalidez-y-ya-no-puedo-seguir-pagando</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-029___que-pasa-con-el-ahorro-de-la-universidad-si-yo-fallezco-antes</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/el-dinero-es-exclusivo-para-pagar-la-colegiatura</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-030___que-sucede-si-sufro-una-invalidez-y-ya-no-puedo-seguir-pagando</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/puedo-usar-el-dinero-si-mi-hijo-decide-estudiar-en-el-extranjero</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-031___el-dinero-es-exclusivo-for-pagar-la-colegiatura</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/que-pasa-si-mi-hijo-no-quiere-estudiar-la-universidad</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-032___puedo-usar-el-dinero-si-mi-hijo-decide-estudiar-en-el-extranjero</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/desde-que-edad-del-nino-me-conviene-contratar</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-033___que-pasa-si-mi-hijo-no-quiere-estudiar-la-universidad</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/que-es-un-seguro-de-vida-y-o-seguro-de-invalidez</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-034___desde-que-edad-del-nino-me-conviene-contratar</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/quien-puede-ser-mi-beneficiario</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-035___que-es-un-seguro-de-vida-y-o-seguro-de-invalidez</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/puedo-asegurar-alguna-parte-u-organo-de-mi-cuerpo</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-036___quien-puede-ser-mi-beneficiario</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/si-fallezco-mis-beneficiarios-tienen-que-pagar-impuestos</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-037___puedo-asegurar-alguna-parte-u-organo-de-mi-cuerpo</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/existe-un-seguro-de-vida-que-me-devuelva-mi-dinero-si-no-me-muero</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-038___si-fallezco-mis-beneficiarios-tienen-que-pagar-impuestos</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/el-seguro-vida-mujer-es-diferente-a-uno-normal</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-039___existe-un-seguro-de-vida-que-me-devuelva-mi-dinero-si-no-me-muero</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/que-es-la-cobertura-de-invalidez-total-y-permanente</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-040___el-seguro-vida-mujer-es-diferente-a-uno-normal</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/que-pasa-si-me-diagnostican-enfermedad-terminal</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-041___que-es-la-cobertura-de-invalidez-total-y-permanente</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/que-pasa-si-ya-no-puedo-pagar-mi-seguro-de-vida</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-042___que-pasa-si-me-diagnostican-enfermedad-terminal</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/por-que-contratar-con-un-agente-y-no-directo-con-el-banco</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-043___que-es-la-cobertura-de-invalidez-total-y-permanente</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/que-hago-si-la-aseguradora-no-quiere-pagar</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-044___que-pasa-si-me-diagnostican-enfermedad-terminal</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/como-se-que-mi-poliza-es-real-y-estoy-protegido</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-045___que-pasa-si-ya-no-puedo-pagar-mi-seguro-de-vida</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/tu-me-ayudas-a-tramitar-el-reembolso-si-tengo-un-siniestro</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-046___por-que-contratar-con-un-agente-y-no-directo-con-el-banco</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/donde-puedo-ver-las-condiciones-generales-antes-de-firmar</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-047___que-hago-si-la-aseguradora-no-quiere-pagar</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/faq/${faqSlug}</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-048___como-se-que-mi-poliza-es-real-y-estoy-protegido</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/recursos/jhs-001___Seguro-de-Huracanes-2026_c_-¿Tu-casa-o-PYME-está-Protegida_q_</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-049___tu-me-ayudas-a-tramitar-el-reembolso-si-tengo-un-siniestro</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/recursos/jhs-002___Seguro-de-auto-para-Viajar-a-Texas-2026_c_-¿Sirve-mi-Póliza_q_</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-050___donde-puedo-ver-las-condiciones-generales-de-los-seguros-antes-de-firmar</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/recursos/jhs-003___Seguro-de-Gastos-Médicos-y-Dengue-2026_c_-¿Qué-te-Cubre_q_</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-051___como-bajar-el-costo-de-tu-seguro-de-gastos-medicos-en-tus-renovaciones-2026</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/recursos/jhs-004___Seguro-de-CAPUFE-vs-Cobertura-amplia_c_-Diferencias-en-carretera</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-052___seguro-de-huracanes-2026-tu-casa-o-pyme-esta-protegida</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/recursos/jhs-005___Errores-al-contratar-un-PPR_c_-¿Cómo-evitar-perder-dinero_q_</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-053___seguro-de-auto-para-viajar-a-texas-2026-sirve-mi-poliza</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/recursos/jhs-006___¿Qué-es-el-deducible-y-coaseguro-en-Gastos-Médicos-Mayores-GMM_q_</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-054___seguro-de-capufe-vs-cobertura-amplia-diferencias-en-carretera</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/recursos/jhs-007___Cómo-bajar-el-costo-de-tu-seguro-de-Gastos-Médicos-en-tus-renovaciones-2026</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-055___cobertura-de-auto-sustituto-como-funciona-en-hdi-y-chubb</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/recursos/jhs-008___Seguro-de-vida-y-retiro_c_-¿Conviene-más-ahorrar-en-UDIS-o-Dólares_q_</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-056___que-es-la-exencion-de-primas-por-desempleo-en-una-segubeca</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://jhseguros.mx/recursos/jhs-009___Cobertura-de-auto-sustituto_c_-¿Cómo-funciona-en-HDI-y-Chubb_q_</loc>
+    <loc>https://jhseguros.mx/recursos/jhs-057___modalidad-40-del-imss-en-2026-costos-requisitos-y-portabilidad-con-ppr</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jhseguros.mx/recursos/jhs-058___que-es-el-seguro-vida-mujer</loc>
     <priority>0.8</priority>
   </url>
 </urlset>
