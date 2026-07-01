@@ -21,7 +21,7 @@
     <link rel="icon" href="rafael-perfil.jpg" type="image/jpeg">
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     
     <script type="application/ld+json">
     {
@@ -1847,23 +1847,20 @@ details[open] summary ~ * {
                             return res.text();
                         })
                         .then(htmlTexto => {
-                            // 🌟 PURIFICADOR ULTRA-AVANZADO: Limpia bordes, comillas y fuerza compatibilidad con Font Awesome 6
+                            // 🌟 PURIFICADOR DE FORMATO: Limpia bordes y remueve comillas duplicadas de Excel
                             let htmlLimpio = htmlTexto.trim();
                             
-                            // 1. Remover comillas literales del GEM en los extremos si existen
+                            // 1. Quitar comillas exteriores si el GEM las incluye
                             if (htmlLimpio.startsWith('"') && htmlLimpio.endsWith('"')) {
                                 htmlLimpio = htmlLimpio.substring(1, htmlLimpio.length - 1);
                             }
                             
-                            // 2. Corregir las comillas dobles repetidas de Excel
+                            // 2. Corregir comillas dobles internas
                             htmlLimpio = htmlLimpio.replace(/""/g, '"');
-                            
-                            // 3. Forzar conversión automática al estándar moderno (fas -> fa-solid)
-                            htmlLimpio = htmlLimpio.replace(/class="fas fa-/g, 'class="fa-solid fa-');
-                            htmlLimpio = htmlLimpio.replace(/class=""fas fa-/g, 'class="fa-solid fa-');
                             
                             contenedorContenido.innerHTML = htmlLimpio;
                         })
+
                         .catch(err => {
                             contenedorContenido.innerHTML = '<p style="text-align:center; color:#ff6b6b; padding: 40px 0;">❌ Detalle al abrir el artículo o el recurso no existe.</p>';
                         });
