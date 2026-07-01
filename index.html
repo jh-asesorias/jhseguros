@@ -1428,6 +1428,12 @@ details[open] summary ~ * {
         <section class="detail-section">
             <div class="container">
                 <div class="detail-content" style="max-width: 800px; margin: 0 auto; padding: 1.5rem 0;">
+                    
+                    <div style="margin-bottom: 25px; position: relative;">
+                        <span style="position: absolute; left: 18px; top: 13px; color: #666; font-size: 1.2rem;">🔍</span>
+                        <input type="text" id="buscador-recursos" placeholder="Buscar por tema (ej. deducible, embarazo, auto)..." style="width: 100%; padding: 14px 15px 14px 45px; border: 2px solid #e2e8f0; border-radius: 30px; font-size: 1.05rem; outline: none; transition: border-color 0.3s; font-family: 'Open Sans', sans-serif; box-shadow: 0 2px 5px rgba(0,0,0,0.05);" onfocus="this.style.borderColor='#2a5298'" onblur="this.style.borderColor='#e2e8f0'">
+                    </div>
+
                     <ul id="lista-dinamica-recursos" style="list-style: none; padding: 0; margin: 0;">
                         <p style="text-align:center; color:#666; font-family: 'Open Sans', sans-serif;">⏳ Cargando biblioteca de conocimientos...</p>
                     </ul>
@@ -1866,6 +1872,25 @@ details[open] summary ~ * {
                         });
                 }
             };
+
+            // 🔍 MOTOR DE BÚSQUEDA DINÁMICA PARA RECURSOS
+            const buscador = document.getElementById('buscador-recursos');
+            if (buscador) {
+                buscador.addEventListener('input', function(e) {
+                    // Normalizamos para ignorar acentos y mayúsculas
+                    const termino = e.target.value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+                    const items = document.querySelectorAll('#lista-dinamica-recursos li');
+                    
+                    items.forEach(item => {
+                        const texto = item.textContent.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+                        if (texto.includes(termino)) {
+                            item.style.display = '';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            }
 
             window.addEventListener('popstate', window.handleCustomRouting);
             window.handleCustomRouting();
