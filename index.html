@@ -16,6 +16,7 @@
     <meta property="og:description" content="Protección Personal, Planes de Retiro, Gastos Médicos y Autos. Asesoría experta.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jhseguros.mx/">
+    <link rel="canonical" href="https://jhseguros.mx/">
     <meta property="og:image" content="https://jhseguros.mx/rafael-perfil.jpg">
     
     <link rel="icon" href="rafael-perfil.jpg" type="image/jpeg">
@@ -1827,7 +1828,7 @@ details[open] summary ~ * {
                         e.preventDefault(); 
                         const slug = item.getAttribute('data-slug');
                         if (slug) {
-                            history.pushState(null, '', `/faq/${slug}`);
+                            history.pushState(null, '', '/faq/' + slug);
                             window.handleCustomRouting();
                         }
                     });
