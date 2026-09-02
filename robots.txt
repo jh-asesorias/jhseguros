@@ -3,4 +3,3 @@ Allow: /
 Allow: /recursos/
 
 Sitemap: https://jhseguros.mx/sitemap.xml
-Sitemap: https://jhseguros.mx/sitemap.txt
