@@ -35,9 +35,9 @@ jobs:
                 throw new Error('No se encontró la variable GOOGLE_INDEXING_KEY');
               }
 
-              const key = JSON.parse(process.env.GOOGLE_KEY);
-              
-              // Sanitización de clave privada para formatear saltos de línea reales
+              // Decodificación Base64 a JSON plano
+              const rawJson = Buffer.from(process.env.GOOGLE_KEY, 'base64').toString('utf8');
+              const key = JSON.parse(rawJson);
               const formattedPrivateKey = key.private_key.replace(/\\n/g, '\n');
 
               const jwtClient = new google.auth.JWT(
