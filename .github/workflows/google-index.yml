@@ -31,36 +31,56 @@ jobs:
 
           async function run() {
             try {
-              if (!process.env.GOOGLE_KEY) {
-                throw new Error('No se encontró la variable GOOGLE_INDEXING_KEY');
+              const rawKey = process.env.GOOGLE_KEY;
+              if (!rawKey) {
+                throw new Error('La variable GOOGLE_INDEXING_KEY no existe o está vacía en GitHub Secrets.');
               }
 
-              // Decodificación Base64 a JSON plano
-              const rawJson = Buffer.from(process.env.GOOGLE_KEY, 'base64').toString('utf8');
-              const key = JSON.parse(rawJson);
+              let keyString = rawKey.trim();
+              
+              // 1. Escáner Inteligente: Detectar formato (Base64 vs JSON puro)
+              if (!keyString.startsWith('{')) {
+                console.log('🔄 Formato Base64 detectado. Decodificando automáticamente...');
+                keyString = Buffer.from(keyString, 'base64').toString('utf8');
+              } else {
+                console.log('🔄 Formato JSON de texto plano detectado.');
+              }
+
+              // 2. Traducir el texto a un objeto digital
+              const key = JSON.parse(keyString);
+
+              // 3. Revisión de seguridad antes de llamar a Google
+              if (!key.client_email) throw new Error('Falta el correo (client_email) en tu variable secreta.');
+              if (!key.private_key) throw new Error('Falta la firma digital (private_key) en tu variable secreta.');
+              console.log('✅ Credenciales leídas y completas para:', key.client_email);
+
+              // 4. Limpieza de saltos de línea para evitar que Google rechace la firma
               const formattedPrivateKey = key.private_key.replace(/\\n/g, '\n');
 
-              const jwtClient = new google.auth.JWT(
-                key.client_email,
-                null,
-                formattedPrivateKey,
-                ['https://www.googleapis.com/auth/indexing'],
-                null
-              );
+              // 5. Autenticación Oficial con Google (Método VIP a prueba de fallos)
+              const auth = new google.auth.GoogleAuth({
+                credentials: {
+                  client_email: key.client_email,
+                  private_key: formattedPrivateKey
+                },
+                scopes: ['https://www.googleapis.com/auth/indexing']
+              });
 
-              await jwtClient.authorize();
-              console.log('🔑 Autenticación exitosa con Google Cloud');
+              const authClient = await auth.getClient();
+              console.log('🔑 Autenticación exitosa con los servidores de Google Cloud.');
 
+              // 6. Leer el mapa de tu sitio web (sitemap)
               const sitemapRaw = fs.readFileSync('sitemap.xml', 'utf8');
               const parser = new xml2js.Parser();
               const result = await parser.parseStringPromise(sitemapRaw);
               const urls = result.urlset.url.map(u => u.loc[0]);
 
-              console.log('🚀 Enviando ' + urls.length + ' URLs a la API de Google...');
+              console.log('🚀 Preparando envío de ' + urls.length + ' páginas de JH Asesorías a Google...');
 
+              // 7. Enviar cada página individualmente
               for (const url of urls) {
                 try {
-                  await google.indexing({ version: 'v3', auth: jwtClient }).urlNotifications.publish({
+                  await google.indexing({ version: 'v3', auth: authClient }).urlNotifications.publish({
                     requestBody: { url: url, type: 'URL_UPDATED' }
                   });
                   console.log('✅ Notificada con éxito: ' + url);
@@ -68,6 +88,9 @@ jobs:
                   console.error('⚠️ Error notificando ' + url + ':', err.message);
                 }
               }
+              
+              console.log('🏆 ¡Proceso de indexación masiva finalizado con éxito!');
+
             } catch (error) {
               console.error('❌ Error crítico de ejecución:', error.message);
               process.exit(1);
