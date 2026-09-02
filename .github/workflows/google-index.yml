@@ -30,37 +30,47 @@ jobs:
           const { google } = require('googleapis');
 
           async function run() {
-            if (!process.env.GOOGLE_KEY) {
-              console.error('❌ No se encontró la secret GOOGLE_INDEXING_KEY');
-              return;
-            }
-
-            const key = JSON.parse(process.env.GOOGLE_KEY);
-            const jwtClient = new google.auth.JWT(
-              key.client_email,
-              null,
-              key.private_key,
-              ['https://www.googleapis.com/auth/indexing'],
-              null
-            );
-
-            await jwtClient.authorize();
-            const sitemapRaw = fs.readFileSync('sitemap.xml', 'utf8');
-            const parser = new xml2js.Parser();
-            const result = await parser.parseStringPromise(sitemapRaw);
-            const urls = result.urlset.url.map(u => u.loc[0]);
-
-            console.log('🚀 Enviando ' + urls.length + ' URLs a la API de Google...');
-
-            for (const url of urls) {
-              try {
-                const res = await google.indexing({ version: 'v3', auth: jwtClient }).urlNotifications.publish({
-                  requestBody: { url: url, type: 'URL_UPDATED' }
-                });
-                console.log('✅ Notificada con éxito: ' + url);
-              } catch (err) {
-                console.error('⚠️ Error notificando ' + url + ':', err.message);
+            try {
+              if (!process.env.GOOGLE_KEY) {
+                throw new Error('No se encontró la variable GOOGLE_INDEXING_KEY');
               }
+
+              const key = JSON.parse(process.env.GOOGLE_KEY);
+              
+              // Sanitización de clave privada para formatear saltos de línea reales
+              const formattedPrivateKey = key.private_key.replace(/\\n/g, '\n');
+
+              const jwtClient = new google.auth.JWT(
+                key.client_email,
+                null,
+                formattedPrivateKey,
+                ['https://www.googleapis.com/auth/indexing'],
+                null
+              );
+
+              await jwtClient.authorize();
+              console.log('🔑 Autenticación exitosa con Google Cloud');
+
+              const sitemapRaw = fs.readFileSync('sitemap.xml', 'utf8');
+              const parser = new xml2js.Parser();
+              const result = await parser.parseStringPromise(sitemapRaw);
+              const urls = result.urlset.url.map(u => u.loc[0]);
+
+              console.log('🚀 Enviando ' + urls.length + ' URLs a la API de Google...');
+
+              for (const url of urls) {
+                try {
+                  await google.indexing({ version: 'v3', auth: jwtClient }).urlNotifications.publish({
+                    requestBody: { url: url, type: 'URL_UPDATED' }
+                  });
+                  console.log('✅ Notificada con éxito: ' + url);
+                } catch (err) {
+                  console.error('⚠️ Error notificando ' + url + ':', err.message);
+                }
+              }
+            } catch (error) {
+              console.error('❌ Error crítico de ejecución:', error.message);
+              process.exit(1);
             }
           }
 
