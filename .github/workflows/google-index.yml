@@ -1,0 +1,68 @@
+name: Envio Masivo a Google Indexing API
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  indexing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar dependencias necesarias
+        run: npm install googleapis axios xml2js
+
+      - name: Enviar URLs masivas a Google
+        env:
+          GOOGLE_KEY: ${{ secrets.GOOGLE_INDEXING_KEY }}
+        run: |
+          node -e "
+          const fs = require('fs');
+          const xml2js = require('xml2js');
+          const { google } = require('googleapis');
+
+          async function run() {
+            if (!process.env.GOOGLE_KEY) {
+              console.error('❌ No se encontró la secret GOOGLE_INDEXING_KEY');
+              return;
+            }
+
+            const key = JSON.parse(process.env.GOOGLE_KEY);
+            const jwtClient = new google.auth.JWT(
+              key.client_email,
+              null,
+              key.private_key,
+              ['https://www.googleapis.com/auth/indexing'],
+              null
+            );
+
+            await jwtClient.authorize();
+            const sitemapRaw = fs.readFileSync('sitemap.xml', 'utf8');
+            const parser = new xml2js.Parser();
+            const result = await parser.parseStringPromise(sitemapRaw);
+            const urls = result.urlset.url.map(u => u.loc[0]);
+
+            console.log('🚀 Enviando ' + urls.length + ' URLs a la API de Google...');
+
+            for (const url of urls) {
+              try {
+                const res = await google.indexing({ version: 'v3', auth: jwtClient }).urlNotifications.publish({
+                  requestBody: { url: url, type: 'URL_UPDATED' }
+                });
+                console.log('✅ Notificada con éxito: ' + url);
+              } catch (err) {
+                console.error('⚠️ Error notificando ' + url + ':', err.message);
+              }
+            }
+          }
+
+          run();
+          "
