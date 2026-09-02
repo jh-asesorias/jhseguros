@@ -1904,6 +1904,11 @@ details[open] summary ~ * {
             }
             canonicalLink.href = window.location.origin + path;
 
+            // 💡 MAGIA SEO: Restaurar título y descripción genéricos al navegar a secciones principales
+            document.title = "JH división SEGUROS - Rafael Jiménez Sánchez";
+            const metaDesc = document.querySelector('meta[name="description"]');
+            if (metaDesc) metaDesc.setAttribute("content", "Rafael Jiménez, Agente CNSF H382035. Especialista en Seguros de Vida, Plan Personal de Retiro (PPR), Gastos Médicos Mayores, Auto y PYMES.");
+
             document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
 
             if (path === '/' || path === '/index.html') {
@@ -1934,6 +1939,11 @@ details[open] summary ~ * {
                         document.getElementById('faq-articulo-titulo').innerText = questionText;
                         document.getElementById('faq-articulo-respuesta').innerHTML = answerHtml;
                         
+                        // 💡 MAGIA SEO: Título y descripción únicos para la pregunta frecuente
+                        document.title = questionText + " | FAQ JH Seguros";
+                        const metaDescFaq = document.querySelector('meta[name="description"]');
+                        if (metaDescFaq) metaDescFaq.setAttribute("content", "Preguntas Frecuentes: " + questionText + " Asesoría certificada en seguros por Rafael Jiménez.");
+
                         targetPage.classList.add('active');
                     } else {
                         const faqPage = document.getElementById('faq-page');
@@ -1973,6 +1983,11 @@ details[open] summary ~ * {
 
                     const tagline = document.querySelector('#articulo-page .tagline');
                     if (tagline) tagline.style.display = 'none';
+
+                    // 💡 MAGIA SEO: Cambiar título y descripción en Google para esta guía específica
+                    document.title = tituloGuia + " | JH Seguros";
+                    const metaDescGuia = document.querySelector('meta[name="description"]');
+                    if (metaDescGuia) metaDescGuia.setAttribute("content", "Descubre todo sobre " + tituloGuia + ". Resuelve tus dudas con la asesoría experta de Rafael Jiménez Sánchez en México.");
 
                     const downloadUrl = `https://raw.githubusercontent.com/jh-asesorias/jhseguros/main/Guias/${slug}.md`;
 
