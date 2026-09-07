@@ -135,5 +135,5 @@ jobs:
     - name: Commit and push generated HTML and Sitemap
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
-        commit_message: "🤖 SEO: Bake HTML pages from Markdown guides and update sitemap [skip ci]"
-        file_pattern: 'recursos/* sitemap.xml'
+        commit_message: "🤖 SEO: Bake HTML pages from Markdown guides and update sitemap"
+        file_pattern: 'recursos/** sitemap.xml'
