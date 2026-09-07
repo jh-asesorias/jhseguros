@@ -2053,7 +2053,7 @@ details[open] summary ~ * {
 
                     document.title = tituloGuia + " | Respuestas sobre Seguros en México";
                     
-                    const canonicalUrl = window.location.origin + '/recursos/' + slug;
+                   const canonicalUrl = window.location.origin + '/recursos/' + slug + '/';
                     let canonicalLink = document.querySelector('link[rel="canonical"]');
                     if (canonicalLink) canonicalLink.href = canonicalUrl;
                     
