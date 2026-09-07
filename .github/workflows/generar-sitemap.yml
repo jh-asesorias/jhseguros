@@ -36,7 +36,9 @@ jobs:
             fs.mkdirSync(recursosDir, { recursive: true });
         }
 
-        // 1. CONVERSOR AUTOMÁTICO DE BORRADORES .MD A PÁGINAS WEB .HTML
+        // 1. CONVERSOR AUTOMÁTICO DE BORRADORES .MD A PÁGINAS WEB (RUTAS LIMPIAS)
+        let xmlUrls = [];
+        
         if (fs.existsSync(guiasDir)) {
             const files = fs.readdirSync(guiasDir);
             files.forEach(file => {
@@ -57,7 +59,7 @@ jobs:
                         .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
                         .replace(/\*(.+?)\*/g, '<em>$1</em>')
                         .replace(/^\n|\n$/g, '')
-                        .split(/\n\n+/).map(p => p.startsWith('<h') ? p : '<p>' + p + '</p>').join('\n');
+                        .split(/\n\n+/).map(p => p.startsWith('<h') || p.startsWith('<div') || p.startsWith('<script') ? p : '<p>' + p + '</p>').join('\n');
 
                     // Plantilla HTML oficial de JH Asesorías
                     const htmlFull = \`<!DOCTYPE html>
@@ -67,7 +69,7 @@ jobs:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>\${title} | JH División SEGUROS</title>
     <meta name="description" content="Guía especializada sobre \${title}. Asesoría patrimonial y seguros en México por el Agente Certificado Rafael Jiménez Sánchez.">
-    <link rel="canonical" href="\${domain}/recursos/\${rawName}">
+    <link rel="canonical" href="\${domain}/recursos/\${rawName}/">
     <link rel="stylesheet" href="/style.css" onerror="this.onerror=null;this.removeAttribute('rel');">
     <style>
         body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; color: #1e293b; max-width: 850px; margin: 0 auto; padding: 20px; }
@@ -87,7 +89,7 @@ jobs:
     <main>
         \${htmlBody}
         <div style="text-align: center; margin-top: 30px;">
-            <a href="https://wa.me/5210000000000?text=Hola%20Rafael,%20necesito%20asesoria%20sobre%20\${encodeURIComponent(title)}" class="cta-btn" target="_blank">Consultar con un Agente Certificado</a>
+            <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20necesito%20asesoria%20sobre%20\${encodeURIComponent(title)}" class="cta-btn" target="_blank">Consultar con un Agente Certificado</a>
         </div>
     </main>
     <footer>
@@ -96,10 +98,16 @@ jobs:
 </body>
 </html>\`;
 
-                    fs.writeFileSync(path.join(recursosDir, \`\${rawName}.html\`), htmlFull);
+                    // Crear subcarpeta para URL Limpia (SEO)
+                    const guideDir = path.join(recursosDir, rawName);
+                    if (!fs.existsSync(guideDir)) {
+                        fs.mkdirSync(guideDir, { recursive: true });
+                    }
+                    fs.writeFileSync(path.join(guideDir, 'index.html'), htmlFull);
+                    xmlUrls.push(\`\${domain}/recursos/\${rawName}/\`);
                 }
             });
-            console.log('🤖 Robot: Paginas HTML generadas con exito en /recursos/');
+            console.log('🤖 Robot: Paginas HTML generadas con exito en subcarpetas /recursos/');
         }
 
         // 2. CONSTRUCCIÓN DEL SITEMAP.XML
@@ -112,18 +120,12 @@ jobs:
             xml += '  <url>\n    <loc>' + domain + '/' + seccion + '</loc>\n    <priority>0.9</priority>\n  </url>\n';
         });
 
-        if (fs.existsSync(recursosDir)) {
-            const htmlFiles = fs.readdirSync(recursosDir);
-            htmlFiles.forEach(file => {
-                if (file.endsWith('.html') && !file.startsWith('.')) {
-                    const slug = file.replace('.html', '');
-                    xml += '  <url>\n';
-                    xml += '    <loc>' + domain + '/recursos/' + slug + '</loc>\n';
-                    xml += '    <priority>0.8</priority>\n';
-                    xml += '  </url>\n';
-                }
-            });
-        }
+        xmlUrls.forEach(url => {
+            xml += '  <url>\n';
+            xml += '    <loc>' + url + '</loc>\n';
+            xml += '    <priority>0.8</priority>\n';
+            xml += '  </url>\n';
+        });
 
         xml += '</urlset>';
         fs.writeFileSync(path.join(process.cwd(), 'sitemap.xml'), xml);
@@ -134,8 +136,4 @@ jobs:
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
         commit_message: "🤖 SEO: Bake HTML pages from Markdown guides and update sitemap [skip ci]"
-        file_pattern: 'recursos/*.html sitemap.xml'
-
-    - name: ⚡ Notificar a Bing (IndexNow)
-      run: |
-        curl -L "https://www.bing.com/ping?sitemap=https://jhseguros.mx/sitemap.xml"
+        file_pattern: 'recursos/* sitemap.xml'
