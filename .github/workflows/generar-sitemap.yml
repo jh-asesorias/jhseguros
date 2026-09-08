@@ -6,6 +6,7 @@ on:
       - 'Guias/**'
       - '*.html'
       - '*.txt'
+  workflow_dispatch:
 
 permissions:
   contents: write
