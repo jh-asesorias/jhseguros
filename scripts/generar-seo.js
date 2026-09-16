@@ -56,7 +56,7 @@ if (fs.existsSync(guiasDir)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${title} | JH División SEGUROS</title>
     <meta name="description" content="Guía especializada sobre ${title}. Asesoría patrimonial y seguros en México por el Agente Certificado Rafael Jiménez Sánchez.">
-    <link rel="canonical" href="${domain}/recursos/${rawName}">
+    <link rel="canonical" href="${domain}/recursos/${rawName}.html">
     <style>
         body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; color: #1e293b; max-width: 850px; margin: 0 auto; padding: 20px; }
         header { border-bottom: 2px solid #0f172a; padding-bottom: 15px; margin-bottom: 25px; display: flex; justify-content: space-between; align-items: center; }
@@ -106,9 +106,8 @@ if (fs.existsSync(recursosDir)) {
     const htmlFiles = fs.readdirSync(recursosDir);
     htmlFiles.forEach(file => {
         if (file.endsWith('.html') && !file.startsWith('.')) {
-            const slug = file.replace('.html', '');
             xml += '  <url>\n';
-            xml += '    <loc>' + domain + '/recursos/' + slug + '</loc>\n';
+            xml += '    <loc>' + domain + '/recursos/' + file + '</loc>\n';
             xml += '    <priority>0.8</priority>\n';
             xml += '  </url>\n';
         }
