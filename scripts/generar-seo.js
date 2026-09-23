@@ -7,12 +7,15 @@ const guiasDir = path.join(rootDir, 'Guias');
 const recursosDir = path.join(rootDir, 'recursos');
 const mainHtmlPath = path.join(rootDir, 'index.html');
 
-// Crear carpeta /recursos/ si no existe
-if (!fs.existsSync(recursosDir)) {
-    fs.mkdirSync(recursosDir, { recursive: true });
+// Función auxiliar para crear carpeta y guardar index.html
+function saveIndexHtml(targetDirPath, content) {
+    if (!fs.existsSync(targetDirPath)) {
+        fs.mkdirSync(targetDirPath, { recursive: true });
+    }
+    fs.writeFileSync(path.join(targetDirPath, 'index.html'), content);
 }
 
-// 1. DUPLICACIÓN FÍSICA AUTOMÁTICA DE SECCIONES EN LA RAÍZ
+// 1. DUPLICACIÓN FÍSICA EN CARPETAS (/SECCION/INDEX.HTML) Y ARCHIVOS SUELTOS
 if (fs.existsSync(mainHtmlPath)) {
     const indexContent = fs.readFileSync(mainHtmlPath, 'utf8');
     const listaSecciones = [
@@ -23,12 +26,14 @@ if (fs.existsSync(mainHtmlPath)) {
     ];
 
     listaSecciones.forEach(sec => {
+        // Genera tanto /auto/index.html como /auto.html para compatibilidad total
+        saveIndexHtml(path.join(rootDir, sec), indexContent);
         fs.writeFileSync(path.join(rootDir, `${sec}.html`), indexContent);
     });
-    console.log('🤖 Robot: Archivos .html de secciones creados en la raiz.');
+    console.log('🤖 Robot: Carpetas de secciones /seccion/index.html creadas.');
 }
 
-// 2. CONVERTIR GUIAS .MD A .HTML EN /RECURSOS/
+// 2. CONVERTIR GUIAS EN CARPETAS /RECURSOS/SLUG/INDEX.HTML Y .HTML
 if (fs.existsSync(guiasDir)) {
     const files = fs.readdirSync(guiasDir);
     files.forEach(file => {
@@ -56,7 +61,7 @@ if (fs.existsSync(guiasDir)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${title} | JH División SEGUROS</title>
     <meta name="description" content="Guía especializada sobre ${title}. Asesoría patrimonial y seguros en México por el Agente Certificado Rafael Jiménez Sánchez.">
-    <link rel="canonical" href="${domain}/recursos/${rawName}.html">
+    <link rel="canonical" href="${domain}/recursos/${rawName}">
     <style>
         body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; color: #1e293b; max-width: 850px; margin: 0 auto; padding: 20px; }
         header { border-bottom: 2px solid #0f172a; padding-bottom: 15px; margin-bottom: 25px; display: flex; justify-content: space-between; align-items: center; }
@@ -83,10 +88,12 @@ if (fs.existsSync(guiasDir)) {
 </body>
 </html>`;
 
+            // Guarda tanto en carpeta /recursos/slug/index.html como en /recursos/slug.html
+            saveIndexHtml(path.join(recursosDir, rawName), htmlFull);
             fs.writeFileSync(path.join(recursosDir, `${rawName}.html`), htmlFull);
         }
     });
-    console.log('🤖 Robot: Paginas HTML de guias generadas en /recursos/.');
+    console.log('🤖 Robot: Carpetas físicas /recursos/slug/index.html generadas.');
 }
 
 // 3. CONSTRUCCIÓN DEL SITEMAP.XML COMPLETO
@@ -102,12 +109,13 @@ seccionesFijas.forEach(seccion => {
     xml += '  </url>\n';
 });
 
-if (fs.existsSync(recursosDir)) {
-    const htmlFiles = fs.readdirSync(recursosDir);
-    htmlFiles.forEach(file => {
-        if (file.endsWith('.html') && !file.startsWith('.')) {
+if (fs.existsSync(guiasDir)) {
+    const files = fs.readdirSync(guiasDir);
+    files.forEach(file => {
+        if (file.endsWith('.md') && !file.startsWith('.')) {
+            const rawName = file.replace('.md', '');
             xml += '  <url>\n';
-            xml += '    <loc>' + domain + '/recursos/' + file + '</loc>\n';
+            xml += '    <loc>' + domain + '/recursos/' + rawName + '</loc>\n';
             xml += '    <priority>0.8</priority>\n';
             xml += '  </url>\n';
         }
