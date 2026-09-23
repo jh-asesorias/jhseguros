@@ -7,7 +7,7 @@ const guiasDir = path.join(rootDir, 'Guias');
 const recursosDir = path.join(rootDir, 'recursos');
 const mainHtmlPath = path.join(rootDir, 'index.html');
 
-// Función auxiliar para crear carpeta y guardar index.html
+// Función para crear carpeta física y guardar index.html
 function saveIndexHtml(targetDirPath, content) {
     if (!fs.existsSync(targetDirPath)) {
         fs.mkdirSync(targetDirPath, { recursive: true });
@@ -15,7 +15,7 @@ function saveIndexHtml(targetDirPath, content) {
     fs.writeFileSync(path.join(targetDirPath, 'index.html'), content);
 }
 
-// 1. DUPLICACIÓN FÍSICA EN CARPETAS (/SECCION/INDEX.HTML) Y ARCHIVOS SUELTOS
+// 1. GENERACIÓN DE CARPETAS DE SECCIONES (/AUTO/INDEX.HTML Y AUTO.HTML)
 if (fs.existsSync(mainHtmlPath)) {
     const indexContent = fs.readFileSync(mainHtmlPath, 'utf8');
     const listaSecciones = [
@@ -26,14 +26,13 @@ if (fs.existsSync(mainHtmlPath)) {
     ];
 
     listaSecciones.forEach(sec => {
-        // Genera tanto /auto/index.html como /auto.html para compatibilidad total
         saveIndexHtml(path.join(rootDir, sec), indexContent);
         fs.writeFileSync(path.join(rootDir, `${sec}.html`), indexContent);
     });
-    console.log('🤖 Robot: Carpetas de secciones /seccion/index.html creadas.');
+    console.log('🤖 Robot: Carpetas de secciones generadas correctamente.');
 }
 
-// 2. CONVERTIR GUIAS EN CARPETAS /RECURSOS/SLUG/INDEX.HTML Y .HTML
+// 2. GENERACIÓN DE CARPETAS DE GUIAS (/RECURSOS/SLUG/INDEX.HTML Y .HTML)
 if (fs.existsSync(guiasDir)) {
     const files = fs.readdirSync(guiasDir);
     files.forEach(file => {
@@ -88,12 +87,12 @@ if (fs.existsSync(guiasDir)) {
 </body>
 </html>`;
 
-            // Guarda tanto en carpeta /recursos/slug/index.html como en /recursos/slug.html
+            // Guarda tanto en /recursos/slug/index.html como en /recursos/slug.html
             saveIndexHtml(path.join(recursosDir, rawName), htmlFull);
             fs.writeFileSync(path.join(recursosDir, `${rawName}.html`), htmlFull);
         }
     });
-    console.log('🤖 Robot: Carpetas físicas /recursos/slug/index.html generadas.');
+    console.log('🤖 Robot: Carpetas de guías /recursos/slug/index.html generadas.');
 }
 
 // 3. CONSTRUCCIÓN DEL SITEMAP.XML COMPLETO
