@@ -2179,6 +2179,12 @@ details[open] summary ~ * {
 
             window.addEventListener('popstate', window.handleCustomRouting);
             window.handleCustomRouting();
+
+            // 🛡️ PARCHE DE SEGURIDAD Y SEO AUTOMÁTICO (Evita Tabnabbing)
+            // Detecta los 26 enlaces externos (y futuros) y les aplica el candado "noopener noreferrer"
+            document.querySelectorAll('a[target="_blank"]').forEach(enlace => {
+                enlace.setAttribute('rel', 'noopener noreferrer');
+            });
         });
     </script>
 </body>
