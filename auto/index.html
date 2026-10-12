@@ -192,8 +192,7 @@
                     <p style="margin: 0 0 18px 0; font-size: 0.95rem; color: #475569; line-height: 1.5;">Llena el formulario de abajo o envíame un mensaje directo. Te responderé con opciones respaldadas y transparentes.</p>
                     <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 10px;">
                         <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20vi%20tu%20anuncio%20en%20Google%20y%20me%20interesa%20cotizar%20mi%20seguro%20de%20auto" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 10px 16px; background-color: #25D366; color: white; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9rem;">📲 Enviar WhatsApp</a>
-                        <!-- Este botón ahora te baja al formulario en la misma página -->
-                        <a href="#contacto-form" style="display: inline-block; padding: 10px 16px; background-color: #2a5298; color: white; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9rem;">📩 Llenar Formulario</a>
+                        <a href="/contacto-form/" style="display: inline-block; padding: 10px 16px; background-color: #2a5298; color: white; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9rem;">📩 Solicitar Asesoría</a>
                     </div>
                 </div>
 
@@ -205,52 +204,7 @@
         </div>
     </section>
 
-    <!-- FORMULARIO DE CONTACTO INCRUSTADO EN LA PÁGINA (Sin saltar a la portada) -->
-    <section id="contacto-form" class="detail-section" style="background-color: #f8f9fa; padding: 4rem 0;">
-        <div class="container">
-            <h2 style="text-align: center; font-family: 'Montserrat', sans-serif; font-size: 1.8rem; margin-bottom: 1rem; color: #1e3c72;">📩 Cotiza tu Seguro de Auto</h2>
-            <p style="text-align: center; max-width: 700px; margin: 0 auto 30px; color: #666;">
-                Recibe un análisis rápido y transparente sin compromiso.
-            </p>
-
-            <div style="max-width: 600px; margin: 0 auto; background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 5px solid #2a5298;">
-                <form action="https://formspree.io/f/xgooobzp" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
-                    
-                    <div>
-                        <label for="nombre" style="font-weight: 700; color: #1e3c72; display: block; margin-bottom: 8px;">Nombre Completo:</label>
-                        <input type="text" id="nombre" name="nombre" required placeholder="Ej. Juan Pérez" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem;">
-                    </div>
-
-                    <div>
-                        <label for="telefono" style="font-weight: 700; color: #1e3c72; display: block; margin-bottom: 8px;">WhatsApp / Celular:</label>
-                        <input type="tel" id="telefono" name="telefono" required placeholder="Para enviarte la cotización" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem;">
-                    </div>
-
-                    <div>
-                        <label for="email" style="font-weight: 700; color: #1e3c72; display: block; margin-bottom: 8px;">Correo Electrónico:</label>
-                        <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem;">
-                    </div>
-
-                    <div>
-                        <label for="interes" style="font-weight: 700; color: #1e3c72; display: block; margin-bottom: 8px;">Me interesa información sobre:</label>
-                        <select id="interes" name="interes" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem; background-color: white;">
-                            <option value="Seguro de Auto" selected>🚗 Seguro de Auto</option>
-                            <option value="Otro">🤔 Otro tipo de seguro</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label for="mensaje" style="font-weight: 700; color: #1e3c72; display: block; margin-bottom: 8px;">Datos de tu vehículo (Opcional):</label>
-                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Ej. Nissan Versa 2023, Advance automático..." style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem; font-family: inherit;"></textarea>
-                    </div>
-
-                    <button type="submit" style="background-color: #2a5298; color: white; padding: 15px; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 1.1rem; margin-top: 10px; transition: background 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                        SOLICITAR COTIZACIÓN
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
+    <!-- SE ELIMINÓ EL FORMULARIO INTEGRADO PARA USAR EL INDEX CONTACTO GLOBAL -->
 
     <!-- FOOTER CON RUTAS ABSOLUTAS Y AÑO 2026 -->
     <footer id="contacto">
