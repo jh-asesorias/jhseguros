@@ -92,7 +92,12 @@
         .card-resumen { margin-bottom: 1.5rem; padding: 16px 18px; background: #f0f0f5; border-left: 5px solid #2a5298; border-radius: 4px; font-weight: 600; color: #1e3c72; text-align: left; }
         .nota-box { margin-top: 2rem; padding: 14px 16px; background: #f8f9fa; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 0.85rem; color: #475569; text-align: left; }
         .cta-box { margin-top: 2rem; padding: 1.5rem; background: #f8f9fa; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center; }
-        .cta-box h3 { margin-top: 0; }
+        .cta-box h4 { margin: 0 0 10px 0; color: #2a5298; font-size: 1.25rem; font-family: 'Montserrat', sans-serif; }
+        .cta-box p { margin: 0 0 18px 0; font-size: 0.95rem; color: #475569; line-height: 1.5; text-align: center; }
+        .cta-botones { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+        .cta-botones a { display: inline-block; padding: 10px 16px; color: white; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9rem; }
+        .btn-wa { background-color: #25D366; }
+        .btn-form { background-color: #2a5298; }
         @media (max-width: 768px) { .name-guia { font-size: 1.45rem; } .detail-content { padding: 1.5rem; } }
     </style>
 </head>
@@ -139,10 +144,14 @@
                     🛡️ Información elaborada por <strong>Rafael Jiménez Sánchez</strong>, agente de seguros con Cédulas CNSF Tipo A1 (H382035) y Tipo B (Y415335). Contenido orientativo: las coberturas, exclusiones y condiciones definitivas dependen de la póliza contratada y de las condiciones generales de cada aseguradora. Atención en todo México, con presencia en Ciudad Victoria y Reynosa, Tamaulipas.
                 </div>
 
+                <!-- TARJETA FINAL: WhatsApp + formulario de contacto -->
                 <div class="cta-box">
-                    <h3>¿Tienes dudas sobre cómo aplica esto en tu caso?</h3>
-                    <p style="margin-bottom: 1rem;">Revisamos tu situación y analizamos opciones de aseguradoras autorizadas en México, sin compromiso.</p>
-                    <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20quiero%20revisar%20mi%20caso%20sobre%20{{ page.title | url_encode }}" class="cta-button" target="_blank" rel="noopener noreferrer">Solicitar asesoría por WhatsApp</a>
+                    <h4>📬 ¿Te quedaron dudas sobre esta consulta?</h4>
+                    <p>No te la juegues con tu patrimonio o tu salud. Habla directamente con un asesor de JH Seguros para revisar tu caso.</p>
+                    <div class="cta-botones">
+                        <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20tengo%20una%20duda%20sobre%20la%20gu%C3%ADa:%20{{ page.title | url_encode }}" target="_blank" rel="noopener noreferrer" class="btn-wa">📲 Enviar WhatsApp</a>
+                        <a href="/contacto-form/" class="btn-form">📩 Solicitar Asesoría</a>
+                    </div>
                 </div>
 
                 <div style="text-align: center; margin-top: 2rem;">
