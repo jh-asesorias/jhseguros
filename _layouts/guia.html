@@ -6,26 +6,22 @@
     <title>{{ page.title }} | JH Seguros</title>
     <meta name="description" content="{{ page.description }}">
     <link rel="canonical" href="https://jhseguros.mx{{ page.url }}">
+    <meta name="author" content="Rafael Jiménez Sánchez">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="{{ page.title }} | JH Seguros">
+    <meta property="og:description" content="{{ page.description }}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://jhseguros.mx{{ page.url }}">
+    <meta property="og:image" content="https://jhseguros.mx/rafael-perfil.jpg">
     <link rel="icon" href="/rafael-perfil.jpg" type="image/jpeg">
-    <style>
-        body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #1e293b; max-width: 850px; margin: 0 auto; padding: 20px; background-color: #f8fafc; }
-        header { border-bottom: 2px solid #0f172a; padding-bottom: 15px; margin-bottom: 25px; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-weight: bold; font-size: 1.2rem; color: #0f172a; text-decoration: none; }
-        .back-link { color: #2563eb; text-decoration: none; font-weight: 600; }
-        .back-link:hover { text-decoration: underline; }
-        article { background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-        h1 { color: #0f172a; font-size: 1.8rem; line-height: 1.3; margin-top: 0; }
-        h2 { color: #1e3c72; font-size: 1.4rem; margin-top: 25px; margin-bottom: 15px; }
-        p { margin-bottom: 1rem; text-align: justify; }
-        .card-destacada { margin-bottom: 25px; padding: 18px; background-color: #f1f5f9; border-left: 5px solid #2a5298; border-radius: 4px; font-size: 1.1rem; line-height: 1.6; font-weight: 600; color: #1e293b; }
-        .meta-info { font-size: 0.95rem; color: #64748b; margin-bottom: 20px; }
-        .cnsf-box { margin-top: 30px; padding: 15px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 0.85rem; color: #475569; }
-        .cta-container { margin-top: 35px; padding: 22px; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center; }
-        .cta-btn { display: inline-block; background-color: #25d366; color: white; text-decoration: none; padding: 12px 24px; border-radius: 6px; font-weight: bold; margin-top: 10px; transition: background-color 0.2s; }
-        .cta-btn:hover { background-color: #1eb954; }
-        footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #e2e8f0; font-size: 0.85rem; color: #64748b; text-align: center; }
-        .whatsapp-float { position: fixed; width: 55px; height: 55px; bottom: 20px; right: 20px; background-color: #25d366; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 6px rgba(0,0,0,0.15); z-index: 1000; text-decoration: none; }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3GLCDV4F8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Z3GLCDV4F8');
+    </script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -35,7 +31,7 @@
       "author": {
         "@type": "Person",
         "name": "Rafael Jiménez Sánchez",
-        "jobTitle": "Agente Profesional de Seguros",
+        "jobTitle": "Agente de Seguros",
         "identifier": "Cédulas CNSF: A1 H382035 y B Y415335"
       },
       "publisher": {
@@ -49,51 +45,150 @@
       }
     }
     </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Open Sans', sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; scroll-behavior: smooth; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { position: relative; background: linear-gradient(135deg, #1e3c72 90%, #2a5298 100%); color: white; padding: 3rem 0; text-align: center; overflow: hidden; z-index: 1; }
+        header::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('/rafael-perfil.jpg'); background-size: cover; background-position: center; opacity: 0.15; filter: grayscale(100%); mix-blend-mode: luminosity; z-index: -1; }
+        .profile-container { display: flex; flex-direction: column; align-items: center; margin-bottom: 1.5rem; }
+        .name { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .tagline { font-size: 1.4rem; margin: 1rem 0; font-weight: 500; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .detail-section { padding: 3rem 0; background-color: #f0f0f5; min-height: 60vh; }
+        .detail-content { background: white; padding: 2.5rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); margin-bottom: 2rem; text-align: justify; color: #444; }
+        .detail-content h2, .detail-content h3 { color: #2a5298; margin-bottom: 12px; margin-top: 20px; font-family: 'Montserrat', sans-serif; font-size: 1.3rem; }
+        .detail-content p { margin-bottom: 1rem; line-height: 1.7; }
+        .detail-content ul, .detail-content ol { margin-left: 25px; margin-bottom: 1.2rem; }
+        .detail-content li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .detail-content strong { color: #1e3c72; }
+        .detail-content hr { border: 0; border-top: 1px solid #eee; margin: 25px 0; }
+        .back-to-top { display: inline-block; background-color: #2a5298; color: white; padding: 0.5rem 1.2rem; font-size: 0.9rem; border-radius: 20px; text-decoration: none; font-weight: 600; transition: background-color 0.3s; }
+        .back-to-top:hover { background-color: #1e3c72; }
+        .cta-button { display: inline-block; background-color: #ff6b6b; color: white; padding: 0.8rem 2rem; border-radius: 30px; text-decoration: none; font-weight: 600; margin: 10px 0 15px; }
+        footer { background-color: #1a1a2e; color: white; padding: 3rem 0 5rem; text-align: center; }
+        .brand { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; margin-bottom: 1rem; color: #ff6b6b; }
+        .social-links { display: flex; justify-content: center; gap: 1rem; margin: 1.5rem 0; }
+        .social-icon { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.1); border-radius: 50%; color: white; text-decoration: none; }
+        .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 20px; right: 20px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; font-size: 35px; box-shadow: 2px 2px 3px #999; z-index: 1000; display: flex; align-items: center; justify-content: center; text-decoration: none; }
+        .mobile-menu-btn { display: none; position: fixed; top: 20px; right: 20px; width: 52px; height: 52px; background-color: #1e3c72; color: white; border-radius: 50%; border: 2px solid rgba(255, 255, 255, 0.2); z-index: 2000; cursor: pointer; align-items: center; justify-content: center; }
+        .mobile-menu-btn svg { width: 24px; height: 24px; fill: currentColor; }
+        .mobile-overlay { position: fixed; top: 0; right: -100%; width: 280px; height: 100%; background-color: #1a1a2e; z-index: 1999; transition: right 0.4s; display: flex; flex-direction: column; padding: 85px 20px 20px; }
+        .mobile-overlay.open { right: 0; }
+        .mobile-nav-link { color: white; text-decoration: none; font-size: 1.05rem; font-weight: 600; padding: 14px 15px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .mobile-backdrop { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 1998; display: none; opacity: 0; transition: opacity 0.3s; }
+        .mobile-backdrop.open { display: block; opacity: 1; }
+        @media (max-width: 768px) { .name { font-size: 1.8rem; } .tagline { font-size: 1.2rem; } .mobile-menu-btn { display: flex; } }
+    
+        .intro-box { background: white; padding: 1.5rem 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 1.5rem; }
+        #buscador { width: 100%; padding: 12px 18px; border: 2px solid #e2e8f0; border-radius: 30px; font-size: 1rem; font-family: inherit; outline: none; margin-top: 1rem; }
+        #buscador:focus { border-color: #2a5298; }
+        ul.guias { list-style: none; margin: 0; padding: 0; background: white; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); overflow: hidden; }
+        ul.guias li { border-bottom: 1px solid #eef0f4; }
+        ul.guias li:last-child { border-bottom: none; }
+        ul.guias a { display: block; padding: 14px 20px; color: #1e3c72; font-weight: 600; text-decoration: none; }
+        ul.guias a:hover { background: #f0f0f5; color: #2a5298; }
+        .contador { color: #64748b; font-size: 0.9rem; margin: 0.8rem 0; }
+        .name-guia { font-family: 'Montserrat', sans-serif; font-size: 1.9rem; font-weight: 700; max-width: 900px; margin: 0 auto 0.5rem; line-height: 1.3; }
+        .card-resumen { margin-bottom: 1.5rem; padding: 16px 18px; background: #f0f0f5; border-left: 5px solid #2a5298; border-radius: 4px; font-weight: 600; color: #1e3c72; text-align: left; }
+        .nota-box { margin-top: 2rem; padding: 14px 16px; background: #f8f9fa; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 0.85rem; color: #475569; text-align: left; }
+        .cta-box { margin-top: 2rem; padding: 1.5rem; background: #f8f9fa; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center; }
+        .cta-box h3 { margin-top: 0; }
+        @media (max-width: 768px) { .name-guia { font-size: 1.45rem; } .detail-content { padding: 1.5rem; } }
+    </style>
 </head>
 <body>
-    <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20tengo%20una%20duda%20sobre%20la%20guía:%20{{ page.title | url_encode }}" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contacto por WhatsApp">
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326z"/></svg>
+    <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20tengo%20una%20duda%20sobre%20la%20gu%C3%ADa:%20{{ page.title | url_encode }}" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.081-.1.115-.173.171-.292.059-.115.03-.217-.015-.307-.045-.1-.445-1.074-.61-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
     </a>
 
+    <button class="mobile-menu-btn" id="menuToggle" aria-label="Abrir menú">
+        <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+    </button>
+    <div class="mobile-backdrop" id="menuBackdrop"></div>
+    <div class="mobile-overlay" id="menuOverlay">
+        <a href="/" class="mobile-nav-link">🏠 Inicio</a>
+        <a href="/danos/" class="mobile-nav-link">🚗 Módulo Autos y Daños</a>
+        <a href="/productos-vida/" class="mobile-nav-link">🛡️ Vida y Gastos Médicos</a>
+        <a href="/hospitales/" class="mobile-nav-link">🏥 Servicios Hospitalarios</a>
+        <a href="/autorizaciones/" class="mobile-nav-link">🏅 Autorizaciones</a>
+        <a href="/certificaciones/" class="mobile-nav-link">🎓 Certificaciones</a>
+        <a href="/recursos/" class="mobile-nav-link">📚 Respuestas sobre Seguros</a>
+        <a href="/redes/" class="mobile-nav-link">🌐 Redes Sociales</a>
+        <a href="/contacto-form/" class="mobile-nav-link">📩 Contacto Directo</a>
+    </div>
+
     <header>
-        <a href="/" class="logo">JH SEGUROS</a>
-        <a href="/recursos/" class="back-link">← Volver a Guías</a>
+        <div class="container">
+            <div class="profile-container">
+                <h1 class="name-guia">{{ page.title }}</h1>
+                <p class="tagline" style="font-size: 1.05rem;">Rafael Jiménez Sánchez - Agente de Seguros Cédula A1 H382035 y B Y415335 (CNSF)</p>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <article>
-            <h1>{{ page.title }}</h1>
-            
-            {% if page.resumen %}
-            <div class="card-destacada">
-                {{ page.resumen }}
-            </div>
-            {% endif %}
+    <section class="detail-section">
+        <div class="container">
+            <div class="detail-content">
+                {% if page.resumen %}
+                <div class="card-resumen">{{ page.resumen }}</div>
+                {% endif %}
 
-            {% if page.aseguradoras %}
-            <div class="meta-info">
-                <strong>Aseguradoras evaluadas:</strong> {{ page.aseguradoras }}
-            </div>
-            {% endif %}
-
-            <div class="contenido">
                 {{ content }}
-            </div>
 
-            <div class="cnsf-box">
-                🛡️ <strong>Validación Oficial:</strong> Información elaborada y revisada por <strong>Rafael Jiménez Sánchez</strong>, Intermediario Profesional de Seguros certificado ante la Comisión Nacional de Seguros y Fianzas (CNSF) bajo las Cédulas Tipo A1 (Folio H382035) y Tipo B (Folio Y415335). Asesoría respaldada bajo la Ley de Instituciones de Seguros y de Fianzas en México, con atención presencial en Ciudad Victoria y Reynosa, Tamaulipas.
-            </div>
+                <div class="nota-box">
+                    🛡️ Información elaborada por <strong>Rafael Jiménez Sánchez</strong>, agente de seguros con Cédulas CNSF Tipo A1 (H382035) y Tipo B (Y415335). Contenido orientativo: las coberturas, exclusiones y condiciones definitivas dependen de la póliza contratada y de las condiciones generales de cada aseguradora. Atención en todo México, con presencia en Ciudad Victoria y Reynosa, Tamaulipas.
+                </div>
 
-            <div class="cta-container">
-                <h3 style="margin-top: 0; color: #0f172a;">¿Tienes dudas sobre cómo aplica esto en tu caso particular?</h3>
-                <p style="margin-bottom: 15px; font-size: 0.95rem;">Revisamos tus condiciones o cotizamos la opción adecuada para tu perfil patrimonial sin costo.</p>
-                <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20quiero%20revisar%20mi%20caso%20sobre%20{{ page.title | url_encode }}" class="cta-btn" target="_blank" rel="noopener noreferrer">Solicitar Asesoría por WhatsApp</a>
-            </div>
-        </article>
-    </main>
+                <div class="cta-box">
+                    <h3>¿Tienes dudas sobre cómo aplica esto en tu caso?</h3>
+                    <p style="margin-bottom: 1rem;">Revisamos tu situación y analizamos opciones de aseguradoras autorizadas en México, sin compromiso.</p>
+                    <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20quiero%20revisar%20mi%20caso%20sobre%20{{ page.title | url_encode }}" class="cta-button" target="_blank" rel="noopener noreferrer">Solicitar asesoría por WhatsApp</a>
+                </div>
 
-    <footer>
-        <p>© 2026 JH Seguros - Rafael Jiménez Sánchez. Agente Certificado CNSF. Operaciones en Tamaulipas y toda la República Mexicana.</p>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="/recursos/" class="back-to-top">← Volver a las guías</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <div class="container">
+            <div class="brand">Seguritos con Rafa</div>
+            <a href="https://calendly.com/jhseguros/lordseguritos" target="_blank" rel="noopener noreferrer" class="cta-button" style="margin-top: 10px; margin-bottom: 15px;">Agenda directamente tu Asesoría</a>
+            <div style="margin: 1.5rem 0;">
+                <p>Email: <a href="mailto:jhseguros@jhasesorias.com" style="color: white; text-decoration: none;">jhseguros@jhasesorias.com</a></p>
+                <p>Teléfono: <a href="tel:+528343117556" style="color: white; text-decoration: none; font-weight: 600;">834-311-7556</a></p>
+                <p>Atención en todo México · Presencia en Reynosa y Ciudad Victoria, Tamaulipas</p>
+            </div>
+            <div class="social-links">
+                <a href="https://www.facebook.com/rafaeljimenezsanchezAS" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6c1.05 0 2.05.2 2.3.3v2.7h-1.5c-1.2 0-1.5.6-1.5 1.45V12h3l-.4 3h-2.6v6.8C18.56 20.87 22 16.84 22 12z"/></svg></a>
+                <a href="https://www.instagram.com/lord_seguritos/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85s.01-3.58.07-4.85C2.38 3.86 3.9 2.32 7.15 2.17c1.27-.06 1.65-.07 4.85-.07zM12 0C8.74 0 8.33.01 7.05.07c-4.27.2-6.78 2.71-6.98 6.98C0 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.27 2.71 6.78 6.98 6.98 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c4.27-.2 6.78-2.71 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.2-4.27-2.71-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm3.98-9.03a1.44 1.44 0 1 1 2.88 0 1.44 1.44 0 0 1-2.88 0z"/></svg></a>
+                <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20tengo%20una%20duda%20sobre%20seguros" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.74.45 3.44 1.31 4.94L2 22l5.31-1.39a9.92 9.92 0 0 0 4.73 1.18h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.12c-1.47 0-2.92-.39-4.18-1.14l-.3-.18-3.1.81.83-3.03-.2-.32A8.25 8.25 0 0 1 3.82 11.9c0-4.54 3.7-8.24 8.23-8.24 2.2 0 4.27.86 5.82 2.42a8.2 8.2 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.15.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.24-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.12-.15.16-.25.24-.42.08-.17.04-.32-.02-.44-.06-.12-.56-1.35-.77-1.84-.2-.48-.4-.42-.56-.43h-.48c-.16 0-.43.06-.65.31-.22.25-.86.84-.86 2.05s.89 2.38 1.01 2.54c.12.17 1.73 2.64 4.19 3.7.59.25 1.05.4 1.4.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.2-.58.2-.1.2-.58-.1-.13-.25-.21-.5-.33z"/></svg></a>
+            </div>
+            <p style="font-size: 0.85rem; color: #aaa; max-width: 800px; margin: 0 auto 15px; line-height: 1.4;">* La información en este sitio web es de carácter orientativo. Las coberturas y beneficios están sujetos a las condiciones generales de las pólizas de cada aseguradora.</p>
+            <p>&copy; 2024 Rafael Jiménez Sánchez - Agente de Seguros Cédula A1 H382035 y B Y415335 - Todos los derechos reservados</p>
+            <p style="margin-top: 15px;"><a href="/privacidad/" style="color: #ccc; text-decoration: none; font-weight: bold; margin-right: 20px;">🔒 Aviso de Privacidad</a><a href="/reserva-datos.pdf" target="_blank" rel="noopener noreferrer" style="color: #ccc; text-decoration: none; font-weight: bold;">📄 Política de Reserva de Datos (ARCO)</a></p>
+        </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('menuToggle');
+            const overlay = document.getElementById('menuOverlay');
+            const backdrop = document.getElementById('menuBackdrop');
+            function toggleMenu() {
+                if (!overlay || !backdrop || !btn) return;
+                overlay.classList.toggle('open');
+                backdrop.classList.toggle('open');
+                btn.innerHTML = overlay.classList.contains('open') 
+                    ? '<svg viewBox="0 0 24 24" style="width:24px;height:24px;fill:currentColor;"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>'
+                    : '<svg viewBox="0 0 24 24" style="width:24px;height:24px;fill:currentColor;"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>';
+            }
+            if (btn && overlay && backdrop) {
+                btn.addEventListener('click', toggleMenu);
+                backdrop.addEventListener('click', toggleMenu);
+            }
+        });
+    </script>
 </body>
 </html>
