@@ -203,6 +203,12 @@
                     <textarea id="mensaje" name="mensaje" rows="4" class="form-control" placeholder="Escribe aquí tu duda, modelo de auto o plan que buscas..."></textarea>
                 </div>
 
+                <!-- ACEPTACIÓN DEL AVISO DE PRIVACIDAD (obligatoria para enviar) -->
+                <div class="form-group" style="display: flex; gap: 10px; align-items: flex-start;">
+                    <input type="checkbox" id="aviso" name="aviso_privacidad" value="Aceptado" required style="margin-top: 4px; width: 18px; height: 18px; flex-shrink: 0;">
+                    <label for="aviso" style="font-weight: 400; font-size: 0.9rem; color: #475569; margin: 0;">He leído y acepto el <a href="/privacidad/" target="_blank" rel="noopener noreferrer" style="color: #2a5298; font-weight: 600;">Aviso de Privacidad</a> y autorizo el tratamiento de mis datos personales para recibir asesoría.</label>
+                </div>
+
                 <button type="submit" class="btn-submit">ENVIAR SOLICITUD DE ASESORÍA</button>
             </form>
         </div>
