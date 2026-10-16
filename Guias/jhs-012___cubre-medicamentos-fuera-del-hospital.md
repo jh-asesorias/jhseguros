@@ -7,7 +7,7 @@ aseguradoras: AXA, Seguros Monterrey New York Life, HDI, CHUBB
 permalink: /recursos/jhs-012___cubre-medicamentos-fuera-del-hospital/
 ---
 
-🩺 Los medicamentos que te sean suministrados durante un internamiento u hospitalización **siempre** estarán cubiertos dentro de la suma asegurada general de tu póliza. 
+🩺 Los medicamentos que te sean suministrados durante un internamiento u hospitalización estarán cubiertos dentro de la suma asegurada general de tu póliza, conforme a sus condiciones. 
 
 💊 Sin embargo, los medicamentos ambulatorios (aquellos que compras en la farmacia para seguir tu tratamiento o recuperación en casa) **solo** se cubren si tu póliza tiene contratada explícitamente la cobertura adicional o endoso de "Medicamentos fuera del hospital" o "Medicinas adquiridas fuera del hospital". 
 

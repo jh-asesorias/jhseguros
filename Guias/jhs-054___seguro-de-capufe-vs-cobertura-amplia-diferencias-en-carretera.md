@@ -2,7 +2,7 @@
 layout: guia
 title: "Seguro de CAPUFE vs. Cobertura Amplia: diferencias en carretera"
 description: "Comparamos el seguro de caseta de CAPUFE contra una póliza de cobertura amplia de auto en México: alcances, exclusiones y por qué no sustituye tu póliza."
-resumen: "¿El seguro de la caseta de CAPUFE es suficiente? Comparamos sus límites contra una póliza de cobertura amplia de AXA o HDI para tus vacaciones de verano."
+resumen: "¿El seguro de la caseta de CAPUFE es suficiente? Comparamos sus límites contra una póliza de cobertura amplia para tus vacaciones de verano."
 aseguradoras: AXA, CHUBB, HDI
 permalink: /recursos/jhs-054___seguro-de-capufe-vs-cobertura-amplia-diferencias-en-carretera/
 ---
@@ -23,6 +23,6 @@ El seguro de usuario de CAPUFE es como la garantía limitada de una tienda: solo
 Una póliza privada te protege en cualquier vía (autopista de cuota, carretera libre o ciudad):
 
 * 🛠️ **Daños materiales:** Absorbe la compostura de tu vehículo pagando únicamente tu deducible pactado.
-* 🔒 **Robo total:** Garantiza la indemnización del valor comercial o convenido de la unidad.
+* 🔒 **Robo total:** Prevé la indemnización del valor comercial o convenido de la unidad.
 * 🚑 **Gastos médicos a ocupantes:** Atención clínica inmediata, hospitalización y traslados para ti y tus acompañantes.
 * ⚖️ **Asistencia jurídica y auxilio vial 24/7:** Cobertura de fianza legal, grúa, paso de corriente y cambio de llanta en cualquier kilómetro del país.

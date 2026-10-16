@@ -1,8 +1,8 @@
 ---
 layout: guia
 title: "¿Desde qué edad del niño me conviene contratar un seguro educativo?"
-description: "Descubre cuál es la mejor edad para contratar una SeguBeca y cómo el tiempo y el interés compuesto te ayudan a pagar mensualidades mucho más bajas."
-resumen: "Descubre cuál es la mejor edad para contratar un seguro educativo universitario y cómo el interés compuesto te ayuda a ahorrar mensualidades mucho más bajas."
+description: "Descubre cuál es la edad más conveniente para contratar una SeguBeca y cómo el tiempo y el interés compuesto te ayudan a pagar mensualidades más bajas."
+resumen: "Descubre cuál es la edad más conveniente para contratar un seguro educativo universitario y cómo el interés compuesto te ayuda a ahorrar mensualidades más bajas."
 aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-036___desde-que-edad-del-nino-me-conviene-contratar/
 ---
@@ -13,6 +13,6 @@ permalink: /recursos/jhs-036___desde-que-edad-del-nino-me-conviene-contratar/
 
 *   ⏳ **Mayor tiempo para acumular:** Dispones de un horizonte de tiempo mucho más largo (de 13 a 18 años), lo que permite que tus aportaciones periódicas se diluyan y sean considerablemente más bajas y accesibles.
 *   📈 **Poder del interés compuesto:** Aprovechas al máximo los rendimientos en UDIS o Dólares que se van acumulando y multiplicando año con año.
-*   ❤️ **Protección más económica:** Los componentes del seguro de vida e invalidez para ti (como padre o madre) son mucho más baratos cuando se contratan a una edad más joven y con un mejor estado de salud.
+*   ❤️ **Protección más económica:** Los componentes del seguro de vida e invalidez para ti (como padre o madre) son más económicos cuando se contratan a una edad más joven y con un mejor estado de salud.
 
 🪙 Por el contrario, conforme el niño crece (si intentas contratar a los 10 o 12 años), la ventana de tiempo se acorta drásticamente. Al tener menos años para juntar el fondo universitario, la mensualidad o prima anual requerida se vuelve mucho más alta y pesada para el presupuesto familiar.

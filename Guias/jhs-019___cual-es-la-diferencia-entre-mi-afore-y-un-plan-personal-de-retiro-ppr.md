@@ -13,4 +13,4 @@ permalink: /recursos/jhs-019___cual-es-la-diferencia-entre-mi-afore-y-un-plan-pe
 
 🏢 En cambio, el **PPR (Plan Personal de Retiro)** es un instrumento 100% voluntario y flexible, disponible para cualquier persona (incluyendo *freelancers*, emprendedores y empresarios), donde tú decides el monto, la frecuencia y la estrategia de inversión mediante contratos privados con la aseguradora.
 
-🤲 Además, el **PPR** suele incluir un seguro de vida con suma asegurada por fallecimiento e invalidez, y ofrece mayores alternativas y flexibilidad de inversión (Dólares, UDIS, portafolios dinámicos), sirviendo como el complemento ideal para repotenciar los ingresos de tu jubilación.
+🤲 Además, el **PPR** suele incluir un seguro de vida con suma asegurada por fallecimiento e invalidez, y ofrece mayores alternativas y flexibilidad de inversión (Dólares, UDIS, portafolios dinámicos), sirviendo como un complemento para potenciar los ingresos de tu jubilación.

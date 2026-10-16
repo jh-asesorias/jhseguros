@@ -7,7 +7,7 @@ aseguradoras: AXA, CHUBB
 permalink: /recursos/jhs-052___seguro-de-huracanes-2026-tu-casa-o-pyme-esta-protegida/
 ---
 
-🏢 Debido a la alta exposición geográfica de México ante ciclones tropicales y depresiones atmosféricas en el Golfo y el Pacífico (con impacto directo en entidades como Tamaulipas, Veracruz, Quintana Roo, Guerrero o Sinaloa), contar con un blindaje patrimonial para tu inmueble residencial o comercial es indispensable.
+🏢 Debido a la alta exposición geográfica de México ante ciclones tropicales y depresiones atmosféricas en el Golfo y el Pacífico (con impacto directo en entidades como Tamaulipas, Veracruz, Quintana Roo, Guerrero o Sinaloa), contar con una protección patrimonial para tu inmueble residencial o comercial es muy recomendable.
 
 Un seguro de daños básico (que cubre principalmente incendio y rayo) **no cubre por defecto los siniestros causados por un ciclón**. Para estar respaldado se requiere contratar explícitamente el endoso catastrófico de **Fenómenos Hidrometeorológicos**.
 

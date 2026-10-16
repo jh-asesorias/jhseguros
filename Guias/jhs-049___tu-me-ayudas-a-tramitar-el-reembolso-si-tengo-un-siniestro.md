@@ -2,12 +2,12 @@
 layout: guia
 title: "¿Tú me ayudas a tramitar el reembolso si tengo un siniestro?"
 description: "Conoce cómo te asesoro y acompaño paso a paso en el trámite de reembolsos y siniestros ante aseguradoras en México."
-resumen: "Descubre cómo te acompaño de la mano a tramitar tus reembolsos y programaciones de cirugía ante la aseguradora para garantizar que tu dinero regrese a salvo."
+resumen: "Descubre cómo te acompaño de la mano a tramitar tus reembolsos y programaciones de cirugía ante la aseguradora para facilitar que tu reembolso se tramite correctamente."
 aseguradoras: AXA, CHUBB, HDI, Seguros Monterrey New York Life
 permalink: /recursos/jhs-049___tu-me-ayudas-a-tramitar-el-reembolso-si-tengo-un-siniestro/
 ---
 
-💡 Sí, absolutamente. Una de las mayores ventajas patrimoniales de contar con un agente de seguros profesional certificado ante la CNSF es recibir **asesoría y acompañamiento integral** durante todo el proceso de reclamación.
+💡 Sí. Una de las mayores ventajas patrimoniales de contar con un agente de seguros profesional certificado ante la CNSF es recibir **asesoría y acompañamiento integral** durante todo el proceso de reclamación.
 
 Mi labor como tu asesor incluye guiarte de la mano:
 

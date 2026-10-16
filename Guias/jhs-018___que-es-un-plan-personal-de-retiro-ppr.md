@@ -11,4 +11,4 @@ permalink: /recursos/jhs-018___que-es-un-plan-personal-de-retiro-ppr/
 
 🧮 Su mayor atractivo radica en su marco fiscal en México: conforme al artículo 151, fracción V de la Ley del Impuesto sobre la Renta (LISR), las aportaciones realizadas son deducibles de impuestos en la declaración anual de personas físicas, con un límite del 10% de tus ingresos anuales acumulables o hasta 5 UMAS anuales, lo que resulte menor.
 
-❤️ Puede contratarse en pesos, dólares o UDIS, y suele incluir un componente de protección (seguro de vida) garantizando además rendimientos (que pueden ser fijos o variables) para ganarle a la inflación a través del tiempo.
+❤️ Puede contratarse en pesos, dólares o UDIS, y suele incluir un componente de protección (seguro de vida) y ofreciendo además rendimientos (que pueden ser fijos o variables, según el plan) para buscar ganarle a la inflación a través del tiempo.

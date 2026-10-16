@@ -1,8 +1,8 @@
 ---
 layout: guia
-title: "Cobertura de auto sustituto: ¿Cómo funciona en HDI y Chubb?"
-description: "Descubre cómo activar la cobertura de auto sustituto o auto relevo en HDI y Chubb Seguros: requisitos, días amparados y mecánica sin deducible."
-resumen: "¿Chocaste o te robaron el auto? Descubre cómo activar la cobertura de auto sustituto o auto relevo en HDI y Chubb Seguros sin pagar deducible este año 2026."
+title: "Cobertura de auto sustituto: ¿Cómo funciona?"
+description: "Descubre cómo activar la cobertura de auto sustituto o auto relevo en tu póliza de auto: requisitos, días amparados y mecánica sin deducible."
+resumen: "¿Chocaste o te robaron el auto? Descubre cómo activar la cobertura de auto sustituto o auto relevo en tu póliza de auto, sin pagar deducible, según las condiciones de cada aseguradora."
 aseguradoras: CHUBB, HDI
 permalink: /recursos/jhs-055___cobertura-de-auto-sustituto-como-funciona-en-hdi-y-chubb/
 ---

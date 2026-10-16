@@ -31,11 +31,11 @@ Para el año 2026, la aportación mensual requerida para cotizar al tope permiti
 
 ---
 
-### 3. La mancuerna perfecta: Modalidad 40 + PPR privado
+### 3. La combinación: Modalidad 40 + PPR privado
 
 🐷 Ante la fuerte carga financiera que implica sostener los pagos topados de la Modalidad 40, la planeación integral aconseja apoyarse en un vehículo privado.
 
-Un **Plan Personal de Retiro (PPR)** contratado con instituciones sólidas como Seguros Monterrey New York Life (por ejemplo, el plan *Imagina Ser*) funciona como el motor de acumulación perfecto. 
+Un **Plan Personal de Retiro (PPR)** contratado con instituciones aseguradoras autorizadas como Seguros Monterrey New York Life (por ejemplo, el plan *Imagina Ser*) funciona como una opción de acumulación. 
 
 **¿Cómo funciona la estrategia?**
-Las aportaciones a tu PPR son deducibles de impuestos (Artículo 151 de la LISR). Los saldos a favor devueltos anualmente por el SAT pueden reinvertirse, y al llegar a tu edad de retiro, el capital garantizado que recibas de tu póliza privada te dará la liquidez exacta para financiar tus cuotas de la Modalidad 40 sin descapitalizar a tu familia. Así, maximizas los beneficios de ambos regímenes (el público y el privado) de forma 100% legal.
+Las aportaciones a tu PPR son deducibles de impuestos (Artículo 151 de la LISR). Los saldos a favor devueltos anualmente por el SAT pueden reinvertirse, y al llegar a tu edad de retiro, el capital que recibas de tu póliza privada puede darte liquidez para financiar tus cuotas de la Modalidad 40 sin descapitalizar a tu familia. Así, maximizas los beneficios de ambos regímenes (el público y el privado) de forma legal.

@@ -13,4 +13,4 @@ permalink: /recursos/jhs-008___el-seguro-cubre-maternidad-parto-o-cesarea/
 
 🏥 Normalmente excluye el control prenatal ambulatorio fuera de hospitalización y tratamientos de fertilidad.
 
-👶 Permite dar de alta al bebé desde su nacimiento con un periodo de gracia para garantizar que sus padecimientos congénitos queden totalmente cubiertos.
+👶 Permite dar de alta al bebé desde su nacimiento con un periodo de gracia para que sus padecimientos congénitos queden cubiertos, conforme a las condiciones de la póliza.

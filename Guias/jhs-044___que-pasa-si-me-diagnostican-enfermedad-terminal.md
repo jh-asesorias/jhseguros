@@ -14,5 +14,5 @@ Si al titular se le diagnostica clínicamente una enfermedad grave e incurable c
 🛡️ **Puntos clave de esta cobertura:**
 
 * 💵 **Adelanto sustancial en vida:** La aseguradora entrega un porcentaje directo de la Suma Asegurada contratada (habitualmente hasta el 50%, sujeto a los topes establecidos en la póliza).
-* 🏥 **Libre disposición del capital:** El dinero se puede utilizar con absoluta libertad para solventar cuidados paliativos, acceder a tratamientos médicos especializados, liquidar compromisos financieros o brindar tranquilidad a la familia durante el proceso.
+* 🏥 **Libre disposición del capital:** El dinero se puede utilizar con libertad para solventar cuidados paliativos, acceder a tratamientos médicos especializados, liquidar compromisos financieros o brindar tranquilidad a la familia durante el proceso.
 * ⚖️ **Ajuste en la entrega por fallecimiento:** El monto anticipado en vida se descuenta del remanente de la Suma Asegurada, la cual se entregará a los beneficiarios designados al ocurrir el fallecimiento.

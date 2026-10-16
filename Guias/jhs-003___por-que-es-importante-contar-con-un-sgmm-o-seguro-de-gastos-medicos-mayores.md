@@ -2,7 +2,7 @@
 layout: guia
 title: ¿Por qué es importante contar con un SGMM?
 description: Descubre por qué un Seguro de Gastos Médicos Mayores protege tu patrimonio ante accidentes o enfermedades graves en hospitales privados de México.
-resumen: Protege tus finanzas familiares ante accidentes o enfermedades costosas con acceso a los mejores hospitales privados de México y medicina de vanguardia.
+resumen: Protege tus finanzas familiares ante accidentes o enfermedades costosas con acceso a hospitales privados de México, según las condiciones de tu póliza.
 aseguradoras: AXA, Seguros Monterrey New York Life, HDI, CHUBB
 permalink: /recursos/jhs-003___por-que-es-importante-contar-con-un-sgmm-o-seguro-de-gastos-medicos-mayores/
 ---

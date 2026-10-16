@@ -13,7 +13,7 @@ permalink: /recursos/jhs-017___cuanto-ronda-el-costo-de-un-dia-de-terapia-intens
 
 * **Hospitales de nivel estándar/medio:** Entre $25,000 y $50,000 pesos diarios.
 * **Hospitales de alto nivel (CDMX, Monterrey o Guadalajara):** De $50,000 a $150,000 pesos diarios.
-* **Centros de alta especialidad o excelencia médica:** Pueden superar fácilmente los $150,000 pesos diarios.
+* **Centros de alta especialidad médica:** Pueden superar fácilmente los $150,000 pesos diarios.
 
 🩺 **¿Qué encarece la cuenta?** A la tarifa diaria por el cuarto de terapia intensiva, debes sumarle de forma obligatoria los honorarios médicos especializados, el uso de ventiladores mecánicos, medicamentos de alto costo y estudios clínicos que se realizan diariamente.
 

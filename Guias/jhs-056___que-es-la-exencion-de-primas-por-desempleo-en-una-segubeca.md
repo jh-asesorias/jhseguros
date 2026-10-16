@@ -1,13 +1,13 @@
 ---
 layout: guia
 title: "¿Qué es la exención de primas por desempleo en una SeguBeca?"
-description: "Descubre cómo funciona la exención de primas por desempleo en SeguBeca de Seguros Monterrey: cobertura ante despido injustificado y protección del fondo universitario."
-resumen: "Descubre cómo funciona la exención de pagos por desempleo en el seguro educativo SeguBeca de Seguros Monterrey. Protege la universidad de tus hijos ante un despido."
+description: "Descubre cómo funciona la exención de primas por desempleo en SeguBeca: cobertura ante despido injustificado y protección del fondo universitario."
+resumen: "Descubre cómo funciona la exención de pagos por desempleo en el seguro educativo SeguBeca. Conoce cómo ayuda a proteger la universidad de tus hijos ante un despido."
 aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-056___que-es-la-exencion-de-primas-por-desempleo-en-una-segubeca/
 ---
 
-Estructurar un fondo garantizado para la educación superior de los hijos mediante un seguro educativo como **SeguBeca** (de Seguros Monterrey New York Life) requiere constancia a lo largo de varios años. Uno de los mayores temores de los padres de familia es enfrentar una pérdida imprevista de ingresos por reestructuraciones o recortes laborales, poniendo en riesgo la continuidad de los pagos y la meta universitaria del menor al cumplir los 18 años.
+Estructurar un fondo para la educación superior de los hijos mediante un seguro educativo como **SeguBeca** (de Seguros Monterrey New York Life) requiere constancia a lo largo de varios años. Uno de los mayores temores de los padres de familia es enfrentar una pérdida imprevista de ingresos por reestructuraciones o recortes laborales, poniendo en riesgo la continuidad de los pagos y la meta universitaria del menor al cumplir los 18 años.
 
 Para contrarrestar esta vulnerabilidad, la póliza integra una salvaguarda contractual que protege el ahorro frente a imprevistos laborales.
 
