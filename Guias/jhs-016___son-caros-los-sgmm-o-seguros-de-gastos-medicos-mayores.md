@@ -1,4 +1,4 @@
-  ---
+---
 layout: guia
 title: ¿Son caros los SGMM o seguros de gastos médicos mayores?
 description: Analizamos el costo promedio de un seguro de gastos médicos mayores en México (2026), cómo reducir la prima y el impacto de no estar asegurado.
