@@ -569,7 +569,7 @@ details[open] summary ~ * {
                         </div>
                         <h3 class="service-title">Respuestas Claras sobre Seguros en México | Guías 2026</h3>
                         <p class="service-description">Resuelve tus dudas en minutos: descubre qué cubre tu póliza, cómo funcionan los deducibles, coaseguros y cómo recuperar tu dinero en planes de ahorro.</p>
-                        <a href="/recursos" class="service-link router-link">Explorar Biblioteca</a>
+                        <a href="/recursos/" class="service-link router-link">Explorar Biblioteca</a>
                     </div>
 
                     <div class="service-card">
@@ -1883,7 +1883,7 @@ details[open] summary ~ * {
                                 <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; font-family: 'Open Sans', sans-serif;">
                                     <div style="display: flex; align-items: center; gap: 14px; flex-grow: 1; padding-right: 20px;">
                                         <span style="color: #000000; font-weight: bold; font-size: 1.2rem; flex-shrink: 0;">+</span>
-                                        <a href="/recursos/${slugUrl}/" style="text-decoration: none; font-weight: bold; color: #000000; font-size: 1.15rem; line-height: 1.4; transition: color 0.15s;">
+                                        <a href="/recursos/${slugUrl}/" class="router-link" style="text-decoration: none; font-weight: bold; color: #000000; font-size: 1.15rem; line-height: 1.4; transition: color 0.15s;">
                                             ${tituloGuia}
                                         </a>
                                     </div>
@@ -2005,7 +2005,7 @@ details[open] summary ~ * {
                     window.fetchGuias();
                 }
             } else if (path.startsWith('/recursos/')) {
-                const fileSlug = path.replace('/recursos/', '');
+                const fileSlug = path.replace('/recursos/', '').replace(/\/+$/, '');
                 const targetPage = document.getElementById('articulo-page');
                 if (targetPage) {
                     targetPage.classList.add('active');
@@ -2053,6 +2053,7 @@ details[open] summary ~ * {
         };
 
             window.cargarArticuloPorSlug = function(slug) {
+                slug = (slug || '').replace(/^\/+|\/+$/g, '');
                 const slugDecodificado = decodeURIComponent(slug);
                 let rawTitulo = slugDecodificado.includes('___') ? slugDecodificado.split('___')[1] : slugDecodificado;
                 let tituloGuia = window.formatearTituloEstetico(rawTitulo);
@@ -2069,7 +2070,7 @@ details[open] summary ~ * {
 
                     document.title = tituloGuia + " | Respuestas sobre Seguros en México";
                     
-                   const canonicalUrl = window.location.origin + '/recursos/' + slug + '/';
+                    const canonicalUrl = window.location.origin + '/recursos/' + slug + '/';
                     let canonicalLink = document.querySelector('link[rel="canonical"]');
                     if (canonicalLink) canonicalLink.href = canonicalUrl;
                     
@@ -2083,6 +2084,82 @@ details[open] summary ~ * {
                         });
                     };
 
+                    const parsearMarkdown = function(md) {
+                        if (!md) return '';
+                        // 1. Quitar Front Matter YAML
+                        let limpio = md.replace(/^---[\s\S]*?---\s*/, '').trim();
+                        
+                        if (limpio.startsWith('"') && limpio.endsWith('"')) {
+                            limpio = limpio.substring(1, limpio.length - 1);
+                        }
+                        limpio = limpio.replace(/""/g, '"').replace(/\r\n/g, '\n');
+
+                        // 2. Procesar bloques por doble salto de línea
+                        const bloques = limpio.split(/\n\n+/);
+                        let html = '';
+
+                        bloques.forEach(bloque => {
+                            let b = bloque.trim();
+                            if (!b) return;
+
+                            if (b.startsWith('### ')) {
+                                html += '<h3 style="color:#2a5298; margin: 1.5rem 0 0.8rem; font-family:\'Montserrat\',sans-serif;">' + formatearLinea(b.slice(4)) + '</h3>';
+                            } else if (b.startsWith('## ')) {
+                                html += '<h2 style="color:#2a5298; margin: 1.8rem 0 1rem; font-family:\'Montserrat\',sans-serif;">' + formatearLinea(b.slice(3)) + '</h2>';
+                            } else if (b.startsWith('# ')) {
+                                html += '<h1 style="color:#2a5298; margin: 2rem 0 1rem; font-family:\'Montserrat\',sans-serif;">' + formatearLinea(b.slice(2)) + '</h1>';
+                            } else if (b === '---' || b === '***') {
+                                html += '<hr style="border:0; border-top:1px solid #e2e8f0; margin:25px 0;">';
+                            } else if (b.startsWith('> ')) {
+                                html += '<blockquote style="border-left:4px solid #2a5298; padding-left:15px; margin:15px 0; color:#555; font-style:italic;">' + formatearLinea(b.slice(2)) + '</blockquote>';
+                            } else {
+                                const lineas = b.split('\n');
+                                let enLista = false;
+                                let tagLista = 'ul';
+                                let textoParrafo = '';
+
+                                lineas.forEach(l => {
+                                    const matchLista = l.match(/^\s*([*\-]\s+|(\d+)\.\s+)(.*)/);
+                                    if (matchLista) {
+                                        if (!enLista) {
+                                            if (textoParrafo.trim()) {
+                                                html += '<p style="margin-bottom:14px; line-height:1.7; color:#333; text-align:justify;">' + formatearLinea(textoParrafo) + '</p>';
+                                                textoParrafo = '';
+                                            }
+                                            tagLista = matchLista[2] ? 'ol' : 'ul';
+                                            html += '<' + tagLista + ' style="margin: 10px 0 18px 25px; padding:0; color:#333;">';
+                                            enLista = true;
+                                        }
+                                        html += '<li style="margin-bottom:8px; line-height:1.6;">' + formatearLinea(matchLista[3]) + '</li>';
+                                    } else {
+                                        if (enLista) {
+                                            html += '</' + tagLista + '>';
+                                            enLista = false;
+                                        }
+                                        textoParrafo += (textoParrafo ? '<br>' : '') + l;
+                                    }
+                                });
+
+                                if (enLista) {
+                                    html += '</' + tagLista + '>';
+                                }
+                                if (textoParrafo.trim()) {
+                                    html += '<p style="margin-bottom:14px; line-height:1.7; color:#333; text-align:justify;">' + formatearLinea(textoParrafo) + '</p>';
+                                }
+                            }
+                        });
+
+                        return html;
+                    };
+
+                    const formatearLinea = function(str) {
+                        if (!str) return '';
+                        return str
+                            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                            .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                            .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" style="color:#2a5298; font-weight:600;">$1</a>');
+                    };
+
                     const urlDirecta = `https://raw.githubusercontent.com/jh-asesorias/jhseguros/main/Guias/${slug}.md`;
 
                     intentarCargarTexto(urlDirecta)
@@ -2093,6 +2170,7 @@ details[open] summary ~ * {
                             return fetch(repoUrl)
                                 .then(res => res.json())
                                 .then(files => {
+                                    if (!Array.isArray(files)) throw new Error("API rate limit o error");
                                     const coincidencia = files.find(f => {
                                         const fName = decodeURIComponent(f.name).toLowerCase().replace(/_/g, '').replace(/-/g, '');
                                         return fName.includes(temaBuscado) || temaBuscado.includes(fName.replace('.md', ''));
@@ -2103,16 +2181,12 @@ details[open] summary ~ * {
                                     throw new Error("No encontrado");
                                 });
                         })
-                        .then(htmlTexto => {
-                            let htmlLimpio = htmlTexto.trim();
-                            if (htmlLimpio.startsWith('"') && htmlLimpio.endsWith('"')) {
-                                htmlLimpio = htmlLimpio.substring(1, htmlLimpio.length - 1);
-                            }
-                            htmlLimpio = htmlLimpio.replace(/""/g, '"');
-                            contenedorContenido.innerHTML = htmlLimpio;
+                        .then(rawTexto => {
+                            const htmlProcesado = parsearMarkdown(rawTexto);
+                            contenedorContenido.innerHTML = htmlProcesado;
 
                             const tempDiv = document.createElement('div');
-                            tempDiv.innerHTML = htmlLimpio;
+                            tempDiv.innerHTML = htmlProcesado;
                             const primerTexto = tempDiv.querySelector('p')?.textContent.trim() || tempDiv.textContent.trim();
                             const metaResumen = primerTexto.substring(0, 155) + '...';
 
@@ -2150,11 +2224,12 @@ details[open] summary ~ * {
                                 <div style="text-align:center; padding: 30px 10px;">
                                     <h3 style="color:#2a5298; margin-bottom:15px; font-family:'Montserrat', sans-serif;">Guía en proceso de actualización</h3>
                                     <p style="color:#555; margin-bottom:20px;">Estamos reorganizando nuestro catálogo de respuestas. Te invitamos a explorar nuestra biblioteca completa.</p>
-                                    <a href="/recursos" class="router-link" style="display:inline-block; padding:10px 20px; background:#2a5298; color:white; border-radius:20px; text-decoration:none; font-weight:bold;">📚 Ver todas las Guías</a>
+                                    <a href="/recursos/" class="router-link" style="display:inline-block; padding:10px 20px; background:#2a5298; color:white; border-radius:20px; text-decoration:none; font-weight:bold;">📚 Ver todas las Guías</a>
                                 </div>
                             `;
                             const metaDescGuia = document.querySelector('meta[name="description"]');
                             if (metaDescGuia) metaDescGuia.setAttribute("content", "Consulta nuestra biblioteca de respuestas claras sobre seguros en México con la asesoría de Rafael Jiménez.");
+                            window.activarInterceptoresEnlaces();
                         });
                 }
             };
