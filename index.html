@@ -2086,13 +2086,20 @@ details[open] summary ~ * {
 
                     const parsearMarkdown = function(md) {
                         if (!md) return '';
-                        // 1. Quitar Front Matter YAML
-                        let limpio = md.replace(/^---[\s\S]*?---\s*/, '').trim();
                         
+                        // 1. Limpieza inicial: quitar BOM invisible y comillas atrapadas
+                        let limpio = md.trim();
+                        if (limpio.charCodeAt(0) === 0xFEFF) {
+                            limpio = limpio.slice(1);
+                        }
                         if (limpio.startsWith('"') && limpio.endsWith('"')) {
                             limpio = limpio.substring(1, limpio.length - 1);
                         }
-                        limpio = limpio.replace(/""/g, '"').replace(/\r\n/g, '\n');
+                        
+                        // Quitar el Front Matter AHORA que ya no hay basura antes de los guiones
+                        limpio = limpio.replace(/^[\s]*---[\s\S]*?---\s*/, '').trim();
+                        
+                        limpio = limpio.replace(/\\n/g, '\n').replace(/""/g, '"').replace(/\r\n/g, '\n');
 
                         // 2. Procesar bloques por doble salto de línea
                         const bloques = limpio.split(/\n\n+/);
