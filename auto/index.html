@@ -3,27 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Seguros de Auto, Hogar y Empresa | JH Seguros</title>
     
-    <!-- ETIQUETAS ÚNICAS PARA GOOGLE ADS -->
-    <title>Seguro de Auto y Protección Vial | JH Seguros</title>
-    <meta name="description" content="Cotiza tu seguro de auto contra choques, robo total y daños a terceros con asistencia vial 24/7 en México.">
-    <link rel="canonical" href="https://jhseguros.mx/auto/">
-    
+    <meta name="description" content="Seguros de auto, hogar, embarcaciones y negocio en Ciudad Victoria y Reynosa. Asesoría con JH Seguros - Rafael Jiménez Sánchez.">
     <meta name="author" content="Rafael Jiménez Sánchez">
+    
     <meta name="robots" content="index, follow">
     
-    <meta property="og:title" content="Seguro de Auto y Protección Vial | JH Seguros">
-    <meta property="og:description" content="Protección integral para tu vehículo, conductor y pasajeros ante colisiones, robo o daños a terceros.">
+    <meta property="og:title" content="Seguros de Auto, Hogar y Empresa | JH Seguros">
+    <meta property="og:description" content="Seguros de auto, hogar, embarcaciones y negocio en Ciudad Victoria y Reynosa. Asesoría con JH Seguros - Rafael Jiménez Sánchez.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jhseguros.mx/auto/">
+    <meta property="og:url" content="https://jhseguros.mx/danos/">
+    <link rel="canonical" href="https://jhseguros.mx/danos/">
     <meta property="og:image" content="https://jhseguros.mx/rafael-perfil.jpg">
     
-    <!-- RUTAS ABSOLUTAS CON DIAGONAL INICIAL -->
     <link rel="icon" href="/rafael-perfil.jpg" type="image/jpeg">
+    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     
-    <!-- GOOGLE ANALYTICS -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "InsuranceAgency",
+      "name": "JH SEGUROS - Rafael Jiménez Sánchez",
+      "image": "https://jhseguros.mx/rafael-perfil.jpg",
+      "logo": "https://jhseguros.mx/JH%20Seguros%20SF.png",
+      "url": "https://jhseguros.mx/danos/",
+      "telephone": "+52 834 311 7556",
+      "email": "jhseguros@jhasesorias.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ciudad Victoria",
+        "addressRegion": "Tamaulipas",
+        "addressCountry": "MX"
+      },
+      "areaServed": [
+        "Ciudad Victoria",
+        "Reynosa",
+        "Tamaulipas"
+      ],
+      "sameAs": [
+        "https://www.facebook.com/rafaeljimenezsanchezAS",
+        "https://www.instagram.com/lord_seguritos/"
+      ],
+      "description": "Agente Intermediario de Seguros certificado en Autos, Hogar y Empresa.",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    }
+    </script>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3GLCDV4F8"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -40,44 +74,117 @@
         body { font-family: 'Open Sans', sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; scroll-behavior: smooth; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         
-        header { 
-            position: relative; 
-            background: linear-gradient(135deg, #1e3c72 90%, #2a5298 100%); 
-            color: white; 
-            padding: 3rem 0; 
-            text-align: center; 
-            overflow: hidden; 
-            z-index: 1; 
-        }
-        header::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-image: url('/rafael-perfil.jpg'); /* Ruta absoluta */
-            background-size: cover;      
-            background-position: center; 
-            background-repeat: no-repeat;
-            opacity: 0.15;               
-            filter: grayscale(100%);     
-            mix-blend-mode: luminosity;  
-            z-index: -1; 
-        }
-
-        .profile-container { display: flex; flex-direction: column; align-items: center; margin-bottom: 1.5rem; }
-        .name { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.2; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
-        .tagline { font-size: 1.7rem; margin: 1.5rem 0; font-weight: 500; max-width: 800px; margin-left: auto; margin-right: auto; text-shadow: 0 1px 2px rgba(0,0,0,0.2); }
+        /* SISTEMA DE NAVEGACIÓN (SPA) */
+        .page { animation: fadeIn 0.4s ease-in; }
+        .page.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         
+       /* HEADER PROFESIONAL CON MARCA DE AGUA */
+    header { 
+        position: relative; 
+        background: linear-gradient(135deg, #1e3c72 90%, #2a5298 100%); 
+        color: white; 
+        padding: 3rem 0; 
+        text-align: center; 
+        overflow: hidden; 
+        z-index: 1; 
+    }
+
+    /* EFECTO FOTO DE FONDO */
+    header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('/rafael-perfil.jpg');
+        
+        background-size: cover;      
+        background-position: center; 
+        background-repeat: no-repeat;
+        
+        /* EL SECRETO: Opacidad baja + Blanco y Negro */
+        opacity: 0.15;               
+        filter: grayscale(100%);     
+        mix-blend-mode: luminosity;  
+        
+        z-index: -1; 
+    }
+
+    .profile-container { display: flex; flex-direction: column; align-items: center; margin-bottom: 1.5rem; }
+    
+    .profile-image {
+        width: 180px; height: 180px; border-radius: 50%; background-color: #fff;
+        display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;
+        border: 4px solid rgba(255, 255, 255, 0.3); overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        position: relative; 
+        z-index: 2;
+    }
+    .profile-image img { width: 100%; height: 100%; object-fit: cover; }
+    
+    /* TEXTOS CON SOMBRA PARA LEERSE MEJOR SOBRE LA FOTO */
+    .name { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.2; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+    .title { font-size: 1.4rem; opacity: 0.95; margin-bottom: 0.3rem; text-shadow: 0 1px 2px rgba(0,0,0,0.2); }
+    .tagline { font-size: 1.7rem; margin: 1.5rem 0; font-weight: 500; max-width: 800px; margin-left: auto; margin-right: auto; text-shadow: 0 1px 2px rgba(0,0,0,0.2); }
+        
+        /* SECCIÓN FILOSOFÍA */
+        .mission-vision { padding: 2rem 0; background-color: white; text-align: center; }
+        .mv-container { display: flex; justify-content: center; gap: 3rem; margin-top: 1.5rem; flex-wrap: wrap; }
+        .mv-item { display: flex; flex-direction: column; align-items: center; width: 180px; cursor: pointer; transition: transform 0.3s; }
+        .mv-item:hover { transform: translateY(-5px); }
+        
+        .mv-icon {
+            width: 100px; height: 100px; border-radius: 50%; background-color: #f0f0f5;
+            display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;
+            border: 3px solid #2a5298; font-size: 3rem;
+        }
+        .mv-name { font-family: 'Montserrat', sans-serif; font-size: 1.2rem; font-weight: 600; color: #2a5298; }
+        
+        /* SERVICIOS */
         .services { padding: 3rem 0; background-color: white; }
+        .section-title { text-align: center; font-family: 'Montserrat', sans-serif; font-size: 1.8rem; margin-bottom: 2rem; color: #2a5298; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .service-card {
+            background: white; border-radius: 8px; padding: 1.5rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s; text-align: center; border-top: 4px solid #2a5298;
+            display: flex; flex-direction: column; height: 100%;
+        }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12); }
+        
+        /* ICONOS SVG PROFESIONALES */
+        .service-icon { margin-bottom: 1rem; color: #2a5298; display: flex; justify-content: center; }
+        .service-icon svg { width: 60px; height: 60px; fill: currentColor; }
+
+        .service-title { font-family: 'Montserrat', sans-serif; font-size: 1.2rem; margin-bottom: 0.8rem; color: #2a5298; }
+        .service-description { color: #666; font-size: 0.95rem; flex-grow: 1; margin-bottom: 1rem; }
+        .service-link {
+            display: inline-block; color: #2a5298; text-decoration: none; font-weight: 600; font-size: 0.9rem;
+            margin-top: auto; padding: 0.5rem 1rem; border: 1px solid #2a5298; border-radius: 4px; transition: all 0.3s;
+        }
+        .service-link:hover { background-color: #2a5298; color: white; }
+        
+        /* CTA & DETALLES */
+        .cta-section { background: linear-gradient(135deg, #2a5298, #1e3c72); color: white; padding: 3rem 0; text-align: center; }
+        .cta-title { font-family: 'Montserrat', sans-serif; font-size: 1.8rem; margin-bottom: 1.5rem; }
+        .cta-button {
+            display: inline-block; background-color: #ff6b6b; color: white; padding: 0.8rem 2rem; border-radius: 30px;
+            text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: background-color 0.3s, transform 0.3s; margin: 1rem 0;
+        }
+        .cta-button:hover { background-color: #ff5252; transform: translateY(-3px); }
+        
+        .detail-section { padding: 3rem 0; background-color: #f0f0f5; min-height: 60vh; }
+        .detail-section .section-title { margin-bottom: 3rem; color: #1e3c72; border-bottom: 2px solid #2a5298; padding-bottom: 0.5rem; display: inline-block; }
         .detail-content { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); margin-bottom: 2rem; }
         .detail-content p, .detail-content ul { margin-bottom: 1rem; color: #444; }
         .detail-content ul { margin-left: 20px; list-style-type: disc; }
         .detail-content strong { color: #2a5298; }
-
-        /* BOTONES */
-        .back-to-top { display: inline-block; background-color: #2a5298; color: white; padding: 0.5rem 1.2rem; font-size: 0.9rem; border-radius: 20px; text-decoration: none; font-weight: 600; transition: background-color 0.3s; margin-top: 1rem; }
+        
+        /* BOTÓN MENÚ MÁS CHICO */
+        .back-to-top { display: inline-block; background-color: #2a5298; color: white; 
+        padding: 0.5rem 1.2rem; font-size: 0.9rem; border-radius: 20px; text-decoration: none; font-weight: 600; transition: background-color 0.3s; margin-top: 1rem; }
         .back-to-top:hover { background-color: #1e3c72; }
-        .cta-button { display: inline-block; background-color: #ff6b6b; color: white; padding: 0.8rem 2rem; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: background-color 0.3s, transform 0.3s; margin: 1rem 0; }
-        .cta-button:hover { background-color: #ff5252; transform: translateY(-3px); }
         
         /* FOOTER */
         footer { background-color: #1a1a2e; color: white; padding: 3rem 0 5rem; }
@@ -86,42 +193,105 @@
         .contact-info { margin: 1.5rem 0; }
         .contact-info a { color: white; text-decoration: none; transition: color 0.3s; }
         .contact-info a:hover { color: #ff6b6b; }
+        
         .social-links { display: flex; gap: 1rem; margin: 1.5rem 0; }
-        .social-icon { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.1); border-radius: 50%; color: white; text-decoration: none; transition: background-color 0.3s; font-size: 1.2rem; }
+        .social-icon {
+            display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px;
+            background-color: rgba(255, 255, 255, 0.1); border-radius: 50%; color: white; text-decoration: none;
+            transition: background-color 0.3s; font-size: 1.2rem;
+        }
         .social-icon:hover { background-color: #ff6b6b; }
         .copyright { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.1); width: 100%; font-size: 0.9rem; opacity: 0.7; }
         
         /* BOTÓN FLOTANTE WHATSAPP */
-        .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 20px; right: 20px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; font-size: 35px; box-shadow: 2px 2px 3px #999; z-index: 1000; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s; }
+        .whatsapp-float {
+            position: fixed; width: 60px; height: 60px; bottom: 20px; right: 20px;
+            background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center;
+            font-size: 35px; box-shadow: 2px 2px 3px #999; z-index: 1000;
+            display: flex; align-items: center; justify-content: center;
+            text-decoration: none; transition: all 0.3s;
+        }
         .whatsapp-float:hover { background-color: #20ba5a; transform: scale(1.1); }
         
-        /* MENÚ MÓVIL */
-        .mobile-menu-btn { display: none; position: fixed; top: 20px; right: 20px; width: 52px; height: 52px; background-color: #1e3c72; color: white; border-radius: 50%; border: 2px solid rgba(255, 255, 255, 0.2); box-shadow: 0 4px 12px rgba(0,0,0,0.3); z-index: 2000; cursor: pointer; align-items: center; justify-content: center; transition: all 0.3s ease; }
-        .mobile-menu-btn svg { width: 24px; height: 24px; fill: currentColor; }
-        .mobile-overlay { position: fixed; top: 0; right: -100%; width: 280px; height: 100%; background-color: #1a1a2e; box-shadow: -5px 0 15px rgba(0,0,0,0.5); z-index: 1999; transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1); display: flex; flex-direction: column; padding: 85px 20px 20px 20px; }
-        .mobile-overlay.open { right: 0; }
-        .mobile-nav-link { color: white; text-decoration: none; font-family: 'Open Sans', sans-serif; font-size: 1.05rem; font-weight: 600; padding: 14px 15px; border-bottom: 1px solid rgba(255,255,255,0.05); transition: all 0.3s ease; }
-        .mobile-nav-link:hover { background-color: rgba(255,255,255,0.05); color: #ff6b6b; padding-left: 25px; }
-        .mobile-backdrop { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 1998; display: none; opacity: 0; transition: opacity 0.3s ease; }
-        .mobile-backdrop.open { display: block; opacity: 1; }
-        
+        /* RESPONSIVE */
         @media (max-width: 768px) {
             .name { font-size: 1.8rem; }
+            .title { font-size: 1.2rem; }
             .tagline { font-size: 1.5rem; }
-            .mobile-menu-btn { display: flex; }
+            .services-grid { grid-template-columns: 1fr; }
+            .profile-image { width: 150px; height: 150px; }
+            .mv-container { flex-direction: column; align-items: center; gap: 2rem; }
         }
+.mobile-menu-btn {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 52px;
+    height: 52px;
+    background-color: #1e3c72;
+    color: white;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 2000;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.mobile-menu-btn svg { width: 24px; height: 24px; fill: currentColor; }
+.mobile-overlay {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100%;
+    background-color: #1a1a2e;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+    z-index: 1999;
+    transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    padding: 85px 20px 20px 20px;
+}
+.mobile-overlay.open { right: 0; }
+.mobile-nav-link {
+    color: white;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    padding: 14px 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    transition: all 0.3s ease;
+}
+.mobile-nav-link:hover { background-color: rgba(255,255,255,0.05); color: #ff6b6b; padding-left: 25px; }
+.mobile-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1998;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.mobile-backdrop.open { display: block; opacity: 1; }
+@media (max-width: 768px) {
+    .mobile-menu-btn { display: flex; }
+}
     </style>
 </head>
 <body>
     
-    <!-- WHATSAPP FLOTANTE (Con mensaje prellenado medible) -->
-    <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20vi%20tu%20anuncio%20en%20Google%20y%20me%20interesa%20cotizar%20mi%20seguro%20de%20auto" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Cotizar en WhatsApp">
+    <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20me%20interesa%20una%20asesor%C3%ADa." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat en WhatsApp">
         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" viewBox="0 0 16 16">
             <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.081-.1.115-.173.171-.292.059-.115.03-.217-.015-.307-.045-.1-.445-1.074-.61-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
         </svg>
     </a>
-
-    <!-- MENÚ MÓVIL (Enlaces limpios) -->
     <button class="mobile-menu-btn" id="menuToggle" aria-label="Abrir menú">
         <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
     </button>
@@ -135,78 +305,79 @@
         <a href="/hospitales/" class="mobile-nav-link">🏥 Servicios Hospitalarios</a>
         <a href="/recursos/" class="mobile-nav-link">📚 Respuestas sobre Seguros</a>
         <a href="/redes/" class="mobile-nav-link">🌐 Redes Sociales</a>
-        <a href="#contacto-form" class="mobile-nav-link" onclick="document.getElementById('menuToggle').click();">📩 Contacto</a>
+        <a href="/contacto-form/" class="mobile-nav-link">📩 Contacto Directo</a>
     </div>
-    
-    <!-- CABECERA PRINCIPAL AUTO -->
-    <header>
-        <div class="container">
-            <div class="profile-container">
-                <!-- H1 optimizado para Google Ads -->
-                <h1 class="name">Seguro de Auto</h1>
-                <p class="tagline">Protección integral y a la medida para tu vehículo, conductor y pasajeros</p>
+
+    <div class="page active">
+        <header>
+            <div class="container">
+                <div class="profile-container">
+                    <h1 class="name" style="font-size: 2.2rem;">Seguros de Auto, Hogar y Empresa en Ciudad Victoria y Reynosa</h1>
+                    <p class="tagline">Seguros para tu auto, hogar, embarcación y negocio. Cotiza con asesoría de JH Seguros y cuida los bienes que tanto te han costado.</p>
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
         
-    <!-- CONTENIDO DEL SEGURO DE AUTO -->
-    <section class="services">
-        <div class="container">
-            <div class="detail-content text-start" style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-                
-                <h2 style="color: #2a5298; font-family: 'Montserrat', sans-serif; font-size: 1.4rem; margin-bottom: 15px; border-bottom: 2px solid #f0f0f0; padding-bottom: 5px;">COBERTURAS BÁSICAS</h2>
-                <p style="color: #666; margin-bottom: 15px;">El blindaje esencial que protege tu patrimonio ante cualquier incidente vial:</p>
-                <ul style="margin-left: 20px; margin-bottom: 25px; list-style-type: disc;">
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Daños Materiales (Totales o Parciales):</strong> Ampara la reparación o indemnización de tu vehículo por daños derivados de colisiones, vuelcos, incendios, vandalismo, huelgas, rotura de cristales y fenómenos de la naturaleza (como inundaciones, sismos, huracanes o granizo). Puede contratarse para cubrir cualquier daño (pérdida parcial y total) o limitarse exclusivamente a protegerte y pagar los daños que puedas ocasionar a un tercero.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Robo Total:</strong> Te indemniza en caso de robo total del vehículo y cubre los daños materiales que sufra la unidad en caso de ser recuperada.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Responsabilidad Civil por Daños a Terceros:</strong> Protege tu patrimonio frente a la responsabilidad legal si causas daños a los bienes de otras personas, o si les provocas lesiones corporales o el fallecimiento en un accidente, cumpliendo con los requisitos de la ley federal.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Asistencia Vial y en Viajes:</strong> Brinda servicios de emergencia en el camino, tales como arrastre de grúa, paso de corriente, envío de gasolina, cambio de llanta, servicio de cerrajero y apoyos logísticos durante tus viajes por descompostura del auto.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Asistencia Legal y Jurídica:</strong> Provee la defensa legal mediante abogados las 24 horas para gestionar la libertad provisional, trámites ante las autoridades y el pago de fianzas o cauciones derivadas de un accidente de tránsito.</li>
-                </ul>
-                
-                <h2 style="color: #2a5298; font-family: 'Montserrat', sans-serif; font-size: 1.4rem; margin-top: 30px; margin-bottom: 15px; border-bottom: 2px solid #f0f0f0; padding-bottom: 5px;">COBERTURAS ADICIONALES</h2>
-                <p style="color: #666; margin-bottom: 15px;">Lleva tu protección al siguiente nivel con coberturas especializadas diseñadas para tu total tranquilidad:</p>
-                <ul style="margin-left: 20px; margin-bottom: 20px; list-style-type: disc;">
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Gastos Médicos a Ocupantes:</strong> Cubre la atención médica, hospitalización, honorarios médicos, ambulancia y gastos funerarios para todos los pasajeros del vehículo que resulten lesionados en un accidente o durante un intento de robo (Revisa bien tu póliza puedes contratar hasta 2 millones de pesos de suma asegurada para gastos médicos de los ocupantes y hasta 400 mil pesos para el conductor).</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Eliminación o Reducción de Deducible:</strong> Exenta o reduce el pago de tu deducible en situaciones específicas, ya sea por daños materiales parciales (si hay un tercero identificable), en caso de Pérdida Total (por daños o robo), o si el tercero responsable del accidente no cuenta con seguro.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Robo Parcial (Autopartes):</strong> Ampara la reposición y mano de obra de las piezas originales (interiores o exteriores) que sean robadas del vehículo, cubriendo también los daños ocasionados al extraerlas.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Auto Sustituto y Gastos de Transporte:</strong> Te otorga un vehículo de renta o un apoyo económico diario para tus traslados mientras tu auto se encuentra en el taller por reparación o en proceso de indemnización por pérdida total.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Reparación en Agencia:</strong> Garantiza que, en caso de siniestro, tu vehículo sea reparado exclusivamente en los talleres de la agencia automotriz de su marca (disponible para autos de modelos recientes).</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Seguro de Llantas y Rines:</strong> Cubre la sustitución o reparación de las llantas y rines si sufren daños irreversibles debido a impactos directos al caer en baches o irregularidades del pavimento, al golpear con el cordón de la banqueta, con derecho a la reposición y/o reparación de las 4 llantas y rines o hasta agotar la suma asegurada contratada  (lo que suceda primero y en esta aplica % de participación del asegurado como en el caso de la reposición de cristales).</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Ampliación de la Suma Asegurada por Pérdida Total:</strong> Incrementa en un 10% adicional el monto de la indemnización sobre el valor del auto en caso de que sea declarado pérdida total por daños o robo.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Equipo Especial, Adaptaciones y Conversiones:</strong> Extiende las coberturas de Daños Materiales, Robo y Responsabilidad Civil a los accesorios, rótulos, modificaciones o blindajes que no venían instalados de fábrica.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Accidentes Automovilísticos al Conductor:</strong> Otorga una indemnización económica específica a los beneficiarios o al conductor en caso de fallecimiento o pérdidas orgánicas ocurridas exclusivamente mientras opera la unidad.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Extensión de Responsabilidad Civil y Gastos Médicos:</strong> Te protege con las mismas coberturas de daños a terceros y gastos médicos si llegas a ocasionar un accidente mientras conduces un vehículo ajeno (con características similares al tuyo).</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Responsabilidad Civil Extendida (Ocupantes, Remolques y Familiar):</strong> Amplía la cobertura de daños a terceros para cubrir accidentes causados por un remolque, lesiones a los pasajeros que viajan contigo, o incluso daños no dolosos causados por ti o tu familia en la vida privada.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Robo de Contenidos Personales y Llaves:</strong> Reembolsa el valor de tus objetos personales robados con violencia del interior del auto y cubre los gastos de reposición de las llaves en caso de robo o extravío.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Protección para Mascotas:</strong> Reembolsa los gastos veterinarios si tu perro o gato viaja contigo dentro del auto y resulta lesionado a causa de un accidente automovilístico.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Asistencia por Tecnología y Hábitos de Manejo:</strong> Integra sistemas digitales (como sensores o aplicaciones) que detectan colisiones graves para enviar asistencia médica automática y te otorga beneficios o recompensas por mantener buenos hábitos al volante.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Accidentes Personales:</strong> Algunas aseguradoras con esta cobertura te pueden otorgar una suma asegurada de hasta 100 mil pesos que te cubre la atención médica por algún accidente personal (para una cirugía por una fractura originada por una caída o golpe en la casa, trabajo o calle).</li>
-                </ul>
-                
-                <p style="margin-top: 30px; margin-bottom: 35px; color: #444; font-size: 0.9rem; text-align: justify; line-height: 1.6;">⭐ Esta guía informativa ha sido redactada, revisada y validada por Rafael Jiménez Sánchez, Intermediario Profesional de Seguros autorizado y certificado ante la Comisión Nacional de Seguros y Fianzas (<strong>CNSF</strong>). Operando bajo las Cédulas Oficiales Tipo A1 y Tipo B con números de registro H382035 y Y415335, respectivamente. Tu tranquilidad, salud y patrimonio están respaldados bajo el marco regulatorio del sector asegurador en México.</p>
-
-                <!-- CAJA DE CONTACTO Y LLAMADO A LA ACCIÓN (Sin salir de la página) -->
-                <div style="margin-top: 35px; padding: 22px; background-color: #f8f9fa; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center;">
-                    <h4 style="margin: 0 0 10px 0; color: #2a5298; font-size: 1.25rem;">📬 ¿Listo para cotizar tu seguro de auto?</h4>
-                    <p style="margin: 0 0 18px 0; font-size: 0.95rem; color: #475569; line-height: 1.5;">Llena el formulario de abajo o envíame un mensaje directo. Te responderé con opciones respaldadas y transparentes.</p>
-                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 10px;">
-                        <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20vi%20tu%20anuncio%20en%20Google%20y%20me%20interesa%20cotizar%20mi%20seguro%20de%20auto" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 10px 16px; background-color: #25D366; color: white; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9rem;">📲 Enviar WhatsApp</a>
-                        <a href="/contacto-form/" style="display: inline-block; padding: 10px 16px; background-color: #2a5298; color: white; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9rem;">📩 Solicitar Asesoría</a>
+        <section class="services">
+            <div class="container">
+                <div class="services-grid">
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1s.67-1 1.5-1 1.5.67 1.5 1-.67 1-1.5 1zm11 0c-.83 0-1.5-.67-1.5-1s.67-1 1.5-1 1.5.67 1.5 1-.67 1-1.5 1zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+                        </div>
+                        <h3 class="service-title">Seguro de Auto</h3>
+                        <p class="service-description">Protección integral para tu vehículo, conductor y pasajeros ante colisiones, robo o daños a terceros en México.</p>
+                        <a href="/auto/" class="service-link">Conoce tu Seguro</a>
                     </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24"><path d="M20 21c-1.39 0-2.78-.53-3.84-1.59L12.35 15.6c-.2-.2-.51-.2-.71 0l-3.83 3.82C6.77 20.47 5.38 21 4 21H2v-2h2c.85 0 1.69-.32 2.34-.97l3.83-3.82c.98-.98 2.56-.98 3.54 0l3.83 3.82c.65.65 1.5 1 2.34 1h2v2h-2zm2-16.5L12 1 2 4.5V11c0 6.16 4.28 11.91 10 13 5.72-1.09 10-6.84 10-13V4.5zM12 6c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z"/></svg>
+                        </div>
+                        <h3 class="service-title">Embarcaciones</h3>
+                        <p class="service-description">Protección para lanchas, yates o motos acuáticas en aguas nacionales, según las condiciones de cada póliza.</p>
+                        <a href="/embarcaciones/" class="service-link">Conoce tu Seguro</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                        </div>
+                        <h3 class="service-title">Seguro de Hogar</h3>
+                        <p class="service-description">Protección para tu casa o departamento. Cuida la estructura y tus pertenencias ante incendio, sismo o robo, según la cobertura contratada.</p>
+                        <a href="/hogar/" class="service-link">Conoce tu Seguro</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zm-6 12H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 16H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
+                        </div>
+                        <h3 class="service-title">Seguro de Negocio / Empresa</h3>
+                        <p class="service-description">Apoya la continuidad de tu empresa. Protección para mercancías, maquinaria y locales ante imprevistos materiales.</p>
+                        <a href="/negocio/" class="service-link">Conoce tu Seguro</a>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        </div>
+                        <h3 class="service-title">Responsabilidad Civil</h3>
+                        <p class="service-description">Respaldo legal y económico ante daños involuntarios ocasionados a terceros en tus actividades personales o comerciales.</p>
+                        <a href="/rc/" class="service-link">Conoce tu Seguro</a>
+                    </div>
+                    
                 </div>
-
+                
                 <div style="text-align: center; margin-top: 30px;">
-                    <a href="/" class="back-to-top" style="background-color: #1a1a2e; margin-right: 15px;">🏠 Ir al Menú Principal</a>
-                    <a href="/danos/" class="back-to-top">Volver a Daños</a>
+                    <a href="/" class="back-to-top">Volver al Menú Principal</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
-    <!-- SE ELIMINÓ EL FORMULARIO INTEGRADO PARA USAR EL INDEX CONTACTO GLOBAL -->
+<!-- SE RETIRÓ EL FORMULARIO DUPLICADO PARA CANALIZAR A LA VENTANILLA ÚNICA EN /contacto-form/ -->
 
-    <!-- FOOTER CON RUTAS ABSOLUTAS Y AÑO 2026 -->
     <footer id="contacto">
         <div class="container">
             <div class="footer-content">
@@ -218,8 +389,8 @@
                     Recibe asesoría personalizada y descubre el plan perfecto para tus necesidades
                 </p>
                 <div class="contact-info">
-                    <p>Email: <a href="mailto:jhseguros@jhasesorias.com">jhseguros@jhasesorias.com</a></p>
-                    <p>Teléfono: <a href="tel:+528343117556" style="color: white; text-decoration: none;">834-311-7556</a></p>
+                    <p>Email: <a href="mailto:jhseguros@jhasesorias.com" target="_blank" rel="noopener noreferrer">jhseguros@jhasesorias.com</a></p>
+                    <p>Teléfono: <a href="tel:+528343117556" style="color: white; text-decoration: none; font-weight: 600;">834-311-7556</a></p>
                     <p>Presencia: en Reynosa y Ciudad Victoria, Tamaulipas</p>
                 </div>
                 
@@ -227,11 +398,17 @@
                     <a href="https://www.facebook.com/rafaeljimenezsanchezAS" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
                         <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6c1.05 0 2.05.2 2.3.3v2.7h-1.5c-1.2 0-1.5.6-1.5 1.45V12h3l-.4 3h-2.6v6.8C18.56 20.87 22 16.84 22 12z"/></svg>
                     </a>
+                    
                     <a href="https://www.instagram.com/lord_seguritos/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
                         <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85s.01-3.58.07-4.85C2.38 3.86 3.9 2.32 7.15 2.17c1.27-.06 1.65-.07 4.85-.07zM12 0C8.74 0 8.33.01 7.05.07c-4.27.2-6.78 2.71-6.98 6.98C0 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.27 2.71 6.78 6.98 6.98 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c4.27-.2 6.78-2.71 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.2-4.27-2.71-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm3.98-9.03a1.44 1.44 0 1 1 2.88 0 1.44 1.44 0 0 1-2.88 0z"/></svg>
                     </a>
-                    <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20vi%20tu%20anuncio%20en%20Google%20y%20me%20interesa%20cotizar%20mi%20seguro%20de%20auto" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp">
+                    
+                    <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20me%20interesa%20una%20asesor%C3%ADa." target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp">
                         <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.74.45 3.44 1.31 4.94L2 22l5.31-1.39a9.92 9.92 0 0 0 4.73 1.18h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.12c-1.47 0-2.92-.39-4.18-1.14l-.3-.18-3.1.81.83-3.03-.2-.32A8.25 8.25 0 0 1 3.82 11.9c0-4.54 3.7-8.24 8.23-8.24 2.2 0 4.27.86 5.82 2.42a8.2 8.2 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.15.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.24-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.12-.15.16-.25.24-.42.08-.17.04-.32-.02-.44-.06-.12-.56-1.35-.77-1.84-.2-.48-.4-.42-.56-.43h-.48c-.16 0-.43.06-.65.31-.22.25-.86.84-.86 2.05s.89 2.38 1.01 2.54c.12.17 1.73 2.64 4.19 3.7.59.25 1.05.4 1.4.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.2-.58.2-.1.2-.58-.1-.13-.25-.21-.5-.33z"/></svg>
+                    </a>
+                    
+                    <a href="mailto:jhseguros@jhasesorias.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Email">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                     </a>
                 </div>
                 
@@ -239,7 +416,7 @@
                     <p style="margin-bottom: 15px; font-size: 0.85rem; color: #aaa; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.4;">
                         * La información en este sitio web es de carácter orientativo. Las coberturas, beneficios y exclusiones definitivas están sujetas a las condiciones generales de las pólizas emitidas por cada compañía aseguradora.
                     </p>
-                    <p>&copy; 2026 Rafael Jiménez Sánchez - Agente de Seguros Cédula A H382035 y B Y415335 - Todos los derechos reservados</p>
+                    <p>&copy; 2024 Rafael Jiménez Sánchez - Agente de Seguros Cédula A1 H382035 y B Y415335 - Todos los derechos reservados</p>
                     <p style="margin-top: 15px;">
                         <a href="/privacidad/" style="color: #ccc; text-decoration: none; font-weight: bold; margin-right: 20px; transition: color 0.3s;" onmouseover="this.style.color='#ff6b6b'" onmouseout="this.style.color='#ccc'">🔒 Aviso de Privacidad</a>
                         <a href="/reserva-datos.pdf" target="_blank" rel="noopener noreferrer" download="reserva-datos.pdf" style="color: #ccc; text-decoration: none; font-weight: bold; transition: color 0.3s;" onmouseover="this.style.color='#ff6b6b'" onmouseout="this.style.color='#ccc'">📄 Política de Reserva de Datos (ARCO)</a>
@@ -249,7 +426,6 @@
         </div>
     </footer>
 
-    <!-- SCRIPT SOLO PARA EL MENÚ MÓVIL (Súper ligero) -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const btn = document.getElementById('menuToggle');
