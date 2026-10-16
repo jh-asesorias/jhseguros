@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
-  <meta charset="utf-8">
-  <title>Redirigiendo | JH Seguros</title>
-  <script>
-    var path = window.location.pathname;
-    var search = window.location.search;
-    var hash = window.location.hash;
-    window.location.replace('/?fallback_path=' + encodeURIComponent(path + search + hash));
-  </script>
+<meta charset="UTF-8">
+<title>JH Seguros</title>
+<script>
+  location.replace('/?fallback_path=' + encodeURIComponent(location.pathname));
+</script>
 </head>
-<body>
-</body>
+<body></body>
 </html>
