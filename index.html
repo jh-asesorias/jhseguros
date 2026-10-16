@@ -630,6 +630,12 @@ details[open] summary ~ * {
                               style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem; font-family: inherit;"></textarea>
                 </div>
 
+                <!-- ACEPTACIÓN DEL AVISO DE PRIVACIDAD (obligatoria para enviar) -->
+                <div style="display: flex; gap: 10px; align-items: flex-start;">
+                    <input type="checkbox" id="aviso" name="aviso_privacidad" value="Aceptado" required style="margin-top: 4px; width: 18px; height: 18px; flex-shrink: 0;">
+                    <label for="aviso" style="font-weight: 400; font-size: 0.9rem; color: #475569;">He leído y acepto el <a href="/privacidad/" target="_blank" rel="noopener noreferrer" style="color: #2a5298; font-weight: 600;">Aviso de Privacidad</a> y autorizo el tratamiento de mis datos personales para recibir asesoría.</label>
+                </div>
+
                 <button type="submit" style="background-color: #2a5298; color: white; padding: 15px; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 1.1rem; margin-top: 10px; transition: background 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
                     ENVIAR SOLICITUD
                 </button>
