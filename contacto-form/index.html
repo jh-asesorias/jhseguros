@@ -110,8 +110,9 @@
 
         /* FOOTER Y WHATSAPP FLOTANTE */
         footer { background-color: #1a1a2e; color: white; padding: 2.5rem 0 4rem; text-align: center; }
-        .back-nav { display: inline-block; margin-bottom: 2rem; color: #94a3b8; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
-        .back-nav:hover { color: white; }
+        .back-nav { display: inline-block; margin: 0.5rem 0 2.5rem; color: #1e3c72; border: 2px solid #1e3c72; padding: 10px 22px; border-radius: 30px; text-decoration: none; font-weight: 700; font-size: 0.95rem; transition: background 0.2s, color 0.2s; }
+        .back-nav:hover { background: #1e3c72; color: white; }
+        .alt-title { text-align: center; font-family: 'Montserrat', sans-serif; color: #1e3c72; font-weight: 600; font-size: 1.05rem; margin-top: -1rem; }
         .whatsapp-float {
             position: fixed; width: 60px; height: 60px; bottom: 20px; right: 20px;
             background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center;
@@ -149,19 +150,6 @@
     </header>
 
     <main class="container" style="margin-top: 2rem;">
-        
-        <!-- VÍAS DE ACCIÓN RÁPIDA -->
-        <div class="direct-channels">
-            <a href="tel:+528343117556" class="channel-btn btn-call">
-                📞 Llamar: 834-311-7556
-            </a>
-            <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20solicito%20asesor%C3%ADa%20personalizada%20de%20seguros" target="_blank" rel="noopener noreferrer" class="channel-btn btn-wa">
-                📲 Mensaje por WhatsApp
-            </a>
-            <a href="https://calendly.com/jhseguros/lordseguritos" target="_blank" rel="noopener noreferrer" class="channel-btn btn-calendar">
-                📅 Agendar en Calendly
-            </a>
-        </div>
 
         <!-- FORMULARIO DIRECTO -->
         <div class="form-card">
@@ -212,6 +200,20 @@
 
                 <button type="submit" class="btn-submit">ENVIAR SOLICITUD DE ASESORÍA</button>
             </form>
+        </div>
+
+        <!-- VÍAS DE CONTACTO DIRECTO (segunda opción, después del formulario) -->
+        <p class="alt-title">¿Prefieres hablar directo conmigo?</p>
+        <div class="direct-channels">
+            <a href="tel:+528343117556" class="channel-btn btn-call">
+                📞 Llamar: 834-311-7556
+            </a>
+            <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20solicito%20asesor%C3%ADa%20personalizada%20de%20seguros" target="_blank" rel="noopener noreferrer" class="channel-btn btn-wa">
+                📲 Mensaje por WhatsApp
+            </a>
+            <a href="https://calendly.com/jhseguros/lordseguritos" target="_blank" rel="noopener noreferrer" class="channel-btn btn-calendar">
+                📅 Agendar en Calendly
+            </a>
         </div>
 
         <div style="text-align: center;">
