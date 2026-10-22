@@ -86,7 +86,6 @@
         .channel-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
         .btn-call { background-color: #1e3c72; color: white; }
         .btn-wa { background-color: #25d366; color: white; }
-        .btn-calendar { background-color: #ff6b6b; color: white; }
 
         /* FORMULARIO */
         .form-card {
@@ -176,7 +175,8 @@
 
                 <div class="form-group">
                     <label for="interes">Ramo de Interés:</label>
-                    <select id="interes" name="interes" class="form-control" style="background-color: white;">
+                    <select id="interes" name="interes" class="form-control" style="background-color: white;" required>
+                        <option value="" disabled selected>— Selecciona una opción —</option>
                         <option value="Gastos Médicos">🏥 Gastos Médicos Mayores</option>
                         <option value="Retiro / PPR">👴 Planeación de Retiro (PPR)</option>
                         <option value="Seguro de Auto">🚗 Seguro de Auto</option>
@@ -210,9 +210,6 @@
             </a>
             <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20solicito%20asesor%C3%ADa%20personalizada%20de%20seguros" target="_blank" rel="noopener noreferrer" class="channel-btn btn-wa">
                 📲 Mensaje por WhatsApp
-            </a>
-            <a href="https://calendly.com/jhseguros/lordseguritos" target="_blank" rel="noopener noreferrer" class="channel-btn btn-calendar">
-                📅 Agendar en Calendly
             </a>
         </div>
 
