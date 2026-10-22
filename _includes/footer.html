@@ -1,1 +1,48 @@
+<!-- =========================================================
+     PIE DE PÁGINA ÚNICO DE JH SEGUROS
+     Se usa en todas las páginas con:  {% include footer.html %}
+     Para cambiar un dato (correo, teléfono, redes, aviso legal),
+     se edita SOLO este archivo y se actualiza todo el sitio.
+     ========================================================= -->
+<style>
+    /* Estilos propios del pie (prefijo jh- para no chocar con los de cada página) */
+    footer.jh-footer { background-color: #1a1a2e; color: #fff; padding: 3rem 20px 5rem; text-align: center; font-family: 'Open Sans', sans-serif; line-height: 1.6; }
+    .jh-footer .jh-brand { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 700; color: #ff6b6b; margin-bottom: 0.5rem; }
+    .jh-footer .jh-lema { color: #ccc; font-size: 0.95rem; margin: 0 auto 1.5rem; max-width: 600px; }
+    .jh-footer .jh-datos { margin: 1.5rem 0; }
+    .jh-footer .jh-datos a { color: #fff; text-decoration: none; }
+    .jh-footer .jh-datos a:hover { color: #ff6b6b; }
+    .jh-footer .jh-redes { display: flex; justify-content: center; gap: 1rem; margin: 1.5rem 0; }
+    .jh-footer .jh-red { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background-color: rgba(255,255,255,0.1); color: #fff; text-decoration: none; transition: background-color 0.3s; }
+    .jh-footer .jh-red:hover { background-color: #ff6b6b; }
+    .jh-footer .jh-legal { font-size: 0.85rem; color: #aaa; max-width: 800px; margin: 0 auto 15px; line-height: 1.4; }
+    .jh-footer .jh-avisos { margin-top: 15px; }
+    .jh-footer .jh-avisos a { color: #ccc; text-decoration: none; font-weight: bold; margin: 0 10px; display: inline-block; }
+</style>
 
+<footer id="contacto" class="jh-footer">
+    <!-- Marca y lema -->
+    <div class="jh-brand">Seguritos con Rafa</div>
+    <p class="jh-lema">Recibe asesoría personalizada y conoce opciones acordes a tus necesidades</p>
+
+    <!-- Datos de contacto -->
+    <div class="jh-datos">
+        <p>Email: <a href="mailto:jhseguros@jhasesorias.com">jhseguros@jhasesorias.com</a></p>
+        <p>Teléfono: <a href="tel:+528343117556" style="font-weight: 600;">834-311-7556</a></p>
+        <p>Atención en todo México · Presencia en Reynosa y Ciudad Victoria, Tamaulipas</p>
+    </div>
+
+    <!-- Redes sociales (solo Facebook e Instagram) -->
+    <div class="jh-redes">
+        <a href="https://www.facebook.com/rafaeljimenezsanchezAS" target="_blank" rel="noopener noreferrer" class="jh-red" aria-label="Facebook"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6c1.05 0 2.05.2 2.3.3v2.7h-1.5c-1.2 0-1.5.6-1.5 1.45V12h3l-.4 3h-2.6v6.8C18.56 20.87 22 16.84 22 12z"/></svg></a>
+        <a href="https://www.instagram.com/lord_seguritos/" target="_blank" rel="noopener noreferrer" class="jh-red" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85s.01-3.58.07-4.85C2.38 3.86 3.9 2.32 7.15 2.17c1.27-.06 1.65-.07 4.85-.07zM12 0C8.74 0 8.33.01 7.05.07c-4.27.2-6.78 2.71-6.98 6.98C0 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.27 2.71 6.78 6.98 6.98 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c4.27-.2 6.78-2.71 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.2-4.27-2.71-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm3.98-9.03a1.44 1.44 0 1 1 2.88 0 1.44 1.44 0 0 1-2.88 0z"/></svg></a>
+    </div>
+
+    <!-- Aviso legal y derechos (el año se actualiza solo) -->
+    <p class="jh-legal">* La información en este sitio web es de carácter orientativo. Las coberturas, beneficios y exclusiones definitivas están sujetas a las condiciones generales de las pólizas emitidas por cada compañía aseguradora.</p>
+    <p>&copy; {{ 'now' | date: '%Y' }} Rafael Jiménez Sánchez - Agente de Seguros Cédula A1 H382035 y B Y415335 - Todos los derechos reservados</p>
+    <p class="jh-avisos">
+        <a href="/privacidad/">🔒 Aviso de Privacidad</a>
+        <a href="/reserva-datos.pdf" target="_blank" rel="noopener noreferrer">📄 Política de Reserva de Datos (ARCO)</a>
+    </p>
+</footer>
