@@ -431,27 +431,15 @@ details[open] summary ~ * {
 @media (max-width: 768px) {
     .mobile-menu-btn { display: flex; }
 }
-        /* ===== Panel de Asesoría Profesional (rediseño) ===== */
-        .asesoria { background: #f0f3f9; padding: 4rem 0; }
-        .asesoria-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 2.5rem; align-items: start; max-width: 1050px; margin: 0 auto; }
-        .asesoria-info h2 { font-family: 'Montserrat', sans-serif; color: #1e3c72; font-size: 1.9rem; line-height: 1.25; margin-bottom: 1rem; }
-        .asesoria-info p { color: #475569; margin-bottom: 1.5rem; }
-        .asesoria-lista { list-style: none; margin: 0 0 1.5rem; padding: 0; }
-        .asesoria-lista li { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 14px; color: #334155; }
-        .asesoria-lista .ico { flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: #2a5298; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1rem; }
-        .asesoria-lista strong { color: #1e3c72; display: block; }
-        .asesoria-wa { display: inline-flex; align-items: center; gap: 8px; background: #1fa855; color: #fff; padding: 12px 20px; border-radius: 30px; text-decoration: none; font-weight: 700; }
-        .form-tarjeta { background: #fff; padding: 2rem; border-radius: 14px; box-shadow: 0 10px 30px rgba(30,60,114,0.12); border-top: 5px solid #2a5298; }
-        .form-tarjeta h3 { font-family: 'Montserrat', sans-serif; color: #1e3c72; font-size: 1.3rem; margin-bottom: 1.2rem; }
-        .campo { margin-bottom: 1rem; }
-        .campo label { display: block; font-weight: 600; color: #1e3c72; font-size: 0.92rem; margin-bottom: 6px; }
-        .campo input, .campo select, .campo textarea { width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 1rem; font-family: inherit; background: #fff; }
-        .campo input:focus, .campo select:focus, .campo textarea:focus { outline: none; border-color: #2a5298; box-shadow: 0 0 0 3px rgba(42,82,152,0.12); }
-        .campo-aviso { display: flex; gap: 10px; align-items: flex-start; font-size: 0.88rem; color: #475569; margin: 0.5rem 0 1.2rem; }
-        .campo-aviso input { margin-top: 3px; width: 18px; height: 18px; flex-shrink: 0; }
-        .btn-enviar { width: 100%; background: #2a5298; color: #fff; padding: 15px; border: none; border-radius: 8px; font-weight: 700; font-size: 1.05rem; cursor: pointer; transition: background 0.3s; }
-        .btn-enviar:hover { background: #1e3c72; }
-        @media (max-width: 860px) { .asesoria-grid { grid-template-columns: 1fr; } .asesoria-info h2 { font-size: 1.6rem; } }
+    /* ===== Recuadro de contacto de la portada (¿Listo para proteger tu futuro?) ===== */
+        .cta-sub { font-family: 'Montserrat', sans-serif; font-size: 1.25rem; font-weight: 600; color: #e2e8f0; margin: -0.8rem 0 0.6rem; }
+        .cta-text { max-width: 700px; margin: 0 auto 1.8rem; opacity: 0.95; }
+        .cta-lista { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; gap: 1.2rem 2rem; max-width: 980px; margin: 0 auto 2rem; padding: 0; text-align: left; }
+        .cta-lista li { display: flex; gap: 12px; align-items: flex-start; flex: 1 1 260px; max-width: 300px; }
+        .cta-lista .ico { flex-shrink: 0; width: 38px; height: 38px; border-radius: 50%; background: #fff; color: #1e3c72; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+        .cta-lista strong { display: block; color: #fff; }
+        .cta-lista .txt { color: #dbe4f3; font-size: 0.92rem; }
+        @media (max-width: 640px) { .cta-lista li { max-width: 100%; } }
     </style>
 </head>
 <body>
@@ -614,72 +602,18 @@ details[open] summary ~ * {
     <section class="cta-section">
     <div class="container">
         <h2 class="cta-title">¿Listo para proteger tu futuro?</h2>
-        <p style="margin: 0 0 20px; opacity: .95;">Cuéntame tu caso y revisamos tus opciones, sin compromiso.</p>
+        <p class="cta-sub">Asesoría profesional personalizada</p>
+        <p class="cta-text">Cuéntame tu caso y te presento opciones de aseguradoras autorizadas, comparadas de forma clara y sin compromiso.</p>
+        <ul class="cta-lista">
+            <li><span class="ico">✓</span><div><strong>Asesoría sin costo</strong><span class="txt">Revisamos juntos lo que necesitas.</span></div></li>
+            <li><span class="ico">🏅</span><div><strong>Agente certificado ante la CNSF</strong><span class="txt">Cédulas A1 H382035 y B Y415335.</span></div></li>
+            <li><span class="ico">🇲🇽</span><div><strong>Atención en todo México</strong><span class="txt">Por WhatsApp, llamada o videollamada.</span></div></li>
+        </ul>
         <a href="https://wa.me/528343117556?text=Hola%20Rafael%2C%20quiero%20informaci%C3%B3n%20sobre%20seguros" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #1fa855; color: #fff; padding: 14px 26px; border-radius: 8px; font-weight: 700; text-decoration: none; margin: 6px;">Escribirme por WhatsApp</a>
-        <a href="#contacto-form" style="display: inline-block; background: #fff; color: #1e3c72; padding: 14px 26px; border-radius: 8px; font-weight: 700; text-decoration: none; margin: 6px;">Solicitar asesoría</a>
+        <a href="/contacto-form/" style="display: inline-block; background: #fff; color: #1e3c72; padding: 14px 26px; border-radius: 8px; font-weight: 700; text-decoration: none; margin: 6px;">Solicitar asesoría</a>
     </div>
 </section>
-                <!-- Panel de Asesoría Profesional Personalizada (dos columnas) -->
-        <section id="contacto-form" class="asesoria">
-            <div class="container">
-                <div class="asesoria-grid">
-
-                    <!-- Columna izquierda: razones para contactar -->
-                    <div class="asesoria-info">
-                        <h2>Asesoría profesional personalizada</h2>
-                        <p>Cuéntame tu caso y te presento opciones de aseguradoras autorizadas, comparadas de forma clara y sin compromiso.</p>
-                        <ul class="asesoria-lista">
-                            <li><span class="ico">✓</span><div><strong>Asesoría sin costo</strong>Revisamos juntos lo que necesitas.</div></li>
-                            <li><span class="ico">🏅</span><div><strong>Agente certificado ante la CNSF</strong>Cédulas A1 H382035 y B Y415335.</div></li>
-                            <li><span class="ico">🇲🇽</span><div><strong>Atención en todo México</strong>Por WhatsApp, llamada o videollamada.</div></li>
-                        </ul>
-                    </div>
-
-                    <!-- Columna derecha: formulario (mismo Formspree, antispam y medición) -->
-                    <div class="form-tarjeta">
-                        <h3>📩 Solicita tu asesoría</h3>
-                        <form action="https://formspree.io/f/xgooobzp" method="POST" onsubmit="if(window.gtag){gtag('event','generate_lead',{form_name:'contacto'});}">
-                            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
-                            <div class="campo">
-                                <label for="nombre">Nombre completo</label>
-                                <input type="text" id="nombre" name="nombre" required placeholder="Ej. Juan Pérez">
-                            </div>
-                            <div class="campo">
-                                <label for="telefono">WhatsApp / Celular</label>
-                                <input type="tel" id="telefono" name="telefono" required placeholder="Para contactarte rápidamente">
-                            </div>
-                            <div class="campo">
-                                <label for="email">Correo electrónico</label>
-                                <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
-                            </div>
-                            <div class="campo">
-                                <label for="interes">Me interesa información sobre</label>
-                                <select id="interes" name="interes" required>
-                                    <option value="" disabled selected>— Selecciona una opción —</option>
-                                    <option value="Retiro / PPR">👴 Planeación de Retiro (PPR)</option>
-                                    <option value="Gastos Médicos">🏥 Gastos Médicos Mayores</option>
-                                    <option value="Seguro Educativo">🎓 Seguro Educativo / Universitario</option>
-                                    <option value="Seguro de Vida">🛡️ Seguro de Vida / Ahorro</option>
-                                    <option value="Seguro de Auto">🚗 Seguro de Auto</option>
-                                    <option value="Otro">🤔 Otra consulta (Hogar, Embarcación, RC, Empresa)</option>
-                                </select>
-                            </div>
-                            <div class="campo">
-                                <label for="mensaje">Tu duda o comentario</label>
-                                <textarea id="mensaje" name="mensaje" rows="3" placeholder="Cuéntame brevemente qué necesitas..."></textarea>
-                            </div>
-                            <!-- Aceptación del Aviso de Privacidad (obligatoria para enviar) -->
-                            <div class="campo-aviso">
-                                <input type="checkbox" id="aviso" name="aviso_privacidad" value="Aceptado" required>
-                                <label for="aviso">He leído y acepto el <a href="/privacidad/" target="_blank" rel="noopener noreferrer" style="color:#2a5298;font-weight:600;">Aviso de Privacidad</a> y autorizo el tratamiento de mis datos personales para recibir asesoría.</label>
-                            </div>
-                            <button type="submit" class="btn-enviar">SOLICITAR ASESORÍA</button>
-                        </form>
-                    </div>
-
-                </div>
-            </div>
-        </section>
+                
         <footer id="contacto">
             <div class="container">
                 <div class="footer-content">
