@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
@@ -139,23 +141,8 @@
         </div>
     </section>
 
-    <footer id="contacto">
-        <div class="container">
-            <div class="brand">Seguritos con Rafa</div>
-            <div style="margin: 1.5rem 0;">
-                <p>Email: <a href="mailto:jhseguros@jhasesorias.com" style="color: white; text-decoration: none;">jhseguros@jhasesorias.com</a></p>
-                <p>Teléfono: <a href="tel:+528343117556" style="color: white; text-decoration: none; font-weight: 600;">834-311-7556</a></p>
-                <p>Presencia: en Reynosa y Ciudad Victoria, Tamaulipas</p>
-            </div>
-            <div class="social-links">
-                <a href="https://www.facebook.com/rafaeljimenezsanchezAS" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6c1.05 0 2.05.2 2.3.3v2.7h-1.5c-1.2 0-1.5.6-1.5 1.45V12h3l-.4 3h-2.6v6.8C18.56 20.87 22 16.84 22 12z"/></svg></a>
-                <a href="https://www.instagram.com/lord_seguritos/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85s.01-3.58.07-4.85C2.38 3.86 3.9 2.32 7.15 2.17c1.27-.06 1.65-.07 4.85-.07zM12 0C8.74 0 8.33.01 7.05.07c-4.27.2-6.78 2.71-6.98 6.98C0 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.27 2.71 6.78 6.98 6.98 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c4.27-.2 6.78-2.71 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.2-4.27-2.71-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm3.98-9.03a1.44 1.44 0 1 1 2.88 0 1.44 1.44 0 0 1-2.88 0z"/></svg></a>
-                </div>
-            <p style="font-size: 0.85rem; color: #aaa; max-width: 800px; margin: 0 auto 15px; line-height: 1.4;">* La información en este sitio web es de carácter orientativo. Las coberturas y beneficios están sujetos a las condiciones generales de las pólizas de cada aseguradora.</p>
-            <p>&copy; 2024 Rafael Jiménez Sánchez - Agente de Seguros Cédula A1 H382035 y B Y415335 - Todos los derechos reservados</p>
-            <p style="margin-top: 15px;"><a href="/privacidad/" style="color: #ccc; text-decoration: none; font-weight: bold; margin-right: 20px;">🔒 Aviso de Privacidad</a><a href="/reserva-datos.pdf" target="_blank" rel="noopener noreferrer" style="color: #ccc; text-decoration: none; font-weight: bold;">📄 Política de Reserva de Datos (ARCO)</a></p>
-        </div>
-    </footer>
+        <!-- FOOTER CON RUTAS ABSOLUTAS -->
+    {% include footer.html %}
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
