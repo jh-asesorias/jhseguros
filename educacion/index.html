@@ -69,17 +69,25 @@
         .steps, .who-grid, .benefit-grid, .plans { display: grid; gap: 16px; }
         .steps { grid-template-columns: repeat(3, 1fr); }
         .who-grid { grid-template-columns: repeat(4, 1fr); margin-bottom: 14px; }
-        .benefit-grid { grid-template-columns: repeat(3, 1fr); }
+        .benefit-grid { grid-template-columns: 1fr; }
         .plans { grid-template-columns: 1fr; }
         .step, .who-card, .benefit, .plan { background: #f8f9fa; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px; }
         .step h3, .who-card h3, .benefit h3, .plan h3 { font-family: 'Montserrat', sans-serif; color: #1e3c72; font-size: 1.05rem; margin-bottom: 6px; }
         .step p, .who-card p, .benefit p { margin: 0; font-size: 0.95rem; }
+        .step-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+        .step-head .step-num { margin-bottom: 0; }
+        .step-icons { font-size: 1.7rem; line-height: 1; letter-spacing: 4px; }
         .step-num { display: inline-flex; width: 34px; height: 34px; border-radius: 50%; background: #2a5298; color: #fff; font-weight: 700; align-items: center; justify-content: center; margin-bottom: 8px; font-family: 'Montserrat', sans-serif; }
         .who-card { text-align: center; }
         .who-icon { font-size: 2rem; display: block; margin-bottom: 4px; }
         .detail-content ul.checks { list-style: none; margin-left: 0; }
         .checks li { padding-left: 26px; position: relative; margin-bottom: 6px; }
         .checks li::before { content: "✔"; position: absolute; left: 0; color: #2a5298; font-weight: 700; }
+        .benefit.has-img { display: grid; grid-template-columns: minmax(0, 360px) 1fr; gap: 22px; align-items: center; }
+        .benefit.has-img.rev { grid-template-columns: 1fr minmax(0, 360px); }
+        .benefit.has-img.rev .benefit-img { order: 2; }
+        .benefit-img { display: block; width: 100%; height: auto; border-radius: 8px; }
+        .benefit p { font-size: 1rem; }
         .plan { border-top: 4px solid #2a5298; }
         .plan:nth-child(2) { border-top-color: #6a4c93; }
         .plan-ins { font-size: 0.85rem; color: #64748b; margin-bottom: 8px !important; }
@@ -96,8 +104,8 @@
         .faq summary { cursor: pointer; padding: 14px 16px; font-weight: 600; color: #1e3c72; }
         .faq details p { padding: 0 16px 14px; margin: 0; }
         .trust { margin: 34px 0 10px; color: #444; font-size: 0.9rem; text-align: justify; }
-        @media (max-width: 900px) { .who-grid, .benefit-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 640px) { .steps, .who-grid, .benefit-grid, .plans { grid-template-columns: 1fr; } .detail-content { padding: 1.4rem; } }
+        @media (max-width: 900px) { .who-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 640px) { .steps, .who-grid, .benefit-grid, .plans { grid-template-columns: 1fr; } .benefit.has-img, .benefit.has-img.rev { grid-template-columns: 1fr; gap: 12px; } .benefit.has-img.rev .benefit-img { order: 0; } .detail-content { padding: 1.4rem; } }
         .hero-sub { font-size: 1.15rem; margin: 0 auto 1.4rem; max-width: 720px; opacity: 0.95; }
         .hero-wa { display: inline-flex; align-items: center; gap: 10px; background: #1fa855; color: #fff; padding: 16px 30px; border-radius: 40px; font-weight: 700; font-size: 1.15rem; text-decoration: none; box-shadow: 0 6px 18px rgba(0,0,0,0.25); transition: transform 0.2s, background 0.2s; }
         .hero-wa:hover { background: #178f47; transform: translateY(-2px); }
@@ -147,17 +155,17 @@
                 <h2 class="sec-title">¿Cómo funciona?</h2>
                 <div class="steps">
                     <div class="step">
-                        <span class="step-num">1</span>
+                        <div class="step-head"><span class="step-num">1</span><span class="step-icons" aria-hidden="true">💰📈</span></div>
                         <h3>Defines la meta</h3>
                         <p>Calculamos juntos cuánto necesitará tu hijo para su carrera y lo convertimos en un ahorro programado.</p>
                     </div>
                     <div class="step">
-                        <span class="step-num">2</span>
+                        <div class="step-head"><span class="step-num">2</span><span class="step-icons" aria-hidden="true">🐷🛡️</span></div>
                         <h3>Ahorras y estás protegido</h3>
                         <p>Mientras aportas, tu vida queda asegurada. Si llegaras a faltar o a sufrir invalidez, el plan contempla que el fondo siga adelante, según las coberturas contratadas.</p>
                     </div>
                     <div class="step">
-                        <span class="step-num">3</span>
+                        <div class="step-head"><span class="step-num">3</span><span class="step-icons" aria-hidden="true">💵🎓</span></div>
                         <h3>Tu hijo recibe su fondo</h3>
                         <p>Al llegar a la edad pactada, se entrega el ahorro en una sola exhibición o en pagos programados durante sus años de universidad, según la forma que elijas.</p>
                     </div>
@@ -180,9 +188,18 @@
                 <!-- 4. Coberturas y beneficios -->
                 <h2 class="sec-title">Coberturas y beneficios</h2>
                 <div class="benefit-grid">
-                    <div class="benefit"><h3>🎓 Fondo universitario asegurado</h3><p>El ahorro se entrega a la edad pactada para cubrir la carrera, más los rendimientos que genere su administración.</p></div>
-                    <div class="benefit"><h3>🛡️ El plan sigue si faltas o sufres invalidez</h3><p>En caso de fallecimiento o invalidez total y permanente del contratante, la póliza puede quedar exenta de los pagos restantes y el fondo continúa hasta su entrega, según las coberturas contratadas.</p></div>
-                    <div class="benefit"><h3>👨‍👩‍👧 Respaldo para la familia</h3><p>Además del fondo del menor, tu familia recibe una suma asegurada para sostener el hogar en caso de fallecimiento.</p></div>
+                    <div class="benefit has-img">
+                        <img class="benefit-img" src="/imagenes/padres-cielo.webp" width="720" height="540" loading="lazy" decoding="async" alt="Joven graduada con birrete y diploma, acompañada de sus padres en la ceremonia de graduación" onerror="this.parentNode.classList.remove('has-img');this.remove()">
+                        <div><h3>🎓 Fondo universitario asegurado</h3><p>El ahorro se entrega a la edad pactada para cubrir la carrera, más los rendimientos que genere su administración, aun cuando tú ya no estés a su lado, según las coberturas contratadas.</p></div>
+                    </div>
+                    <div class="benefit has-img rev">
+                        <img class="benefit-img" src="/imagenes/padre-incapacidad.webp" width="720" height="540" loading="lazy" decoding="async" alt="Persona en silla de ruedas entregando su póliza a un asesor de seguros en una oficina" onerror="this.parentNode.classList.remove('has-img','rev');this.remove()">
+                        <div><h3>🛡️ El plan sigue si faltas o sufres invalidez</h3><p>En caso de fallecimiento o invalidez total y permanente del contratante, la póliza puede quedar exenta de los pagos restantes y el fondo continúa hasta su entrega, según las coberturas contratadas.</p></div>
+                    </div>
+                    <div class="benefit has-img">
+                        <img class="benefit-img" src="/imagenes/padre-indemnizacion.webp" width="720" height="540" loading="lazy" decoding="async" alt="Asesor de JH Seguros entregando un cheque de indemnización a una mujer en su oficina" onerror="this.parentNode.classList.remove('has-img');this.remove()">
+                        <div><h3>👨‍👩‍👧 Respaldo para la familia</h3><p>Además del fondo del menor, tu familia recibe una suma asegurada para sostener el hogar en caso de fallecimiento.</p></div>
+                    </div>
                     <div class="benefit"><h3>⚕️ Anticipos en momentos difíciles</h3><p>Adelanto de una parte de la suma asegurada ante una enfermedad terminal y un anticipo para gastos inmediatos de la familia.</p></div>
                     <div class="benefit"><h3>🔄 Entrega flexible</h3><p>Una sola exhibición o entregas mensuales durante cuatro años, para que el dinero acompañe toda la carrera.</p></div>
                     <div class="benefit"><h3>➕ Coberturas opcionales</h3><p>Muerte accidental, invalidez, exención de pagos por desempleo, aportaciones adicionales y la opción de que tu hijo tenga su propio seguro de vida sin exámenes médicos en el futuro.</p></div>
