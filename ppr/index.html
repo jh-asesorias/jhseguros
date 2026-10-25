@@ -5,24 +5,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plan Personal de Retiro (PPR) y Deducibilidad LISR | JH Seguros</title>
-    <meta name="description" content="Planea tu jubilación con ahorro en UDIS o Dólares y las deducciones fiscales que establece la LISR, dentro de sus límites. JH Seguros, atención en todo México.">
+    <title>Plan Personal de Retiro (PPR) deducible | JH Seguros</title>
+    <meta name="description" content="Planea tu retiro con un PPR en UDIS o dólares, deducible conforme al art. 151 fracc. V de la LISR. Calcula tu ahorro fiscal estimado y recibe asesoría en todo México.">
     <link rel="canonical" href="https://jhseguros.mx/ppr/">
     <meta name="author" content="Rafael Jiménez Sánchez">
     <meta name="robots" content="index, follow">
-    
+
     <meta property="og:title" content="Plan Personal de Retiro (PPR) | JH Seguros">
-    <meta property="og:description" content="Protección patrimonial, rentas vitalicias y deducciones fiscales para una vejez digna.">
+    <meta property="og:description" content="Ahorra para tu retiro, protege a tu familia y deduce tus aportaciones conforme a la LISR. Calcula tu beneficio fiscal estimado.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jhseguros.mx/ppr/">
     <meta property="og:image" content="https://jhseguros.mx/imagenes/og-ppr.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Plan Personal de Retiro (PPR) | JH Seguros">
-    
+
     <link rel="icon" href="/rafael-perfil.jpg" type="image/jpeg">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3GLCDV4F8"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -32,39 +32,224 @@
       gtag('config', 'AW-18520948891');
     </script>
 
+    <!-- Datos estructurados: preguntas frecuentes (SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "¿Cuánto puedo deducir de mi PPR en 2026?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Conforme al artículo 151, fracción V, de la LISR puedes deducir tus aportaciones hasta la cantidad menor entre el 10% de tus ingresos acumulables del año y 5 UMA anuales. En 2026, 5 UMA anuales equivalen a $213,973.20."}},
+        {"@type": "Question", "name": "¿La deducción del PPR entra en el tope general de deducciones personales?",
+         "acceptedAnswer": {"@type": "Answer", "text": "No. El último párrafo del artículo 151 de la LISR excluye las aportaciones de la fracción V del límite global de deducciones personales, por lo que se suman a tus demás deducciones."}},
+        {"@type": "Question", "name": "¿Qué pasa si retiro mi dinero antes de los 65 años?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Si retiras sin cumplir los requisitos del plan, el monto se considera ingreso acumulable del ejercicio y la institución retiene ISR del 20% como pago provisional (artículo 145 de la LISR). Por eso el PPR se diseña como un ahorro de largo plazo."}},
+        {"@type": "Question", "name": "¿Cuándo recibo el beneficio fiscal?",
+         "acceptedAnswer": {"@type": "Answer", "text": "Al presentar tu declaración anual, normalmente en abril del año siguiente. La deducción reduce tu base gravable y puede generarte saldo a favor o un menor impuesto a pagar."}}
+      ]
+    }
+    </script>
+
     <style>
+        /* ===== Paleta JH: azul + morado ===== */
+        :root {
+            --azul-900: #12264f;
+            --azul-800: #1e3c72;
+            --azul-600: #2a5298;
+            --morado-700: #4b2a85;
+            --morado-500: #6c4bc4;
+            --morado-100: #efeafb;
+            --azul-50: #eef3fb;
+            --texto: #2b2f3a;
+            --texto-suave: #556070;
+            --borde: #e2e8f0;
+            --verde-wa: #25d366;
+            --sombra: 0 6px 24px rgba(18, 38, 79, 0.08);
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Open Sans', sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; scroll-behavior: smooth; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        header { position: relative; background: linear-gradient(135deg, #1e3c72 90%, #2a5298 100%); color: white; padding: 3rem 0; text-align: center; overflow: hidden; z-index: 1; }
-        header::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('/rafael-perfil.jpg'); background-size: cover; background-position: center; opacity: 0.15; filter: grayscale(100%); mix-blend-mode: luminosity; z-index: -1; }
-        .profile-container { display: flex; flex-direction: column; align-items: center; margin-bottom: 1.5rem; }
-        .name { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; font-weight: 700; margin-bottom: 0.5rem; }
-        .tagline { font-size: 1.7rem; margin: 1.5rem 0; font-weight: 500; max-width: 800px; margin-left: auto; margin-right: auto; }
-        .services { padding: 3rem 0; background-color: white; }
-        .detail-content { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); margin-bottom: 2rem; }
-        .detail-content p, .detail-content ul { margin-bottom: 1rem; color: #444; }
-        .detail-content ul { margin-left: 20px; list-style-type: disc; }
-        .detail-content strong { color: #2a5298; }
-        .back-to-top { display: inline-block; background-color: #2a5298; color: white; padding: 0.5rem 1.2rem; font-size: 0.9rem; border-radius: 20px; text-decoration: none; font-weight: 600; margin-top: 1rem; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Open Sans', sans-serif; line-height: 1.65; color: var(--texto); background-color: #f6f7fb; }
+        img { max-width: 100%; }
+        .container { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+        h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; line-height: 1.25; color: var(--azul-900); }
+        section { padding: 4rem 0; }
+        .section-head { text-align: center; max-width: 760px; margin: 0 auto 2.5rem; }
+        .eyebrow { display: inline-block; font-family: 'Montserrat', sans-serif; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--morado-500); margin-bottom: 0.6rem; }
+        .section-head h2 { font-size: 2rem; margin-bottom: 0.8rem; }
+        .section-head p { color: var(--texto-suave); font-size: 1.05rem; }
+
+        /* ===== Botones ===== */
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 0.9rem 1.6rem; border-radius: 40px; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1rem; text-decoration: none; border: 0; cursor: pointer; transition: transform .15s, box-shadow .15s; }
+        .btn:hover { transform: translateY(-2px); }
+        .btn-wa { background: var(--verde-wa); color: #fff; box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35); }
+        .btn-ghost { background: rgba(255,255,255,0.12); color: #fff; border: 2px solid rgba(255,255,255,0.45); }
+        .btn-primary { background: linear-gradient(135deg, var(--azul-600), var(--morado-500)); color: #fff; box-shadow: 0 6px 18px rgba(75, 42, 133, 0.3); }
+        .btn svg { width: 20px; height: 20px; fill: currentColor; flex-shrink: 0; }
+
+        /* ===== Hero ===== */
+        header.hero { position: relative; background: linear-gradient(135deg, var(--azul-900) 0%, var(--azul-800) 45%, var(--morado-700) 100%); color: #fff; padding: 5rem 0 4.5rem; overflow: hidden; z-index: 1; }
+        header.hero::before { content: ""; position: absolute; inset: 0; background-image: url('/rafael-perfil.jpg'); background-size: cover; background-position: center; opacity: 0.12; filter: grayscale(100%); mix-blend-mode: luminosity; z-index: -1; }
+        .hero-inner { max-width: 820px; margin: 0 auto; text-align: center; }
+        .hero .eyebrow { color: #cdbcff; }
+        .hero h1 { color: #fff; font-size: 2.6rem; font-weight: 800; margin-bottom: 1.1rem; }
+        .hero h1 span { background: linear-gradient(90deg, #a9c6ff, #d3c2ff); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .hero .lead { font-size: 1.2rem; color: rgba(255,255,255,0.88); margin-bottom: 2rem; }
+        .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 2.2rem; }
+        .chips { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+        .chip { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.22); border-radius: 30px; padding: 6px 14px; font-size: 0.9rem; }
+
+        /* ===== Problema ===== */
+        .problem { background: #fff; }
+        .problem-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        .problem-card { background: var(--azul-50); border-radius: 14px; padding: 1.6rem; }
+        .problem-card .icon { font-size: 1.8rem; margin-bottom: 0.6rem; }
+        .problem-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .problem-card p { color: var(--texto-suave); font-size: 0.97rem; }
+        .alert { margin-top: 2rem; background: var(--morado-100); border-left: 5px solid var(--morado-500); border-radius: 10px; padding: 1.3rem 1.5rem; }
+        .alert strong { color: var(--morado-700); }
+        .alert p { font-size: 0.98rem; }
+        .alert small { display: block; margin-top: 0.5rem; color: var(--texto-suave); font-size: 0.82rem; }
+
+        /* ===== Cómo funciona ===== */
+        .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; counter-reset: paso; }
+        .step { background: #fff; border-radius: 14px; padding: 1.8rem 1.5rem; box-shadow: var(--sombra); position: relative; }
+        .step::before { counter-increment: paso; content: counter(paso); display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--azul-600), var(--morado-500)); color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.2rem; margin-bottom: 1rem; }
+        .step h3 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+        .step p { color: var(--texto-suave); font-size: 0.97rem; }
+
+        /* ===== Beneficios ===== */
+        .benefits { background: #fff; }
+        .benefit-row { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; margin-bottom: 3rem; }
+        .benefit-row:last-child { margin-bottom: 0; }
+        .benefit-row.reverse .benefit-text { order: 2; }
+        .benefit-text h3 { font-size: 1.45rem; margin-bottom: 0.8rem; }
+        .benefit-text p { color: var(--texto-suave); margin-bottom: 0.9rem; }
+        .benefit-text ul { list-style: none; }
+        .benefit-text li { padding-left: 30px; position: relative; margin-bottom: 0.7rem; }
+        .benefit-text li::before { content: "✓"; position: absolute; left: 0; top: 0; width: 22px; height: 22px; border-radius: 50%; background: var(--morado-100); color: var(--morado-700); font-weight: 700; font-size: 0.8rem; display: flex; align-items: center; justify-content: center; }
+        .benefit-text strong { color: var(--azul-600); }
+        .benefit-media img { display: block; width: 100%; height: auto; border-radius: 16px; box-shadow: var(--sombra); }
+        .benefit-media.panel { background: linear-gradient(135deg, var(--azul-800), var(--morado-700)); color: #fff; border-radius: 16px; padding: 2rem; box-shadow: var(--sombra); }
+        .panel h4 { color: #fff; font-size: 1.1rem; margin-bottom: 1rem; }
+        .panel-opt { background: rgba(255,255,255,0.1); border-radius: 10px; padding: 0.9rem 1rem; margin-bottom: 0.7rem; }
+        .panel-opt b { display: block; font-family: 'Montserrat', sans-serif; }
+        .panel-opt span { font-size: 0.92rem; color: rgba(255,255,255,0.85); }
+
+        /* ===== Beneficio fiscal + calculadora ===== */
+        .tax-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 2rem; align-items: start; }
+        .tax-summary { background: #fff; border-radius: 16px; padding: 2rem; box-shadow: var(--sombra); }
+        .tax-summary h3 { font-size: 1.3rem; margin-bottom: 1rem; }
+        .big-number { font-family: 'Montserrat', sans-serif; font-size: 2.1rem; font-weight: 800; color: var(--morado-700); line-height: 1.1; }
+        .big-label { color: var(--texto-suave); font-size: 0.9rem; margin-bottom: 1.2rem; }
+        .tax-summary ul { list-style: none; }
+        .tax-summary li { padding: 0.7rem 0; border-top: 1px solid var(--borde); font-size: 0.97rem; }
+        .example { margin-top: 1.2rem; background: var(--azul-50); border-radius: 12px; padding: 1.1rem 1.2rem; font-size: 0.95rem; }
+        .example b { color: var(--azul-800); }
+
+        .calc { background: linear-gradient(160deg, var(--azul-900), var(--morado-700)); color: #fff; border-radius: 16px; padding: 2rem; box-shadow: var(--sombra); }
+        .calc h3 { color: #fff; font-size: 1.3rem; margin-bottom: 0.3rem; }
+        .calc > p { color: rgba(255,255,255,0.8); font-size: 0.93rem; margin-bottom: 1.3rem; }
+        .field { margin-bottom: 1rem; }
+        .field label { display: block; font-weight: 600; font-size: 0.93rem; margin-bottom: 0.35rem; }
+        .input-wrap { position: relative; }
+        .input-wrap span { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--texto-suave); font-weight: 600; }
+        .field input { width: 100%; padding: 0.85rem 1rem 0.85rem 2rem; border-radius: 10px; border: 0; font-size: 1.05rem; font-family: 'Open Sans', sans-serif; color: var(--texto); }
+        .field input:focus { outline: 3px solid #a9c6ff; }
+        .results { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 1.2rem 0; }
+        .result { background: rgba(255,255,255,0.1); border-radius: 10px; padding: 0.9rem; }
+        .result small { display: block; font-size: 0.8rem; color: rgba(255,255,255,0.75); }
+        .result b { font-family: 'Montserrat', sans-serif; font-size: 1.25rem; }
+        .result.highlight { grid-column: 1 / -1; background: #fff; color: var(--azul-900); }
+        .result.highlight small { color: var(--texto-suave); }
+        .result.highlight b { font-size: 1.8rem; color: var(--morado-700); }
+        .calc-note { font-size: 0.78rem; color: rgba(255,255,255,0.7); margin-top: 1rem; }
+        .calc .btn { width: 100%; }
+
+        details.legal { margin-top: 2rem; background: #fff; border: 1px solid var(--borde); border-radius: 12px; padding: 0 1.4rem; }
+        details.legal summary { cursor: pointer; padding: 1.1rem 0; font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--azul-800); }
+        details.legal .legal-body { padding-bottom: 1.3rem; font-size: 0.94rem; color: var(--texto-suave); }
+        details.legal .legal-body p { margin-bottom: 0.8rem; }
+        details.legal .legal-body strong { color: var(--azul-800); }
+
+        /* ===== Comparativo ===== */
+        .compare { background: #fff; }
+        .table-wrap { overflow-x: auto; border-radius: 14px; box-shadow: var(--sombra); }
+        table { width: 100%; border-collapse: collapse; background: #fff; min-width: 560px; }
+        th, td { padding: 1rem 1.1rem; text-align: left; border-bottom: 1px solid var(--borde); font-size: 0.96rem; }
+        thead th { background: var(--azul-800); color: #fff; font-family: 'Montserrat', sans-serif; }
+        thead th.ppr { background: var(--morado-700); }
+        td.ppr { background: #faf8ff; font-weight: 600; color: var(--morado-700); }
+        tbody tr:last-child td { border-bottom: 0; }
+
+        /* ===== Para quién ===== */
+        .profiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .profile { background: #fff; border-radius: 14px; padding: 1.6rem; box-shadow: var(--sombra); border-top: 4px solid var(--morado-500); }
+        .profile:nth-child(2) { border-top-color: var(--azul-600); }
+        .profile:nth-child(3) { border-top-color: var(--azul-800); }
+        .profile h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .profile p { color: var(--texto-suave); font-size: 0.96rem; }
+
+        /* ===== FAQ ===== */
+        .faq { background: #fff; }
+        .faq-list { max-width: 820px; margin: 0 auto; }
+        .faq-list details { border-bottom: 1px solid var(--borde); }
+        .faq-list summary { cursor: pointer; list-style: none; padding: 1.15rem 2.2rem 1.15rem 0; position: relative; font-family: 'Montserrat', sans-serif; font-weight: 600; color: var(--azul-900); }
+        .faq-list summary::-webkit-details-marker { display: none; }
+        .faq-list summary::after { content: "+"; position: absolute; right: 4px; top: 50%; transform: translateY(-50%); font-size: 1.5rem; color: var(--morado-500); }
+        .faq-list details[open] summary::after { content: "−"; }
+        .faq-list .answer { padding: 0 0 1.2rem; color: var(--texto-suave); }
+
+        /* ===== Credencial + CTA final ===== */
+        .credential { max-width: 860px; margin: 0 auto 2.5rem; display: flex; gap: 16px; align-items: flex-start; background: #fff; border-radius: 14px; padding: 1.4rem 1.6rem; box-shadow: var(--sombra); font-size: 0.9rem; color: var(--texto-suave); }
+        .credential img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+        .credential strong { color: var(--azul-800); }
+        .final-cta { background: linear-gradient(135deg, var(--azul-800), var(--morado-700)); color: #fff; border-radius: 20px; padding: 3rem 2rem; text-align: center; max-width: 960px; margin: 0 auto; }
+        .final-cta h2 { color: #fff; font-size: 1.9rem; margin-bottom: 0.8rem; }
+        .final-cta p { color: rgba(255,255,255,0.88); margin-bottom: 1.6rem; font-size: 1.05rem; }
+        .final-cta .hero-ctas { margin-bottom: 0; }
+        .nav-bottom { text-align: center; margin-top: 2rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+        .back-to-top { display: inline-block; background-color: var(--azul-600); color: white; padding: 0.55rem 1.3rem; font-size: 0.9rem; border-radius: 20px; text-decoration: none; font-weight: 600; }
+        .back-to-top.dark { background-color: #1a1a2e; }
+
+        /* ===== Estilos del footer incluido (se conservan) ===== */
         footer { background-color: #1a1a2e; color: white; padding: 3rem 0 5rem; text-align: center; }
         .brand { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; margin-bottom: 1rem; color: #ff6b6b; }
         .cta-button { display: inline-block; background-color: #ff6b6b; color: white; padding: 0.8rem 2rem; border-radius: 30px; text-decoration: none; font-weight: 600; margin: 10px 0 15px; }
         .social-links { display: flex; justify-content: center; gap: 1rem; margin: 1.5rem 0; }
         .social-icon { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.1); border-radius: 50%; color: white; text-decoration: none; }
-        .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 20px; right: 20px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; font-size: 35px; box-shadow: 2px 2px 3px #999; z-index: 1000; display: flex; align-items: center; justify-content: center; text-decoration: none; }
-        .mobile-menu-btn { display: none; position: fixed; top: 20px; right: 20px; width: 52px; height: 52px; background-color: #1e3c72; color: white; border-radius: 50%; border: 2px solid rgba(255, 255, 255, 0.2); z-index: 2000; cursor: pointer; align-items: center; justify-content: center; }
+
+        /* ===== WhatsApp flotante y menú móvil (se conservan) ===== */
+        .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 20px; right: 20px; background-color: var(--verde-wa); color: #FFF; border-radius: 50px; text-align: center; font-size: 35px; box-shadow: 2px 2px 3px #999; z-index: 1000; display: flex; align-items: center; justify-content: center; text-decoration: none; }
+        .mobile-menu-btn { display: none; position: fixed; top: 20px; right: 20px; width: 52px; height: 52px; background-color: var(--azul-800); color: white; border-radius: 50%; border: 2px solid rgba(255, 255, 255, 0.2); z-index: 2000; cursor: pointer; align-items: center; justify-content: center; }
         .mobile-menu-btn svg { width: 24px; height: 24px; fill: currentColor; }
         .mobile-overlay { position: fixed; top: 0; right: -100%; width: 280px; height: 100%; background-color: #1a1a2e; z-index: 1999; transition: right 0.4s; display: flex; flex-direction: column; padding: 85px 20px 20px; }
         .mobile-overlay.open { right: 0; }
         .mobile-nav-link { color: white; text-decoration: none; font-size: 1.05rem; font-weight: 600; padding: 14px 15px; border-bottom: 1px solid rgba(255,255,255,0.05); }
         .mobile-backdrop { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 1998; display: none; opacity: 0; transition: opacity 0.3s; }
         .mobile-backdrop.open { display: block; opacity: 1; }
-        @media (max-width: 768px) { .name { font-size: 1.8rem; } .tagline { font-size: 1.5rem; } .mobile-menu-btn { display: flex; } }
+
+        /* ===== Responsivo ===== */
+        @media (max-width: 900px) {
+            .problem-grid, .steps, .profiles { grid-template-columns: 1fr; }
+            .benefit-row, .tax-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            .benefit-row.reverse .benefit-text { order: 0; }
+        }
+        @media (max-width: 768px) {
+            section { padding: 3rem 0; }
+            header.hero { padding: 5.5rem 0 3.5rem; }
+            .hero h1 { font-size: 1.9rem; }
+            .hero .lead { font-size: 1.05rem; }
+            .section-head h2, .final-cta h2 { font-size: 1.55rem; }
+            .mobile-menu-btn { display: flex; }
+            .hero-ctas .btn { width: 100%; }
+            .credential { flex-direction: column; }
+            .calc, .tax-summary { padding: 1.5rem; }
+        }
     </style>
 </head>
 <body>
-    <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20me%20interesa%20planear%20mi%20retiro%20con%20un%20PPR" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+    <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20me%20interesa%20planear%20mi%20retiro%20con%20un%20PPR" class="whatsapp-float js-wa" data-origen="flotante" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.081-.1.115-.173.171-.292.059-.115.03-.217-.015-.307-.045-.1-.445-1.074-.61-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
     </a>
 
@@ -84,55 +269,295 @@
         <a href="/contacto-form/" class="mobile-nav-link">📩 Contacto Directo</a>
     </div>
 
-    <header>
+    <!-- ===== 1. HERO ===== -->
+    <header class="hero">
         <div class="container">
-            <div class="profile-container">
-                <h1 class="name">Planes Personales de Retiro (PPR) y Jubilación</h1>
-                <p class="tagline">Protección patrimonial, rendimientos conforme a tu plan e incentivos fiscales conforme a la LISR para tu retiro.</p>
+            <div class="hero-inner">
+                <span class="eyebrow">Plan Personal de Retiro (PPR)</span>
+                <h1>Tu retiro no puede depender <span>solo de tu pensión</span></h1>
+                <p class="lead">Construye tu propio fondo para los 65 años, protege a tu familia desde el primer día y recupera parte de lo que ahorras con la deducción que permite la Ley del Impuesto Sobre la Renta (LISR).</p>
+                <div class="hero-ctas">
+                    <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20me%20interesa%20planear%20mi%20retiro%20con%20un%20PPR" class="btn btn-wa js-wa" data-origen="hero" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326z"/></svg>
+                        Enviar WhatsApp
+                    </a>
+                </div>
+                <div class="chips">
+                    <span class="chip">✔ Deducible conforme a los arts. 151 y 185 LISR</span>
+                    <span class="chip">✔ Ahorro en UDIS o dólares</span>
+                    <span class="chip">✔ Protección por invalidez y fallecimiento</span>
+                </div>
             </div>
         </div>
     </header>
 
-    <section class="services">
+    <!-- ===== 2. PROBLEMA ===== -->
+    <section class="problem">
         <div class="container">
-            <div class="detail-content text-start">
-                <p>Nuestros <strong>Planes Personales para el Retiro (PPR)</strong> son un instrumento para construir una jubilación a tu medida sin depender únicamente de sistemas públicos. Permiten ahorrar en UDIS o Dólares y optimizar o reducir tu carga fiscal de acuerdo con las disposiciones vigentes de la Ley del Impuesto sobre la Renta (LISR).</p>
+            <div class="section-head">
+                <span class="eyebrow">La pregunta que pocos se hacen a tiempo</span>
+                <h2>¿Con cuánto vas a vivir cuando dejes de trabajar?</h2>
+                <p>Para muchas personas, la pensión pública no alcanzará a cubrir el mismo nivel de vida. Entre más pronto empieces, menos tendrás que aportar cada mes.</p>
+            </div>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="icon">⏳</div>
+                    <h3>El tiempo es tu mejor aliado</h3>
+                    <p>A los 35 años tienes tres décadas para construir tu fondo. A los 50, el plan se diseña distinto, pero sigue siendo posible.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="icon">💼</div>
+                    <h3>Independientes y empresarios</h3>
+                    <p>Si no cotizas o cotizas por debajo de tu ingreso real, tu pensión será menor. Un PPR te da control sobre tu retiro.</p>
+                </div>
+            </div>
+            <div class="alert">
+                <p><strong>¿Eres Ley 73 del IMSS y estabas pensando en la Modalidad 40?</strong> Las condiciones cambiaron. Desde el 22 de octubre de 2026, las nuevas inscripciones y reinscripciones tienen como tope el último salario registrado más 1 UMA, como medida temporal. Un PPR puede complementar tu estrategia de retiro sin depender de esas reglas.</p>
+                <small>Fuente: Acuerdo ACDO.AS2.HCT.101026/302.P.DG del H. Consejo Técnico del IMSS, publicado en el DOF el 21 de octubre de 2026.</small>
+            </div>
+        </div>
+    </section>
 
-                <h2 style="color: #2a5298; font-family: 'Montserrat', sans-serif; font-size: 1.3rem; margin: 25px 0 10px;">1. Retiro / Supervivencia (Tu Meta de Ahorro)</h2>
-                <p>Al llegar a tu edad de retiro (65 años), tú decides la forma de entrega:</p>
-                <ul style="margin-left: 20px;">
-                    <li><strong>Pago Único:</strong> Recibes el 100% de tu capital acumulado en una sola exhibición.</li>
-                    <li><strong>Rentas Mensuales Vitalicias:</strong> Un ingreso mensual de por vida, con opciones de aguinaldo de retiro, traspaso a cónyuge o periodos de garantía hereditaria, según la modalidad elegida (incluso puedes elegir un plazo determinado de entrega).</li>
-                </ul>
+    <!-- ===== 3. CÓMO FUNCIONA ===== -->
+    <section>
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">Así funciona</span>
+                <h2>Tres pasos para tu retiro</h2>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <h3>Aportas durante el plazo pactado</h3>
+                    <p>Defines una aportación de acuerdo con tu edad, tu ingreso y la meta que quieres alcanzar. Tu ahorro se constituye en UDIS o en dólares.</p>
+                </div>
+                <div class="step">
+                    <h3>Deduces en tu declaración anual</h3>
+                    <p>Tus aportaciones reducen tu base gravable, dentro de los límites de la LISR. Eso puede traducirse en saldo a favor o en menos impuesto a pagar.</p>
+                </div>
+                <div class="step">
+                    <h3>Te retiras a los 65 años</h3>
+                    <p>Recibes tu fondo en una sola exhibición o como renta mensual. Mientras tanto, tu y tu familia esta protegida.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <h2 style="color: #2a5298; font-family: 'Montserrat', sans-serif; font-size: 1.3rem; margin: 25px 0 10px;">2. Protección Familiar</h2>
-                <ul style="margin-left: 20px;">
-                    <li><strong>Protección por Fallecimiento:</strong> En caso de faltar antes de la jubilación, tus beneficiarios reciben la Suma Asegurada contratada.</li>
-                </ul>
-                <img src="/imagenes/padre-indemnizacion.webp" width="720" height="540" loading="lazy" decoding="async" alt="Asesora entregando a una mujer el cheque de la indemnización de su seguro" onerror="this.remove()" style="display: block; width: 100%; max-width: 440px; height: auto; border-radius: 8px; margin: 4px auto 18px;">
+    <!-- ===== 4. BENEFICIOS ===== -->
+    <section class="benefits">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">Mucho más que un ahorro</span>
+                <h2>Lo que incluye tu Plan Personal de Retiro</h2>
+            </div>
 
-                <h2 style="color: #2a5298; font-family: 'Montserrat', sans-serif; font-size: 1.3rem; margin: 25px 0 10px;">3. Protección ante Invalidez Total y Permanente</h2>
-                <ul style="margin-left: 20px;">
-                    <li><strong>Exención de Pagos:</strong> Si sufres una invalidez total y permanente, la aseguradora absorbe las primas restantes y tu fondo sigue creciendo intacto hasta tu retiro, para que este sea entregado a tus 65 años.</li>
-                    <li><strong>Pago Anticipado:</strong> Entrega de liquidez inmediata con la suma asegurada de invalidez total y permanente, para adaptarte a tu nueva etapa.</li>
-                </ul>
-                <img src="/imagenes/padre-incapacidad.webp" width="720" height="540" loading="lazy" decoding="async" alt="Persona en silla de ruedas entregando su póliza a un asesor de seguros" onerror="this.remove()" style="display: block; width: 100%; max-width: 440px; height: auto; border-radius: 8px; margin: 4px auto 18px;">
+            <div class="benefit-row">
+                <div class="benefit-text">
+                    <h3>1. Retiro: tú decides cómo recibirlo</h3>
+                    <p>Al llegar a tu edad de retiro (65 años), eliges la forma de entrega que mejor se adapte a tu vida.</p>
+                    <ul>
+                        <li><strong>Pago único:</strong> recibes el 100% de tu capital acumulado en una sola exhibición.</li>
+                        <li><strong>Rentas mensuales vitalicias:</strong> un ingreso de por vida, con opciones de aguinaldo de retiro, traspaso a tu cónyuge o periodo de garantía para tus herederos, según la modalidad elegida.</li>
+                        <li><strong>Plazo determinado:</strong> también puedes recibir tu fondo durante un número definido de años.</li>
+                    </ul>
+                </div>
+                <div class="benefit-media panel">
+                    <h4>Opciones de entrega a los 65 años</h4>
+                    <div class="panel-opt"><b>💰 Pago único</b><span>Todo tu capital, en una sola exhibición.</span></div>
+                    <div class="panel-opt"><b>📅 Renta vitalicia</b><span>Un ingreso mensual mientras vivas.</span></div>
+                    <div class="panel-opt"><b>🗓️ Plazo determinado</b><span>Pagos durante los años que elijas.</span></div>
+                </div>
+            </div>
 
-                <p style="margin-top: 30px; margin-bottom: 35px; color: #444; font-size: 0.9rem; text-align: justify; line-height: 1.6;">⭐ Esta guía informativa ha sido redactada, revisada y validada por Rafael Jiménez Sánchez, Intermediario Profesional de Seguros autorizado y certificado ante la Comisión Nacional de Seguros y Fianzas (<strong>CNSF</strong>). Operando bajo las Cédulas Oficiales Tipo A1 y Tipo B con números de registro H382035 y Y415335, respectivamente. Tu tranquilidad, salud y patrimonio están respaldados bajo el marco regulatorio del sector asegurador en México.</p>
+            <div class="benefit-row reverse">
+                <div class="benefit-text">
+                    <h3>2. Protección familiar desde el primer día</h3>
+                    <p>Tu plan no solo te protege a ti en el futuro: también protege financieramente hoy a quienes dependen de ti.</p>
+                    <ul>
+                        <li><strong>Protección por fallecimiento:</strong> si llegaras a faltar antes de tu jubilación, tus beneficiarios reciben la suma asegurada contratada.</li>
+                    </ul>
+                </div>
+                <div class="benefit-media">
+                    <img src="/imagenes/padre-indemnizacion.webp" width="720" height="540" loading="lazy" decoding="async" alt="Asesora entregando a una mujer el cheque de la indemnización de su seguro" onerror="this.remove()">
+                </div>
+            </div>
 
-                <div style="margin-top: 35px; padding: 22px; background-color: #f8f9fa; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center;">
-                    <h3 style="margin: 0 0 10px 0; color: #2a5298; font-size: 1.25rem;">📬 ¿Deseas calcular tu pensión proyectada y tu deducibilidad?</h3>
-                    <p style="margin: 0 0 18px 0; font-size: 0.95rem; color: #475569;">Te preparamos un cálculo exacto de acuerdo con tu edad e ingresos.</p>
-                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;">
-                        <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20me%20interesa%20planear%20mi%20retiro%20con%20un%20PPR" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 10px 16px; background-color: #25D366; color: white; border-radius: 6px; text-decoration: none; font-weight: bold;">📲 Enviar WhatsApp</a>
-                        <a href="/contacto-form/" style="display: inline-block; padding: 10px 16px; background-color: #2a5298; color: white; border-radius: 6px; text-decoration: none; font-weight: bold;">📩 Solicitar Asesoría</a>
+            <div class="benefit-row">
+                <div class="benefit-text">
+                    <h3>3. Protección ante invalidez total y permanente</h3>
+                    <p>Si un accidente o enfermedad te impide seguir trabajando, tu plan de retiro sigue adelante.</p>
+                    <ul>
+                        <li><strong>Exención de pagos:</strong> la aseguradora absorbe las primas restantes y tu fondo sigue creciendo hasta tu retiro, para entregártelo a los 65 años.</li>
+                        <li><strong>Pago anticipado:</strong> recibes liquidez inmediata con la suma asegurada de invalidez total y permanente, para adaptarte a tu nueva etapa.</li>
+                    </ul>
+                </div>
+                <div class="benefit-media">
+                    <img src="/imagenes/padre-incapacidad.webp" width="720" height="540" loading="lazy" decoding="async" alt="Persona en silla de ruedas entregando su póliza a un asesor de seguros" onerror="this.remove()">
+                </div>
+            </div>
+
+            <div class="benefit-row reverse">
+                <div class="benefit-text">
+                    <h3>4. Ahorro en UDIS o en dólares</h3>
+                    <p>Eliges la moneda de tu plan para proteger el valor de tu ahorro en el tiempo.</p>
+                    <ul>
+                        <li><strong>UDIS:</strong> unidad que se actualiza con la inflación, para que tu ahorro conserve su poder de compra.</li>
+                        <li><strong>Dólares:</strong> una alternativa para diversificar tu patrimonio frente al tipo de cambio.</li>
+                    </ul>
+                </div>
+                <div class="benefit-media panel">
+                    <h4>¿Cuál te conviene?</h4>
+                    <div class="panel-opt"><b>🇲🇽 UDIS</b><span>Si tus gastos futuros serán en pesos y quieres protegerte de la inflación.</span></div>
+                    <div class="panel-opt"><b>💵 Dólares</b><span>Si buscas diversificar o tienes metas ligadas al dólar.</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 5. BENEFICIO FISCAL + CALCULADORA ===== -->
+    <section id="calculadora">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">Beneficio fiscal 2026</span>
+                <h2>Ahorra para tu retiro y paga menos ISR</h2>
+                <p>Las aportaciones a tu PPR son deducibles en tu declaración anual. Calcula en segundos cuánto podrías recuperar.</p>
+            </div>
+
+            <div class="tax-grid">
+                <div class="tax-summary">
+                    <h3>Lo que necesitas saber</h3>
+                    <div class="big-number">$213,973.20</div>
+                    <div class="big-label">Monto máximo deducible al año en 2026 (5 UMAA anuales)</div>
+                    <ul>
+                        <li>📌 Deduces lo <strong>menor</strong> entre el <strong>10% de tus ingresos acumulables</strong> del año y <strong>5 UMA anuales</strong>.</li>
+                       <li>🧾 Se aplica en tu declaración anual (abril del año siguiente).</li>
+                        <li>⚠️ Si retiras antes de cumplir los requisitos del plan, el monto se acumula a tus ingresos y se retiene ISR.</li>
+                    </ul>
+                    <div class="example">
                     </div>
                 </div>
+            </div>
 
-                <div style="text-align: center; margin-top: 30px;">
-                    <a href="/" class="back-to-top" style="background-color: #1a1a2e; margin-right: 15px;">🏠 Ir al Menú Principal</a>
-                    <a href="/productos-vida/" class="back-to-top">Volver a Vida y Salud</a>
+            <details class="legal">
+                <summary>📖 Detalle normativo para quien quiere profundizar</summary>
+                <div class="legal-body">
+                    <p><strong>Artículo 151, fracción V, LISR.</strong> Las personas físicas residentes en México pueden deducir las aportaciones complementarias de retiro a la subcuenta de aportaciones voluntarias y las aportaciones a planes personales de retiro, hasta por un monto que no exceda del 10% de sus ingresos acumulables del ejercicio, sin que dichas aportaciones excedan del equivalente a 5 veces el valor anual de la UMA. Los planes deben tener como objetivo el retiro a partir de los 65 años, o en casos de invalidez o incapacidad para realizar un trabajo personal remunerado conforme a las leyes de seguridad social.</p>
+                    <p><strong>Valor de la UMA 2026.</strong> Diario: $117.31; anual: $42,794.64 (vigente desde el 1 de febrero de 2026, INEGI). Tope de 5 UMA anuales: $213,973.20.</p>
+                    <p><strong>Tope global de deducciones personales.</strong> El último párrafo del artículo 151 establece un límite general para las deducciones personales, del cual quedan excluidas las aportaciones de la fracción V. Por eso tu PPR se suma a tus otras deducciones, como gastos médicos o colegiaturas.</p>
+                    <p><strong>Artículo 185 LISR.</strong> Existe un estímulo distinto para cuentas personales especiales para el ahorro y ciertos seguros con planes de retiro, deducible hasta $152,000 al año, con reglas propias: lo deducido se acumula cuando se retira. Te explicamos cuál esquema conviene a tu caso.</p>
+                    </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ===== 6. COMPARATIVO ===== -->
+    <section class="compare">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">Comparativo</span>
+                <h2>¿Por qué un PPR y no solo una cuenta de ahorro?</h2>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr><th>Característica</th><th class="ppr">PPR</th><th>Cuenta de ahorro o inversión tradicional</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Deducible en tu declaración anual</td><td class="ppr">✔ Sí, art. 151 y 185 LISR</td><td>✘ No</td></tr>
+                        <tr><td>Protección por fallecimiento</td><td class="ppr">✔ Suma asegurada para tus beneficiarios</td><td>✘ Solo el saldo acumulado</td></tr>
+                        <tr><td>Protección por invalidez total y permanente</td><td class="ppr">✔ Exención de pagos y pago anticipado</td><td>✘ No</td></tr>
+                        <tr><td>Protección contra inflación o tipo de cambio</td><td class="ppr">✔ UDIS o dólares</td><td>Depende del instrumento</td></tr>
+                        <tr><td>Disciplina de ahorro a largo plazo</td><td class="ppr">✔ Plan con meta y aportación definidas</td><td>Fácil de gastar antes de tiempo</td></tr>
+                        <tr><td>Asesoría y seguimiento</td><td class="ppr">✔ Acompañamiento personal</td><td>Por tu cuenta</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 7. PARA QUIÉN ===== -->
+    <section>
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">¿Es para ti?</span>
+                <h2>Un plan para cada etapa</h2>
+            </div>
+            <div class="profiles">
+                <div class="profile">
+                    <h3>De 30 a 44 años</h3>
+                    <p>Tienes el tiempo a tu favor. Con aportaciones moderadas construyes un fondo sólido y proteges a tu familia mientras crecen tus responsabilidades.</p>
                 </div>
+                <div class="profile">
+                    <h3>De 45 años en adelante</h3>
+                    <p>Es momento de acelerar. Diseñamos un plan con la aportación que realmente necesitas para llegar a tu meta y aprovechar al máximo la deducción.</p>
+                </div>
+                <div class="profile">
+                    <h3>Profesionistas, independientes y empresarios</h3>
+                    <p>Si tu pensión no reflejará tu ingreso real, un PPR te da un retiro propio y un beneficio fiscal que se nota en tu declaración.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 8. PREGUNTAS FRECUENTES ===== -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">Preguntas frecuentes</span>
+                <h2>Resolvemos tus dudas</h2>
+            </div>
+            <div class="faq-list">
+                <details>
+                    <summary>¿Cuánto puedo deducir de mi PPR en 2026?</summary>
+                    <div class="answer">Lo menor entre el 10% de tus ingresos acumulables del año y 5 UMA anuales, que en 2026 equivalen a $213,973.20 (art. 151, fracc. V, LISR), depende esto de tu regimen fiscal.</div>
+                </details>
+                <details>
+                    <summary>¿La deducción del PPR entra en el tope general de deducciones personales?</summary>
+                    <div class="answer">No. Las aportaciones de la fracción V están excluidas del límite global del artículo 151, por lo que se suman a tus demás deducciones personales.</div>
+                </details>
+                <details>
+                    <summary>Soy asalariado, ¿también puedo deducir?</summary>
+                    <div class="answer">Sí. Aunque tu empresa te retenga ISR cada mes, puedes presentar tu declaración anual para aplicar la deducción y, en su caso, obtener saldo a favor.</div>
+                </details>
+                <details>
+                    <summary>¿Cuándo recibo el beneficio fiscal?</summary>
+                    <div class="answer">Al presentar tu declaración anual, normalmente en abril del año siguiente. Necesitas la constancia que emite la institución por tus aportaciones del año.</div>
+                </details>
+                <details>
+                    <summary>¿Qué pasa si retiro mi dinero antes de los 65 años?</summary>
+                    <div class="answer">Si retiras sin cumplir los requisitos del plan, el monto se considera ingreso acumulable del ejercicio y se retiene ISR del 20% como pago provisional (art. 145 LISR). Por eso es importante definir una aportación que puedas sostener.</div>
+                </details>
+                <details>
+                    <summary>¿Qué pasa con mi plan si fallezco?</summary>
+                    <div class="answer">Tus beneficiarios reciben la suma asegurada por fallecimiento contratada. Así tu familia queda protegida aunque no hayas completado tu plan.</div>
+                </details>
+                <details>
+                    <summary>¿Cuánto cuesta la asesoría en JH Seguros?</summary>
+                    <div class="answer">Nada. Te preparamos sin costo una proyección de tu fondo al retiro y de tu deducción, de acuerdo con tu edad e ingresos.</div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 9. CREDENCIAL + CTA FINAL ===== -->
+    <section>
+        <div class="container">
+            <div class="credential">
+                <img src="/rafael-perfil.jpg" alt="Rafael Jiménez Sánchez" width="64" height="64" loading="lazy" onerror="this.remove()">
+                <p>⭐ Esta guía informativa ha sido redactada, revisada y validada por <strong>Rafael Jiménez Sánchez</strong>, Intermediario Profesional de Seguros autorizado y certificado ante la Comisión Nacional de Seguros y Fianzas (<strong>CNSF</strong>). Operando bajo las Cédulas Oficiales Tipo A1 y Tipo B con números de registro H382035 y Y415335, respectivamente. Tu tranquilidad, salud y patrimonio están respaldados bajo el marco regulatorio del sector asegurador en México.</p>
+            </div>
+
+            <div class="final-cta">
+                <h2>Empieza hoy el retiro que quieres mañana</h2>
+                <p>Te preparamos una proyección de tu pensión y de tu deducción fiscal, de acuerdo con tu edad e ingresos. Sin costo y sin compromiso.</p>
+                <div class="hero-ctas">
+                    <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20me%20interesa%20planear%20mi%20retiro%20con%20un%20PPR" class="btn btn-wa js-wa" data-origen="cta_final" target="_blank" rel="noopener noreferrer">📲 Hablar por WhatsApp</a>
+                    <a href="/contacto-form/" class="btn btn-ghost">📩 Solicitar asesoría</a>
+                </div>
+            </div>
+
+            <div class="nav-bottom">
+                <a href="/" class="back-to-top dark">🏠 Ir al Menú Principal</a>
+                <a href="/productos-vida/" class="back-to-top">Volver a Vida y Salud</a>
             </div>
         </div>
     </section>
@@ -142,6 +567,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // ----- Menú móvil -----
             const btn = document.getElementById('menuToggle');
             const overlay = document.getElementById('menuOverlay');
             const backdrop = document.getElementById('menuBackdrop');
@@ -149,7 +575,7 @@
                 if (!overlay || !backdrop || !btn) return;
                 overlay.classList.toggle('open');
                 backdrop.classList.toggle('open');
-                btn.innerHTML = overlay.classList.contains('open') 
+                btn.innerHTML = overlay.classList.contains('open')
                     ? '<svg viewBox="0 0 24 24" style="width:24px;height:24px;fill:currentColor;"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>'
                     : '<svg viewBox="0 0 24 24" style="width:24px;height:24px;fill:currentColor;"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>';
             }
@@ -157,6 +583,69 @@
                 btn.addEventListener('click', toggleMenu);
                 backdrop.addEventListener('click', toggleMenu);
             }
+
+            // ----- Medición de clics a WhatsApp (GA4) -----
+            document.querySelectorAll('.js-wa').forEach(function(a) {
+                a.addEventListener('click', function() {
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'contacto_whatsapp', { pagina: 'ppr', origen: a.dataset.origen || '' });
+                    }
+                });
+            });
+
+            // ----- Calculadora de deducción PPR -----
+            // Tarifa anual art. 152 LISR 2026: [límite inferior, cuota fija, % excedente]
+            const TARIFA_2026 = [
+                [0.01, 0, 1.92], [10135.12, 194.59, 6.40], [86022.12, 5051.37, 10.88],
+                [151176.20, 12140.13, 16.00], [175735.67, 16069.64, 17.92], [210403.70, 22282.14, 21.36],
+                [424353.98, 67981.92, 23.52], [668840.15, 125485.07, 30.00], [1276925.99, 307910.81, 32.00],
+                [1702567.98, 444116.23, 34.00], [5107703.93, 1601862.46, 35.00]
+            ];
+            const TOPE_UMA = 213973.20; // 5 UMA anuales 2026
+
+            function isrAnual(base) {
+                if (base <= 0) return 0;
+                let fila = TARIFA_2026[0];
+                for (const f of TARIFA_2026) { if (base >= f[0]) fila = f; }
+                return fila[1] + (base - fila[0]) * fila[2] / 100;
+            }
+            const mxn = n => n.toLocaleString('es-MX', { style: 'currency', currency: 'MXN', maximumFractionDigits: 0 });
+            const leer = el => parseFloat(String(el.value).replace(/[^\d.]/g, '')) || 0;
+
+            const inIngreso = document.getElementById('ingreso');
+            const inAport = document.getElementById('aportacion');
+            const waCalc = document.getElementById('calcWa');
+
+            function calcular() {
+                const ingresoAnual = leer(inIngreso) * 12;
+                const aportAnual = leer(inAport) * 12;
+                const tope = Math.min(ingresoAnual * 0.10, TOPE_UMA);
+                const deducible = Math.min(aportAnual, tope);
+                const ahorro = isrAnual(ingresoAnual) - isrAnual(ingresoAnual - deducible);
+
+                document.getElementById('rTope').textContent = mxn(tope);
+                document.getElementById('rDeducible').textContent = mxn(deducible);
+                document.getElementById('rAhorro').textContent = mxn(ahorro);
+                document.getElementById('rAnual').textContent = mxn(aportAnual);
+                document.getElementById('rNeto').textContent = mxn(Math.max(aportAnual - ahorro, 0));
+
+                // Mensaje de WhatsApp con los datos de la calculadora
+                const texto = 'Hola Rafael, usé la calculadora de PPR. Ingreso mensual: ' + mxn(leer(inIngreso)) +
+                    ', aportación mensual: ' + mxn(leer(inAport)) + ', ahorro estimado de ISR: ' + mxn(ahorro) +
+                    ' al año. Me gustaría un cálculo exacto.';
+                waCalc.href = 'https://wa.me/528343117556?text=' + encodeURIComponent(texto);
+            }
+
+            function formatear(e) {
+                const n = leer(e.target);
+                e.target.value = n ? n.toLocaleString('es-MX', { maximumFractionDigits: 0 }) : '';
+                calcular();
+            }
+
+            [inIngreso, inAport].forEach(function(el) {
+                el.addEventListener('input', formatear);
+            });
+            calcular();
         });
     </script>
 </body>
