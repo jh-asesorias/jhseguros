@@ -137,7 +137,7 @@
         .panel-opt span { font-size: 0.92rem; color: rgba(255,255,255,0.85); }
 
         /* ===== Beneficio fiscal + calculadora ===== */
-        .tax-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 2rem; align-items: start; }
+        .tax-grid { display: grid; grid-template-columns: minmax(0, 680px); justify-content: center; gap: 2rem; align-items: start; }
         .tax-summary { background: #fff; border-radius: 16px; padding: 2rem; box-shadow: var(--sombra); }
         .tax-summary h3 { font-size: 1.3rem; margin-bottom: 1rem; }
         .big-number { font-family: 'Montserrat', sans-serif; font-size: 2.1rem; font-weight: 800; color: var(--morado-700); line-height: 1.1; }
@@ -166,7 +166,7 @@
         .calc-note { font-size: 0.78rem; color: rgba(255,255,255,0.7); margin-top: 1rem; }
         .calc .btn { width: 100%; }
 
-        details.legal { margin-top: 2rem; background: #fff; border: 1px solid var(--borde); border-radius: 12px; padding: 0 1.4rem; }
+        details.legal { max-width: 680px; margin: 2rem auto 0; background: #fff; border: 1px solid var(--borde); border-radius: 12px; padding: 0 1.4rem; }
         details.legal summary { cursor: pointer; padding: 1.1rem 0; font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--azul-800); }
         details.legal .legal-body { padding-bottom: 1.3rem; font-size: 0.94rem; color: var(--texto-suave); }
         details.legal .legal-body p { margin-bottom: 0.8rem; }
@@ -174,8 +174,8 @@
 
         /* ===== Comparativo ===== */
         .compare { background: #fff; }
-        .table-wrap { overflow-x: auto; border-radius: 14px; box-shadow: var(--sombra); }
-        table { width: 100%; border-collapse: collapse; background: #fff; min-width: 560px; }
+        .table-wrap { overflow-x: auto; border-radius: 14px; box-shadow: var(--sombra); max-width: 760px; margin: 0 auto; }
+        table { width: 100%; border-collapse: collapse; background: #fff; min-width: 0; }
         th, td { padding: 1rem 1.1rem; text-align: left; border-bottom: 1px solid var(--borde); font-size: 0.96rem; }
         thead th { background: var(--azul-800); color: #fff; font-family: 'Montserrat', sans-serif; }
         thead th.ppr { background: var(--morado-700); }
@@ -336,7 +336,7 @@
                 </div>
                 <div class="step">
                     <h3>Te retiras a los 65 años</h3>
-                    <p>Recibes tu fondo en una sola exhibición o como renta mensual. Mientras tanto, tu y tu familia esta protegida.</p>
+                    <p>Recibes tu fondo en una sola exhibición o como renta mensual. Mientras tanto, tú y tu familia están protegidos.</p>
                 </div>
             </div>
         </div>
@@ -419,21 +419,19 @@
             <div class="section-head">
                 <span class="eyebrow">Beneficio fiscal 2026</span>
                 <h2>Ahorra para tu retiro y paga menos ISR</h2>
-                <p>Las aportaciones a tu PPR son deducibles en tu declaración anual. Calcula en segundos cuánto podrías recuperar.</p>
+                <p>Las aportaciones a tu PPR son deducibles en tu declaración anual. Te preparamos sin costo una proyección personalizada de cuánto podrías recuperar.</p>
             </div>
 
             <div class="tax-grid">
                 <div class="tax-summary">
                     <h3>Lo que necesitas saber</h3>
                     <div class="big-number">$213,973.20</div>
-                    <div class="big-label">Monto máximo deducible al año en 2026 (5 UMAA anuales)</div>
+                    <div class="big-label">Monto máximo deducible al año en 2026 (5 UMA anuales)</div>
                     <ul>
                         <li>📌 Deduces lo <strong>menor</strong> entre el <strong>10% de tus ingresos acumulables</strong> del año y <strong>5 UMA anuales</strong>.</li>
-                       <li>🧾 Se aplica en tu declaración anual (abril del año siguiente).</li>
+                        <li>🧾 Se aplica en tu declaración anual (abril del año siguiente).</li>
                         <li>⚠️ Si retiras antes de cumplir los requisitos del plan, el monto se acumula a tus ingresos y se retiene ISR.</li>
                     </ul>
-                    <div class="example">
-                    </div>
                 </div>
             </div>
 
@@ -453,21 +451,20 @@
     <section class="compare">
         <div class="container">
             <div class="section-head">
-                <span class="eyebrow">Comparativo</span>
-                <h2>¿Por qué un PPR y no solo una cuenta de ahorro?</h2>
+                <h2>¿Por qué un Plan Personal para el Retio (PPR)?</h2>
             </div>
             <div class="table-wrap">
                 <table>
                     <thead>
-                        <tr><th>Característica</th><th class="ppr">PPR</th><th>Cuenta de ahorro o inversión tradicional</th></tr>
+                        <tr><th>Característica</th><th class="ppr">PPR</th></tr>
                     </thead>
                     <tbody>
-                        <tr><td>Deducible en tu declaración anual</td><td class="ppr">✔ Sí, art. 151 y 185 LISR</td><td>✘ No</td></tr>
-                        <tr><td>Protección por fallecimiento</td><td class="ppr">✔ Suma asegurada para tus beneficiarios</td><td>✘ Solo el saldo acumulado</td></tr>
-                        <tr><td>Protección por invalidez total y permanente</td><td class="ppr">✔ Exención de pagos y pago anticipado</td><td>✘ No</td></tr>
-                        <tr><td>Protección contra inflación o tipo de cambio</td><td class="ppr">✔ UDIS o dólares</td><td>Depende del instrumento</td></tr>
-                        <tr><td>Disciplina de ahorro a largo plazo</td><td class="ppr">✔ Plan con meta y aportación definidas</td><td>Fácil de gastar antes de tiempo</td></tr>
-                        <tr><td>Asesoría y seguimiento</td><td class="ppr">✔ Acompañamiento personal</td><td>Por tu cuenta</td></tr>
+                        <tr><td>Deducible en tu declaración anual</td><td class="ppr">✔ Sí, art. 151 y 185 LISR</td></tr>
+                        <tr><td>Protección por fallecimiento</td><td class="ppr">✔ Suma asegurada para tus beneficiarios</td></tr>
+                        <tr><td>Protección por invalidez total y permanente</td><td class="ppr">✔ Exención de pagos y pago anticipado</td></tr>
+                        <tr><td>Protección contra inflación o tipo de cambio</td><td class="ppr">✔ UDIS o dólares</td></tr>
+                        <tr><td>Disciplina de ahorro a largo plazo</td><td class="ppr">✔ Plan con meta y aportación definidas</td></tr>
+                        <tr><td>Asesoría y seguimiento</td><td class="ppr">✔ Acompañamiento personal</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -508,7 +505,7 @@
             <div class="faq-list">
                 <details>
                     <summary>¿Cuánto puedo deducir de mi PPR en 2026?</summary>
-                    <div class="answer">Lo menor entre el 10% de tus ingresos acumulables del año y 5 UMA anuales, que en 2026 equivalen a $213,973.20 (art. 151, fracc. V, LISR), depende esto de tu regimen fiscal.</div>
+                    <div class="answer">Lo menor entre el 10% de tus ingresos acumulables del año y 5 UMA anuales, que en 2026 equivalen a $213,973.20 (art. 151, fracc. V, LISR); esto depende de tu régimen fiscal.</div>
                 </details>
                 <details>
                     <summary>¿La deducción del PPR entra en el tope general de deducciones personales?</summary>
@@ -642,10 +639,13 @@
                 calcular();
             }
 
-            [inIngreso, inAport].forEach(function(el) {
-                el.addEventListener('input', formatear);
-            });
-            calcular();
+            // La calculadora solo corre si existen sus campos en la página
+            if (inIngreso && inAport && waCalc) {
+                [inIngreso, inAport].forEach(function(el) {
+                    el.addEventListener('input', formatear);
+                });
+                calcular();
+            }
         });
     </script>
 </body>
