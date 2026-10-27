@@ -44,5 +44,44 @@
     <p class="jh-avisos">
         <a href="/privacidad/">🔒 Aviso de Privacidad</a>
         <a href="/reserva-datos.pdf" target="_blank" rel="noopener noreferrer">📄 Política de Reserva de Datos (ARCO)</a>
-    </p>
+        </p>
 </footer>
+
+<!-- ============================================================
+     CONVERSIÓN GOOGLE ADS: "Clic WhatsApp"
+     Cuenta como prospecto cada clic en un botón de WhatsApp
+     (wa.me o api.whatsapp.com) o en un enlace de llamada (tel:).
+     Funciona en todas las páginas porque este pie de página
+     se incluye en todo el sitio.
+     ============================================================ -->
+<script>
+    (function () {
+        // Código de la conversión "Clic WhatsApp" en Google Ads
+        var ADS_SEND_TO = 'AW-18520948891/1R--CLS_9asdEJuBvf9E';
+
+        // Escucha los clics en toda la página (incluye botones que se agreguen después)
+        document.addEventListener('click', function (e) {
+            // Busca el enlace que recibió el clic (aunque se pulse el ícono o el texto interno)
+            var enlace = e.target.closest ? e.target.closest('a[href]') : null;
+            if (!enlace) return;
+
+            var destino = enlace.getAttribute('href') || '';
+            var esWhatsApp = destino.indexOf('wa.me') > -1 || destino.indexOf('api.whatsapp.com') > -1;
+            var esLlamada = destino.indexOf('tel:') === 0;
+
+            // Si no es WhatsApp ni llamada, no hace nada
+            if (!esWhatsApp && !esLlamada) return;
+
+            // Si la etiqueta de Google no cargó (bloqueador de anuncios), no marca error
+            if (typeof gtag !== 'function') return;
+
+            // Envía la conversión a Google Ads
+            gtag('event', 'conversion', {
+                'send_to': ADS_SEND_TO,
+                'value': 1.0,
+                'currency': 'MXN',
+                'transport_type': 'beacon' // asegura el envío aunque se abra WhatsApp de inmediato
+            });
+        });
+    })();
+</script>
