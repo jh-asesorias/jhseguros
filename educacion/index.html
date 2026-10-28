@@ -113,8 +113,8 @@
     </style>
     <style>
         /* Iconos de línea en lugar de emojis (Lucide, licencia ISC; WhatsApp, Facebook e Instagram: logotipos oficiales) */
-        .jh-i { display: inline-block; width: 1.1em; height: 1.1em; margin-right: 0.35em; vertical-align: -0.18em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
-        .jh-solo { display: inline-block; width: 0.85em; height: 0.85em; color: #6c4bc4; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; vertical-align: middle; }
+        svg.jh-i { display: inline-block; width: 1.1em; height: 1.1em; margin-right: 0.35em; vertical-align: -0.18em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+        svg.jh-solo { display: inline-block; width: 0.85em; height: 0.85em; color: #6c4bc4; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; vertical-align: middle; }
         .jh-solo + .jh-solo { margin-left: 0.25em; }
         .ico .jh-solo { width: 20px; height: 20px; color: inherit; }
         svg.jh-fill { fill: currentColor; stroke: none; }
@@ -255,13 +255,7 @@
                 <p class="note">¿Qué te conviene? Depende de la edad de tu hijo, la moneda que prefieras y el monto de tu meta. Te presento la opción más adecuada para tu caso, sin compromiso.</p>
 
                 <!-- 7. CTA principal (después de resolver dudas) -->
-                <div class="cta-box" id="contacto-cta">
-                    <h3><svg class="jh-i" viewBox="0 0 24 24" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" /> <rect x="2" y="4" width="20" height="16" rx="2" /></svg>¿Cuánto necesitará tu hijo para la universidad?</h3>
-                    <p>Calculamos su meta de ahorro según su edad actual y te presento las opciones en una asesoría personalizada.</p>
-                    <div class="cta-row">
-                        <a href="/contacto-form/" class="btn-form" data-track="form_cta"><svg class="jh-i" viewBox="0 0 24 24" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" /> <rect x="2" y="4" width="20" height="16" rx="2" /></svg>Solicitar Asesoría</a>
-                    </div>
-                </div>
+                {% include contacto-cta.html titulo="¿Cuánto necesitará tu hijo para la universidad?" texto="Calculamos su meta de ahorro según su edad actual y te presento las opciones en una asesoría personalizada." wa="https://wa.me/528343117556?text=Hola%20Rafael,%20me%20interesa%20asegurar%20la%20universidad%20de%20mis%20hijos%20con%20un%20seguro%20educativo" %}
 
                 <!-- 8. Respaldo profesional -->
                 <p class="trust"><svg class="jh-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" /> <path d="m16 9-5.5 5.5L8 12" /></svg>Esta guía informativa ha sido redactada, revisada y validada por Rafael Jiménez Sánchez, Intermediario Profesional de Seguros autorizado y certificado ante la Comisión Nacional de Seguros y Fianzas (<strong>CNSF</strong>). Operando bajo las Cédulas Oficiales Tipo A1 y Tipo B con números de registro H382035 y Y415335, respectivamente. Tu tranquilidad, salud y patrimonio están respaldados bajo el marco regulatorio del sector asegurador en México.</p>
