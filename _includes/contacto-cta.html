@@ -1,0 +1,37 @@
+<!-- =========================================================
+     CAJA DE CONTACTO ÚNICA DE JH SEGUROS
+     Mismo diseño en todas las páginas; cada página manda sus propios textos:
+       titulo = encabezado de la caja
+       texto  = párrafo debajo del encabezado
+       wa     = enlace completo de WhatsApp con su mensaje prellenado
+       puntos = (opcional) frases cortas separadas por |
+     Para cambiar el diseño en todo el sitio, se edita SOLO este archivo.
+     ========================================================= -->
+<style>
+    .jh-cta { max-width: 960px; margin: 38px auto 0; padding: 24px; background: linear-gradient(135deg, #1e3c72, #2a5298); border-radius: 10px; text-align: center; color: #fff; font-family: 'Open Sans', sans-serif; }
+    .jh-cta .jh-cta-titulo { font-family: 'Montserrat', sans-serif; font-size: 1.3rem; font-weight: 700; line-height: 1.3; color: #fff; margin: 0 0 8px; }
+    .jh-cta .jh-cta-texto { color: #e2e8f0; font-size: 1rem; line-height: 1.6; text-align: center; margin: 0 0 18px; }
+    .jh-cta .jh-cta-puntos { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 20px; list-style: none; margin: 0 0 18px; padding: 0; color: #e2e8f0; font-size: 0.95rem; }
+    .jh-cta .jh-cta-puntos li { display: inline-flex; align-items: center; gap: 6px; }
+    .jh-cta .jh-cta-botones { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+    .jh-cta a.jh-cta-btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; border-radius: 6px; font-family: 'Open Sans', sans-serif; font-size: 1rem; font-weight: 700; line-height: 1.2; text-decoration: none; }
+    .jh-cta a.jh-cta-wa { background: #25D366; color: #fff; }
+    .jh-cta a.jh-cta-form { background: #fff; color: #1e3c72; }
+    .jh-cta svg.jh-cta-ico { width: 18px; height: 18px; flex-shrink: 0; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .jh-cta svg.jh-cta-ico.jh-cta-relleno { fill: currentColor; stroke: none; }
+    .jh-cta .jh-cta-titulo svg.jh-cta-ico { width: 1.1em; height: 1.1em; margin-right: 0.35em; vertical-align: -0.18em; }
+</style>
+<div class="jh-cta">
+    <h3 class="jh-cta-titulo"><svg class="jh-cta-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" /><rect x="2" y="4" width="20" height="16" rx="2" /></svg>{{ include.titulo }}</h3>
+    <p class="jh-cta-texto">{{ include.texto }}</p>
+    {% if include.puntos %}
+    <ul class="jh-cta-puntos">
+        {% assign puntos = include.puntos | split: "|" %}
+        {% for punto in puntos %}<li><svg class="jh-cta-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>{{ punto }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+    <div class="jh-cta-botones">
+        <a href="{{ include.wa }}" target="_blank" rel="noopener noreferrer" class="jh-cta-btn jh-cta-wa js-wa" data-origen="cta_final" data-track="cta_whatsapp"><svg class="jh-cta-ico jh-cta-relleno" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.081-.1.115-.173.171-.292.059-.115.03-.217-.015-.307-.045-.1-.445-1.074-.61-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>Enviar WhatsApp</a>
+        <a href="/contacto-form/" class="jh-cta-btn jh-cta-form" data-track="form_cta"><svg class="jh-cta-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" /><rect x="2" y="4" width="20" height="16" rx="2" /></svg>Solicitar asesoría</a>
+    </div>
+</div>

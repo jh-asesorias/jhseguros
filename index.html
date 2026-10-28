@@ -446,8 +446,8 @@ details[open] summary ~ * {
     </style>
     <style>
         /* Iconos de línea en lugar de emojis (Lucide, licencia ISC; WhatsApp, Facebook e Instagram: logotipos oficiales) */
-        .jh-i { display: inline-block; width: 1.1em; height: 1.1em; margin-right: 0.35em; vertical-align: -0.18em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
-        .jh-solo { display: inline-block; width: 0.85em; height: 0.85em; color: #6c4bc4; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; vertical-align: middle; }
+        svg.jh-i { display: inline-block; width: 1.1em; height: 1.1em; margin-right: 0.35em; vertical-align: -0.18em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+        svg.jh-solo { display: inline-block; width: 0.85em; height: 0.85em; color: #6c4bc4; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; vertical-align: middle; }
         .jh-solo + .jh-solo { margin-left: 0.25em; }
         .ico .jh-solo { width: 20px; height: 20px; color: inherit; }
         svg.jh-fill { fill: currentColor; stroke: none; }
@@ -600,19 +600,9 @@ details[open] summary ~ * {
             </div>
         </section>
         
-    <section class="cta-section">
-    <div class="container">
-        <h2 class="cta-title">¿Listo para proteger tu futuro?</h2>
-        <p class="cta-sub">Asesoría profesional personalizada</p>
-        <p class="cta-text">Cuéntame tu caso y te presento opciones de aseguradoras autorizadas, comparadas de forma clara y sin compromiso.</p>
-        <ul class="cta-lista">
-            <li><span class="ico"><svg class="jh-solo" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><div><strong>Asesoría sin costo</strong><span class="txt">Revisamos juntos lo que necesitas.</span></div></li>
-            <li><span class="ico"><svg class="jh-solo" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /> <circle cx="12" cy="10" r="3" /></svg></span><div><strong>Atención en todo México</strong><span class="txt">Por WhatsApp, llamada o videollamada.</span></div></li>
-        </ul>
-        <a href="https://wa.me/528343117556?text=Hola%20Rafael%2C%20quiero%20informaci%C3%B3n%20sobre%20seguros" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #1fa855; color: #fff; padding: 14px 26px; border-radius: 8px; font-weight: 700; text-decoration: none; margin: 6px;">Escribirme por WhatsApp</a>
-        <a href="/contacto-form/" style="display: inline-block; background: #fff; color: #1e3c72; padding: 14px 26px; border-radius: 8px; font-weight: 700; text-decoration: none; margin: 6px;">Solicitar asesoría</a>
-    </div>
-</section>
+    <section class="cta-section-jh" style="padding: 1rem 20px 3rem;">
+        {% include contacto-cta.html titulo="¿Listo para proteger tu futuro?" texto="Cuéntame tu caso y te presento opciones de aseguradoras autorizadas, comparadas de forma clara y sin compromiso." puntos="Asesoría sin costo|Atención en todo México" wa="https://wa.me/528343117556?text=Hola%20Rafael%2C%20quiero%20informaci%C3%B3n%20sobre%20seguros" %}
+    </section>
                 
          <!-- FOOTER CON RUTAS ABSOLUTAS -->
     {% include footer.html %}
