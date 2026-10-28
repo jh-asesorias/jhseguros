@@ -4,7 +4,7 @@
     <!-- 1. RECEPCIÓN PRINCIPAL -->
     <url>
         <loc>https://jhseguros.mx/</loc>
-        <lastmod>2026-10-16</lastmod>
+        <lastmod>2026-10-27</lastmod>
         <priority>1.0</priority>
     </url>
 
@@ -26,8 +26,7 @@
 
     <!-- 4. OFICINAS DE SOPORTE, CONFIANZA Y LEGAL -->
     <url><loc>https://jhseguros.mx/hospitales/</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
-    <url><loc>https://jhseguros.mx/autorizaciones/</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
-    <url><loc>https://jhseguros.mx/certificaciones/</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
+    <url><loc>https://jhseguros.mx/autorizaciones/</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority></url>
     <url><loc>https://jhseguros.mx/redes/</loc><lastmod>2026-10-16</lastmod><priority>0.6</priority></url>
     <url><loc>https://jhseguros.mx/contacto-form/</loc><lastmod>2026-10-16</lastmod><priority>0.8</priority></url>
     <url><loc>https://jhseguros.mx/privacidad/</loc><lastmod>2026-10-16</lastmod><priority>0.5</priority></url>
