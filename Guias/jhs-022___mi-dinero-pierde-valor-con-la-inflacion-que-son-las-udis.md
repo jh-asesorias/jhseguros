@@ -7,10 +7,10 @@ aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-022___mi-dinero-pierde-valor-con-la-inflacion-que-son-las-udis/
 ---
 
-🪙 Sí, el dinero en pesos nominales guardado debajo del colchón o en cuentas bancarias tradicionales sin generar rendimientos superiores al nivel inflacionario, **pierde poder adquisitivo de forma constante y silenciosa** con el paso de los años.
+Sí, el dinero en pesos nominales guardado debajo del colchón o en cuentas bancarias tradicionales sin generar rendimientos superiores al nivel inflacionario, **pierde poder adquisitivo de forma constante y silenciosa** con el paso de los años.
 
-🛡️ Lo que hoy te alcanza para cubrir una meta financiera, en 15 o 20 años requerirá una cantidad de pesos mucho mayor debido a la subida natural y continua de los precios de bienes y servicios.
+Lo que hoy te alcanza para cubrir una meta financiera, en 15 o 20 años requerirá una cantidad de pesos mucho mayor debido a la subida natural y continua de los precios de bienes y servicios.
 
-📈 Las **UDIS (Unidades de Inversión)** resuelven estructuralmente este problema al actualizar su valor diario conforme a la inflación dictada por el Banco de México. Si contratas un plan de ahorro en UDIS con un rendimiento adicional (por ejemplo, UDIS + 1% de rendimiento anual pactado), tu dinero no solo preservará su poder de compra original, sino que experimentará un crecimiento real en términos de capacidad de consumo a largo plazo.
+Las **UDIS (Unidades de Inversión)** resuelven estructuralmente este problema al actualizar su valor diario conforme a la inflación dictada por el Banco de México. Si contratas un plan de ahorro en UDIS con un rendimiento adicional (por ejemplo, UDIS + 1% de rendimiento anual pactado), tu dinero no solo preservará su poder de compra original, sino que experimentará un crecimiento real en términos de capacidad de consumo a largo plazo.
 
-🛡️ A diferencia de ahorrar en dólares (que te protege de devaluaciones cambiarias pero sigue sufriendo la inflación propia de Estados Unidos), las UDIS se actualizan conforme a la inflación interna de México.
+A diferencia de ahorrar en dólares (que te protege de devaluaciones cambiarias pero sigue sufriendo la inflación propia de Estados Unidos), las UDIS se actualizan conforme a la inflación interna de México.

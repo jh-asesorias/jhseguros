@@ -249,6 +249,14 @@
             .calc, .tax-summary { padding: 1.5rem; }
         }
     </style>
+    <style>
+        /* Iconos de línea en lugar de emojis (Lucide, licencia ISC; WhatsApp, Facebook e Instagram: logotipos oficiales) */
+        .jh-i { display: inline-block; width: 1.1em; height: 1.1em; margin-right: 0.35em; vertical-align: -0.18em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+        .jh-solo { display: inline-block; width: 0.85em; height: 0.85em; color: #6c4bc4; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; vertical-align: middle; }
+        .jh-solo + .jh-solo { margin-left: 0.25em; }
+        .ico .jh-solo { width: 20px; height: 20px; color: inherit; }
+        svg.jh-fill { fill: currentColor; stroke: none; }
+    </style>
 </head>
 <body>
     <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20me%20interesa%20planear%20mi%20retiro%20con%20un%20PPR" class="whatsapp-float js-wa" data-origen="flotante" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
@@ -284,9 +292,9 @@
                     </a>
                 </div>
                 <div class="chips">
-                    <span class="chip">✔ Deducible conforme a los arts. 151 y 185 LISR</span>
-                    <span class="chip">✔ Ahorro en UDIS o dólares</span>
-                    <span class="chip">✔ Protección por invalidez y fallecimiento</span>
+                    <span class="chip"><svg class="jh-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Deducible conforme a los arts. 151 y 185 LISR</span>
+                    <span class="chip"><svg class="jh-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Ahorro en UDIS o dólares</span>
+                    <span class="chip"><svg class="jh-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Protección por invalidez y fallecimiento</span>
                 </div>
             </div>
         </div>
@@ -302,12 +310,12 @@
             </div>
             <div class="problem-grid">
                 <div class="problem-card">
-                    <div class="icon">⏳</div>
+                    <div class="icon"><svg class="jh-solo" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 22h14" /> <path d="M5 2h14" /> <path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22" /> <path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2" /></svg></div>
                     <h3>El tiempo es tu mejor aliado</h3>
                     <p>A los 35 años tienes tres décadas para construir tu fondo. A los 50, el plan se diseña distinto, pero sigue siendo posible.</p>
                 </div>
                 <div class="problem-card">
-                    <div class="icon">💼</div>
+                    <div class="icon"><svg class="jh-solo" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" /> <rect width="20" height="14" x="2" y="6" rx="2" /></svg></div>
                     <h3>Independientes y empresarios</h3>
                     <p>Si no cotizas o cotizas por debajo de tu ingreso real, tu pensión será menor. Un PPR te da control sobre tu retiro.</p>
                 </div>
@@ -363,9 +371,9 @@
                 </div>
                 <div class="benefit-media panel">
                     <h4>Opciones de entrega a los 65 años</h4>
-                    <div class="panel-opt"><b>💰 Pago único</b><span>Todo tu capital, en una sola exhibición.</span></div>
-                    <div class="panel-opt"><b>📅 Renta vitalicia</b><span>Un ingreso mensual mientras vivas.</span></div>
-                    <div class="panel-opt"><b>🗓️ Plazo determinado</b><span>Pagos durante los años que elijas.</span></div>
+                    <div class="panel-opt"><b><svg class="jh-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1" /> <path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4" /></svg>Pago único</b><span>Todo tu capital, en una sola exhibición.</span></div>
+                    <div class="panel-opt"><b><svg class="jh-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v3" /> <path d="M16 2v3" /> <rect x="3" y="3" width="18" height="18" rx="2" /> <path d="M3 9h18" /></svg>Renta vitalicia</b><span>Un ingreso mensual mientras vivas.</span></div>
+                    <div class="panel-opt"><b><svg class="jh-i" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" /> <path d="M16 2v3" /> <path d="M3 9h18" /> <path d="M8 2v3" /> <path d="M17 13h-6" /> <path d="M13 17H7" /> <path d="M7 13h.01" /> <path d="M17 17h.01" /></svg>Plazo determinado</b><span>Pagos durante los años que elijas.</span></div>
                 </div>
             </div>
 
@@ -407,8 +415,8 @@
                 </div>
                 <div class="benefit-media panel">
                     <h4>¿Cuál te conviene?</h4>
-                    <div class="panel-opt"><b>🇲🇽 UDIS</b><span>Si tus gastos futuros serán en pesos y quieres protegerte de la inflación.</span></div>
-                    <div class="panel-opt"><b>💵 Dólares</b><span>Si buscas diversificar o tienes metas ligadas al dólar.</span></div>
+                    <div class="panel-opt"><b><svg class="jh-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.744 17.736a6 6 0 1 1-7.48-7.48" /> <path d="M15 6h1v4" /> <path d="m6.134 14.768.866-.5 2 3.464" /> <circle cx="16" cy="8" r="6" /></svg>UDIS</b><span>Si tus gastos futuros serán en pesos y quieres protegerte de la inflación.</span></div>
+                    <div class="panel-opt"><b><svg class="jh-i" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="12" x="2" y="6" rx="2" /> <circle cx="12" cy="12" r="2" /> <path d="M6 12h.01M18 12h.01" /></svg>Dólares</b><span>Si buscas diversificar o tienes metas ligadas al dólar.</span></div>
                 </div>
             </div>
         </div>
@@ -429,15 +437,15 @@
                     <div class="big-number">$213,973.20</div>
                     <div class="big-label">Monto máximo deducible al año en 2026 (5 UMA anuales)</div>
                     <ul>
-                        <li>📌 Deduces lo <strong>menor</strong> entre el <strong>10% de tus ingresos acumulables</strong> del año y <strong>5 UMA anuales</strong>.</li>
-                        <li>🧾 Se aplica en tu declaración anual (abril del año siguiente).</li>
-                        <li>⚠️ Si retiras antes de cumplir los requisitos del plan, el monto se acumula a tus ingresos y se retiene ISR.</li>
+                        <li><svg class="jh-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17v5" /> <path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z" /></svg>Deduces lo <strong>menor</strong> entre el <strong>10% de tus ingresos acumulables</strong> del año y <strong>5 UMA anuales</strong>.</li>
+                        <li><svg class="jh-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 16H8" /> <path d="M14 8H8" /> <path d="M16 12H8" /> <path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z" /></svg>Se aplica en tu declaración anual (abril del año siguiente).</li>
+                        <li><svg class="jh-i" viewBox="0 0 24 24" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /> <path d="M12 9v4" /> <path d="M12 17h.01" /></svg>Si retiras antes de cumplir los requisitos del plan, el monto se acumula a tus ingresos y se retiene ISR.</li>
                     </ul>
                 </div>
             </div>
 
             <details class="legal">
-                <summary>📖 Detalle normativo para quien quiere profundizar</summary>
+                <summary><svg class="jh-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v16" /> <path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z" /></svg>Detalle normativo para quien quiere profundizar</summary>
                 <div class="legal-body">
                     <p><strong>Artículo 151, fracción V, LISR.</strong> Las personas físicas residentes en México pueden deducir las aportaciones complementarias de retiro a la subcuenta de aportaciones voluntarias y las aportaciones a planes personales de retiro, hasta por un monto que no exceda del 10% de sus ingresos acumulables del ejercicio, sin que dichas aportaciones excedan del equivalente a 5 veces el valor anual de la UMA. Los planes deben tener como objetivo el retiro a partir de los 65 años, o en casos de invalidez o incapacidad para realizar un trabajo personal remunerado conforme a las leyes de seguridad social.</p>
                     <p><strong>Valor de la UMA 2026.</strong> Diario: $117.31; anual: $42,794.64 (vigente desde el 1 de febrero de 2026, INEGI). Tope de 5 UMA anuales: $213,973.20.</p>
@@ -460,12 +468,12 @@
                         <tr><th>Característica</th><th class="ppr">PPR</th></tr>
                     </thead>
                     <tbody>
-                        <tr><td>Deducible en tu declaración anual</td><td class="ppr">✔ Sí, art. 151 y 185 LISR</td></tr>
-                        <tr><td>Protección por fallecimiento</td><td class="ppr">✔ Suma asegurada para tus beneficiarios</td></tr>
-                        <tr><td>Protección por invalidez total y permanente</td><td class="ppr">✔ Exención de pagos y pago anticipado</td></tr>
-                        <tr><td>Protección contra inflación o tipo de cambio</td><td class="ppr">✔ UDIS o dólares</td></tr>
-                        <tr><td>Disciplina de ahorro a largo plazo</td><td class="ppr">✔ Plan con meta y aportación definidas</td></tr>
-                        <tr><td>Asesoría y seguimiento</td><td class="ppr">✔ Acompañamiento personal</td></tr>
+                        <tr><td>Deducible en tu declaración anual</td><td class="ppr"><svg class="jh-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Sí, art. 151 y 185 LISR</td></tr>
+                        <tr><td>Protección por fallecimiento</td><td class="ppr"><svg class="jh-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Suma asegurada para tus beneficiarios</td></tr>
+                        <tr><td>Protección por invalidez total y permanente</td><td class="ppr"><svg class="jh-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Exención de pagos y pago anticipado</td></tr>
+                        <tr><td>Protección contra inflación o tipo de cambio</td><td class="ppr"><svg class="jh-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>UDIS o dólares</td></tr>
+                        <tr><td>Disciplina de ahorro a largo plazo</td><td class="ppr"><svg class="jh-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Plan con meta y aportación definidas</td></tr>
+                        <tr><td>Asesoría y seguimiento</td><td class="ppr"><svg class="jh-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Acompañamiento personal</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -541,20 +549,20 @@
         <div class="container">
             <div class="credential">
                 <img src="/rafael-perfil.jpg" alt="Rafael Jiménez Sánchez" width="64" height="64" loading="lazy" onerror="this.remove()">
-                <p>⭐ Esta guía informativa ha sido redactada, revisada y validada por <strong>Rafael Jiménez Sánchez</strong>, Intermediario Profesional de Seguros autorizado y certificado ante la Comisión Nacional de Seguros y Fianzas (<strong>CNSF</strong>). Operando bajo las Cédulas Oficiales Tipo A1 y Tipo B con números de registro H382035 y Y415335, respectivamente. Tu tranquilidad, salud y patrimonio están respaldados bajo el marco regulatorio del sector asegurador en México.</p>
+                <p><svg class="jh-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" /> <path d="m16 9-5.5 5.5L8 12" /></svg>Esta guía informativa ha sido redactada, revisada y validada por <strong>Rafael Jiménez Sánchez</strong>, Intermediario Profesional de Seguros autorizado y certificado ante la Comisión Nacional de Seguros y Fianzas (<strong>CNSF</strong>). Operando bajo las Cédulas Oficiales Tipo A1 y Tipo B con números de registro H382035 y Y415335, respectivamente. Tu tranquilidad, salud y patrimonio están respaldados bajo el marco regulatorio del sector asegurador en México.</p>
             </div>
 
             <div class="final-cta">
                 <h2>Empieza hoy el retiro que quieres mañana</h2>
                 <p>Te preparamos una proyección de tu pensión y de tu deducción fiscal, de acuerdo con tu edad e ingresos. Sin costo y sin compromiso.</p>
                 <div class="hero-ctas">
-                    <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20me%20interesa%20planear%20mi%20retiro%20con%20un%20PPR" class="btn btn-wa js-wa" data-origen="cta_final" target="_blank" rel="noopener noreferrer">📲 Hablar por WhatsApp</a>
-                    <a href="/contacto-form/" class="btn btn-ghost">📩 Solicitar asesoría</a>
+                    <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20me%20interesa%20planear%20mi%20retiro%20con%20un%20PPR" class="btn btn-wa js-wa" data-origen="cta_final" target="_blank" rel="noopener noreferrer"><svg class="jh-i jh-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.081-.1.115-.173.171-.292.059-.115.03-.217-.015-.307-.045-.1-.445-1.074-.61-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>Hablar por WhatsApp</a>
+                    <a href="/contacto-form/" class="btn btn-ghost"><svg class="jh-i" viewBox="0 0 24 24" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" /> <rect x="2" y="4" width="20" height="16" rx="2" /></svg>Solicitar asesoría</a>
                 </div>
             </div>
 
             <div class="nav-bottom">
-                <a href="/" class="back-to-top dark">🏠 Ir al Menú Principal</a>
+                <a href="/" class="back-to-top dark">Ir al Menú Principal</a>
                 <a href="/productos-vida/" class="back-to-top">Volver a Vida y Salud</a>
             </div>
         </div>

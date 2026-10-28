@@ -7,13 +7,13 @@ aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-033___el-dinero-es-exclusivo-para-pagar-la-colegiatura/
 ---
 
-📈 No, en la práctica general del mercado mexicano, el dinero acumulado al vencimiento de un seguro educativo (como *SeguBeca*) se entrega al contratante o al beneficiario como un **capital libre de uso**, sin candados contractuales ni la obligación legal de comprobar o facturar gastos ante la aseguradora.
+No, en la práctica general del mercado mexicano, el dinero acumulado al vencimiento de un seguro educativo (como *SeguBeca*) se entrega al contratante o al beneficiario como un **capital libre de uso**, sin candados contractuales ni la obligación legal de comprobar o facturar gastos ante la aseguradora.
 
-📚 Aunque su diseño original busca financiar la educación superior, el capital se puede destinar de forma flexible a cualquier necesidad del estudiante, como:
+Aunque su diseño original busca financiar la educación superior, el capital se puede destinar de forma flexible a cualquier necesidad del estudiante, como:
 
 *   Inscripciones y mensualidades de la universidad.
 *   Compra de libros, herramientas o equipo de cómputo.
 *   Gastos de manutención, hospedaje y transporte (útil si tu hijo estudia de foráneo).
 *   Programas de intercambio académico internacional o maestrías en el extranjero.
 
-💡 Incluso, si las necesidades cambian (por ejemplo, si el joven obtiene una beca completa por mérito propio en una universidad pública o privada), el capital queda disponible para otros propósitos patrimoniales de la familia, o bien, puede servir como el capital semilla para impulsar su primer emprendimiento comercial.
+Incluso, si las necesidades cambian (por ejemplo, si el joven obtiene una beca completa por mérito propio en una universidad pública o privada), el capital queda disponible para otros propósitos patrimoniales de la familia, o bien, puede servir como el capital semilla para impulsar su primer emprendimiento comercial.

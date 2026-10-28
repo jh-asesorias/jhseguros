@@ -17,9 +17,9 @@ Para contrarrestar esta vulnerabilidad, la póliza integra una salvaguarda contr
 
 Si el contratante titular sufre un despido injustificado, la aseguradora interviene directamente en auxilio del plan:
 
-* 🛡️ **Meses amparados:** La aseguradora absorbe el pago de la prima total hasta por un periodo máximo de **3 meses continuos por evento**.
-* ⏳ **Oxígeno financiero:** Esta ventana permite al tutor reorganizar su economía o recolocarse laboralmente sin la presión de una cuota inmediata.
-* 📈 **El fondo no se detiene:** Durante ese lapso, el fondo educativo continúa madurando con normalidad, protegiendo sus rendimientos indexados en UDIS o Dólares y manteniendo plenamente activas las coberturas de vida e invalidez del titular.
+* **Meses amparados:** La aseguradora absorbe el pago de la prima total hasta por un periodo máximo de **3 meses continuos por evento**.
+* **Oxígeno financiero:** Esta ventana permite al tutor reorganizar su economía o recolocarse laboralmente sin la presión de una cuota inmediata.
+* **El fondo no se detiene:** Durante ese lapso, el fondo educativo continúa madurando con normalidad, protegiendo sus rendimientos indexados en UDIS o Dólares y manteniendo plenamente activas las coberturas de vida e invalidez del titular.
 
 ---
 
@@ -27,15 +27,15 @@ Si el contratante titular sufre un despido injustificado, la aseguradora intervi
 
 Para que el área dictaminadora apruebe la exención temporal, deben acreditarse los siguientes puntos:
 
-* 💼 **Naturaleza del cese:** Debe tratarse estrictamente de un despido injustificado dentro del régimen formal asalariado (empleo subordinado). Quedan fuera las renuncias voluntarias y el vencimiento natural de contratos por obra o tiempo determinado.
-* 📄 **Documentación oficial:** Se debe entregar al agente la constancia formal de rescisión laboral, finiquito o convenio sancionado ante la autoridad laboral competente, junto con identificación oficial vigente.
-* 🛡️ **Continuidad de coberturas:** El menor y el contratante permanecen protegidos con las mismas condiciones y sumas aseguradas estipuladas en el contrato maestro.
+* **Naturaleza del cese:** Debe tratarse estrictamente de un despido injustificado dentro del régimen formal asalariado (empleo subordinado). Quedan fuera las renuncias voluntarias y el vencimiento natural de contratos por obra o tiempo determinado.
+* **Documentación oficial:** Se debe entregar al agente la constancia formal de rescisión laboral, finiquito o convenio sancionado ante la autoridad laboral competente, junto con identificación oficial vigente.
+* **Continuidad de coberturas:** El menor y el contratante permanecen protegidos con las mismas condiciones y sumas aseguradas estipuladas en el contrato maestro.
 
 ---
 
 ### 3. Exclusiones y consideraciones técnicas
 
-* 🚫 **Profesionales independientes y empresarios:** Este beneficio no opera para profesionistas independientes (freelance), contratistas por honorarios ni accionistas/socios de empresas, ya que ante la ley no existe la figura de subordinación laboral ni despido injustificado.
-* 📊 **Límite de eventos:** Para preservar la estabilidad financiera del fondo mutual, el beneficio cuenta con un límite de activaciones definido en la carátula de póliza y las condiciones generales.
+* **Profesionales independientes y empresarios:** Este beneficio no opera para profesionistas independientes (freelance), contratistas por honorarios ni accionistas/socios de empresas, ya que ante la ley no existe la figura de subordinación laboral ni despido injustificado.
+* **Límite de eventos:** Para preservar la estabilidad financiera del fondo mutual, el beneficio cuenta con un límite de activaciones definido en la carátula de póliza y las condiciones generales.
 
 *(Nota: Los requisitos específicos y periodos de gracia se rigen estrictamente por las condiciones generales del plan SeguBeca contratado).*
