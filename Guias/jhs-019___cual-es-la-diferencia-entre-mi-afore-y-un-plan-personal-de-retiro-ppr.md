@@ -7,10 +7,10 @@ aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-019___cual-es-la-diferencia-entre-mi-afore-y-un-plan-personal-de-retiro-ppr/
 ---
 
-🛡️ Aunque ambos buscan el mismo fin (proteger tu futuro financiero para la vejez), operan bajo esquemas complementarios muy distintos.
+Aunque ambos buscan el mismo fin (proteger tu futuro financiero para la vejez), operan bajo esquemas complementarios muy distintos.
 
-🐷 **La AFORE** es un sistema de ahorro obligatorio para trabajadores formales asalariados cuyas aportaciones están predeterminadas por ley en función del salario con el que estés registrado en el **IMSS**/ISSSTE e invertidas en SIEFORES reguladas estrictamente por el gobierno.
+**La AFORE** es un sistema de ahorro obligatorio para trabajadores formales asalariados cuyas aportaciones están predeterminadas por ley en función del salario con el que estés registrado en el **IMSS**/ISSSTE e invertidas en SIEFORES reguladas estrictamente por el gobierno.
 
-🏢 En cambio, el **PPR (Plan Personal de Retiro)** es un instrumento 100% voluntario y flexible, disponible para cualquier persona (incluyendo *freelancers*, emprendedores y empresarios), donde tú decides el monto, la frecuencia y la estrategia de inversión mediante contratos privados con la aseguradora.
+En cambio, el **PPR (Plan Personal de Retiro)** es un instrumento 100% voluntario y flexible, disponible para cualquier persona (incluyendo *freelancers*, emprendedores y empresarios), donde tú decides el monto, la frecuencia y la estrategia de inversión mediante contratos privados con la aseguradora.
 
-🤲 Además, el **PPR** suele incluir un seguro de vida con suma asegurada por fallecimiento e invalidez, y ofrece mayores alternativas y flexibilidad de inversión (Dólares, UDIS, portafolios dinámicos), sirviendo como un complemento para potenciar los ingresos de tu jubilación.
+Además, el **PPR** suele incluir un seguro de vida con suma asegurada por fallecimiento e invalidez, y ofrece mayores alternativas y flexibilidad de inversión (Dólares, UDIS, portafolios dinámicos), sirviendo como un complemento para potenciar los ingresos de tu jubilación.

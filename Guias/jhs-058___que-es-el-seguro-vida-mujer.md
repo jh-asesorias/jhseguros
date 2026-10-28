@@ -7,12 +7,12 @@ aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-058___que-es-el-seguro-vida-mujer/
 ---
 
-🐷 **Vida Mujer** es un seguro de vida dotal (con un esquema de ahorro integrado) diseñado por **Seguros Monterrey New York Life** para brindar un apoyo real e integral a la mujer. Estructurado bajo un horizonte de 20 años, combina de forma sólida la protección financiera por fallecimiento con coberturas especializadas en la salud femenina.
+**Vida Mujer** es un seguro de vida dotal (con un esquema de ahorro integrado) diseñado por **Seguros Monterrey New York Life** para brindar un apoyo real e integral a la mujer. Estructurado bajo un horizonte de 20 años, combina de forma sólida la protección financiera por fallecimiento con coberturas especializadas en la salud femenina.
 
-📈 **Ventajas financieras (Ahorro y Supervivencia):**
+**Ventajas financieras (Ahorro y Supervivencia):**
 Para proteger tu dinero contra la inflación, este plan puede ser contratado en monedas fuertes como UDIS o Dólares (USD). Si la asegurada sobrevive al término del plazo de 20 años, el plan prevé la entrega en vida de forma acumulada del **115% de la suma asegurada** base.
 
-👶 **Coberturas y beneficios clave del plan:**
+**Coberturas y beneficios clave del plan:**
 Este producto es integral y ampara múltiples escenarios a través de sus cláusulas:
 *   **Ahorro y Vida:** Cobertura de Supervivencia, Fallecimiento y Anticipo por Momentos de Vida (entregas parciales programadas).
 *   **Salud y Maternidad:** Apoyo en Vida (AV), Protección por Cáncer Femenino (PCF), y Protección por Complicaciones del Embarazo y Padecimientos Femeninos (PEP).
