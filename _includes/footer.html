@@ -49,7 +49,24 @@
 </footer>
 
 <!-- ============================================================
-     CONVERSIÓN GOOGLE ADS: "Clic WhatsApp"
+     PÍXEL DE META "JH Seguros Meta" (ID 983463104185333)
+     Registra las visitas (PageView) en todo el sitio para medir
+     y crear públicos de remarketing en Facebook e Instagram.
+     Está declarado en /privacidad/cookies/.
+     ============================================================ -->
+<script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '983463104185333');
+    fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=983463104185333&ev=PageView&noscript=1"></noscript>
+
+<!-- ============================================================
+     CONVERSIONES: "Clic WhatsApp" (Google Ads) y "Contact" (Meta)
      Cuenta como prospecto cada clic en un botón de WhatsApp
      (wa.me o api.whatsapp.com) o en un enlace de llamada (tel:).
      Funciona en todas las páginas porque este pie de página
@@ -72,6 +89,11 @@
 
             // Si no es WhatsApp ni llamada, no hace nada
             if (!esWhatsApp && !esLlamada) return;
+
+            // Meta: registra el evento "Contact" (clic en WhatsApp o en llamar)
+            if (typeof fbq === 'function') {
+                fbq('track', 'Contact');
+            }
 
             // Si la etiqueta de Google no cargó (bloqueador de anuncios), no marca error
             if (typeof gtag !== 'function') return;
