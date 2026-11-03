@@ -4,39 +4,39 @@
     <!-- 1. RECEPCIÓN PRINCIPAL -->
     <url>
         <loc>https://jhseguros.mx/</loc>
-        <lastmod>2026-10-27</lastmod>
+        <lastmod>2026-11-02</lastmod>
         <priority>1.0</priority>
     </url>
 
     <!-- 2. OFICINAS DE PRODUCTO (MÓDULOS PRINCIPALES) -->
-    <url><loc>https://jhseguros.mx/danos/</loc><lastmod>2026-10-16</lastmod><priority>0.9</priority></url>
-    <url><loc>https://jhseguros.mx/productos-vida/</loc><lastmod>2026-10-16</lastmod><priority>0.9</priority></url>
+    <url><loc>https://jhseguros.mx/danos/</loc><lastmod>2026-10-27</lastmod><priority>0.9</priority></url>
+    <url><loc>https://jhseguros.mx/productos-vida/</loc><lastmod>2026-10-27</lastmod><priority>0.9</priority></url>
 
     <!-- 3. OFICINAS DE PRODUCTO ESPECÍFICO -->
-    <url><loc>https://jhseguros.mx/auto/</loc><lastmod>2026-10-16</lastmod><priority>0.8</priority></url>
-    <url><loc>https://jhseguros.mx/gmm/</loc><lastmod>2026-10-16</lastmod><priority>0.8</priority></url>
-    <url><loc>https://jhseguros.mx/vida/</loc><lastmod>2026-10-16</lastmod><priority>0.8</priority></url>
-    <url><loc>https://jhseguros.mx/ppr/</loc><lastmod>2026-10-16</lastmod><priority>0.8</priority></url>
-    <url><loc>https://jhseguros.mx/mujer/</loc><lastmod>2026-10-16</lastmod><priority>0.8</priority></url>
-    <url><loc>https://jhseguros.mx/educacion/</loc><lastmod>2026-10-16</lastmod><priority>0.8</priority></url>
-    <url><loc>https://jhseguros.mx/embarcaciones/</loc><lastmod>2026-10-16</lastmod><priority>0.8</priority></url>
-    <url><loc>https://jhseguros.mx/hogar/</loc><lastmod>2026-10-16</lastmod><priority>0.8</priority></url>
-    <url><loc>https://jhseguros.mx/negocio/</loc><lastmod>2026-10-16</lastmod><priority>0.8</priority></url>
-    <url><loc>https://jhseguros.mx/rc/</loc><lastmod>2026-10-16</lastmod><priority>0.8</priority></url>
+    <url><loc>https://jhseguros.mx/auto/</loc><lastmod>2026-11-02</lastmod><priority>0.8</priority></url>
+    <url><loc>https://jhseguros.mx/gmm/</loc><lastmod>2026-10-27</lastmod><priority>0.8</priority></url>
+    <url><loc>https://jhseguros.mx/vida/</loc><lastmod>2026-10-27</lastmod><priority>0.8</priority></url>
+    <url><loc>https://jhseguros.mx/ppr/</loc><lastmod>2026-10-27</lastmod><priority>0.8</priority></url>
+    <url><loc>https://jhseguros.mx/mujer/</loc><lastmod>2026-10-27</lastmod><priority>0.8</priority></url>
+    <url><loc>https://jhseguros.mx/educacion/</loc><lastmod>2026-10-27</lastmod><priority>0.8</priority></url>
+    <url><loc>https://jhseguros.mx/embarcaciones/</loc><lastmod>2026-10-27</lastmod><priority>0.8</priority></url>
+    <url><loc>https://jhseguros.mx/hogar/</loc><lastmod>2026-10-27</lastmod><priority>0.8</priority></url>
+    <url><loc>https://jhseguros.mx/negocio/</loc><lastmod>2026-10-27</lastmod><priority>0.8</priority></url>
+    <url><loc>https://jhseguros.mx/rc/</loc><lastmod>2026-10-27</lastmod><priority>0.8</priority></url>
 
     <!-- 4. OFICINAS DE SOPORTE, CONFIANZA Y LEGAL -->
     <url><loc>https://jhseguros.mx/hospitales/</loc><lastmod>2026-11-03</lastmod><priority>0.7</priority></url>
     <url><loc>https://jhseguros.mx/autorizaciones/</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority></url>
-    <url><loc>https://jhseguros.mx/redes/</loc><lastmod>2026-10-16</lastmod><priority>0.6</priority></url>
-    <url><loc>https://jhseguros.mx/contacto-form/</loc><lastmod>2026-10-16</lastmod><priority>0.8</priority></url>
+    <url><loc>https://jhseguros.mx/redes/</loc><lastmod>2026-10-27</lastmod><priority>0.6</priority></url>
+    <url><loc>https://jhseguros.mx/contacto-form/</loc><lastmod>2026-10-27</lastmod><priority>0.8</priority></url>
     <url><loc>https://jhseguros.mx/privacidad/</loc><lastmod>2026-10-27</lastmod><priority>0.5</priority></url>
     <url><loc>https://jhseguros.mx/privacidad/cookies/</loc><lastmod>2026-10-27</lastmod><priority>0.3</priority></url>
-    <url><loc>https://jhseguros.mx/vision/</loc><lastmod>2026-10-16</lastmod><priority>0.5</priority></url>
-    <url><loc>https://jhseguros.mx/mision/</loc><lastmod>2026-10-16</lastmod><priority>0.5</priority></url>
-    <url><loc>https://jhseguros.mx/valor/</loc><lastmod>2026-10-16</lastmod><priority>0.5</priority></url>
+    <url><loc>https://jhseguros.mx/vision/</loc><lastmod>2026-10-27</lastmod><priority>0.5</priority></url>
+    <url><loc>https://jhseguros.mx/mision/</loc><lastmod>2026-10-27</lastmod><priority>0.5</priority></url>
+    <url><loc>https://jhseguros.mx/valor/</loc><lastmod>2026-10-27</lastmod><priority>0.5</priority></url>
 
     <!-- 5. RECEPCIÓN DE LA BIBLIOTECA -->
-    <url><loc>https://jhseguros.mx/recursos/</loc><lastmod>2026-10-16</lastmod><priority>0.8</priority></url>
+    <url><loc>https://jhseguros.mx/recursos/</loc><lastmod>2026-10-27</lastmod><priority>0.8</priority></url>
 
     <!-- 6. CONSULTORIOS DE CONOCIMIENTO (LAS 58 GUÍAS) -->
     <url><loc>https://jhseguros.mx/recursos/jhs-001___que-significa-sgmm-o-sgmmi/</loc><lastmod>2026-10-16</lastmod><priority>0.7</priority></url>
