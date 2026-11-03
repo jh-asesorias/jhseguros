@@ -1,1 +1,143 @@
+---
+---
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios | Rafael Jiménez Sánchez · JH Seguros</title>
+    <meta name="description" content="Diagnóstico patrimonial personalizado, seguros de vida, gastos médicos y retiro, planes personales para el retiro deducibles, seguros de autos y de hogar. Atención en todo México.">
+    <link rel="canonical" href="https://jhseguros.mx/servicios/">
+    <meta name="author" content="Rafael Jiménez Sánchez">
+    <meta name="robots" content="index, follow">
 
+    <meta property="og:title" content="Servicios | JH Seguros">
+    <meta property="og:description" content="Conozco tu situación y diseño la protección que necesitas: vida, gastos médicos, retiro, autos y hogar.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jhseguros.mx/servicios/">
+    <meta property="og:image" content="https://jhseguros.mx/imagenes/og-jhseguros.png">
+
+    <link rel="icon" href="/rafael-perfil.jpg" type="image/jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3GLCDV4F8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Z3GLCDV4F8');
+      gtag('config', 'AW-18520948891');
+    </script>
+
+    <style>
+        /* ===== Paleta JH: azul + morado ===== */
+        :root {
+            --azul-900: #12264f;
+            --azul-800: #1e3c72;
+            --azul-600: #2a5298;
+            --morado-700: #4b2a85;
+            --morado-500: #6c4bc4;
+            --morado-100: #efeafb;
+            --texto: #333;
+            --texto-suave: #444;
+            --borde: #e2e8f0;
+            --sombra: 0 6px 24px rgba(18, 38, 79, 0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Open Sans', sans-serif; line-height: 1.6; color: var(--texto); background-color: #f6f7fb; }
+        .container { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; line-height: 1.25; }
+
+        /* Encabezado de la pantalla */
+        .page-hero { background: linear-gradient(135deg, var(--azul-900) 0%, var(--azul-800) 55%, var(--morado-700) 100%); color: #fff; text-align: center; padding: 3.5rem 0 3rem; }
+        .page-hero .eyebrow { display: inline-block; font-family: 'Montserrat', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #cbbcf5; margin-bottom: 0.6rem; }
+        .page-hero h1 { font-size: 2.2rem; margin-bottom: 0.8rem; }
+        .page-hero p { max-width: 720px; margin: 0 auto; font-size: 1.08rem; opacity: 0.95; }
+
+        /* Recuadros de servicios */
+        .servicios { padding: 3.5rem 0; }
+        .servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+        .servicio-card { background-color: #fff; border: 1px solid var(--borde); border-top: 4px solid var(--morado-500); border-radius: 14px; padding: 1.8rem 1.6rem; box-shadow: var(--sombra); transition: transform 0.2s, box-shadow 0.2s; }
+        .servicio-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(18, 38, 79, 0.12); }
+        .servicio-num { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%; background-color: var(--azul-800); color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.9rem; margin-right: 8px; }
+        .servicio-icono { width: 52px; height: 52px; border-radius: 12px; background-color: var(--morado-100); color: var(--morado-500); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+        .servicio-icono svg { width: 28px; height: 28px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+        .servicio-card h2 { font-size: 1.2rem; color: var(--azul-800); margin-bottom: 0.6rem; display: flex; align-items: center; }
+        .servicio-card p { color: var(--texto-suave); font-size: 1rem; }
+
+        /* Botón final */
+        .cierre { text-align: center; padding: 0 0 3.5rem; }
+        .btn-inicio { display: inline-block; background-color: var(--azul-800); color: #fff; text-decoration: none; font-family: 'Montserrat', sans-serif; font-weight: 700; padding: 0.9rem 2rem; border-radius: 30px; transition: background-color 0.2s; }
+        .btn-inicio:hover { background-color: var(--morado-700); }
+
+        @media (max-width: 600px) {
+            .page-hero h1 { font-size: 1.7rem; }
+            .servicios-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    {% include header.html %}
+
+    <!-- Encabezado -->
+    <section class="page-hero">
+        <div class="container">
+            <span class="eyebrow">Servicios</span>
+            <h1>Protección diseñada a partir de tu situación</h1>
+            <p>Primero te escucho y conozco tus necesidades; después diseñamos juntos la estrategia y la protección que mejor se adecuan a tu perfil.</p>
+        </div>
+    </section>
+
+    <!-- Recuadros de servicios -->
+    <section class="servicios">
+        <div class="container">
+            <div class="servicios-grid">
+
+                <!-- 1. Diagnóstico patrimonial -->
+                <article class="servicio-card">
+                    <div class="servicio-icono"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/><path d="M8 11h6M11 8v6"/></svg></div>
+                    <h2><span class="servicio-num">1</span>Diagnóstico Patrimonial Personalizado</h2>
+                    <p>Escuchamos, diagnosticamos y diseñamos una estrategia patrimonial de acuerdo con tu perfil, sin ventas forzadas. Obtendrás información clara e importante sobre tus finanzas.</p>
+                </article>
+
+                <!-- 2. Vida, salud y retiro -->
+                <article class="servicio-card">
+                    <div class="servicio-icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.4-9.3-9A5.3 5.3 0 0 1 12 6a5.3 5.3 0 0 1 9.3 6c-2.3 4.6-9.3 9-9.3 9z"/><path d="M12 10v5M9.5 12.5h5"/></svg></div>
+                    <h2><span class="servicio-num">2</span>Seguros de Vida, Salud y Retiro</h2>
+                    <p>Al conocerte, podemos ofrecerte y personalizar tu protección patrimonial en Vida y Gastos Médicos Mayores, con una proyección acorde al plazo contratado.</p>
+                </article>
+
+                <!-- 3. Planes para el retiro -->
+                <article class="servicio-card">
+                    <div class="servicio-icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V11M10 21V7M15 21v-8M20 21V4"/></svg></div>
+                    <h2><span class="servicio-num">3</span>Planes Personales para el Retiro</h2>
+                    <p>Diseñamos un plan de ahorro para tu retiro que puedes hacer deducible de impuestos, conforme a la Ley del Impuesto sobre la Renta.</p>
+                </article>
+
+                <!-- 4. Autos -->
+                <article class="servicio-card">
+                    <div class="servicio-icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 16h14v-4l-2-5H7l-2 5z"/><path d="M3 12h18"/><circle cx="7.5" cy="16.5" r="1.5"/><circle cx="16.5" cy="16.5" r="1.5"/></svg></div>
+                    <h2><span class="servicio-num">4</span>Seguros de Autos</h2>
+                    <p>Cotizamos, revisamos y te ofrecemos excelentes alternativas de acuerdo con las coberturas, tus inquietudes y los alcances que necesitas o deseas.</p>
+                </article>
+
+                <!-- 5. Hogar -->
+                <article class="servicio-card">
+                    <div class="servicio-icono"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></div>
+                    <h2><span class="servicio-num">5</span>Seguros de Hogar</h2>
+                    <p>Cotizamos, revisamos y te ofrecemos excelentes alternativas de acuerdo con las coberturas y tus inquietudes, para proteger el patrimonio de tu familia.</p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Regreso al inicio -->
+    <div class="cierre">
+        <a href="/" class="btn-inicio">Regresar a Inicio</a>
+    </div>
+
+    {% include footer.html %}
+</body>
+</html>
