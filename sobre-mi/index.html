@@ -72,8 +72,7 @@
         .perfil { padding: 3.5rem 0; }
         .perfil-grid { display: grid; grid-template-columns: 300px 1fr; gap: 2.5rem; align-items: start; }
         .perfil-foto { background-color: #fff; border: 1px solid var(--borde); border-radius: 16px; box-shadow: var(--sombra); aspect-ratio: 4 / 5; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-        .perfil-foto img { width: 100%; height: 100%; object-fit: cover; }
-        .perfil-foto img.logo-temporal { width: 55%; height: auto; object-fit: contain; }
+        .perfil-foto img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
         .perfil-texto { background-color: #fff; border: 1px solid var(--borde); border-left: 4px solid var(--morado-500); border-radius: 16px; box-shadow: var(--sombra); padding: 2rem 2.2rem; }
         .perfil-texto h2 { font-size: 1.4rem; color: var(--azul-800); margin-bottom: 1rem; }
         .perfil-texto p { color: var(--texto-suave); font-size: 1.05rem; margin-bottom: 1rem; text-align: justify; }
@@ -109,11 +108,9 @@
     <section class="perfil">
         <div class="container perfil-grid">
 
-            <!-- FOTO PENDIENTE: cuando tengas tu fotografía, súbela a /imagenes/ y
-                 reemplaza la línea de la imagen por:
-                 <img src="/imagenes/NOMBRE-DE-TU-FOTO.jpg" alt="Rafael Jiménez Sánchez, agente de seguros autorizado"> -->
+            <!-- Fotografía de perfil -->
             <div class="perfil-foto">
-                <img src="/imagenes/jh-seguros-logo.webp" alt="JH Seguros" class="logo-temporal">
+                <img src="/imagenes/rafael-sobre-mi.webp" alt="Rafael Jiménez Sánchez, agente de seguros autorizado" width="732" height="1032">
             </div>
 
             <div class="perfil-texto">
