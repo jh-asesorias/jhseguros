@@ -651,16 +651,17 @@
                 });
             });
 
-            // ----- Calculadora de deducción PPR -----
-            // Tarifa anual art. 152 LISR 2026: [límite inferior, cuota fija, % excedente]
+            // ----- Calculadora de ahorro fiscal PPR -----
+            // Tarifa anual art. 152 LISR 2026 (Anexo 8 RMF): [límite inferior, cuota fija, % sobre el excedente]
             const TARIFA_2026 = [
                 [0.01, 0, 1.92], [10135.12, 194.59, 6.40], [86022.12, 5051.37, 10.88],
                 [151176.20, 12140.13, 16.00], [175735.67, 16069.64, 17.92], [210403.70, 22282.14, 21.36],
                 [424353.98, 67981.92, 23.52], [668840.15, 125485.07, 30.00], [1276925.99, 307910.81, 32.00],
                 [1702567.98, 444116.23, 34.00], [5107703.93, 1601862.46, 35.00]
             ];
-            const TOPE_UMA = 213973.20; // 5 UMA anuales 2026
+            const TOPE_UMA = 213973.20; // 5 UMA anuales 2026 (el mismo monto que se muestra en la página)
 
+            // ISR anual: se busca el renglón de la tarifa, se aplica el % al excedente del límite inferior y se suma la cuota fija
             function isrAnual(base) {
                 if (base <= 0) return 0;
                 let fila = TARIFA_2026[0];
@@ -668,43 +669,71 @@
                 return fila[1] + (base - fila[0]) * fila[2] / 100;
             }
             const mxn = n => n.toLocaleString('es-MX', { style: 'currency', currency: 'MXN', maximumFractionDigits: 0 });
-            const leer = el => parseFloat(String(el.value).replace(/[^\d.]/g, '')) || 0;
+            const leer = el => parseInt(String(el.value).replace(/\D/g, ''), 10) || 0;
 
             const inIngreso = document.getElementById('ingreso');
+            const inPeriodo = document.getElementById('periodo');
             const inAport = document.getElementById('aportacion');
             const waCalc = document.getElementById('calcWa');
+            let temporizadorGA = null;
 
             function calcular() {
-                const ingresoAnual = leer(inIngreso) * 12;
-                const aportAnual = leer(inAport) * 12;
+                const ingresoCapturado = leer(inIngreso);
+                const ingresoAnual = inPeriodo.value === 'anual' ? ingresoCapturado : ingresoCapturado * 12;
+                const ingresoMensual = Math.round(ingresoAnual / 12);
+                const aportMensual = leer(inAport);
+                const aportAnual = aportMensual * 12;
+                const hayDatos = ingresoAnual > 0 && aportAnual > 0;
+
+                document.getElementById('calcVacio').hidden = hayDatos;
+                document.getElementById('calcResultado').hidden = !hayDatos;
+                if (!hayDatos) {
+                    waCalc.href = 'https://wa.me/528343117556?text=' + encodeURIComponent('Hola Rafael, usé la calculadora de PPR. Quiero mi proyección personalizada.');
+                    return;
+                }
+
+                // Art. 151 fracc. V: tope = lo menor entre 10% del ingreso anual y 5 UMA anuales
                 const tope = Math.min(ingresoAnual * 0.10, TOPE_UMA);
                 const deducible = Math.min(aportAnual, tope);
-                const ahorro = isrAnual(ingresoAnual) - isrAnual(ingresoAnual - deducible);
+                const ahorro = Math.max(isrAnual(ingresoAnual) - isrAnual(ingresoAnual - deducible), 0);
+                const porcentaje = aportAnual > 0 ? Math.round(ahorro / aportAnual * 100) : 0;
 
-                document.getElementById('rTope').textContent = mxn(tope);
                 document.getElementById('rDeducible').textContent = mxn(deducible);
+                document.getElementById('rTope').textContent = mxn(tope);
                 document.getElementById('rAhorro').textContent = mxn(ahorro);
-                document.getElementById('rAnual').textContent = mxn(aportAnual);
-                document.getElementById('rNeto').textContent = mxn(Math.max(aportAnual - ahorro, 0));
+                document.getElementById('rPorcentaje').textContent = 'Equivale a que el SAT te regrese aprox. ' + porcentaje + '% de lo que ahorras.';
+                document.getElementById('calcAviso').hidden = !(aportAnual > tope);
 
-                // Mensaje de WhatsApp con los datos de la calculadora
-                const texto = 'Hola Rafael, usé la calculadora de PPR. Ingreso mensual: ' + mxn(leer(inIngreso)) +
-                    ', aportación mensual: ' + mxn(leer(inAport)) + ', ahorro estimado de ISR: ' + mxn(ahorro) +
-                    ' al año. Me gustaría un cálculo exacto.';
+                // WhatsApp con los datos prellenados (el clic cuenta como conversión por el código del footer y por .js-wa)
+                const texto = 'Hola Rafael, usé la calculadora de PPR: ingreso mensual ' + mxn(ingresoMensual) +
+                    ', aportación mensual ' + mxn(aportMensual) + '. Quiero mi proyección personalizada.';
                 waCalc.href = 'https://wa.me/528343117556?text=' + encodeURIComponent(texto);
+
+                // GA4: evento "calculadora_ppr" cuando la persona termina de capturar (sin enviar sus cifras)
+                clearTimeout(temporizadorGA);
+                temporizadorGA = setTimeout(function() {
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'calculadora_ppr', { pagina: 'ppr', excede_tope: aportAnual > tope ? 'si' : 'no' });
+                    }
+                }, 1500);
             }
 
+            // Escribe el número con comas sin mover el cursor de lugar
             function formatear(e) {
-                const n = leer(e.target);
-                e.target.value = n ? n.toLocaleString('es-MX', { maximumFractionDigits: 0 }) : '';
+                const campo = e.target;
+                const digitosAntes = campo.value.slice(0, campo.selectionStart || 0).replace(/\D/g, '').length;
+                const n = leer(campo);
+                campo.value = n ? n.toLocaleString('es-MX', { maximumFractionDigits: 0 }) : '';
+                let pos = 0, cuenta = 0;
+                while (pos < campo.value.length && cuenta < digitosAntes) { if (/\d/.test(campo.value[pos])) cuenta++; pos++; }
+                try { campo.setSelectionRange(pos, pos); } catch (err) {}
                 calcular();
             }
 
             // La calculadora solo corre si existen sus campos en la página
-            if (inIngreso && inAport && waCalc) {
-                [inIngreso, inAport].forEach(function(el) {
-                    el.addEventListener('input', formatear);
-                });
+            if (inIngreso && inPeriodo && inAport && waCalc) {
+                [inIngreso, inAport].forEach(function(el) { el.addEventListener('input', formatear); });
+                inPeriodo.addEventListener('change', calcular);
                 calcular();
             }
         });
