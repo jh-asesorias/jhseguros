@@ -166,6 +166,18 @@
         .result.highlight b { font-size: 1.8rem; color: var(--morado-700); }
         .calc-note { font-size: 0.78rem; color: rgba(255,255,255,0.7); margin-top: 1rem; }
         .calc .btn { width: 100%; }
+        .calc-wrap { margin: 0 0 1.3rem; }
+        details.calc-det { border-color: var(--morado-500); }
+        details.calc-det summary { color: var(--morado-700); }
+        .calc .field select { width: 100%; padding: 0.85rem 1rem; border-radius: 10px; border: 0; font-size: 1.05rem; font-family: 'Open Sans', sans-serif; color: var(--texto); background: #fff; }
+        .calc .field select:focus { outline: 3px solid #a9c6ff; }
+        .calc-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .calc-aviso { background: #fff3cd; color: #5c4400; border-radius: 10px; padding: 0.8rem 1rem; font-size: 0.98rem; margin: 0 0 1rem; }
+        .calc-vacio { color: rgba(255,255,255,0.85); font-size: 1rem; margin: 1.2rem 0; }
+        .calc-nota { font-size: 0.88rem; color: rgba(255,255,255,0.8); margin-top: 1rem; line-height: 1.5; }
+        #rPorcentaje { font-size: 1rem; color: #fff; margin: 0 0 1.2rem; }
+        .calc-nota + .calc-nota { margin-top: 0.6rem; }
+        @media (max-width: 560px) { .calc-row, .calc .results { grid-template-columns: 1fr; } details.calc-det { padding: 0 0.8rem; } }
 
         details.legal { max-width: 680px; margin: 2rem auto 0; background: #fff; border: 1px solid var(--borde); border-radius: 12px; padding: 0 1.4rem; }
         details.legal summary { cursor: pointer; padding: 1.1rem 0; font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--azul-800); }
