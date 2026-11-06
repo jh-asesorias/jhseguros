@@ -445,6 +445,52 @@
                 </div>
             </div>
 
+            <!-- Simulador de ahorro fiscal (art. 151 fracc. V y 152 LISR): cerrado por defecto -->
+            <details class="legal calc-det" id="simulador">
+                <summary><svg class="jh-i" viewBox="0 0 24 24" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2" /> <line x1="8" x2="16" y1="6" y2="6" /> <line x1="16" x2="16" y1="14" y2="18" /> <path d="M16 10h.01" /> <path d="M12 10h.01" /> <path d="M8 10h.01" /> <path d="M12 14h.01" /> <path d="M8 14h.01" /> <path d="M12 18h.01" /> <path d="M8 18h.01" /></svg>Simulador de ahorro fiscal (calculadora)</summary>
+                <div class="calc-wrap">
+                <div class="calc" id="calculadoraPPR">
+                    <h3>Calcula cuánto ISR podrías recuperar</h3>
+                    <p>Escribe tu ingreso y lo que piensas aportar a tu PPR. El resultado es una estimación.</p>
+
+                    <div class="calc-row">
+                        <div class="field">
+                            <label for="ingreso">Tu ingreso bruto</label>
+                            <div class="input-wrap"><span>$</span><input type="text" id="ingreso" inputmode="numeric" autocomplete="off" placeholder="Ej. 30,000" maxlength="12"></div>
+                        </div>
+                        <div class="field">
+                            <label for="periodo">Es un ingreso</label>
+                            <select id="periodo">
+                                <option value="mensual" selected>Mensual</option>
+                                <option value="anual">Anual</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="aportacion">Aportación mensual que piensas hacer a tu PPR</label>
+                        <div class="input-wrap"><span>$</span><input type="text" id="aportacion" inputmode="numeric" autocomplete="off" placeholder="Ej. 3,000" maxlength="12"></div>
+                    </div>
+
+                    <p class="calc-vacio" id="calcVacio">Escribe tu ingreso y tu aportación para ver tu resultado.</p>
+
+                    <div id="calcResultado" hidden aria-live="polite">
+                        <div class="calc-aviso" id="calcAviso" hidden>Tu aportación supera el tope deducible; el excedente sigue ahorrando, pero no se deduce.</div>
+                        <div class="results">
+                            <div class="result"><small>Podrías deducir</small><b id="rDeducible">$0</b><small>al año</small></div>
+                            <div class="result"><small>Tope deducible que aplica</small><b id="rTope">$0</b><small>al año</small></div>
+                            <div class="result highlight"><small>Ahorro estimado de ISR</small><b id="rAhorro">$0</b><small>al año</small></div>
+                        </div>
+                        <p class="calc-nota" id="rPorcentaje"></p>
+                    </div>
+
+                    <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20us%C3%A9%20la%20calculadora%20de%20PPR.%20Quiero%20mi%20proyecci%C3%B3n%20personalizada." id="calcWa" class="btn btn-wa js-wa" data-origen="calculadora" target="_blank" rel="noopener noreferrer">Quiero mi proyección personalizada</a>
+
+                    <p class="calc-nota">La deducción de tu PPR no cuenta dentro del tope global de deducciones personales (art. 151, último párrafo, LISR).</p>
+                    <p class="calc-nota">Cálculo estimado con fines informativos, conforme a los arts. 151 fracc. V y 152 de la LISR. No considera otras deducciones ni tu situación fiscal particular. El monto final depende de tu declaración anual y de las condiciones del plan contratado.</p>
+                </div>
+                </div>
+            </details>
+
             <details class="legal">
                 <summary><svg class="jh-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v16" /> <path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z" /></svg>Detalle normativo para quien quiere profundizar</summary>
                 <div class="legal-body">
