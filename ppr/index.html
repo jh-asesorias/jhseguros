@@ -173,10 +173,15 @@
         .calc .field select:focus { outline: 3px solid #a9c6ff; }
         .calc-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
         .calc-aviso { background: #fff3cd; color: #5c4400; border-radius: 10px; padding: 0.8rem 1rem; font-size: 0.98rem; margin: 0 0 1rem; }
-        .calc-vacio { color: rgba(255,255,255,0.85); font-size: 1rem; margin: 1.2rem 0; }
+        .btn-calc { background: #fff; color: var(--morado-700); box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); margin: 0.4rem 0 1rem; }
+        .btn-calc:hover { transform: translateY(-1px); }
+        .btn-calc:focus-visible { outline: 3px solid #a9c6ff; outline-offset: 2px; }
+        .calc-vacio { background: #fff3cd; color: #5c4400; border-radius: 10px; padding: 0.7rem 1rem; font-size: 0.98rem; margin: 0 0 1rem; }
         .calc-nota { font-size: 0.88rem; color: rgba(255,255,255,0.8); margin-top: 1rem; line-height: 1.5; }
         #rPorcentaje { font-size: 1rem; color: #fff; margin: 0 0 1.2rem; }
+        #rPorcentaje:empty { display: none; }
         .calc-nota + .calc-nota { margin-top: 0.6rem; }
+        .calc-invita { color: #fff; font-size: 1.05rem; font-weight: 600; line-height: 1.45; margin: 1.6rem 0 0.9rem; }
         @media (max-width: 560px) { .calc-row, .calc .results { grid-template-columns: 1fr; } details.calc-det { padding: 0 0.8rem; } }
 
         details.legal { max-width: 680px; margin: 2rem auto 0; background: #fff; border: 1px solid var(--borde); border-radius: 12px; padding: 0 1.4rem; }
@@ -463,7 +468,7 @@
                 <div class="calc-wrap">
                 <div class="calc" id="calculadoraPPR">
                     <h3>Calcula cuánto ISR podrías recuperar</h3>
-                    <p>Escribe tu ingreso y lo que piensas aportar a tu PPR. El resultado es una estimación.</p>
+                    <p>Escribe tu ingreso y lo que piensas aportar a tu PPR y presiona "Calcular mi ahorro". El resultado es una estimación.</p>
 
                     <div class="calc-row">
                         <div class="field">
@@ -483,22 +488,24 @@
                         <div class="input-wrap"><span>$</span><input type="text" id="aportacion" inputmode="numeric" autocomplete="off" placeholder="Ej. 3,000" maxlength="12"></div>
                     </div>
 
-                    <p class="calc-vacio" id="calcVacio">Escribe tu ingreso y tu aportación para ver tu resultado.</p>
+                    <button type="button" class="btn btn-calc" id="btnCalcular">Calcular mi ahorro</button>
+                    <p class="calc-vacio" id="calcVacio" role="alert" hidden>Escribe tu ingreso y tu aportación mensual para calcular.</p>
 
-                    <div id="calcResultado" hidden aria-live="polite">
+                    <div id="calcResultado" aria-live="polite">
                         <div class="calc-aviso" id="calcAviso" hidden>Tu aportación supera el tope deducible; el excedente sigue ahorrando, pero no se deduce.</div>
                         <div class="results">
-                            <div class="result"><small>Podrías deducir</small><b id="rDeducible">$0</b><small>al año</small></div>
-                            <div class="result"><small>Tope deducible que aplica</small><b id="rTope">$0</b><small>al año</small></div>
-                            <div class="result highlight"><small>Ahorro estimado de ISR</small><b id="rAhorro">$0</b><small>al año</small></div>
+                            <div class="result"><small>Podrías deducir</small><b id="rDeducible">—</b><small>al año</small></div>
+                            <div class="result"><small>Tope deducible que aplica</small><b id="rTope">—</b><small>al año</small></div>
+                            <div class="result highlight"><small>Ahorro estimado de ISR</small><b id="rAhorro">—</b><small>al año</small></div>
                         </div>
                         <p class="calc-nota" id="rPorcentaje"></p>
                     </div>
 
-                    <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20us%C3%A9%20la%20calculadora%20de%20PPR.%20Quiero%20mi%20proyecci%C3%B3n%20personalizada." id="calcWa" class="btn btn-wa js-wa" data-origen="calculadora" target="_blank" rel="noopener noreferrer">Quiero mi proyección personalizada</a>
-
                     <p class="calc-nota">La deducción de tu PPR no cuenta dentro del tope global de deducciones personales (art. 151, último párrafo, LISR).</p>
-                    <p class="calc-nota">Cálculo estimado con fines informativos, conforme a los arts. 151 fracc. V y 152 de la LISR. No considera otras deducciones ni tu situación fiscal particular. El monto final depende de tu declaración anual y de las condiciones del plan contratado.</p>
+                    <p class="calc-nota">Cálculo estimado con fines informativos, conforme a los arts. 151 fracc. V de la LISR. No considera otras deducciones ni tu situación fiscal particular. El monto final depende de tu declaración anual y de las condiciones del plan contratado.</p>
+
+                    <p class="calc-invita">¿Quieres revisar otras deducciones a las que tienes derecho y obtener un cálculo más exacto? Te preparamos sin costo una proyección personalizada.</p>
+                    <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20us%C3%A9%20la%20calculadora%20de%20PPR.%20Quiero%20mi%20proyecci%C3%B3n%20personalizada." id="calcWa" class="btn btn-wa js-wa" data-origen="calculadora" target="_blank" rel="noopener noreferrer">Quiero mi proyección personalizada</a>
                 </div>
                 </div>
             </details>
@@ -674,29 +681,38 @@
             const inIngreso = document.getElementById('ingreso');
             const inPeriodo = document.getElementById('periodo');
             const inAport = document.getElementById('aportacion');
+            const btnCalc = document.getElementById('btnCalcular');
             const waCalc = document.getElementById('calcWa');
-            let temporizadorGA = null;
+            const TEXTO_INICIAL = '';   // Sin texto antes de calcular: el cuadro muestra "—" hasta que se presiona el botón
+            let yaCalculo = false;   // Después del primer cálculo, el resultado se actualiza solo al cambiar los datos
 
-            function calcular() {
+            function limpiarResultado() {
+                ['rDeducible', 'rTope', 'rAhorro'].forEach(function(id) { document.getElementById(id).textContent = '—'; });
+                document.getElementById('rPorcentaje').textContent = TEXTO_INICIAL;
+                document.getElementById('calcAviso').hidden = true;
+                waCalc.href = 'https://wa.me/528343117556?text=' + encodeURIComponent('Hola Rafael, usé la calculadora de PPR. Quiero mi proyección personalizada.');
+            }
+
+            // Devuelve true si había datos suficientes para calcular
+            function calcular(porBoton) {
                 const ingresoCapturado = leer(inIngreso);
                 const ingresoAnual = inPeriodo.value === 'anual' ? ingresoCapturado : ingresoCapturado * 12;
                 const ingresoMensual = Math.round(ingresoAnual / 12);
                 const aportMensual = leer(inAport);
                 const aportAnual = aportMensual * 12;
-                const hayDatos = ingresoAnual > 0 && aportAnual > 0;
 
-                document.getElementById('calcVacio').hidden = hayDatos;
-                document.getElementById('calcResultado').hidden = !hayDatos;
-                if (!hayDatos) {
-                    waCalc.href = 'https://wa.me/528343117556?text=' + encodeURIComponent('Hola Rafael, usé la calculadora de PPR. Quiero mi proyección personalizada.');
-                    return;
+                if (!(ingresoAnual > 0 && aportAnual > 0)) {
+                    document.getElementById('calcVacio').hidden = !porBoton;   // El aviso solo sale al presionar el botón
+                    limpiarResultado();
+                    return false;
                 }
+                document.getElementById('calcVacio').hidden = true;
 
                 // Art. 151 fracc. V: tope = lo menor entre 10% del ingreso anual y 5 UMA anuales
                 const tope = Math.min(ingresoAnual * 0.10, TOPE_UMA);
                 const deducible = Math.min(aportAnual, tope);
                 const ahorro = Math.max(isrAnual(ingresoAnual) - isrAnual(ingresoAnual - deducible), 0);
-                const porcentaje = aportAnual > 0 ? Math.round(ahorro / aportAnual * 100) : 0;
+                const porcentaje = Math.round(ahorro / aportAnual * 100);
 
                 document.getElementById('rDeducible').textContent = mxn(deducible);
                 document.getElementById('rTope').textContent = mxn(tope);
@@ -709,13 +725,11 @@
                     ', aportación mensual ' + mxn(aportMensual) + '. Quiero mi proyección personalizada.';
                 waCalc.href = 'https://wa.me/528343117556?text=' + encodeURIComponent(texto);
 
-                // GA4: evento "calculadora_ppr" cuando la persona termina de capturar (sin enviar sus cifras)
-                clearTimeout(temporizadorGA);
-                temporizadorGA = setTimeout(function() {
-                    if (typeof gtag === 'function') {
-                        gtag('event', 'calculadora_ppr', { pagina: 'ppr', excede_tope: aportAnual > tope ? 'si' : 'no' });
-                    }
-                }, 1500);
+                // GA4: evento "calculadora_ppr" al presionar "Calcular" (sin enviar las cifras de la persona)
+                if (porBoton && typeof gtag === 'function') {
+                    gtag('event', 'calculadora_ppr', { pagina: 'ppr', excede_tope: aportAnual > tope ? 'si' : 'no' });
+                }
+                return true;
             }
 
             // Escribe el número con comas sin mover el cursor de lugar
@@ -727,14 +741,18 @@
                 let pos = 0, cuenta = 0;
                 while (pos < campo.value.length && cuenta < digitosAntes) { if (/\d/.test(campo.value[pos])) cuenta++; pos++; }
                 try { campo.setSelectionRange(pos, pos); } catch (err) {}
-                calcular();
+                if (yaCalculo) calcular(false);
             }
 
             // La calculadora solo corre si existen sus campos en la página
-            if (inIngreso && inPeriodo && inAport && waCalc) {
-                [inIngreso, inAport].forEach(function(el) { el.addEventListener('input', formatear); });
-                inPeriodo.addEventListener('change', calcular);
-                calcular();
+            if (inIngreso && inPeriodo && inAport && btnCalc && waCalc) {
+                [inIngreso, inAport].forEach(function(el) {
+                    el.addEventListener('input', formatear);
+                    el.addEventListener('keydown', function(ev) { if (ev.key === 'Enter') { ev.preventDefault(); btnCalc.click(); } });
+                });
+                inPeriodo.addEventListener('change', function() { if (yaCalculo) calcular(false); });
+                btnCalc.addEventListener('click', function() { yaCalculo = true; calcular(true); });
+                limpiarResultado();
             }
         });
     </script>
