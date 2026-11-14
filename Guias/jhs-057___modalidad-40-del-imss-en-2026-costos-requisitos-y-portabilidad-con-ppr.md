@@ -5,6 +5,8 @@ description: "Guía sobre la Modalidad 40 del IMSS en 2026: nuevos costos, requi
 resumen: "Guía completa sobre la Modalidad 40 del IMSS en 2026. Conoce los nuevos costos de aportación, requisitos de inscripción y cómo complementarla con un PPR o Plan de Ahorro."
 aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-057___modalidad-40-del-imss-en-2026-costos-requisitos-y-estrategia-con-ppr/
+redirect_from:
+  - /recursos/jhs-057___modalidad-40-del-imss-en-2026-costos-requisitos-y-portabilidad-con-ppr/
 ---
 
 La Continuación Voluntaria en el Régimen Obligatorio, mejor conocida como **Modalidad 40 del IMSS**, es la estrategia previsional más efectiva para los trabajadores en México que cotizaron bajo la Ley del Seguro Social de 1973 (Ley 73). 

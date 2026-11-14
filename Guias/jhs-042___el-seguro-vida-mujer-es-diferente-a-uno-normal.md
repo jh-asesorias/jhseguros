@@ -5,6 +5,8 @@ description: "Conoce qué es el seguro Vida Mujer en México: protección por fa
 resumen: "Conoce el Seguro Vida Mujer: un plan diseñado para ti que ofrece protección por fallecimiento y apoyo en efectivo ante cáncer femenino o complicaciones de embarazo."
 aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-042___el-seguro-vida-mujer-es-diferente-a-uno-normal/
+redirect_from:
+  - /recursos/jhs-040___el-seguro-vida-mujer-es-diferente-a-uno-normal/
 ---
 
 Sí, el plan **Vida Mujer** (de Seguros Monterrey New York Life) es un producto integral diseñado específicamente para atender las necesidades financieras y de salud de la mujer, marcando una clara diferencia frente a un seguro de vida convencional.

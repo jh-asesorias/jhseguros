@@ -5,6 +5,8 @@ description: Conoce cómo proteger tu dinero de la inflación en México. Entien
 resumen: ¿Cómo proteger tu ahorro para el retiro de la inflación? Conoce los planes de ahorro en UDIS y asegura el poder adquisitivo de tu dinero en el futuro.
 aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-022___mi-dinero-pierde-valor-con-la-inflacion-que-son-las-udis/
+redirect_from:
+  - /recursos/jhs-021___mi-dinero-pierde-valor-con-la-inflacion-que-son-las-udis/
 ---
 
 Sí, el dinero en pesos nominales guardado debajo del colchón o en cuentas bancarias tradicionales sin generar rendimientos superiores al nivel inflacionario, **pierde poder adquisitivo de forma constante y silenciosa** con el paso de los años.

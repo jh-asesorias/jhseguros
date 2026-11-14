@@ -5,6 +5,8 @@ description: "Descubre qué pasa con el seguro educativo si tu hijo decide no es
 resumen: "¿Qué pasa con el dinero del seguro educativo si tu hijo decide no estudiar? Conoce las opciones de entrega del capital pactado al cumplir la mayoría de edad."
 aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-035___que-pasa-si-mi-hijo-no-quiere-estudiar-la-universidad/
+redirect_from:
+  - /recursos/jhs-033___que-pasa-si-mi-hijo-no-quiere-estudiar-la-universidad/
 ---
 
 Es una duda habitual entre padres de familia, pero la respuesta es clara: **el dinero ahorrado no se pierde ni se lo queda la aseguradora**. El capital acumulado es un activo que pertenece a tu patrimonio familiar.

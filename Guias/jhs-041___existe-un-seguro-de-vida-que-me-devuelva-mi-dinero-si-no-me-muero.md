@@ -5,6 +5,8 @@ description: "Descubre qué son los seguros dotales o seguros de vida con ahorro
 resumen: "Descubre los seguros de vida con ahorro (dotales): una opción de ahorro que te protege y prevé devolverte tus aportaciones más rendimientos al plazo."
 aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-041___existe-un-seguro-de-vida-que-me-devuelva-mi-dinero-si-no-me-muero/
+redirect_from:
+  - /recursos/jhs-039___existe-un-seguro-de-vida-que-me-devuelva-mi-dinero-si-no-me-muero/
 ---
 
 Sí, totalmente. Estos instrumentos financieros existen en el sector asegurador regulado y se conocen técnicamente como **Seguros Dotales** o **Seguros de Vida con Ahorro** (como el plan *Star Dotal* de Seguros Monterrey New York Life).

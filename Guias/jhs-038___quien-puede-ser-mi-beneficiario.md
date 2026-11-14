@@ -5,6 +5,8 @@ description: "Conoce quién puede ser beneficiario en tu seguro de vida en Méxi
 resumen: "Aprende quién puede ser beneficiario en tu seguro de vida, las reglas de designación y cómo modificar los porcentajes de tu póliza de forma libre y segura."
 aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-038___quien-puede-ser-mi-beneficiario/
+redirect_from:
+  - /recursos/jhs-036___quien-puede-ser-mi-beneficiario/
 ---
 
 Conforme al artículo 174 de la Ley sobre el Contrato de Seguro (LCS) en México, gozas de **total libertad legal** para designar a quien tú decidas como beneficiario de tu póliza de vida, sin obligación de parentesco forzoso.

@@ -5,6 +5,8 @@ description: ¿Eres freelance o emprendedor sin nómina? Conoce cómo contratar 
 resumen: ¿Eres freelance o emprendedor sin nómina? Conoce cómo contratar un Plan Personal de Retiro (PPR), asegurar tu pensión y deducir impuestos de forma legal.
 aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-024___puedo-tener-un-ppr-si-soy-freelance-entrepreneur-o-no-tengo-nomina/
+redirect_from:
+  - /recursos/jhs-023___puedo-tener-un-ppr-si-soy-freelance-entrepreneur-o-no-tengo-nomina/
 ---
 
 Sí, por supuesto, y de hecho es una herramienta fundamental y altamente recomendable para quienes trabajan de forma independiente o por cuenta propia.

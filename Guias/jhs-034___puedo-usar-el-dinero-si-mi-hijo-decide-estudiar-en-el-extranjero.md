@@ -5,6 +5,8 @@ description: "Descubre cómo usar el capital de tu seguro educativo en el extran
 resumen: "¿Tu hijo quiere estudiar en el extranjero? Conoce cómo utilizar el capital de tu seguro educativo en cualquier universidad o escuela internacional."
 aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-034___puedo-usar-el-dinero-si-mi-hijo-decide-estudiar-en-el-extranjero/
+redirect_from:
+  - /recursos/jhs-032___puedo-usar-el-dinero-si-mi-hijo-decide-estudiar-en-el-extranjero/
 ---
 
 Sí, por supuesto. No existe ninguna restricción geográfica ni territorial en el contrato de un seguro educativo (como *SeguBeca* u *Objetivo Universidad*) para el destino final de los recursos.

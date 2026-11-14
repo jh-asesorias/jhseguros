@@ -5,6 +5,8 @@ description: "Descubre cuál es la edad más conveniente para contratar una Segu
 resumen: "Descubre cuál es la edad más conveniente para contratar un seguro educativo universitario y cómo el interés compuesto te ayuda a ahorrar mensualidades más bajas."
 aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-036___desde-que-edad-del-nino-me-conviene-contratar/
+redirect_from:
+  - /recursos/jhs-034___desde-que-edad-del-nino-me-conviene-contratar/
 ---
 
 La regla matemática y de planificación financiera en este rubro es contundente: **entre más pequeño sea el niño al momento de contratar, mayores serán los beneficios del plan**.

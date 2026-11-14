@@ -5,6 +5,8 @@ description: "Conoce qué es la cobertura de invalidez total y permanente (ITP) 
 resumen: "Aprende qué es la cobertura de invalidez total y permanente en tu seguro de vida y cómo prevé la entrega de la suma asegurada en vida si dejas de trabajar."
 aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-043___que-es-la-cobertura-de-invalidez-total-y-permanente/
+redirect_from:
+  - /recursos/jhs-041___que-es-la-cobertura-de-invalidez-total-y-permanente/
 ---
 
 La cobertura de **Invalidez Total y Permanente (ITP)** es un beneficio o endoso de protección en vida integrado dentro de las pólizas de seguro de vida (como en los planes de Seguros Monterrey New York Life).

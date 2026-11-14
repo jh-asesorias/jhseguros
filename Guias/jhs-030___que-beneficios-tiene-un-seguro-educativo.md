@@ -5,6 +5,8 @@ description: "Conoce los beneficios de un seguro educativo en México: ahorro en
 resumen: "Conoce los beneficios de un seguro educativo o universitario: ahorro en UDIS frente a la inflación, rendimientos pactados y protección familiar por invalidez."
 aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-030___que-beneficios-tiene-un-seguro-educativo/
+redirect_from:
+  - /recursos/jhs-028___que-beneficios-tiene-un-seguro-educativo/
 ---
 
 Un seguro educativo robusto (como el plan *SeguBeca*) ofrece una protección integral, combinando disciplina de ahorro a largo plazo y protección del patrimonio familiar.

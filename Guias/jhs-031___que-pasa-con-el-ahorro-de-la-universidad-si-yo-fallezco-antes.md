@@ -5,6 +5,8 @@ description: "Descubre la exención de primas por fallecimiento en un seguro edu
 resumen: "Descubre la exención de primas por fallecimiento: qué pasa con el seguro educativo de tus hijos si tú faltas y cómo se protege el capital para su universidad."
 aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-031___que-pasa-con-el-ahorro-de-la-universidad-si-yo-fallezco-antes/
+redirect_from:
+  - /recursos/jhs-029___que-pasa-con-el-ahorro-de-la-universidad-si-yo-fallezco-antes/
 ---
 
 El núcleo de protección de un seguro educativo (como *SeguBeca*) es buscar que el proyecto profesional y universitario de tus hijos se concrete aun ante tu fallecimiento o invalidez.

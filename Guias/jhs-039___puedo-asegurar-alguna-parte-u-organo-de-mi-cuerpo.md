@@ -5,6 +5,8 @@ description: "Descubre cómo funciona la cobertura de pérdidas orgánicas y enf
 resumen: "¿Se puede asegurar una parte del cuerpo o un órgano? Descubre la cobertura de pérdidas orgánicas por accidente, pensada para médicos, cirujanos y músicos."
 aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-039___puedo-asegurar-alguna-parte-u-organo-de-mi-cuerpo/
+redirect_from:
+  - /recursos/jhs-037___puedo-asegurar-alguna-parte-u-organo-de-mi-cuerpo/
 ---
 
 No es posible asegurar un órgano o extremidad de forma aislada a través de una póliza convencional individual o de gastos médicos masivos en México, ya que estos contratos cubren la vida humana general y diagnósticos médicos globales.

@@ -5,6 +5,8 @@ description: Descubre qué sucede si dejas de aportar a tu PPR en México, cómo
 resumen: ¿Qué sucede con tu Plan Personal de Retiro si dejas de aportar temporalmente? Conoce los periodos de gracia y la flexibilidad de las aseguradoras en México.
 aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-027___que-pasa-si-dejo-de-aportar-por-un-tiempo/
+redirect_from:
+  - /recursos/jhs-025___que-pasa-si-dejo-de-aportar-por-un-tiempo/
 ---
 
 Si atraviesas un bache económico y dejas de aportar a tu plan, las consecuencias dependerán directamente del tiempo que lleve contratada tu póliza y de las condiciones particulares del contrato.

@@ -5,6 +5,8 @@ description: "Conoce el artículo 93 de la LISR: descubre por qué las indemniza
 resumen: "Conoce el artículo 93 de la LISR: ¿Los beneficiarios de un seguro de vida pagan impuestos en México? Descubre por qué las sumas por fallecimiento están exentas."
 aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-040___si-fallezco-mis-beneficiarios-tienen-que-pagar-impuestos/
+redirect_from:
+  - /recursos/jhs-038___si-fallezco-mis-beneficiarios-tienen-que-pagar-impuestos/
 ---
 
 En México, las indemnizaciones pagadas por instituciones de seguros debidamente autorizadas con motivo del fallecimiento del titular gozan de un tratamiento fiscal altamente favorable.

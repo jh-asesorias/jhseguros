@@ -5,6 +5,8 @@ description: "¿El fondo de tu retiro se puede heredar? Descubre cómo tus benef
 resumen: ¿El fondo de tu retiro se puede heredar? Descubre la cobertura de vida en los PPR y cómo tus beneficiarios reciben el ahorro acumulado libre de impuestos.
 aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-028___el-dinero-de-mi-retiro-se-puede-heredar-si-fallezco-antes-de-cobrarlo/
+redirect_from:
+  - /recursos/jhs-026___el-dinero-de-mi-retiro-se-puede-heredar-si-fallezco-antes-de-cobrarlo/
 ---
 
 Sí, totalmente. De hecho, la transmisión patrimonial directa representa una de las mayores fortalezas legales de los planes para el retiro estructurados mediante aseguradoras.
