@@ -1,0 +1,8 @@
+# =========================================================
+# CONFIGURACIÓN DEL SITIO JH SEGUROS (GitHub Pages)
+# jekyll-redirect-from: permite poner "redirect_from" en una
+# guía para que sus direcciones viejas lleven automáticamente
+# a la dirección nueva (evita errores 404 en Google).
+# =========================================================
+plugins:
+  - jekyll-redirect-from
