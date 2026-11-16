@@ -3,240 +3,256 @@
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- ETIQUETAS ÚNICAS PARA GOOGLE ADS -->
-    <title>Seguro de Auto y Protección Vial | JH Seguros</title>
-    <meta name="description" content="Cotiza tu seguro de auto contra choques, robo total y daños a terceros con asistencia vial 24/7 en México.">
-    <link rel="canonical" href="https://jhseguros.mx/auto/">
-    
-    <meta name="author" content="Rafael Jiménez Sánchez">
-    <meta name="robots" content="index, follow">
-    
-    <meta property="og:title" content="Seguro de Auto y Protección Vial | JH Seguros">
-    <meta property="og:description" content="Protección integral para tu vehículo, conductor y pasajeros ante colisiones, robo o daños a terceros.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jhseguros.mx/auto/">
-    <meta property="og:image" content="https://jhseguros.mx/imagenes/og-auto.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Seguro de Auto | JH Seguros">
-    
-    <!-- RUTAS ABSOLUTAS CON DIAGONAL INICIAL -->
-    <link rel="icon" href="/rafael-perfil.jpg" type="image/jpeg">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
-    <!-- GOOGLE ANALYTICS -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3GLCDV4F8"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-Z3GLCDV4F8');
-      gtag('config', 'AW-18520948891');
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seguro de Auto | Cotiza y compara coberturas – JH Seguros</title>
+  <meta name="description" content="Cotiza tu seguro de auto con asesoría personalizada. Compara protección contra daños, robo, responsabilidad civil y coberturas como auto sustituto y llantas y rines.">
+  <link rel="canonical" href="https://jhseguros.mx/auto/">
+  <meta name="author" content="Rafael Jiménez Sánchez">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Seguro de Auto | JH Seguros">
+  <meta property="og:description" content="Tu auto protegido y coberturas que hacen la diferencia. Recibe asesoría para elegir una protección acorde a tu vehículo y necesidades.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jhseguros.mx/auto/">
+  <meta property="og:image" content="https://jhseguros.mx/imagenes/og-auto.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Seguro de auto y coberturas adicionales de JH Seguros">
+  <link rel="icon" href="/rafael-perfil.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <style>
-        /* =========================================
-           ESTILOS MAESTROS
-           ========================================= */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Open Sans', sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; scroll-behavior: smooth; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        
-        header { 
-            position: relative; 
-            background: linear-gradient(135deg, #1e3c72 90%, #2a5298 100%); 
-            color: white; 
-            padding: 3rem 0; 
-            text-align: center; 
-            overflow: hidden; 
-            z-index: 1; 
-        }
-        header::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-image: url('/rafael-perfil.jpg'); /* Ruta absoluta */
-            background-size: cover;      
-            background-position: center; 
-            background-repeat: no-repeat;
-            opacity: 0.15;               
-            filter: grayscale(100%);     
-            mix-blend-mode: luminosity;  
-            z-index: -1; 
-        }
+  <!-- Se conservan los identificadores de medición existentes -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3GLCDV4F8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Z3GLCDV4F8');
+    gtag('config', 'AW-18520948891');
+  </script>
 
-        .profile-container { display: flex; flex-direction: column; align-items: center; margin-bottom: 1.5rem; }
-        .name { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.2; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
-        .tagline { font-size: 1.7rem; margin: 1.5rem 0; font-weight: 500; max-width: 800px; margin-left: auto; margin-right: auto; text-shadow: 0 1px 2px rgba(0,0,0,0.2); }
-        
-        .services { padding: 3rem 0; background-color: white; }
-        .detail-content { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); margin-bottom: 2rem; }
-        .detail-content p, .detail-content ul { margin-bottom: 1rem; color: #444; }
-        .detail-content ul { margin-left: 20px; list-style-type: disc; }
-        .detail-content strong { color: #2a5298; }
-
-        /* BOTONES */
-        .back-to-top { display: inline-block; background-color: #2a5298; color: white; padding: 0.5rem 1.2rem; font-size: 0.9rem; border-radius: 20px; text-decoration: none; font-weight: 600; transition: background-color 0.3s; margin-top: 1rem; }
-        .back-to-top:hover { background-color: #1e3c72; }
-        .cta-button { display: inline-block; background-color: #ff6b6b; color: white; padding: 0.8rem 2rem; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: background-color 0.3s, transform 0.3s; margin: 1rem 0; }
-        .cta-button:hover { background-color: #ff5252; transform: translateY(-3px); }
-        
-        /* FOOTER */
-        footer { background-color: #1a1a2e; color: white; padding: 3rem 0 5rem; }
-        .footer-content { display: flex; flex-direction: column; align-items: center; text-align: center; }
-        .brand { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; margin-bottom: 1rem; color: #ff6b6b; }
-        .contact-info { margin: 1.5rem 0; }
-        .contact-info a { color: white; text-decoration: none; transition: color 0.3s; }
-        .contact-info a:hover { color: #ff6b6b; }
-        .social-links { display: flex; gap: 1rem; margin: 1.5rem 0; }
-        .social-icon { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.1); border-radius: 50%; color: white; text-decoration: none; transition: background-color 0.3s; font-size: 1.2rem; }
-        .social-icon:hover { background-color: #ff6b6b; }
-        .copyright { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.1); width: 100%; font-size: 0.9rem; opacity: 0.7; }
-        
-        /* BOTÓN FLOTANTE WHATSAPP */
-        .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 20px; right: 20px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; font-size: 35px; box-shadow: 2px 2px 3px #999; z-index: 1000; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s; }
-        .whatsapp-float:hover { background-color: #20ba5a; transform: scale(1.1); }
-        
-        /* MENÚ MÓVIL */
-        .mobile-menu-btn { display: none; position: fixed; top: 20px; right: 20px; width: 52px; height: 52px; background-color: #1e3c72; color: white; border-radius: 50%; border: 2px solid rgba(255, 255, 255, 0.2); box-shadow: 0 4px 12px rgba(0,0,0,0.3); z-index: 2000; cursor: pointer; align-items: center; justify-content: center; transition: all 0.3s ease; }
-        .mobile-menu-btn svg { width: 24px; height: 24px; fill: currentColor; }
-        .mobile-overlay { position: fixed; top: 0; right: -100%; width: 280px; height: 100%; background-color: #1a1a2e; box-shadow: -5px 0 15px rgba(0,0,0,0.5); z-index: 1999; transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1); display: flex; flex-direction: column; padding: 85px 20px 20px 20px; }
-        .mobile-overlay.open { right: 0; }
-        .mobile-nav-link { color: white; text-decoration: none; font-family: 'Open Sans', sans-serif; font-size: 1.05rem; font-weight: 600; padding: 14px 15px; border-bottom: 1px solid rgba(255,255,255,0.05); transition: all 0.3s ease; }
-        .mobile-nav-link:hover { background-color: rgba(255,255,255,0.05); color: #ff6b6b; padding-left: 25px; }
-        .mobile-backdrop { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 1998; display: none; opacity: 0; transition: opacity 0.3s ease; }
-        .mobile-backdrop.open { display: block; opacity: 1; }
-        
-        @media (max-width: 768px) {
-            .name { font-size: 1.8rem; }
-            .tagline { font-size: 1.5rem; }
-            .mobile-menu-btn { display: flex; }
-        }
-    </style>
-    <style>
-        /* Iconos de línea en lugar de emojis (Lucide, licencia ISC; WhatsApp, Facebook e Instagram: logotipos oficiales) */
-        svg.jh-i { display: inline-block; width: 1.1em; height: 1.1em; margin-right: 0.35em; vertical-align: -0.18em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
-        svg.jh-solo { display: inline-block; width: 0.85em; height: 0.85em; color: #6c4bc4; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; vertical-align: middle; }
-        .jh-solo + .jh-solo { margin-left: 0.25em; }
-        .ico .jh-solo { width: 20px; height: 20px; color: inherit; }
-        svg.jh-fill { fill: currentColor; stroke: none; }
-    </style>
+  <style>
+    :root{--navy:#12264f;--blue:#1e3c72;--purple:#6c4bc4;--ink:#202b3c;--muted:#64748b;--pale:#f3f6fb;--line:#e4eaf2;--green:#20b96b;--white:#fff}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Open Sans',sans-serif;color:var(--ink);line-height:1.65;background:#fff}
+    a{color:inherit}
+    img{max-width:100%;display:block}
+    .wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+    .eyebrow{font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--purple)}
+    h1,h2,h3{font-family:Montserrat,sans-serif;line-height:1.17}
+    h1{font-size:clamp(2.35rem,5vw,4.3rem);font-weight:800;letter-spacing:-.04em}
+    h2{font-size:clamp(1.8rem,3vw,2.65rem);color:var(--navy);letter-spacing:-.025em}
+    h3{font-size:1.2rem;color:var(--navy)}
+    p{color:var(--muted)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 23px;border-radius:9px;text-decoration:none;font-weight:800;transition:.2s;border:0}
+    .btn:hover{transform:translateY(-2px);filter:brightness(.97)}
+    .btn-primary{background:var(--green);color:#fff;box-shadow:0 8px 22px #20b96b38}
+    .btn-outline{border:1px solid #ffffff80;color:#fff;background:#ffffff12}
+    .btn-dark{background:var(--navy);color:#fff}
+    .top-note{background:var(--navy);color:#dce6f6;font-size:.82rem;padding:7px 0;text-align:center}
+    .hero{position:relative;overflow:hidden;color:#fff;background:radial-gradient(circle at 80% 15%,#6c4bc455,transparent 32%),linear-gradient(120deg,#10254d 0%,#1e3c72 58%,#293d79 100%);padding:74px 0 68px}
+    .hero:after{content:"";position:absolute;width:430px;height:430px;border:1px solid #ffffff20;border-radius:50%;right:-120px;bottom:-250px;box-shadow:0 0 0 45px #ffffff08,0 0 0 90px #ffffff06}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;position:relative;z-index:1}
+    .hero .eyebrow{color:#c7b8ff}
+    .hero h1{margin:16px 0 18px;max-width:680px}
+    .hero h1 span{color:#c7b8ff}
+    .hero-copy{font-size:1.12rem;color:#e3eaf7;max-width:620px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 20px}
+    .micro{font-size:.85rem;color:#c7d3e8}
+    .hero-visual{position:relative;min-height:360px;border:1px solid #ffffff35;border-radius:24px;background:linear-gradient(145deg,#ffffff18,#ffffff08);padding:16px;box-shadow:0 24px 65px #07142d55}
+    .hero-visual img{width:100%;height:326px;object-fit:cover;border-radius:15px}
+    .visual-label{position:absolute;left:30px;bottom:30px;background:#fff;color:var(--navy);border-radius:12px;padding:12px 16px;font-size:.85rem;font-weight:800;box-shadow:0 10px 30px #0003}
+    .trust-strip{background:#fff;border-bottom:1px solid var(--line)}
+    .trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:20px 0}
+    .trust-item{display:flex;align-items:center;gap:12px;font-size:.91rem;font-weight:700;color:var(--navy)}
+    .trust-icon{width:38px;height:38px;display:grid;place-items:center;flex:0 0 38px;border-radius:11px;background:#f0ebff;color:var(--purple);font-size:1.15rem}
+    section{padding:76px 0}
+    .section-head{text-align:center;max-width:760px;margin:0 auto 38px}
+    .section-head .eyebrow{margin-bottom:12px}
+    .section-head p{margin-top:14px;font-size:1.03rem}
+    .coverage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .coverage{padding:24px;border:1px solid var(--line);border-radius:15px;background:#fff;box-shadow:0 8px 24px #13264f08}
+    .coverage .symbol{width:44px;height:44px;border-radius:12px;background:#eef2fb;color:var(--blue);display:grid;place-items:center;font-size:1.25rem;margin-bottom:17px}
+    .coverage p{font-size:.94rem;margin-top:9px}
+    .coverage.featured{border-color:#cfc2f4;background:linear-gradient(145deg,#fff,#f8f5ff)}
+    .special{background:var(--pale)}
+    .special-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+    .special-card{background:#fff;border-radius:19px;overflow:hidden;box-shadow:0 12px 34px #14264d12;border:1px solid var(--line)}
+    .special-card img{width:100%;height:245px;object-fit:cover}
+    .special-body{padding:25px}
+    .special-body p{margin:10px 0 13px}
+    .special-body ul{padding-left:20px;color:#4b5870;font-size:.93rem}
+    .special-body li{margin:6px 0}
+    .tag{display:inline-block;padding:5px 10px;border-radius:30px;background:#f0ebff;color:#5d42a8;font-size:.73rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px}
+    .fineprint{font-size:.82rem!important;color:#718096!important;margin-top:14px!important}
+    .how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .step{padding:24px;border-radius:15px;background:#fff;border:1px solid var(--line)}
+    .step-no{font:800 1.4rem Montserrat;color:var(--purple);margin-bottom:12px}
+    .step p{font-size:.93rem;margin-top:8px}
+    .closing{background:linear-gradient(120deg,#12264f,#263e78);color:#fff;text-align:center;padding:62px 0}
+    .closing h2{color:#fff;max-width:780px;margin:0 auto}
+    .closing p{color:#dce6f6;max-width:680px;margin:15px auto 24px}
+    .faq{max-width:850px;margin:auto}
+    details{border-bottom:1px solid var(--line);padding:18px 4px}
+    summary{cursor:pointer;font-weight:800;color:var(--navy)}
+    details p{padding:12px 0 2px;font-size:.94rem}
+    .disclaimer{font-size:.8rem;text-align:center;margin-top:28px}
+    .float-wa{position:fixed;right:20px;bottom:20px;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;background:#20c96b;color:#fff;text-decoration:none;font-size:29px;box-shadow:0 8px 25px #0003;z-index:1000}
+    @media(max-width:850px){.hero-grid{grid-template-columns:1fr;gap:28px}.hero-visual{min-height:260px}.hero-visual img{height:260px}.coverage-grid{grid-template-columns:repeat(2,1fr)}.special-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:620px){.wrap{width:min(100% - 30px,1160px)}.hero{padding:54px 0 48px}.hero-grid{gap:25px}.hero-visual{min-height:220px}.hero-visual img{height:220px}.trust-grid{grid-template-columns:1fr;gap:12px;padding:16px 0}.trust-item{font-size:.88rem}section{padding:55px 0}.coverage-grid,.special-grid,.how-grid{grid-template-columns:1fr}.special-card img{height:220px}.hero-actions{display:grid}.hero-actions .btn{width:100%}.float-wa{width:54px;height:54px;right:14px;bottom:14px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+  </style>
 </head>
 <body>
-    {% include header.html %}
-    
-    <!-- WHATSAPP FLOTANTE (Con mensaje prellenado medible) -->
-    <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20vi%20tu%20anuncio%20en%20Google%20y%20me%20interesa%20cotizar%20mi%20seguro%20de%20auto" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Cotizar en WhatsApp">
-        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.081-.1.115-.173.171-.292.059-.115.03-.217-.015-.307-.045-.1-.445-1.074-.61-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-        </svg>
-    </a>
+  {% include header.html %}
 
-    <!-- MENÚ MÓVIL (Enlaces limpios) -->
-    <button class="mobile-menu-btn" id="menuToggle" aria-label="Abrir menú">
-        <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-    </button>
-    <div class="mobile-backdrop" id="menuBackdrop"></div>
-    <div class="mobile-overlay" id="menuOverlay">
-        <a href="/" class="mobile-nav-link">Inicio</a>
-        <a href="/danos/" class="mobile-nav-link">Módulo Autos y Daños</a>
-        <a href="/productos-vida/" class="mobile-nav-link">Vida y Gastos Médicos</a>
-        <a href="/autorizaciones/" class="mobile-nav-link">Autorizaciones / Certificaciones</a>
-        <a href="/hospitales/" class="mobile-nav-link">Servicios Hospitalarios</a>
-        <a href="/recursos/" class="mobile-nav-link">Respuestas sobre Seguros</a>
-        <a href="/redes/" class="mobile-nav-link">Redes Sociales</a>
-        <a href="/contacto-form/" class="mobile-nav-link">Contacto Directo</a>
-    </div>
-    
-    <!-- CABECERA PRINCIPAL AUTO -->
-    <header>
-        <div class="container">
-            <div class="profile-container">
-                <!-- H1 optimizado para Google Ads -->
-                <h1 class="name">Seguro de Auto</h1>
-                <p class="tagline">Protección integral y a la medida para tu vehículo, conductor y pasajeros</p>
-            </div>
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Seguro de auto · Asesoría personalizada</div>
+          <h1>Tu auto protegido.<br><span>Tu tranquilidad también.</span></h1>
+          <p class="hero-copy">Un accidente, un robo o un bache pueden cambiarte el día. Conoce opciones de seguro de auto y coberturas que pueden ayudarte a enfrentar esos imprevistos sin dejar toda la carga en tu bolsillo.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary js-wa" data-origen="hero_auto" data-track="cta_whatsapp" href="https://wa.me/528343117556?text=Hola%20Rafael%2C%20quiero%20conocer%20opciones%20para%20asegurar%20mi%20auto." target="_blank" rel="noopener">Quiero cotizar mi auto <span aria-hidden="true">→</span></a>
+            <a class="btn btn-outline" href="#coberturas">Conocer coberturas</a>
+          </div>
+          <p class="micro">Atención personalizada · Opciones de distintas aseguradoras · Acompañamiento durante la vigencia</p>
         </div>
-    </header>
-        
-    <!-- CONTENIDO DEL SEGURO DE AUTO -->
-    <section class="services">
-        <div class="container">
-            <div class="detail-content text-start" style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-                
-                <h2 style="color: #2a5298; font-family: 'Montserrat', sans-serif; font-size: 1.4rem; margin-bottom: 15px; border-bottom: 2px solid #f0f0f0; padding-bottom: 5px;">COBERTURAS BÁSICAS</h2>
-                <p style="color: #666; margin-bottom: 15px;">La protección esencial para tu patrimonio ante los riesgos cubiertos por tu póliza vial:</p>
-                <ul style="margin-left: 20px; margin-bottom: 25px; list-style-type: disc;">
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Daños Materiales (Totales o Parciales):</strong> Ampara la reparación o indemnización de tu vehículo por daños derivados de colisiones, vuelcos, incendios, vandalismo, huelgas, rotura de cristales y fenómenos de la naturaleza (como inundaciones, sismos, huracanes o granizo). Puede contratarse para cubrir cualquier daño (pérdida parcial y total) o limitarse exclusivamente a protegerte y pagar los daños que puedas ocasionar a un tercero.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Robo Total:</strong> Te indemniza en caso de robo total del vehículo y cubre los daños materiales que sufra la unidad en caso de ser recuperada.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Responsabilidad Civil por Daños a Terceros:</strong> Protege tu patrimonio frente a la responsabilidad legal si causas daños a los bienes de otras personas, o si les provocas lesiones corporales o el fallecimiento en un accidente, cumpliendo con los requisitos de la ley federal.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Asistencia Vial y en Viajes:</strong> Brinda servicios de emergencia en el camino, tales como arrastre de grúa, paso de corriente, envío de gasolina, cambio de llanta, servicio de cerrajero y apoyos logísticos durante tus viajes por descompostura del auto.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Asistencia Legal y Jurídica:</strong> Provee la defensa legal mediante abogados las 24 horas para gestionar la libertad provisional, trámites ante las autoridades y el pago de fianzas o cauciones derivadas de un accidente de tránsito.</li>
-                </ul>
-                
-                <h2 style="color: #2a5298; font-family: 'Montserrat', sans-serif; font-size: 1.4rem; margin-top: 30px; margin-bottom: 15px; border-bottom: 2px solid #f0f0f0; padding-bottom: 5px;">COBERTURAS ADICIONALES</h2>
-                <p style="color: #666; margin-bottom: 15px;">Lleva tu protección al siguiente nivel con coberturas especializadas diseñadas para tu total tranquilidad:</p>
-                <ul style="margin-left: 20px; margin-bottom: 20px; list-style-type: disc;">
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Gastos Médicos a Ocupantes:</strong> Cubre la atención médica, hospitalización, honorarios médicos, ambulancia y gastos funerarios para todos los pasajeros del vehículo que resulten lesionados en un accidente o durante un intento de robo (Revisa bien tu póliza puedes contratar hasta 2 millones de pesos de suma asegurada para gastos médicos de los ocupantes y hasta 400 mil pesos para el conductor).</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Eliminación o Reducción de Deducible:</strong> Exenta o reduce el pago de tu deducible en situaciones específicas, ya sea por daños materiales parciales (si hay un tercero identificable), en caso de Pérdida Total (por daños o robo), o si el tercero responsable del accidente no cuenta con seguro.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Robo Parcial (Autopartes):</strong> Ampara la reposición y mano de obra de las piezas originales (interiores o exteriores) que sean robadas del vehículo, cubriendo también los daños ocasionados al extraerlas.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Auto Sustituto y Gastos de Transporte:</strong> Te otorga un vehículo de renta o un apoyo económico diario para tus traslados mientras tu auto se encuentra en el taller por reparación o en proceso de indemnización por pérdida total.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Reparación en Agencia:</strong> Establece que, en caso de siniestro, tu vehículo sea reparado exclusivamente en los talleres de la agencia automotriz de su marca (disponible para autos de modelos recientes).</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Seguro de Llantas y Rines:</strong> Cubre la sustitución o reparación de las llantas y rines si sufren daños irreversibles debido a impactos directos al caer en baches o irregularidades del pavimento, al golpear con el cordón de la banqueta, con derecho a la reposición y/o reparación de las 4 llantas y rines o hasta agotar la suma asegurada contratada  (lo que suceda primero y en esta cobertura aplica tiempo de espera y % de coaseguro de participación del asegurado, como en el caso de la reposición de cristales).</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Ampliación de la Suma Asegurada por Pérdida Total:</strong> Incrementa en un 10% adicional el monto de la indemnización sobre el valor del auto en caso de que sea declarado pérdida total por daños o robo.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Equipo Especial, Adaptaciones y Conversiones:</strong> Extiende las coberturas de Daños Materiales, Robo y Responsabilidad Civil a los accesorios, rótulos, modificaciones o blindajes que no venían instalados de fábrica.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Accidentes Automovilísticos al Conductor:</strong> Otorga una indemnización económica específica a los beneficiarios o al conductor en caso de fallecimiento o pérdidas orgánicas ocurridas exclusivamente mientras opera la unidad.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Extensión de Responsabilidad Civil y Gastos Médicos:</strong> Te protege con las mismas coberturas de daños a terceros y gastos médicos si llegas a ocasionar un accidente mientras conduces un vehículo ajeno (con características similares al tuyo).</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Responsabilidad Civil Extendida (Ocupantes, Remolques y Familiar):</strong> Amplía la cobertura de daños a terceros para cubrir accidentes causados por un remolque, lesiones a los pasajeros que viajan contigo, o incluso daños no dolosos causados por ti o tu familia en la vida privada.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Robo de Contenidos Personales y Llaves:</strong> Reembolsa el valor de tus objetos personales robados con violencia del interior del auto y cubre los gastos de reposición de las llaves en caso de robo o extravío.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Protección para Mascotas:</strong> Reembolsa los gastos veterinarios si tu perro o gato viaja contigo dentro del auto y resulta lesionado a causa de un accidente automovilístico.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Asistencia por Tecnología y Hábitos de Manejo:</strong> Integra sistemas digitales (como sensores o aplicaciones) que detectan colisiones graves para enviar asistencia médica automática y te otorga beneficios o recompensas por mantener buenos hábitos al volante.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Accidentes Personales:</strong> Algunas aseguradoras con esta cobertura te pueden otorgar una suma asegurada de hasta 100 mil pesos que te cubre la atención médica por algún accidente personal (para una cirugía por una fractura originada por una caída o golpe en la casa, trabajo o calle).</li>
-                </ul>
-                
-                <p style="margin-top: 30px; margin-bottom: 35px; color: #444; font-size: 0.9rem; text-align: justify; line-height: 1.6;"><svg class="jh-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" /> <path d="m16 9-5.5 5.5L8 12" /></svg>Esta guía informativa ha sido redactada, revisada y validada por Rafael Jiménez Sánchez, Intermediario Profesional de Seguros autorizado y certificado ante la Comisión Nacional de Seguros y Fianzas (<strong>CNSF</strong>). Operando bajo las Cédulas Oficiales Tipo A1 y Tipo B con números de registro H382035 y Y415335, respectivamente. Tu tranquilidad, salud y patrimonio están respaldados bajo el marco regulatorio del sector asegurador en México.</p>
-
-                {% include contacto-cta.html titulo="¿Listo para cotizar tu seguro de auto?" texto="Llena el formulario de abajo o envíame un mensaje directo. Te responderé con opciones respaldadas y transparentes." wa="https://wa.me/528343117556?text=Hola%20Rafael,%20vi%20tu%20anuncio%20en%20Google%20y%20me%20interesa%20cotizar%20mi%20seguro%20de%20auto" %}
-
-                <div style="text-align: center; margin-top: 30px;">
-                    <a href="/" class="back-to-top" style="background-color: #1a1a2e; margin-right: 15px;">Ir al Menú Principal</a>
-                    <a href="/danos/" class="back-to-top">Volver a Daños</a>
-                </div>
-            </div>
+        <div class="hero-visual">
+          <!-- Imagen sugerida: /imagenes/auto-hero.jpg (vehículo moderno en carretera/ciudad, sin logotipos) -->
+          <img src="/imagenes/auto-hero.jpg" alt="Automóvil particular circulando por una avenida" width="1200" height="760" fetchpriority="high">
+          <div class="visual-label">Protección para tu vehículo y quienes viajan contigo</div>
         </div>
+      </div>
     </section>
 
-    <!-- SE ELIMINÓ EL FORMULARIO INTEGRADO PARA USAR EL INDEX CONTACTO GLOBAL -->
+    <div class="trust-strip">
+      <div class="wrap trust-grid">
+        <div class="trust-item"><span class="trust-icon">✓</span> Opciones según tu vehículo y presupuesto</div>
+        <div class="trust-item"><span class="trust-icon">◈</span> Coberturas explicadas con claridad</div>
+        <div class="trust-item"><span class="trust-icon">↗</span> Asesoría antes y después de contratar</div>
+      </div>
+    </div>
 
-    <!-- FOOTER CON RUTAS ABSOLUTAS -->
-    {% include footer.html %}
+    <section id="coberturas">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Protección esencial</div>
+          <h2>¿Qué puede proteger tu seguro de auto?</h2>
+          <p>La cobertura depende del plan y de las condiciones de cada aseguradora. Estas son algunas de las protecciones que podemos revisar contigo.</p>
+        </div>
+        <div class="coverage-grid">
+          <article class="coverage"><div class="symbol">🚘</div><h3>Daños materiales</h3><p>Protección para reparar tu vehículo o indemnizarte cuando un accidente u otro riesgo amparado cause daños parciales o pérdida total.</p></article>
+          <article class="coverage"><div class="symbol">🔐</div><h3>Robo total</h3><p>Respaldo económico ante el robo total de la unidad, conforme al valor, deducible y condiciones establecidos en la póliza.</p></article>
+          <article class="coverage"><div class="symbol">⚖</div><h3>Responsabilidad civil</h3><p>Protección frente a daños que puedas causar a terceros en sus bienes o en su persona al utilizar tu vehículo.</p></article>
+          <article class="coverage"><div class="symbol">🩺</div><h3>Gastos médicos a ocupantes</h3><p>Apoyo para gastos médicos de conductor y pasajeros lesionados en un accidente cubierto, hasta la suma asegurada contratada.</p></article>
+          <article class="coverage"><div class="symbol">🛠</div><h3>Asistencia vial y legal</h3><p>Servicios como grúa, paso de corriente, envío de combustible, cambio de llanta y orientación o defensa legal, según el plan.</p></article>
+          <article class="coverage"><div class="symbol">＋</div><h3>Protecciones adicionales</h3><p>Podemos revisar opciones para deducibles, robo parcial, reparación en agencia, equipo especial y otras necesidades particulares.</p></article>
+        </div>
+      </div>
+    </section>
 
-    <!-- SCRIPT SOLO PARA EL MENÚ MÓVIL (Súper ligero) -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const btn = document.getElementById('menuToggle');
-            const overlay = document.getElementById('menuOverlay');
-            const backdrop = document.getElementById('menuBackdrop');
+    <section class="special" id="beneficios-adicionales">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Coberturas que vale la pena conocer</div>
+          <h2>No solo se trata de reparar tu auto</h2>
+          <p>Hay beneficios que pueden ayudarte a seguir con tu rutina y resolver daños que suelen aparecer en el camino.</p>
+        </div>
+        <div class="special-grid">
+          <article class="special-card">
+            <!-- Imagen sugerida: /imagenes/auto-sustituto.jpg (persona recibiendo llaves de vehículo de renta, escena realista) -->
+            <img src="/imagenes/auto-sustituto.jpg" alt="Persona recibiendo las llaves de un automóvil de renta" width="800" height="350" loading="lazy">
+            <div class="special-body">
+              <span class="tag">Sigue moviéndote</span>
+              <h3>Auto sustituto o gastos de transporte</h3>
+              <p>¿Tu auto está en reparación o en proceso de indemnización por pérdida total? Algunas pólizas ofrecen alternativas para que puedas continuar tus traslados.</p>
+              <ul>
+                <li>Vehículo de renta por el periodo autorizado, o</li>
+                <li>Apoyo económico diario para transporte, cuando así se contemple.</li>
+              </ul>
+              <p class="fineprint">La modalidad, duración, límites y causas que activan el beneficio varían según la póliza contratada.</p>
+            </div>
+          </article>
+          <article class="special-card">
+            <!-- Imagen sugerida: /imagenes/llanta-rin-bache.jpg (primer plano realista de rin y llanta dañados junto a bache, sin personas) -->
+            <img src="/imagenes/llanta-rin-bache.jpg" alt="Llanta y rin de automóvil dañados después de impactar un bache" width="1200" height="525" loading="lazy">
+            <div class="special-body">
+              <span class="tag">Protección ante baches</span>
+              <h3>Seguro de llantas y rines</h3>
+              <p>Un impacto contra un bache, una irregularidad del pavimento o el cordón de la banqueta puede dañar seriamente una llanta o un rin.</p>
+              <p>Esta cobertura adicional puede contemplar la reparación o sustitución de llantas y rines dañados por un impacto directo, hasta los límites contratados.</p>
+              <ul>
+                <li>Reposición o reparación conforme al dictamen y condiciones.</li>
+                <li>Hasta cuatro llantas y rines o hasta agotar la suma asegurada, lo que ocurra primero, cuando así lo establezca el plan.</li>
+              </ul>
+              <p class="fineprint">Puede aplicar tiempo de espera, coaseguro o participación del asegurado, límites y exclusiones. Es indispensable revisar las condiciones específicas antes de contratar.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-            function toggleMenu() {
-                if (!overlay || !backdrop || !btn) return;
-                overlay.classList.toggle('open');
-                backdrop.classList.toggle('open');
-                const isOpen = overlay.classList.contains('open');
-                btn.innerHTML = isOpen 
-                    ? '<svg viewBox="0 0 24 24" style="width:24px;height:24px;fill:currentColor;"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>'
-                    : '<svg viewBox="0 0 24 24" style="width:24px;height:24px;fill:currentColor;"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>';
-            }
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Así te asesoro</div>
+          <h2>Elegir tu seguro puede ser más sencillo</h2>
+          <p>Primero conocemos tu necesidad; después revisamos opciones. La idea es que sepas qué estás contratando y qué puedes esperar de tu póliza.</p>
+        </div>
+        <div class="how-grid">
+          <article class="step"><div class="step-no">01</div><h3>Conocemos tu vehículo</h3><p>Revisamos datos del auto, uso, zona de circulación y el tipo de protección que buscas.</p></article>
+          <article class="step"><div class="step-no">02</div><h3>Comparamos alternativas</h3><p>Analizamos coberturas, deducibles, sumas aseguradas y condiciones relevantes; no solo el precio.</p></article>
+          <article class="step"><div class="step-no">03</div><h3>Te acompaño</h3><p>Resolvemos dudas sobre tu póliza y te oriento durante su vigencia y ante un siniestro.</p></article>
+        </div>
+      </div>
+    </section>
 
-            if (btn && overlay && backdrop) {
-                btn.addEventListener('click', toggleMenu);
-                backdrop.addEventListener('click', toggleMenu);
-            }
-        });
-    </script>
+    <section class="closing">
+      <div class="wrap">
+        <h2>¿Buscas un seguro de auto que realmente entiendas?</h2>
+        <p>Cuéntame qué vehículo deseas asegurar y qué te interesa proteger. Revisamos alternativas y sus condiciones para que tomes una decisión informada.</p>
+        <a class="btn btn-primary js-wa" data-origen="cierre_auto" data-track="cta_whatsapp" href="https://wa.me/528343117556?text=Hola%20Rafael%2C%20quiero%20recibir%20opciones%20para%20mi%20seguro%20de%20auto." target="_blank" rel="noopener">Solicitar asesoría por WhatsApp →</a>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">Preguntas frecuentes</div><h2>Antes de cotizar, toma en cuenta</h2></div>
+        <div class="faq">
+          <details><summary>¿Puedo contratar solo responsabilidad civil?</summary><p>Existen opciones enfocadas en responsabilidad civil y otras que incluyen daños materiales y robo total. La disponibilidad depende de la aseguradora, el vehículo y los criterios de aceptación.</p></details>
+          <details><summary>¿Todas las pólizas incluyen auto sustituto?</summary><p>No. Puede ser una cobertura adicional o un beneficio sujeto a condiciones específicas. Hay que confirmar causas cubiertas, días autorizados, límites y requisitos.</p></details>
+          <details><summary>¿El seguro de llantas y rines cubre cualquier ponchadura?</summary><p>No debe asumirse así. La cobertura descrita se refiere a daños por impacto directo y puede tener exclusiones, tiempo de espera, coaseguro y límites. La póliza determina qué eventos proceden.</p></details>
+          <details><summary>¿Qué necesito para cotizar?</summary><p>Generalmente se solicitan datos del vehículo, versión, modelo, código postal de circulación y datos del conductor o contratante. Te indicaré la información necesaria según el caso.</p></details>
+        </div>
+        <p class="disclaimer">La información es orientativa. Las coberturas, sumas aseguradas, deducibles, coaseguros, periodos de espera, requisitos, exclusiones y disponibilidad dependen de la oferta y de las condiciones generales y particulares de cada aseguradora. La contratación queda sujeta a aceptación de la compañía.</p>
+      </div>
+    </section>
+  </main>
+
+  {% include contacto-cta.html titulo="Cotiza tu seguro de auto con asesoría personalizada" texto="Cuéntame qué vehículo deseas asegurar. Revisaremos opciones, coberturas y condiciones para que elijas con información clara." wa="https://wa.me/528343117556?text=Hola%20Rafael%2C%20quiero%20cotizar%20mi%20seguro%20de%20auto." puntos="Comparación de coberturas|Deducibles y sumas aseguradas|Acompañamiento durante la vigencia" %}
+
+  {% include footer.html %}
+
+  <a class="float-wa js-wa" data-origen="flotante_auto" data-track="cta_whatsapp" href="https://wa.me/528343117556?text=Hola%20Rafael%2C%20quiero%20informaci%C3%B3n%20sobre%20seguro%20de%20auto." target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">◉</a>
+
+  <script>
+    // Registro auxiliar del origen del clic; se conserva la configuración de GA4 y Google Ads.
+    document.querySelectorAll('.js-wa').forEach(function(link){
+      link.addEventListener('click',function(){
+        if(typeof gtag==='function'){
+          gtag('event','whatsapp_click',{
+            event_category:'conversion',
+            event_label:link.dataset.origen || 'auto',
+            page_path:location.pathname
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
