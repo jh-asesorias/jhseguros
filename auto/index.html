@@ -103,6 +103,10 @@
     .disclaimer{font-size:.8rem;text-align:center;margin-top:28px}
     .firma{max-width:900px;margin:34px auto 0;padding:18px 22px;border-left:4px solid var(--purple);background:var(--pale);border-radius:10px;font-size:.86rem;color:#4b5870}
     .firma a{color:var(--blue);font-weight:700}
+    .nav-bottom{text-align:center;margin-top:2rem;display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+    .back-to-top{display:inline-block;background-color:var(--blue);color:#fff;padding:.6rem 1.4rem;font-size:1rem;border-radius:20px;text-decoration:none;font-weight:600}
+    .back-to-top.dark{background-color:#1a1a2e}
+    .cierre-final{padding:0 0 64px}
     .float-wa{position:fixed;right:20px;bottom:20px;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;background:#20c96b;color:#fff;text-decoration:none;font-size:29px;box-shadow:0 8px 25px #0003;z-index:1000}
     @media(max-width:850px){.hero-grid{grid-template-columns:1fr;gap:28px}.hero-visual{min-height:260px}.hero-visual img{height:260px}.coverage-grid{grid-template-columns:repeat(2,1fr)}.special-grid{grid-template-columns:1fr 1fr}}
     @media(max-width:620px){.wrap{width:min(100% - 30px,1160px)}.hero{padding:54px 0 48px}.hero-grid{gap:25px}.hero-visual{min-height:220px}.hero-visual img{height:220px}.trust-grid{grid-template-columns:1fr;gap:12px;padding:16px 0}.trust-item{font-size:.88rem}section{padding:55px 0}.coverage-grid,.special-grid,.how-grid{grid-template-columns:1fr}.special-card img{height:220px}.hero-actions{display:grid}.hero-actions .btn{width:100%}.float-wa{width:54px;height:54px;right:14px;bottom:14px}}
@@ -267,13 +271,23 @@
           <details><summary>¿Qué necesito para cotizar?</summary><p>Generalmente se solicitan datos del vehículo, versión, modelo, código postal de circulación y datos del conductor o contratante. Te indicaré la información necesaria según el caso.</p></details>
         </div>
         <p class="disclaimer">La información es orientativa. Las coberturas, sumas aseguradas, deducibles, coaseguros, periodos de espera, requisitos, exclusiones y disponibilidad dependen de la oferta y de las condiciones generales y particulares de cada aseguradora. La contratación queda sujeta a aceptación de la compañía.</p>
+
+      </div>
+    </section>
+    <section class="cierre-final">
+      <div class="wrap">
+        {% include contacto-cta.html titulo="Cotiza tu seguro de auto con asesoría personalizada" texto="Cuéntame qué vehículo deseas asegurar. Revisaremos opciones, coberturas y condiciones para que elijas con información clara." wa="https://wa.me/528343117556?text=Hola%20Rafael%2C%20quiero%20cotizar%20mi%20seguro%20de%20auto." puntos="Comparación de coberturas|Deducibles y sumas aseguradas|Acompañamiento durante la vigencia" %}
+
         <div class="firma">Esta guía informativa ha sido redactada, revisada y validada por <strong>Rafael Jiménez Sánchez</strong>, Intermediario Profesional de Seguros autorizado y certificado ante la Comisión Nacional de Seguros y Fianzas (CNSF), operando bajo las Cédulas Oficiales Tipo A1 y Tipo B con números de registro <strong>H382035</strong> y <strong>Y415335</strong>, respectivamente. Tu tranquilidad, salud y patrimonio están respaldados bajo el marco regulatorio del sector asegurador en México. <a href="/autorizaciones/">Consulta mis autorizaciones</a>.</div>
 
+        <div class="nav-bottom">
+          <a href="/" class="back-to-top dark">Ir al Menú Principal</a>
+          <a href="/danos/" class="back-to-top">Volver a Autos y Daños</a>
+        </div>
       </div>
     </section>
   </main>
 
-  {% include contacto-cta.html titulo="Cotiza tu seguro de auto con asesoría personalizada" texto="Cuéntame qué vehículo deseas asegurar. Revisaremos opciones, coberturas y condiciones para que elijas con información clara." wa="https://wa.me/528343117556?text=Hola%20Rafael%2C%20quiero%20cotizar%20mi%20seguro%20de%20auto." puntos="Comparación de coberturas|Deducibles y sumas aseguradas|Acompañamiento durante la vigencia" %}
 
   {% include footer.html %}
 
