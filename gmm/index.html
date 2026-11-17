@@ -203,6 +203,8 @@
         .faq-list .answer { padding: 0 0 1.2rem; color: var(--texto-suave); font-size: 1.05rem; }
 
         /* ===== Credencial + CTA final ===== */
+        .firma { max-width: 900px; margin: 34px auto 0; padding: 18px 22px; border-left: 4px solid var(--morado-500); background: var(--morado-100); border-radius: 10px; font-size: .86rem; color: #4b5870; }
+        .firma a { color: var(--azul-600); font-weight: 700; }
         .credential { max-width: 860px; margin: 0 auto 2.5rem; display: flex; gap: 16px; align-items: flex-start; background: #fff; border-radius: 14px; padding: 1.4rem 1.6rem; box-shadow: var(--sombra); font-size: 0.95rem; color: var(--texto-suave); text-align: justify; }
         .credential img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
         .credential strong { color: var(--azul-800); }
@@ -290,6 +292,83 @@
         .chip { display: inline-flex; align-items: center; gap: 6px; }
         .chip-ico { width: 16px; height: 16px; fill: none; stroke: #cdbcff; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
         .btn .btn-ico { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+
+        /* ===== Homologación visual JH Seguros: GMM ===== */
+        :root {
+            --azul-900: #10264b;
+            --azul-800: #183967;
+            --azul-600: #28549a;
+            --morado-700: #49327e;
+            --morado-500: #7056bd;
+            --sombra: 0 14px 38px rgba(16, 38, 75, .10);
+        }
+        body { background: #f7f9fc; color: #263449; }
+        .container { max-width: 1180px; }
+        section { padding: 5rem 0; }
+        .section-head { margin-bottom: 2.8rem; }
+        .section-head h2 { color: var(--azul-900); font-size: clamp(1.8rem, 3vw, 2.45rem); letter-spacing: -.035em; }
+        .section-head p { max-width: 760px; margin: .75rem auto 0; }
+        .eyebrow { letter-spacing: .12em; font-size: .76rem; }
+        .btn { min-height: 50px; padding: .9rem 1.55rem; }
+        .btn-primary { background: linear-gradient(120deg, var(--azul-600), var(--morado-500)); }
+        header.hero {
+            padding: 5.2rem 0 4.5rem;
+            background: radial-gradient(circle at 10% 10%, rgba(112,86,189,.26), transparent 34%), linear-gradient(125deg, #10264b 0%, #193b70 58%, #49327e 100%);
+        }
+        header.hero::before { display: none; }
+        .hero-inner {
+            max-width: none; margin: 0; text-align: left;
+            display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(330px, .92fr);
+            gap: clamp(2rem, 5vw, 4.5rem); align-items: center;
+        }
+        .hero-copy { max-width: 650px; }
+        .hero .eyebrow { color: #d7cbff; }
+        .hero h1 { font-size: clamp(1.95rem, 3.3vw, 2.8rem); line-height: 1.14; letter-spacing: -.045em; margin: .4rem 0 1.2rem; }
+        .hero h1 span { background: linear-gradient(90deg, #c2d8ff, #e0d2ff); -webkit-background-clip: text; background-clip: text; }
+        .hero .lead { max-width: 620px; font-size: 1.12rem; line-height: 1.8; color: rgba(255,255,255,.88); margin-bottom: 1.7rem; }
+        .hero-ctas { justify-content: flex-start; margin-bottom: 1.5rem; }
+        .hero-visual { position: relative; min-height: 390px; }
+        .hero-visual img { width: 100%; height: 420px; object-fit: cover; border-radius: 26px; box-shadow: 0 24px 60px rgba(0,0,0,.25); border: 1px solid rgba(255,255,255,.22); }
+        .hero-visual::after { content: "Asesoría individual y familiar"; position: absolute; left: -22px; bottom: 24px; padding: 14px 20px; border-radius: 14px; background: #fff; color: var(--azul-900); font: 700 .9rem Montserrat, sans-serif; box-shadow: var(--sombra); }
+        .chips { justify-content: flex-start; gap: 8px; }
+        .chip { font-size: .85rem; padding: 8px 12px; background: rgba(255,255,255,.09); }
+        .problem-card, .concept, .step, .profile, .plan2 { border-radius: 18px; box-shadow: var(--sombra); transition: transform .2s ease, box-shadow .2s ease; }
+        .problem-card:hover, .concept:hover, .step:hover, .profile:hover, .plan2:hover { transform: translateY(-4px); box-shadow: 0 18px 42px rgba(16,38,75,.14); }
+        .problem-card { padding: 1.8rem; }
+        .concept { padding: 1.7rem; border: 1px solid #edf0f6; border-top: 4px solid var(--morado-500); }
+        .cov { border-radius: 15px; padding: 1.45rem; background: #f1f5fb; border: 1px solid #e8edf5; }
+        .benefit-media img { border-radius: 22px; }
+        .benefit-media.panel { border-radius: 22px; }
+        .know { border-radius: 14px; padding: 1.35rem 1.5rem; }
+        .faq-list details { padding: .1rem .2rem; }
+        .faq-list summary { font-size: 1.02rem; }
+        .credential { border: 1px solid #edf0f6; border-radius: 18px; }
+        .final-cta { border-radius: 24px; box-shadow: 0 18px 45px rgba(16,38,75,.16); }
+        .plans-intro { max-width: 850px; margin: 0 auto 1.8rem; text-align: center; color: var(--texto-suave); }
+        .plan-brand { display: inline-block; margin-bottom: .8rem; padding: .35rem .75rem; border-radius: 30px; background: var(--azul-50); color: var(--azul-800); font: 700 .75rem Montserrat, sans-serif; letter-spacing: .06em; text-transform: uppercase; }
+        .plan2 h3 { color: var(--azul-900); font-size: 1.45rem; margin-bottom: .7rem; }
+        .plan2 p { color: var(--texto-suave); margin-bottom: .9rem; }
+        .plan2 .btn { margin-top: .7rem; }
+        .plan-note { line-height: 1.7; }
+        @media (max-width: 900px) {
+            .hero-inner { grid-template-columns: 1fr; }
+            .hero-copy { max-width: 760px; }
+            .hero-visual { min-height: 0; max-width: 650px; width: 100%; margin: 0 auto; }
+            .hero-visual img { height: min(62vw, 390px); }
+            .hero-visual::after { left: 14px; bottom: 14px; }
+        }
+        @media (max-width: 768px) {
+            section { padding: 3.6rem 0; }
+            header.hero { padding: 5.5rem 0 3.6rem; }
+            .hero h1 { font-size: clamp(1.75rem, 7vw, 2.2rem); }
+            .hero .lead { font-size: 1rem; }
+            .hero-ctas { justify-content: stretch; }
+            .hero-ctas .btn { width: 100%; }
+            .chips { justify-content: flex-start; }
+            .hero-visual img { height: 260px; }
+        }
+
     </style>
 </head>
 <body>
@@ -317,18 +396,25 @@
     <header class="hero">
         <div class="container">
             <div class="hero-inner">
-                <h1>Gastos Médicos Mayores (GMM): <span>salud privada y protección</span></h1>
-                <p class="lead">Un accidente o una enfermedad grave pueden costar más que años de ahorro. Un seguro de gastos médicos mayores te permite atenderte en hospitales privados de México y cuidar el patrimonio de tu familia, según el plan que elijas.</p>
-                <div class="hero-ctas">
-                    <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20me%20interesa%20cotizar%20un%20Seguro%20de%20Gastos%20M%C3%A9dicos%20Mayores" class="btn btn-wa js-wa" data-origen="hero" target="_blank" rel="noopener noreferrer">
-                        <svg viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326z"/></svg>
-                        Enviar WhatsApp
-                    </a>
+                <div class="hero-copy">
+                    <span class="eyebrow">Gastos Médicos Mayores · Protección personal y familiar</span>
+                    <h1>Gastos Médicos Mayores (GMM): <span>tu salud merece opciones, tu patrimonio protección</span></h1>
+                    <p class="lead">Un accidente o una enfermedad grave pueden cambiar tus planes y comprometer tus ahorros. Un seguro de Gastos Médicos Mayores puede ayudarte a acceder a atención médica privada y contar con respaldo financiero ante eventos cubiertos, conforme a las condiciones de tu póliza.</p>
+                    <div class="hero-ctas">
+                        <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20me%20interesa%20cotizar%20un%20Seguro%20de%20Gastos%20M%C3%A9dicos%20Mayores" class="btn btn-wa js-wa" data-origen="hero" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326z"/></svg>
+                            Solicitar cotización
+                        </a>
+                        <a href="#coberturas" class="btn btn-ghost">Conocer coberturas</a>
+                    </div>
+                    <div class="chips">
+                        <span class="chip"><svg class="chip-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Hospitales y médicos de tu elección</span>
+                        <span class="chip"><svg class="chip-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Individual o familiar</span>
+                        <span class="chip"><svg class="chip-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Asesoría sin costo en todo México</span>
+                    </div>
                 </div>
-                <div class="chips">
-                    <span class="chip"><svg class="chip-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Hospitales y médicos de tu elección</span>
-                    <span class="chip"><svg class="chip-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Individual o familiar</span>
-                    <span class="chip"><svg class="chip-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Asesoría sin costo en todo México</span>
+                <div class="hero-visual">
+                    <img src="/imagenes/gmm-04-accidente.webp" alt="Atención y acompañamiento ante un accidente, como parte de la protección de gastos médicos" width="720" height="540" fetchpriority="high" decoding="async" onerror="this.closest('.hero-visual').style.display='none'">
                 </div>
             </div>
         </div>
@@ -396,7 +482,7 @@
     </section>
 
     <!-- ===== 4. COBERTURAS BÁSICAS ===== -->
-    <section class="benefits">
+    <section class="benefits" id="coberturas">
         <div class="container">
             <div class="section-head">
                 <span class="eyebrow">Coberturas básicas</span>
@@ -559,7 +645,44 @@
         </div>
     </section>
 
-    <!-- ===== 6. LO QUE CONVIENE SABER ===== -->
+    <!-- ===== 6. ALTERNATIVAS PARA COMPARAR ===== -->
+    <section>
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">Alternativas de protección</span>
+                <h2>Comparemos opciones antes de decidir</h2>
+                <p>La mejor póliza no es necesariamente la de mayor suma asegurada o la prima más baja: es la que equilibra hospitales, deducible, coaseguro, coberturas y presupuesto de acuerdo con tus prioridades.</p>
+            </div>
+            <p class="plans-intro">Podemos revisar alternativas como <strong>Alfa Medical</strong> y <strong>AXA Flex Plus</strong>, sujetas a disponibilidad, criterios de aceptación, condiciones y versiones vigentes de cada producto. También puedo revisar otras alternativas de las aseguradoras con las que trabajo, según tu perfil.</p>
+            <div class="plans2">
+                <article class="plan2">
+                    <span class="plan-brand">Alternativa 01</span>
+                    <h3>Alfa Medical</h3>
+                    <p>Revisamos sus condiciones vigentes y configuramos una propuesta de acuerdo con tu edad, necesidades de atención, hospitales de preferencia y presupuesto.</p>
+                    <ul>
+                        <li>Revisión de suma asegurada y alcances contratables.</li>
+                        <li>Comparación de deducible, coaseguro y topes.</li>
+                        <li>Validación de red hospitalaria y tabulador médico.</li>
+                    </ul>
+                    <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20quiero%20conocer%20la%20opcion%20Alfa%20Medical" class="btn btn-primary js-wa" data-origen="plan-alfa" target="_blank" rel="noopener noreferrer">Consultar Alfa Medical</a>
+                </article>
+                <article class="plan2">
+                    <span class="plan-brand">Alternativa 02</span>
+                    <h3>AXA Flex Plus</h3>
+                    <p>Analizamos la configuración disponible y sus condiciones para identificar si corresponde a tus prioridades de protección y capacidad de pago.</p>
+                    <ul>
+                        <li>Revisión de suma asegurada y coberturas aplicables.</li>
+                        <li>Comparación de deducible, coaseguro y topes.</li>
+                        <li>Validación de red hospitalaria y tabulador médico.</li>
+                    </ul>
+                    <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20quiero%20conocer%20la%20opcion%20AXA%20Flex%20Plus" class="btn btn-primary js-wa" data-origen="plan-axa" target="_blank" rel="noopener noreferrer">Consultar AXA Flex Plus</a>
+                </article>
+            </div>
+            <p class="plan-note">Los nombres comerciales no implican que todas las coberturas estén incluidas en cualquier versión. La propuesta y sus alcances se confirman con la cotización, solicitud, carátula y condiciones generales vigentes de la póliza.</p>
+        </div>
+    </section>
+
+    <!-- ===== 7. LO QUE CONVIENE SABER ===== -->
     <section class="alt-bg">
         <div class="container">
             <div class="section-head">
@@ -646,12 +769,9 @@
     <!-- ===== 10. CREDENCIAL + CTA FINAL ===== -->
     <section>
         <div class="container">
-            <div class="credential">
-                <img src="/rafael-perfil.jpg" alt="Rafael Jiménez Sánchez" width="64" height="64" loading="lazy" onerror="this.remove()">
-                <p><svg class="h-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" /> <path d="m16 9-5.5 5.5L8 12" /></svg>Esta guía informativa ha sido redactada, revisada y validada por <strong>Rafael Jiménez Sánchez</strong>, Intermediario Profesional de Seguros autorizado y certificado ante la Comisión Nacional de Seguros y Fianzas (<strong>CNSF</strong>). Operando bajo las Cédulas Oficiales Tipo A1 y Tipo B con números de registro H382035 y Y415335, respectivamente. Tu tranquilidad, salud y patrimonio están respaldados bajo el marco regulatorio del sector asegurador en México.</p>
-            </div>
-
             {% include contacto-cta.html titulo="Protege hoy tu salud y tu patrimonio" texto="Te preparo una cotización de gastos médicos mayores, individual o familiar, con varias opciones para comparar. Asesoría sin costo y sin compromiso." wa="https://wa.me/528343117556?text=Hola%20Rafael,%20me%20interesa%20cotizar%20un%20Seguro%20de%20Gastos%20M%C3%A9dicos%20Mayores" %}
+
+            <div class="firma">Esta guía informativa ha sido redactada, revisada y validada por <strong>Rafael Jiménez Sánchez</strong>, Intermediario Profesional de Seguros autorizado y certificado ante la Comisión Nacional de Seguros y Fianzas (CNSF), operando bajo las Cédulas Oficiales Tipo A1 y Tipo B con números de registro <strong>H382035</strong> y <strong>Y415335</strong>, respectivamente. Tu tranquilidad, salud y patrimonio están respaldados bajo el marco regulatorio del sector asegurador en México. <a href="/autorizaciones/">Consulta mis autorizaciones</a>.</div>
 
             <div class="nav-bottom">
                 <a href="/" class="back-to-top dark">Ir al Menú Principal</a>
