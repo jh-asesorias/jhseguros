@@ -3,301 +3,407 @@
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seguro Educativo para tus Hijos: Ahorro Universitario Protegido | JH Seguros</title>
-    <meta name="description" content="Asegura la universidad de tus hijos: ahorro en UDIS o dólares que puede continuar aunque tú faltes. Para padres, abuelos y tutores. Asesoría Personal sin costo en todo México.">
-    <link rel="canonical" href="https://jhseguros.mx/educacion/">
-    <meta name="author" content="Rafael Jiménez Sánchez">
-    <meta name="robots" content="index, follow">
-    
-    <meta property="og:title" content="Seguro Educativo: el fondo universitario de tus hijos, asegurado | JH Seguros">
-    <meta property="og:description" content="Ahorro universitario que puede continuar aunque llegues a faltar o sufrir invalidez, según las condiciones de la póliza.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jhseguros.mx/educacion/">
-    <meta property="og:image" content="https://jhseguros.mx/imagenes/og-educacion.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Seguro Educativo | JH Seguros">
-    
-    <link rel="icon" href="/rafael-perfil.jpg" type="image/jpeg">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3GLCDV4F8"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-Z3GLCDV4F8');
-      gtag('config', 'AW-18520948891');
-    </script>
-
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Open Sans', sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; scroll-behavior: smooth; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        header { position: relative; background: linear-gradient(135deg, #1e3c72 90%, #2a5298 100%); color: white; padding: 3rem 0; text-align: center; overflow: hidden; z-index: 1; }
-        header::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('/rafael-perfil.jpg'); background-size: cover; background-position: center; opacity: 0.15; filter: grayscale(100%); mix-blend-mode: luminosity; z-index: -1; }
-        .brand-logo { display: inline-block; background: #fff; padding: 10px 16px; border-radius: 12px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); margin-bottom: 1.2rem; }
-        .brand-logo img { display: block; height: 70px; width: auto; }
-        .profile-container { display: flex; flex-direction: column; align-items: center; margin-bottom: 1.5rem; }
-        .name { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; font-weight: 700; margin-bottom: 0.5rem; }
-        .tagline { font-size: 1.7rem; margin: 1.5rem 0; font-weight: 500; max-width: 800px; margin-left: auto; margin-right: auto; }
-        .services { padding: 3rem 0; background-color: white; }
-        .detail-content { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); margin-bottom: 2rem; }
-        .detail-content p, .detail-content ul { margin-bottom: 1rem; color: #444; }
-        .detail-content ul { margin-left: 20px; list-style-type: disc; }
-        .detail-content strong { color: #2a5298; }
-        .back-to-top { display: inline-block; background-color: #2a5298; color: white; padding: 0.5rem 1.2rem; font-size: 0.9rem; border-radius: 20px; text-decoration: none; font-weight: 600; margin-top: 1rem; }
-        footer { background-color: #1a1a2e; color: white; padding: 3rem 0 5rem; text-align: center; }
-        .brand { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; margin-bottom: 1rem; color: #ff6b6b; }
-        .cta-button { display: inline-block; background-color: #ff6b6b; color: white; padding: 0.8rem 2rem; border-radius: 30px; text-decoration: none; font-weight: 600; margin: 10px 0 15px; }
-        .social-links { display: flex; justify-content: center; gap: 1rem; margin: 1.5rem 0; }
-        .social-icon { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.1); border-radius: 50%; color: white; text-decoration: none; }
-        .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 20px; right: 20px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; font-size: 35px; box-shadow: 2px 2px 3px #999; z-index: 1000; display: flex; align-items: center; justify-content: center; text-decoration: none; }
-        .mobile-menu-btn { display: none; position: fixed; top: 20px; right: 20px; width: 52px; height: 52px; background-color: #1e3c72; color: white; border-radius: 50%; border: 2px solid rgba(255, 255, 255, 0.2); z-index: 2000; cursor: pointer; align-items: center; justify-content: center; }
-        .mobile-menu-btn svg { width: 24px; height: 24px; fill: currentColor; }
-        .mobile-overlay { position: fixed; top: 0; right: -100%; width: 280px; height: 100%; background-color: #1a1a2e; z-index: 1999; transition: right 0.4s; display: flex; flex-direction: column; padding: 85px 20px 20px; }
-        .mobile-overlay.open { right: 0; }
-        .mobile-nav-link { color: white; text-decoration: none; font-size: 1.05rem; font-weight: 600; padding: 14px 15px; border-bottom: 1px solid rgba(255,255,255,0.05); }
-        .mobile-backdrop { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 1998; display: none; opacity: 0; transition: opacity 0.3s; }
-        .mobile-backdrop.open { display: block; opacity: 1; }
-        @media (max-width: 768px) { .name { font-size: 1.8rem; } .tagline { font-size: 1.5rem; } .mobile-menu-btn { display: flex; } }
-        /* Secciones ampliadas del seguro educativo */
-        .lead { font-size: 1.08rem; }
-        .sec-title { color: #2a5298; font-family: 'Montserrat', sans-serif; font-size: 1.4rem; margin: 38px 0 14px; }
-        .steps, .who-grid, .benefit-grid, .plans { display: grid; gap: 16px; }
-        .steps { grid-template-columns: repeat(3, 1fr); }
-        .who-grid { grid-template-columns: repeat(4, 1fr); margin-bottom: 14px; }
-        .benefit-grid { grid-template-columns: 1fr; }
-        .plans { grid-template-columns: 1fr; }
-        .step, .who-card, .benefit, .plan { background: #f8f9fa; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px; }
-        .step h3, .who-card h3, .benefit h3, .plan h3 { font-family: 'Montserrat', sans-serif; color: #1e3c72; font-size: 1.05rem; margin-bottom: 6px; }
-        .step p, .who-card p, .benefit p { margin: 0; font-size: 0.95rem; }
-        .step-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
-        .step-head .step-num { margin-bottom: 0; }
-        .step-icons { font-size: 1.7rem; line-height: 1; letter-spacing: 4px; }
-        .step-num { display: inline-flex; width: 34px; height: 34px; border-radius: 50%; background: #2a5298; color: #fff; font-weight: 700; align-items: center; justify-content: center; margin-bottom: 8px; font-family: 'Montserrat', sans-serif; }
-        .who-card { text-align: center; }
-        .who-icon { font-size: 2rem; display: block; margin-bottom: 4px; }
-        .detail-content ul.checks { list-style: none; margin-left: 0; }
-        .checks li { padding-left: 26px; position: relative; margin-bottom: 6px; }
-        .checks li::before { content: "✓"; position: absolute; left: 0; color: #2a5298; font-weight: 700; }
-        .benefit.has-img { display: grid; grid-template-columns: minmax(0, 360px) 1fr; gap: 22px; align-items: center; }
-        .benefit.has-img.rev { grid-template-columns: 1fr minmax(0, 360px); }
-        .benefit.has-img.rev .benefit-img { order: 2; }
-        .benefit-img { display: block; width: 100%; height: auto; border-radius: 8px; }
-        .benefit p { font-size: 1rem; }
-        .plan { border-top: 4px solid #2a5298; }
-        .plan:nth-child(2) { border-top-color: #6a4c93; }
-        .plan-ins { font-size: 0.85rem; color: #64748b; margin-bottom: 8px !important; }
-        .plan ul { margin: 0 0 0 18px !important; }
-        .note { font-size: 0.9rem; color: #64748b !important; margin-top: 12px; }
-        .cta-box { margin-top: 38px; padding: 24px; background: linear-gradient(135deg, #1e3c72, #2a5298); border-radius: 10px; text-align: center; color: #fff; }
-        .cta-box h3 { font-family: 'Montserrat', sans-serif; font-size: 1.3rem; margin-bottom: 8px; }
-        .cta-box p { color: #e2e8f0 !important; margin-bottom: 18px !important; }
-        .cta-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
-        .btn-wa, .btn-form { display: inline-block; padding: 11px 18px; border-radius: 6px; text-decoration: none; font-weight: 700; color: #fff; }
-        .btn-wa { background: #25D366; }
-        .btn-form { background: #fff; color: #1e3c72; }
-        .faq details { border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 10px; background: #fff; }
-        .faq summary { cursor: pointer; padding: 14px 16px; font-weight: 600; color: #1e3c72; }
-        .faq details p { padding: 0 16px 14px; margin: 0; }
-        .trust { margin: 34px 0 10px; color: #444; font-size: 0.9rem; text-align: justify; }
-        @media (max-width: 900px) { .who-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 640px) { .steps, .who-grid, .benefit-grid, .plans { grid-template-columns: 1fr; } .benefit.has-img, .benefit.has-img.rev { grid-template-columns: 1fr; gap: 12px; } .benefit.has-img.rev .benefit-img { order: 0; } .detail-content { padding: 1.4rem; } }
-        .hero-sub { font-size: 1.15rem; margin: 0 auto 1.4rem; max-width: 720px; opacity: 0.95; }
-        .hero-wa { display: inline-flex; align-items: center; gap: 10px; background: #1fa855; color: #fff; padding: 16px 30px; border-radius: 40px; font-weight: 700; font-size: 1.15rem; text-decoration: none; box-shadow: 0 6px 18px rgba(0,0,0,0.25); transition: transform 0.2s, background 0.2s; }
-        .hero-wa:hover { background: #178f47; transform: translateY(-2px); }
-        @media (max-width: 640px) { .hero-sub { font-size: 1rem; } .hero-wa { font-size: 1.05rem; padding: 14px 24px; } }
-    </style>
-    <style>
-        /* Iconos de línea en lugar de emojis (Lucide, licencia ISC; WhatsApp, Facebook e Instagram: logotipos oficiales) */
-        svg.jh-i { display: inline-block; width: 1.1em; height: 1.1em; margin-right: 0.35em; vertical-align: -0.18em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
-        svg.jh-solo { display: inline-block; width: 0.85em; height: 0.85em; color: #6c4bc4; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; vertical-align: middle; }
-        .jh-solo + .jh-solo { margin-left: 0.25em; }
-        .ico .jh-solo { width: 20px; height: 20px; color: inherit; }
-        svg.jh-fill { fill: currentColor; stroke: none; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seguro Educativo y SeguBeca | Planea la Universidad de tus Hijos | JH Seguros</title>
+  <meta name="description" content="Conoce cómo planear el fondo universitario de tus hijos con SeguBeca de Seguros Monterrey o Aliados+ Kids de AXA. Asesoría personalizada sin costo en México.">
+  <link rel="canonical" href="https://jhseguros.mx/educacion/">
+  <meta name="author" content="Rafael Jiménez Sánchez">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Planea hoy la universidad de tus hijos | JH Seguros">
+  <meta property="og:description" content="Conoce alternativas de ahorro educativo con protección. Compara SeguBeca y Aliados+ Kids con asesoría profesional.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jhseguros.mx/educacion/">
+  <meta property="og:image" content="https://jhseguros.mx/imagenes/og-educacion.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Planeación universitaria y seguro educativo | JH Seguros">
+  <link rel="icon" href="/rafael-perfil.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3GLCDV4F8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Z3GLCDV4F8');
+    gtag('config', 'AW-18520948891');
+  </script>
+  <style>
+    :root{--navy:#17345f;--blue:#28569a;--blue2:#3974bd;--gold:#f2b544;--ink:#253247;--muted:#5b6879;--pale:#f3f6fa;--line:#e1e7ef;--green:#20a65a}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Open Sans',sans-serif;color:var(--ink);line-height:1.65;background:#fff}
+    a{color:inherit}
+    .container{width:min(1160px,calc(100% - 40px));margin:auto}
+    .hero{position:relative;overflow:hidden;color:#fff;padding:76px 0 70px;background:linear-gradient(120deg,rgba(18,43,80,.97),rgba(40,86,154,.91)),url('/imagenes/padres-cielo.webp') center/cover}
+    .hero:after{content:"";position:absolute;width:420px;height:420px;border:1px solid rgba(255,255,255,.13);border-radius:50%;right:-110px;top:-170px;box-shadow:0 0 0 45px rgba(255,255,255,.035),0 0 0 90px rgba(255,255,255,.025)}
+    .hero-content{position:relative;z-index:1;max-width:850px;text-align:center;margin:auto}
+    .eyebrow{display:inline-block;color:#ffe0a0;border:1px solid rgba(255,224,160,.5);border-radius:30px;padding:6px 15px;font-size:.82rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;margin-bottom:18px}
+    h1,h2,h3{font-family:'Montserrat',sans-serif;line-height:1.2}
+    h1{font-size:clamp(2.1rem,5vw,3.55rem);font-weight:800;margin-bottom:20px}
+    .hero-lead{font-size:clamp(1.05rem,2vw,1.28rem);max-width:760px;margin:0 auto 18px;color:#eef4ff}
+    .hero-products{font-size:.96rem;color:#dce8fa;margin-bottom:26px}
+    .hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font-weight:700;border-radius:8px;padding:14px 23px;transition:.2s;min-height:50px}
+    .btn-primary{background:var(--gold);color:#26364b;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+    .btn-primary:hover{background:#ffd071;transform:translateY(-2px)}
+    .btn-secondary{border:1px solid rgba(255,255,255,.65);color:#fff}
+    .btn-secondary:hover{background:rgba(255,255,255,.12)}
+    .microcopy{font-size:.83rem;color:#dce8fa;margin-top:13px}
+    .trust-strip{background:#fff;border-bottom:1px solid var(--line)}
+    .trust-items{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:20px 0;text-align:center}
+    .trust-items div{font-size:.92rem;font-weight:700;color:var(--navy)}
+    .trust-items span{display:block;font-size:.8rem;font-weight:400;color:var(--muted)}
+    section{padding:68px 0}
+    .section-head{text-align:center;max-width:800px;margin:0 auto 34px}
+    .kicker{font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;color:var(--blue);font-weight:800;margin-bottom:9px}
+    h2{font-size:clamp(1.75rem,3.4vw,2.5rem);color:var(--navy);margin-bottom:13px}
+    .section-head p{color:var(--muted);font-size:1.05rem}
+    .problem{background:var(--pale)}
+    .problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:13px;padding:24px;box-shadow:0 5px 18px rgba(22,48,84,.045)}
+    .card h3{color:var(--navy);font-size:1.12rem;margin-bottom:9px}
+    .card p{color:var(--muted);font-size:.96rem}
+    .card-icon{width:42px;height:42px;border-radius:11px;background:#eaf1fb;color:var(--blue);display:grid;place-items:center;font-size:1.25rem;font-weight:800;margin-bottom:15px}
+    .solution-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .solution{border:1px solid var(--line);border-radius:15px;padding:28px;background:#fff;box-shadow:0 8px 25px rgba(22,48,84,.06)}
+    .solution.featured{border:2px solid var(--blue);position:relative}
+    .solution .label{display:inline-block;background:#eaf1fb;color:var(--blue);font-size:.78rem;font-weight:800;padding:5px 10px;border-radius:20px;margin-bottom:14px}
+    .solution h3{font-size:1.45rem;color:var(--navy);margin-bottom:8px}
+    .solution p{color:var(--muted);margin-bottom:14px}
+    .solution ul,.clean-list{padding-left:20px;color:var(--muted)}
+    .solution li,.clean-list li{margin:7px 0}
+    .text-link{display:inline-block;margin-top:15px;color:var(--blue);font-weight:700;text-decoration:none}
+    .how{background:var(--pale)}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .step{background:#fff;border:1px solid var(--line);border-radius:13px;padding:25px}
+    .step-num{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--blue);color:#fff;font-family:'Montserrat';font-weight:800;margin-bottom:14px}
+    .step h3{color:var(--navy);font-size:1.12rem;margin-bottom:8px}
+    .step p{color:var(--muted);font-size:.95rem}
+    .protection-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:center}
+    .protection-image{width:100%;height:100%;max-height:430px;object-fit:cover;border-radius:15px}
+    .protection-copy h2{text-align:left}
+    .protection-copy>p{color:var(--muted);margin-bottom:16px}
+    .callout{background:#edf4ff;border-left:4px solid var(--blue);padding:17px 19px;border-radius:0 9px 9px 0;margin-top:20px;color:var(--navy)}
+    .features{background:var(--pale)}
+    .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .feature{background:#fff;padding:21px;border:1px solid var(--line);border-radius:12px}
+    .feature h3{color:var(--navy);font-size:1rem;margin-bottom:7px}
+    .feature p{color:var(--muted);font-size:.92rem}
+    .audience-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .audience{text-align:center;padding:20px 13px;background:#fff;border:1px solid var(--line);border-radius:12px}
+    .audience strong{display:block;color:var(--navy);margin-bottom:5px}
+    .audience p{font-size:.88rem;color:var(--muted)}
+    .compare{background:var(--pale)}
+    .compare-note{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px;color:var(--muted);text-align:center}
+    .faq{max-width:900px;margin:auto}
+    .faq details{border:1px solid var(--line);border-radius:9px;margin-bottom:11px;background:#fff}
+    .faq summary{cursor:pointer;padding:17px 20px;color:var(--navy);font-weight:700}
+    .faq details p{padding:0 20px 18px;color:var(--muted)}
+    .final-cta{background:linear-gradient(120deg,var(--navy),var(--blue));color:#fff;text-align:center}
+    .final-cta h2{color:#fff}
+    .final-cta p{max-width:720px;margin:0 auto 22px;color:#e5edf9}
+    .final-cta .microcopy{color:#dce8fa}
+    .trust-copy{font-size:.88rem;color:var(--muted);text-align:center;max-width:950px;margin:30px auto 0}
+    .bottom-nav{text-align:center;margin-top:25px}
+    .bottom-nav a{display:inline-block;margin:6px 10px;color:var(--blue);font-weight:700;text-decoration:none}
+    .btn-wa{background:#25d366;color:#fff;gap:10px;box-shadow:0 8px 22px rgba(37,211,102,.32)}
+    .btn-wa:hover{background:#1fb85a;transform:translateY(-2px)}
+    .wa-ico{width:20px;height:20px;fill:currentColor;flex-shrink:0}
+    .wa-link{display:inline-flex;align-items:center;gap:8px;margin-top:15px;color:#128c4b;font-weight:700;text-decoration:none}
+    .wa-link .wa-ico{width:18px;height:18px}
+    .wa-link:hover{text-decoration:underline}
+    .benefit-rows{display:grid;gap:26px}
+    .benefit-row{display:grid;grid-template-columns:1fr 1.1fr;gap:28px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 8px 25px rgba(22,48,84,.06)}
+    .benefit-row.rev .benefit-photo{order:2}
+    .benefit-photo img{width:100%;height:100%;min-height:280px;max-height:340px;object-fit:cover;display:block}
+    .benefit-text{padding:26px 28px 26px 0}
+    .benefit-row.rev .benefit-text{padding:26px 0 26px 28px}
+    .benefit-text h3{color:var(--navy);font-size:1.3rem;margin-bottom:10px}
+    .benefit-text p{color:var(--muted);margin-bottom:10px}
+    .data-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .data{background:#fff;border:1px solid var(--line);border-radius:13px;padding:20px;border-top:4px solid var(--gold)}
+    .data small{display:block;font-size:.74rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
+    .data strong{display:block;font-family:'Montserrat',sans-serif;color:var(--navy);font-size:1.08rem;line-height:1.3;margin-bottom:6px}
+    .data p{font-size:.88rem;color:var(--muted)}
+    .optional-box{margin-top:22px;background:#fff;border:1px solid var(--line);border-radius:13px;padding:22px 24px}
+    .optional-box h3{color:var(--navy);font-size:1.08rem;margin-bottom:10px}
+    .chips{display:flex;flex-wrap:wrap;gap:9px}
+    .chips span{background:#eaf1fb;color:var(--navy);font-size:.88rem;font-weight:700;padding:7px 13px;border-radius:30px}
+    .firma{max-width:950px;margin:30px auto 0;padding:18px 22px;border-left:4px solid var(--blue);background:var(--pale);border-radius:10px;font-size:.88rem;color:var(--muted)}
+    .firma a{color:var(--blue);font-weight:700}
+    .wa-float{position:fixed;right:20px;bottom:20px;z-index:1000;background:#20bd62;color:#fff;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;text-decoration:none;font-size:27px;box-shadow:0 4px 15px #0003}
+    .wa-float svg{width:30px;height:30px;fill:currentColor}
+    @media(max-width:850px){.problem-grid,.feature-grid,.data-grid{grid-template-columns:repeat(2,1fr)}.benefit-row,.benefit-row.rev{grid-template-columns:1fr}.benefit-row.rev .benefit-photo{order:0}.benefit-text,.benefit-row.rev .benefit-text{padding:4px 24px 24px}.audience-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:650px){.hero{padding:60px 0 52px}.container{width:min(100% - 30px,1160px)}section{padding:52px 0}.trust-items{grid-template-columns:1fr;gap:10px}.problem-grid,.solution-grid,.steps,.protection-grid,.feature-grid,.data-grid{grid-template-columns:1fr}.benefit-photo img{min-height:220px}.audience-grid{grid-template-columns:repeat(2,1fr)}.solution{padding:23px}.hero-actions .btn{width:100%}.wa-float{width:54px;height:54px;right:14px;bottom:14px}}
+  </style>
 </head>
 <body>
-    {% include header.html %}
-    <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20me%20interesa%20asegurar%20la%20universidad%20de%20mis%20hijos%20con%20un%20seguro%20educativo" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.081-.1.115-.173.171-.292.059-.115.03-.217-.015-.307-.045-.1-.445-1.074-.61-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
-    </a>
+  {% include header.html %}
 
-    <button class="mobile-menu-btn" id="menuToggle" aria-label="Abrir menú">
-        <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-    </button>
-    <div class="mobile-backdrop" id="menuBackdrop"></div>
-    <div class="mobile-overlay" id="menuOverlay">
-        <a href="/" class="mobile-nav-link">Inicio</a>
-        <a href="/danos/" class="mobile-nav-link">Módulo Autos y Daños</a>
-        <a href="/productos-vida/" class="mobile-nav-link">Vida y Gastos Médicos</a>
-        <a href="/autorizaciones/" class="mobile-nav-link">Autorizaciones / Certificaciones</a>
-        <a href="/hospitales/" class="mobile-nav-link">Servicios Hospitalarios</a>
-        <a href="/recursos/" class="mobile-nav-link">Respuestas sobre Seguros</a>
-        <a href="/redes/" class="mobile-nav-link">Redes Sociales</a>
-        <a href="/contacto-form/" class="mobile-nav-link">Contacto Directo</a>
-    </div>
+  <a class="wa-float" href="https://wa.me/528343117556?text=Hola%20Rafael,%20quiero%20planear%20el%20fondo%20universitario%20de%20mi%20hijo" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp" data-track="whatsapp_flotante">
+    <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13.6 2.3A7.9 7.9 0 0 0 8 0C3.6 0 .1 3.6.1 7.9c0 1.4.4 2.8 1.1 4L0 16l4.2-1.1a7.9 7.9 0 0 0 3.8 1h.1c4.3 0 7.9-3.6 7.9-7.9a7.9 7.9 0 0 0-2.4-5.7ZM8 14.5a6.6 6.6 0 0 1-3.4-.9l-.2-.2-2.5.7.7-2.4-.2-.3a6.6 6.6 0 0 1-1-3.5c0-3.6 3-6.6 6.6-6.6a6.6 6.6 0 0 1 4.7 1.9 6.6 6.6 0 0 1 1.9 4.7c0 3.6-3 6.6-6.6 6.6Zm3.6-4.9c-.2-.1-1.2-.6-1.4-.7-.2-.1-.3-.1-.4.1l-.6.8c-.1.1-.2.1-.4 0-.2-.1-.8-.3-1.6-1-.6-.5-1-1.2-1.1-1.4-.1-.2 0-.3.1-.4l.3-.3.2-.3c.1-.1 0-.2 0-.3-.1-.1-.4-1.1-.6-1.5-.2-.4-.3-.3-.5-.3h-.4c-.1 0-.4.1-.5.3-.2.2-.7.7-.7 1.7s.7 1.9.8 2.1c.1.1 1.4 2.1 3.4 3 .5.2.8.3 1.1.4.5.2.9.1 1.2.1.4-.1 1.2-.5 1.3-.9.2-.5.2-.9.1-.9 0-.1-.2-.2-.4-.3Z"/></svg>
+  </a>
 
-    <header>
-        <div class="container">
-            <div class="profile-container">
-                <h1 class="name">Seguro Educativo: la universidad de tus hijos, asegurada</h1>
-                <p class="tagline">Ahorra para su carrera desde hoy y protege ese fondo aunque tú no estés, según las condiciones de la póliza.</p>
-                <p class="hero-sub">Planes <strong>SeguBeca</strong> de Seguros Monterrey New York Life y <strong>Aliados+ Kids</strong> de AXA Seguros. Asesoría sin costo: te explico con un ejemplo para tu hijo cómo funciona.</p>
-                <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20quiero%20una%20asesor%C3%ADa%20sobre%20el%20seguro%20educativo%20para%20mi%20hijo" target="_blank" rel="noopener noreferrer" class="hero-wa" data-track="hero_whatsapp"><svg class="jh-i jh-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.081-.1.115-.173.171-.292.059-.115.03-.217-.015-.307-.045-.1-.445-1.074-.61-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>Quiero mi asesoría por WhatsApp</a>
-            </div>
+  <main>
+    <header class="hero">
+      <div class="container hero-content">
+        <span class="eyebrow">Seguro educativo · Planeación universitaria</span>
+        <h1>Que la universidad de tus hijos no dependa de lo que pueda pasar mañana.</h1>
+        <p class="hero-lead">Construye desde hoy un fondo para su educación y conoce alternativas que pueden proteger la continuidad de ese objetivo ante determinados imprevistos.</p>
+        <p class="hero-products">SeguBeca de Seguros Monterrey New York Life y Aliados+ Kids de AXA Seguros.</p>
+        <div class="hero-actions">
+          <a class="btn btn-wa" href="https://wa.me/528343117556?text=Hola%20Rafael,%20quiero%20conocer%20cu%C3%A1nto%20necesito%20ahorrar%20para%20la%20universidad%20de%20mi%20hijo" target="_blank" rel="noopener noreferrer" data-track="hero_calcular_meta"><svg class="wa-ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.081-.1.115-.173.171-.292.059-.115.03-.217-.015-.307-.045-.1-.445-1.074-.61-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>Quiero planear su universidad</a>
+          <a class="btn btn-secondary" href="#como-funciona">Conocer cómo funciona</a>
         </div>
+        <p class="microcopy">Asesoría personalizada sin costo y sin compromiso. Atención en todo México.</p>
+      </div>
     </header>
 
-    <section class="services">
-        <div class="container">
-            <div class="detail-content text-start">
+    <div class="trust-strip">
+      <div class="container trust-items">
+        <div>Planeación con anticipación<span>Define una meta y construye el fondo gradualmente.</span></div>
+        <div>Ahorro con protección<span>Conoce las coberturas disponibles en cada alternativa.</span></div>
+        <div>Orientación profesional<span>Revisa opciones según tu familia y presupuesto.</span></div>
+      </div>
+    </div>
 
-                <!-- 1. Problema: por qué planear desde hoy -->
-                <p class="lead">La educación es el patrimonio más valioso que puedes heredar. Pero las colegiaturas suben cada año, a la carrera se suman libros, idiomas, transporte y materiales, y nadie tiene comprado el futuro. Un <strong>seguro educativo</strong> te permite construir hoy el fondo universitario de tu hijo y, al mismo tiempo, <strong>proteger ese fondo para que llegue aunque tú no estés</strong>.</p>
-
-                <!-- 2. Cómo funciona (3 pasos) -->
-                <h2 class="sec-title">¿Cómo funciona?</h2>
-                <div class="steps">
-                    <div class="step">
-                        <div class="step-head"><span class="step-num">1</span><span class="step-icons" aria-hidden="true"><svg class="jh-solo" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1" /> <path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4" /></svg><svg class="jh-solo" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 7h6v6" /> <path d="m22 7-8.5 8.5-5-5L2 17" /></svg></span></div>
-                        <h3>Defines la meta</h3>
-                        <p>Calculamos juntos cuánto necesitará tu hijo para su carrera y lo convertimos en un ahorro programado.</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-head"><span class="step-num">2</span><span class="step-icons" aria-hidden="true"><svg class="jh-solo" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 17h3v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-3a3.16 3.16 0 0 0 2-2h1a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1h-1a5 5 0 0 0-2-4V3a4 4 0 0 0-3.2 1.6l-.3.4H11a6 6 0 0 0-6 6v1a5 5 0 0 0 2 4v3a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1z" /> <path d="M16 10h.01" /> <path d="M2 8v1a2 2 0 0 0 2 2h1" /></svg><svg class="jh-solo" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /> <path d="m9 12 2 2 4-4" /></svg></span></div>
-                        <h3>Ahorras y estás protegido</h3>
-                        <p>Mientras aportas, tu vida queda asegurada. Si llegaras a faltar o a sufrir invalidez, el plan contempla que el fondo siga adelante, según las coberturas contratadas.</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-head"><span class="step-num">3</span><span class="step-icons" aria-hidden="true"><svg class="jh-solo" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="12" x="2" y="6" rx="2" /> <circle cx="12" cy="12" r="2" /> <path d="M6 12h.01M18 12h.01" /></svg><svg class="jh-solo" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" /> <path d="M22 10v6" /> <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" /></svg></span></div>
-                        <h3>Tu hijo recibe su fondo</h3>
-                        <p>Al llegar a la edad pactada, se entrega el ahorro en una sola exhibición o en pagos programados durante sus años de universidad, según la forma que elijas.</p>
-                    </div>
-                </div>
-
-                <!-- 3. Quiénes pueden contratar -->
-                <h2 class="sec-title">¿Quién puede contratarlo?</h2>
-                <div class="who-grid">
-                    <div class="who-card"><span class="who-icon"><svg class="jh-solo" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /> <path d="M16 3.128a4 4 0 0 1 0 7.744" /> <path d="M22 21v-2a4 4 0 0 0-3-3.87" /> <circle cx="9" cy="7" r="4" /></svg></span><h3>Mamá y papá</h3><p>Pueden contratarlo uno de los dos o ambos, con protección para la pareja en la misma póliza.</p></div>
-                    <div class="who-card"><span class="who-icon"><svg class="jh-solo" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /> <circle cx="12" cy="7" r="4" /></svg></span><h3>Abuelos</h3><p>Una forma muy especial de heredar a los nietos: su educación.</p></div>
-                    <div class="who-card"><span class="who-icon"><svg class="jh-solo" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /> <path d="M16 3.128a4 4 0 0 1 0 7.744" /> <path d="M22 21v-2a4 4 0 0 0-3-3.87" /> <circle cx="9" cy="7" r="4" /></svg></span><h3>Padres solteros o divorciados</h3><p>Certeza de que la carrera de tu hijo no depende de imprevistos.</p></div>
-                    <div class="who-card"><span class="who-icon"><svg class="jh-solo" viewBox="0 0 24 24" aria-hidden="true"><path d="m11 17 2 2a1 1 0 1 0 3-3" /> <path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4" /> <path d="m21 3 1 11h-2" /> <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3" /> <path d="M3 4h8" /></svg></span><h3>Tutores y padres adoptivos</h3><p>Cualquier persona legalmente responsable de un menor que quiera asegurar su futuro académico.</p></div>
-                </div>
-                <ul class="checks">
-                    <li><strong>Edad del contratante:</strong> de 18 a 70 años.</li>
-                    <li><strong>Edad del menor:</strong> desde recién nacido y hasta 13 años, según el plan que elijas. Mientras más pronto inicies, menor será tu aportación.</li>
-                    <li><strong>Moneda:</strong> en <strong>UDIS</strong> (se ajustan con la inflación) o en <strong>dólares</strong>, según el plan.</li>
-                </ul>
-
-                <!-- 4. Coberturas y beneficios -->
-                <h2 class="sec-title">Coberturas y beneficios</h2>
-                <div class="benefit-grid">
-                    <div class="benefit has-img">
-                        <img class="benefit-img" src="/imagenes/padres-cielo.webp" width="720" height="540" loading="lazy" decoding="async" alt="Joven graduada con birrete y diploma, acompañada de sus padres en la ceremonia de graduación" onerror="this.parentNode.classList.remove('has-img');this.remove()">
-                        <div><h3><svg class="jh-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" /> <path d="M22 10v6" /> <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" /></svg>Fondo universitario asegurado</h3><p>El ahorro se entrega a la edad pactada para cubrir la carrera, más los rendimientos que genere su administración, aun cuando tú ya no estés a su lado, según las coberturas contratadas.</p></div>
-                    </div>
-                    <div class="benefit has-img rev">
-                        <img class="benefit-img" src="/imagenes/padre-incapacidad.webp" width="720" height="540" loading="lazy" decoding="async" alt="Persona en silla de ruedas entregando su póliza a un asesor de seguros en una oficina" onerror="this.parentNode.classList.remove('has-img','rev');this.remove()">
-                        <div><h3><svg class="jh-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /> <path d="m9 12 2 2 4-4" /></svg>El plan sigue si faltas o sufres invalidez</h3><p>En caso de fallecimiento o invalidez total y permanente del contratante, la póliza puede quedar exenta de los pagos restantes y el fondo continúa hasta su entrega, según las coberturas contratadas.</p></div>
-                    </div>
-                    <div class="benefit has-img">
-                        <img class="benefit-img" src="/imagenes/padre-indemnizacion.webp" width="720" height="540" loading="lazy" decoding="async" alt="Asesor de JH Seguros entregando un cheque de indemnización a una mujer en su oficina" onerror="this.parentNode.classList.remove('has-img');this.remove()">
-                        <div><h3><svg class="jh-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /> <path d="M16 3.128a4 4 0 0 1 0 7.744" /> <path d="M22 21v-2a4 4 0 0 0-3-3.87" /> <circle cx="9" cy="7" r="4" /></svg>Respaldo para la familia</h3><p>Además del fondo del menor, tu familia recibe una suma asegurada para sostener el hogar en caso de fallecimiento.</p></div>
-                    </div>
-                    <div class="benefit"><h3><svg class="jh-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" /> <path d="M3.22 13H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27" /></svg>Anticipos en momentos difíciles</h3><p>Adelanto de una parte de la suma asegurada ante una enfermedad terminal y un anticipo para gastos inmediatos de la familia.</p></div>
-                    <div class="benefit"><h3><svg class="jh-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" /> <path d="M21 3v5h-5" /> <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" /> <path d="M8 16H3v5" /></svg>Entrega flexible</h3><p>Una sola exhibición o entregas mensuales durante cuatro años, para que el dinero acompañe toda la carrera.</p></div>
-                    <div class="benefit"><h3><svg class="jh-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14" /> <path d="M12 5v14" /></svg>Coberturas opcionales</h3><p>Muerte accidental, invalidez, exención de pagos por desempleo, aportaciones adicionales y la opción de que tu hijo tenga su propio seguro de vida sin exámenes médicos en el futuro.</p></div>
-                </div>
-                <p class="note">Las coberturas incluidas, los periodos de espera y los montos varían según el plan y la aseguradora. En tu asesoría te explico exactamente qué incluye cada uno.</p>
-
-                <!-- 5. Planes disponibles -->
-                <h2 class="sec-title">Resumen del plan</h2>
-                <div class="plans">
-                    <div class="plan">
-                        <ul>
-                            <li>Ahorro en UDIS o dólares</li>
-                            <li>Para menores desde recién nacidos y hasta 13 años, según el plan</li>
-                            <li>Fondo disponible a los 18 años (en algunos planes, también a los 22)</li>
-                            <li>Opción de proteger a ambos padres</li>
-                            <li>Coberturas opcionales por invalidez del contratante</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                                <!-- 6. Preguntas frecuentes (resuelven dudas antes de pedir el contacto) -->
-                <h2 class="sec-title">Preguntas frecuentes</h2>
-                <div class="faq">
-                    <details>
-                        <summary>¿Desde qué edad de mi hijo puedo contratarlo?</summary>
-                        <p>Desde recién nacido. Mientras más pequeño sea al contratar, más años tienes para ahorrar y menor es la aportación periódica.</p>
-                    </details>
-                    <details>
-                        <summary>¿Qué pasa si yo llego a faltar?</summary>
-                        <p>Según el plan y las coberturas contratadas, la aseguradora puede eximir los pagos restantes, la póliza sigue vigente y tu hijo recibe su fondo en la fecha pactada. Además, tu familia puede recibir una suma asegurada adicional.</p>
-                    </details>
-                    <details>
-                        <summary>¿Puedo pagarlo de forma mensual?</summary>
-                        <p>Sí. Puedes elegir pagos anuales, semestrales, trimestrales o mensuales, según te acomode.</p>
-                    </details>
-                    <details>
-                        <summary>¿Lo pueden contratar los abuelos?</summary>
-                        <p>Sí. El contratante puede tener hasta 70 años, por lo que es una excelente forma de que los abuelos hereden educación a sus nietos.</p>
-                    </details>
-                    <details>
-                        <summary>¿Cuánto cuesta?</summary>
-                        <p>Depende de la edad y los hábitos de salud de quien contrata, la edad del menor, la meta de ahorro, la moneda y las coberturas que elijas. Con estos datos y tu meta te preparo una cotización exacta sin compromiso.</p>
-                    </details>
-                </div>
-                 
-                <p class="note">¿Qué te conviene? Depende de la edad de tu hijo, la moneda que prefieras y el monto de tu meta. Te presento la opción más adecuada para tu caso, sin compromiso.</p>
-
-                <!-- 7. CTA principal (después de resolver dudas) -->
-                {% include contacto-cta.html titulo="¿Cuánto necesitará tu hijo para la universidad?" texto="Calculamos su meta de ahorro según su edad actual y te presento las opciones en una asesoría personalizada." wa="https://wa.me/528343117556?text=Hola%20Rafael,%20me%20interesa%20asegurar%20la%20universidad%20de%20mis%20hijos%20con%20un%20seguro%20educativo" %}
-
-                <!-- 8. Respaldo profesional -->
-                <p class="trust"><svg class="jh-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" /> <path d="m16 9-5.5 5.5L8 12" /></svg>Esta guía informativa ha sido redactada, revisada y validada por Rafael Jiménez Sánchez, Intermediario Profesional de Seguros autorizado y certificado ante la Comisión Nacional de Seguros y Fianzas (<strong>CNSF</strong>). Operando bajo las Cédulas Oficiales Tipo A1 y Tipo B con números de registro H382035 y Y415335, respectivamente. Tu tranquilidad, salud y patrimonio están respaldados bajo el marco regulatorio del sector asegurador en México.</p>
-
-                <div style="text-align: center; margin-top: 30px;">
-                    <a href="/" class="back-to-top" style="background-color: #1a1a2e; margin-right: 15px;">Ir al Menú Principal</a>
-                    <a href="/productos-vida/" class="back-to-top">Volver a Vida y Salud</a>
-                </div>
-            </div>
+    <section class="problem">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">El momento de empezar es hoy</div>
+          <h2>¿Ya sabes cuánto costará la universidad cuando tu hijo tenga 18 años?</h2>
+          <p>La educación universitaria implica mucho más que colegiaturas. Planear con tiempo puede ayudarte a prepararte para inscripción, materiales, transporte, alojamiento y otros gastos.</p>
         </div>
+        <div class="problem-grid">
+          <article class="card"><div class="card-icon">01</div><h3>El tiempo cuenta</h3><p>Comenzar con anticipación te permite distribuir el esfuerzo de ahorro durante más años, de acuerdo con tus posibilidades.</p></article>
+          <article class="card"><div class="card-icon">02</div><h3>Ahorrar no siempre es suficiente</h3><p>También conviene considerar qué ocurriría con el objetivo educativo ante un fallecimiento o una invalidez del contratante.</p></article>
+          <article class="card"><div class="card-icon">03</div><h3>Una meta que merece protección</h3><p>Un seguro educativo combina un objetivo de ahorro con coberturas cuya disponibilidad depende del producto y de la póliza contratada.</p></article>
+        </div>
+      </div>
     </section>
 
-     <!-- FOOTER CON RUTAS ABSOLUTAS -->
-    {% include footer.html %}
+    <section id="alternativas">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Conoce tus alternativas</div>
+          <h2>Dos opciones para planear su futuro educativo</h2>
+          <p>Te ayudo a revisar las características de cada producto y a identificar cuál puede ajustarse mejor a la edad de tu hijo, tu meta y tu capacidad de aportación.</p>
+        </div>
+        <div class="solution-grid">
+          <article class="solution featured">
+            <span class="label">Seguros Monterrey New York Life</span>
+            <h3>SeguBeca</h3>
+            <p>Una alternativa de seguro educativo para formar un fondo destinado a los estudios de tus hijos, con coberturas de protección conforme al plan elegido.</p>
+            <ul>
+              <li>Planeación de una meta educativa.</li>
+              <li>Alternativas de aportación y plazo, según elegibilidad.</li>
+              <li>Protección del contratante conforme a las coberturas contratadas.</li>
+            </ul>
+            <a class="wa-link" href="https://wa.me/528343117556?text=Hola%20Rafael,%20quiero%20informaci%C3%B3n%20de%20SeguBeca" target="_blank" rel="noopener noreferrer" data-track="segu_beca"><svg class="wa-ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.081-.1.115-.173.171-.292.059-.115.03-.217-.015-.307-.045-.1-.445-1.074-.61-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>Solicitar información de SeguBeca</a>
+          </article>
+          <article class="solution">
+            <span class="label">AXA Seguros</span>
+            <h3>Aliados+ Kids</h3>
+            <p>Una alternativa de protección y planeación financiera para acompañar la preparación del futuro de los menores, de acuerdo con sus condiciones contractuales.</p>
+            <ul>
+              <li>Objetivo de ahorro para el futuro del menor.</li>
+              <li>Opciones y coberturas sujetas al producto vigente.</li>
+              <li>Asesoría para conocer sus alcances y requisitos.</li>
+            </ul>
+            <a class="wa-link" href="https://wa.me/528343117556?text=Hola%20Rafael,%20quiero%20informaci%C3%B3n%20de%20Aliados%2B%20Kids%20de%20AXA" target="_blank" rel="noopener noreferrer" data-track="aliados_kids"><svg class="wa-ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.081-.1.115-.173.171-.292.059-.115.03-.217-.015-.307-.045-.1-.445-1.074-.61-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>Solicitar información de Aliados+ Kids</a>
+          </article>
+        </div>
+        <p class="trust-copy">Los productos no son idénticos. Las edades de aceptación, moneda, plazos, beneficios, exclusiones y coberturas pueden ser diferentes. La disponibilidad se confirma con la documentación y cotización vigente de cada aseguradora.</p>
+      </div>
+    </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const btn = document.getElementById('menuToggle');
-            const overlay = document.getElementById('menuOverlay');
-            const backdrop = document.getElementById('menuBackdrop');
-            function toggleMenu() {
-                if (!overlay || !backdrop || !btn) return;
-                overlay.classList.toggle('open');
-                backdrop.classList.toggle('open');
-                btn.innerHTML = overlay.classList.contains('open') 
-                    ? '<svg viewBox="0 0 24 24" style="width:24px;height:24px;fill:currentColor;"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>'
-                    : '<svg viewBox="0 0 24 24" style="width:24px;height:24px;fill:currentColor;"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>';
-            }
-            if (btn && overlay && backdrop) {
-                btn.addEventListener('click', toggleMenu);
-                backdrop.addEventListener('click', toggleMenu);
-            }
+    <section class="how" id="como-funciona">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Un objetivo, un plan</div>
+          <h2>¿Cómo funciona un seguro educativo?</h2>
+          <p>El proceso comienza con una meta clara y una revisión de las alternativas disponibles.</p>
+        </div>
+        <div class="steps">
+          <article class="step"><div class="step-num">1</div><h3>Definimos cuánto quieres reunir</h3><p>Revisamos la edad de tu hijo, cuándo necesitará el fondo y qué cantidad te gustaría destinar a sus estudios.</p></article>
+          <article class="step"><div class="step-num">2</div><h3>Elegimos una alternativa</h3><p>Analizamos aportaciones, moneda, plazo y coberturas. Te explico qué protege cada producto y bajo qué condiciones.</p></article>
+          <article class="step"><div class="step-num">3</div><h3>Construyes su fondo</h3><p>Si decides contratar, realizas las aportaciones pactadas y el plan opera conforme a las condiciones de la póliza.</p></article>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="datos-del-plan">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">El plan en datos</div>
+          <h2>Lo que necesitas saber para empezar</h2>
+          <p>Estas son las características generales de los planes educativos que manejo. Las condiciones exactas se confirman en la cotización de cada aseguradora.</p>
+        </div>
+        <div class="data-grid">
+          <div class="data"><small>Edad del menor</small><strong>Desde recién nacido y hasta 13 años</strong><p>Según el plan. Mientras más pronto inicies, más años tienes para ahorrar y menor es tu aportación.</p></div>
+          <div class="data"><small>Edad de quien contrata</small><strong>De 18 a 70 años</strong><p>Pueden contratarlo mamá, papá, abuelos o tutores.</p></div>
+          <div class="data"><small>Moneda</small><strong>UDIS o dólares</strong><p>Las UDIS se ajustan con la inflación; los dólares convienen si piensas en estudios en el extranjero.</p></div>
+          <div class="data"><small>Fondo disponible</small><strong>A los 18 años</strong><p>En algunos planes también a los 22, para acompañar el final de la carrera.</p></div>
+          <div class="data"><small>Forma de entrega</small><strong>Una sola exhibición o mensual</strong><p>Puedes recibirlo completo o en entregas mensuales durante cuatro años de universidad.</p></div>
+          <div class="data"><small>Formas de pago</small><strong>Anual, semestral, trimestral o mensual</strong><p>Eliges la frecuencia de aportación que mejor se acomode a tu presupuesto.</p></div>
+          <div class="data"><small>Protección para ambos padres</small><strong>Mamá y papá en la misma póliza</strong><p>Puede contratarlo uno de los dos o ambos, con protección para la pareja.</p></div>
+          <div class="data"><small>Suma asegurada adicional</small><strong>Respaldo para tu familia</strong><p>Además del fondo del menor, tu familia puede recibir una suma asegurada en caso de fallecimiento.</p></div>
+        </div>
+        <div class="optional-box">
+          <h3>Coberturas opcionales que puedes agregar</h3>
+          <div class="chips"><span>Muerte accidental</span><span>Invalidez del contratante</span><span>Exención de pagos por desempleo</span><span>Aportaciones adicionales</span><span>Seguro de vida futuro para tu hijo sin exámenes médicos</span></div>
+        </div>
+        <p class="trust-copy">Las edades de aceptación, monedas, plazos, formas de entrega y coberturas varían según el plan y la aseguradora. En tu asesoría te confirmo exactamente qué incluye cada uno.</p>
+      </div>
+    </section>
+
+    <section class="features" id="proteccion">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">La diferencia está en la protección</div>
+          <h2>¿Qué pasa si tú faltas antes de terminar de ahorrar?</h2>
+          <p>Esta es la pregunta más importante al evaluar un seguro educativo. Un ahorro bancario se detiene cuando tú no puedes aportar; un seguro educativo está diseñado para que el objetivo continúe.</p>
+        </div>
+        <div class="benefit-rows">
+          <article class="benefit-row">
+            <div class="benefit-photo"><img src="/imagenes/padres-cielo.webp" width="720" height="540" loading="lazy" decoding="async" alt="Joven graduada con su diploma; sus padres la acompañan desde el cielo"></div>
+            <div class="benefit-text">
+              <h3>Su universidad, aunque tú ya no estés</h3>
+              <p>Si el contratante fallece durante la vigencia, la aseguradora puede eximir las aportaciones pendientes. El plan continúa y tu hijo recibe su fondo en la fecha pactada, según las coberturas contratadas.</p>
+              <p>El dinero se entrega como capital de libre uso: colegiaturas, libros, equipo, manutención foránea o estudios en el extranjero.</p>
+            </div>
+          </article>
+          <article class="benefit-row rev">
+            <div class="benefit-photo"><img src="/imagenes/padre-incapacidad.webp" width="720" height="540" loading="lazy" decoding="async" alt="Persona en silla de ruedas entregando su póliza a un asesor de seguros"></div>
+            <div class="benefit-text">
+              <h3>El plan sigue si sufres una invalidez</h3>
+              <p>Con la cobertura de exención de pago de primas por invalidez total y permanente, si un accidente o una enfermedad te impide trabajar de por vida, la aseguradora cubre las aportaciones restantes.</p>
+              <p>La póliza sigue activa hasta su vencimiento, para que el ahorro de tu hijo se entregue completo.</p>
+            </div>
+          </article>
+          <article class="benefit-row">
+            <div class="benefit-photo"><img src="/imagenes/padre-indemnizacion.webp" width="720" height="540" loading="lazy" decoding="async" alt="Asesor de JH Seguros entregando un cheque de indemnización a una mujer en su oficina"></div>
+            <div class="benefit-text">
+              <h3>Respaldo adicional para tu familia</h3>
+              <p>Además de mantener el fondo del menor, tus beneficiarios pueden recibir una suma asegurada por fallecimiento, que da liquidez inmediata para sostener el hogar mientras el fondo universitario sigue creciendo.</p>
+              <p>Algunos planes incluyen un adelanto de la suma asegurada ante una enfermedad terminal y un anticipo para gastos inmediatos de la familia.</p>
+            </div>
+          </article>
+        </div>
+        <div class="callout"><strong>Importante:</strong> no todas las coberturas aplican automáticamente ni funcionan igual en ambos productos. Revisaremos contigo condiciones, exclusiones, periodos de espera y requisitos.</div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Diseña el plan con información</div>
+          <h2>Aspectos que debes revisar antes de contratar</h2>
+          <p>La mejor alternativa no es necesariamente la misma para todas las familias.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature"><h3>Meta y monto</h3><p>Cuánto quieres reunir y qué gastos educativos deseas contemplar.</p></article>
+          <article class="feature"><h3>Edad del menor</h3><p>La edad de tu hijo influye en los plazos y opciones disponibles.</p></article>
+          <article class="feature"><h3>Moneda</h3><p>Elige entre UDIS o dólares y entiende cómo protege cada una tu fondo frente a la inflación y el tipo de cambio.</p></article>
+          <article class="feature"><h3>Frecuencia de pago</h3><p>Conoce las modalidades de aportación permitidas y el compromiso que implican.</p></article>
+          <article class="feature"><h3>Protecciones</h3><p>Identifica qué coberturas están incluidas, cuáles son opcionales y qué exclusiones aplican.</p></article>
+          <article class="feature"><h3>Entrega del fondo</h3><p>Confirma cuándo y cómo se entrega el beneficio, de acuerdo con el contrato.</p></article>
+        </div>
+        <div class="compare-note" style="margin-top:22px">
+          <strong style="color:var(--navy)">¿SeguBeca o Aliados+ Kids?</strong> Más que elegir por el nombre, conviene comparar requisitos, edades, aportaciones, moneda, plazo, beneficios por fallecimiento o invalidez, exclusiones y forma de entrega. Te presento ambas propuestas con la información vigente de cada aseguradora.
+          <p style="margin-top:16px"><a class="btn btn-wa" href="https://wa.me/528343117556?text=Hola%20Rafael,%20quiero%20comparar%20SeguBeca%20y%20Aliados%2B%20Kids" target="_blank" rel="noopener noreferrer" data-track="comparar_productos"><svg class="wa-ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.081-.1.115-.173.171-.292.059-.115.03-.217-.015-.307-.045-.1-.445-1.074-.61-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>Quiero comparar las alternativas</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Una decisión familiar</div>
+          <h2>¿Quién puede interesarse en un plan educativo?</h2>
+          <p>La posibilidad de contratar depende de los requisitos de cada aseguradora y producto.</p>
+        </div>
+        <div class="audience-grid">
+          <div class="audience"><strong>Mamá y papá</strong><p>Uno de los dos o ambos, con protección para la pareja en la misma póliza.</p></div>
+          <div class="audience"><strong>Madres o padres solteros</strong><p>Preparar una meta educativa con respaldo financiero.</p></div>
+          <div class="audience"><strong>Abuelos</strong><p>Hasta los 70 años: una forma muy especial de heredar educación a los nietos.</p></div>
+          <div class="audience"><strong>Tutores y padres adoptivos</strong><p>Cualquier persona legalmente responsable de un menor.</p></div>
+        </div>
+      </div>
+    </section>
+
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div class="kicker">Resolvamos tus dudas</div>
+          <h2>Preguntas frecuentes sobre el seguro educativo</h2>
+        </div>
+        <div class="faq">
+          <details><summary>¿Desde qué edad de mi hijo me conviene contratar?</summary><p>Desde recién nacido y hasta los 13 años, según el plan. Mientras más pequeño sea, mejor: tienes más años para ahorrar, tu aportación periódica es menor y la protección de vida para ti es más económica. Si empiezas a los 10 o 12 años, el plazo se acorta y la aportación sube.</p></details>
+          <details><summary>¿Qué sucede si fallezco durante el plazo del plan?</summary><p>Según el plan y las coberturas contratadas, la aseguradora exime las aportaciones pendientes, la póliza sigue vigente y tu hijo recibe su fondo en la fecha pactada. Además, tus beneficiarios pueden recibir una suma asegurada por fallecimiento.</p></details>
+          <details><summary>¿Qué sucede si sufro una invalidez y ya no puedo pagar?</summary><p>Con la cobertura de exención de pago de primas por invalidez total y permanente, si un accidente o enfermedad te impide trabajar de por vida, la aseguradora cubre las aportaciones restantes y el plan continúa hasta su vencimiento. Aplican las definiciones, requisitos y exclusiones de la póliza.</p></details>
+          <details><summary>¿Y si pierdo mi empleo?</summary><p>SeguBeca ofrece como cobertura opcional la exención de pagos por desempleo. Aplica ante un despido injustificado en un empleo formal asalariado, presentando la constancia de terminación laboral o finiquito; no aplica en renuncias voluntarias ni en el fin de contratos por obra o tiempo determinado.</p></details>
+          <details><summary>¿Puedo hacer aportaciones mensuales?</summary><p>Sí. Puedes elegir pagos anuales, semestrales, trimestrales o mensuales, según te acomode.</p></details>
+          <details><summary>¿Lo pueden contratar los abuelos?</summary><p>Sí. El contratante puede tener hasta 70 años, sujeto a la aceptación de la aseguradora. Es una excelente forma de heredar educación a los nietos.</p></details>
+          <details><summary>¿El dinero es solo para pagar la colegiatura?</summary><p>No. Al vencimiento, el fondo se entrega como capital de libre uso, sin obligación de comprobar gastos ante la aseguradora: inscripciones, colegiaturas, libros, equipo de cómputo, manutención, hospedaje o un intercambio académico.</p></details>
+          <details><summary>¿Puedo usarlo si mi hijo decide estudiar en el extranjero?</summary><p>Sí. No hay restricción geográfica para el uso del fondo. Si tu meta es la educación internacional, conviene contratar el plan en dólares para protegerte del tipo de cambio.</p></details>
+          <details><summary>¿Qué pasa si mi hijo no quiere estudiar la universidad?</summary><p>El dinero no se pierde. El fondo pertenece a tu patrimonio familiar y puede destinarse a una carrera técnica, un negocio, el enganche de su primera vivienda u otros objetivos.</p></details>
+          <details><summary>¿El dinero se entrega necesariamente a los 18 años?</summary><p>Generalmente el fondo está disponible a los 18 años y, en algunos planes, también a los 22. Puedes recibirlo en una sola exhibición o en entregas mensuales durante cuatro años, según el plan elegido.</p></details>
+          <details><summary>¿Cuánto cuesta un seguro educativo?</summary><p>Depende de la edad y los hábitos de salud de quien contrata, la edad del menor, la meta de ahorro, la moneda y las coberturas que elijas. Con esos datos te preparo una cotización personalizada, sin compromiso.</p></details>
+          <details><summary>¿El ahorro está garantizado y genera rendimientos?</summary><p>Los valores garantizados, los valores proyectados y cualquier rendimiento se distinguen en la ilustración y en la documentación del producto. Las proyecciones no deben interpretarse como garantías; en tu asesoría te explico cuáles son cuáles.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+    {% include contacto-cta.html titulo="¿Cuánto necesitará tu hijo para la universidad?" texto="Calculamos su meta de ahorro según su edad actual y te presento las opciones en una asesoría personalizada." wa="https://wa.me/528343117556?text=Hola%20Rafael,%20me%20interesa%20asegurar%20la%20universidad%20de%20mis%20hijos%20con%20un%20seguro%20educativo" %}
+
+    </div>
+
+    <section class="final-cta" id="asesoria">
+      <div class="container">
+        <div class="kicker" style="color:#ffe0a0">Da el primer paso</div>
+        <h2>Conoce cuánto podrías destinar hoy a su futuro universitario.</h2>
+        <p>Cuéntame la edad de tu hijo y la meta que tienes en mente. Revisaremos las alternativas disponibles y te explicaré sus beneficios, costos y condiciones para que puedas decidir con información.</p>
+        <a class="btn btn-wa" href="https://wa.me/528343117556?text=Hola%20Rafael,%20quiero%20una%20asesor%C3%ADa%20para%20planear%20la%20universidad%20de%20mi%20hijo" target="_blank" rel="noopener noreferrer" data-track="cta_final"><svg class="wa-ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.081-.1.115-.173.171-.292.059-.115.03-.217-.015-.307-.045-.1-.445-1.074-.61-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>Solicitar asesoría por WhatsApp</a>
+        <p class="microcopy">Atención personalizada · Sin costo y sin compromiso</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="firma">Esta guía informativa ha sido redactada, revisada y validada por <strong>Rafael Jiménez Sánchez</strong>, Intermediario Profesional de Seguros autorizado y certificado ante la Comisión Nacional de Seguros y Fianzas (CNSF), operando bajo las Cédulas Oficiales Tipo A1 y Tipo B con números de registro <strong>H382035</strong> y <strong>Y415335</strong>, respectivamente. Tu tranquilidad, salud y patrimonio están respaldados bajo el marco regulatorio del sector asegurador en México. <a href="/autorizaciones/">Consulta mis autorizaciones</a>.</div>
+      <p class="trust-copy">La contratación está sujeta a requisitos de aceptación, evaluación de la aseguradora y condiciones generales y particulares de la póliza. La información de esta página no sustituye la cotización, carátula, condiciones generales ni documentación contractual vigente.</p>
+      <nav class="bottom-nav" aria-label="Navegación secundaria">
+        <a href="/">Inicio</a>
+        <a href="/productos-vida/">Vida y Salud</a>
+        <a href="/danos/">Autos y Daños</a>
+        <a href="/contacto-form/">Contacto</a>
+      </nav>
+    </div>
+  </main>
+
+  {% include footer.html %}
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('a[href*="wa.me"], a[href="/contacto-form/"], a[href^="tel:"], [data-track]').forEach(function (a) {
+        a.addEventListener('click', function () {
+          if (typeof gtag !== 'function') return;
+          var tipo = a.href && a.href.indexOf('wa.me') > -1 ? 'whatsapp' :
+                     (a.href && a.href.indexOf('tel:') === 0 ? 'telefono' : 'formulario');
+          gtag('event', 'generate_lead', {
+            lead_channel: tipo,
+            lead_source: a.dataset.track || 'enlace',
+            page_path: '/educacion/'
+          });
         });
-        // Registra clics de contacto como evento GA4 (importable como conversión en Google Ads)
-        document.querySelectorAll('a[href*="wa.me"], a[href="/contacto-form/"], a[href^="tel:"], [data-track]').forEach(function (a) {
-            a.addEventListener('click', function () {
-                if (typeof gtag !== 'function') return;
-                var tipo = a.href.indexOf('wa.me') > -1 ? 'whatsapp' : (a.href.indexOf('tel:') === 0 ? 'telefono' : 'formulario');
-                gtag('event', 'generate_lead', { lead_channel: tipo, lead_source: a.dataset.track || 'enlace', page_path: '/educacion/' });
-            });
-        });
-    </script>
+      });
+    });
+  </script>
 </body>
 </html>
