@@ -3,188 +3,62 @@
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Seguro de Hogar y Casa Habitación | JH Seguros</title>
-    <meta name="description" content="Seguro de hogar: incendio, robo con violencia, sismo e inundación opcionales, protección para paneles solares y asistencia en el hogar.">
-    <link rel="canonical" href="https://jhseguros.mx/hogar/">
-    
-    <meta name="author" content="Rafael Jiménez Sánchez">
-    <meta name="robots" content="index, follow">
-    
-    <meta property="og:title" content="Seguro de Hogar y Casa Habitación | JH Seguros">
-    <meta property="og:description" content="Asegura la estructura y contenidos de tu hogar ante incendios, robo o daños por sismo.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jhseguros.mx/hogar/">
-    <meta property="og:image" content="https://jhseguros.mx/imagenes/og-hogar.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Seguro de Hogar | JH Seguros">
-    
-    <link rel="icon" href="/rafael-perfil.jpg" type="image/jpeg">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    
-    <!-- GOOGLE ANALYTICS -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3GLCDV4F8"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-Z3GLCDV4F8');
-      gtag('config', 'AW-18520948891');
-    </script>
-
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Open Sans', sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; scroll-behavior: smooth; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        header { position: relative; background: linear-gradient(135deg, #1e3c72 90%, #2a5298 100%); color: white; padding: 3rem 0; text-align: center; overflow: hidden; z-index: 1; }
-        header::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('/rafael-perfil.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; opacity: 0.15; filter: grayscale(100%); mix-blend-mode: luminosity; z-index: -1; }
-        .profile-container { display: flex; flex-direction: column; align-items: center; margin-bottom: 1.5rem; }
-        .name { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.2; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
-        .tagline { font-size: 1.7rem; margin: 1.5rem 0; font-weight: 500; max-width: 800px; margin-left: auto; margin-right: auto; text-shadow: 0 1px 2px rgba(0,0,0,0.2); }
-        .services { padding: 3rem 0; background-color: white; }
-        .detail-content { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); margin-bottom: 2rem; }
-        .detail-content p, .detail-content ul { margin-bottom: 1rem; color: #444; }
-        .detail-content ul { margin-left: 20px; list-style-type: disc; }
-        .detail-content strong { color: #2a5298; }
-        .back-to-top { display: inline-block; background-color: #2a5298; color: white; padding: 0.5rem 1.2rem; font-size: 0.9rem; border-radius: 20px; text-decoration: none; font-weight: 600; transition: background-color 0.3s; margin-top: 1rem; }
-        .back-to-top:hover { background-color: #1e3c72; }
-        .cta-button { display: inline-block; background-color: #ff6b6b; color: white; padding: 0.8rem 2rem; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 1.1rem; transition: background-color 0.3s, transform 0.3s; margin: 1rem 0; }
-        .cta-button:hover { background-color: #ff5252; transform: translateY(-3px); }
-        footer { background-color: #1a1a2e; color: white; padding: 3rem 0 5rem; }
-        .footer-content { display: flex; flex-direction: column; align-items: center; text-align: center; }
-        .brand { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; margin-bottom: 1rem; color: #ff6b6b; }
-        .contact-info { margin: 1.5rem 0; }
-        .contact-info a { color: white; text-decoration: none; transition: color 0.3s; }
-        .contact-info a:hover { color: #ff6b6b; }
-        .social-links { display: flex; gap: 1rem; margin: 1.5rem 0; }
-        .social-icon { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.1); border-radius: 50%; color: white; text-decoration: none; transition: background-color 0.3s; font-size: 1.2rem; }
-        .social-icon:hover { background-color: #ff6b6b; }
-        .copyright { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.1); width: 100%; font-size: 0.9rem; opacity: 0.7; }
-        .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 20px; right: 20px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; font-size: 35px; box-shadow: 2px 2px 3px #999; z-index: 1000; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s; }
-        .whatsapp-float:hover { background-color: #20ba5a; transform: scale(1.1); }
-        .mobile-menu-btn { display: none; position: fixed; top: 20px; right: 20px; width: 52px; height: 52px; background-color: #1e3c72; color: white; border-radius: 50%; border: 2px solid rgba(255, 255, 255, 0.2); box-shadow: 0 4px 12px rgba(0,0,0,0.3); z-index: 2000; cursor: pointer; align-items: center; justify-content: center; transition: all 0.3s ease; }
-        .mobile-menu-btn svg { width: 24px; height: 24px; fill: currentColor; }
-        .mobile-overlay { position: fixed; top: 0; right: -100%; width: 280px; height: 100%; background-color: #1a1a2e; box-shadow: -5px 0 15px rgba(0,0,0,0.5); z-index: 1999; transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1); display: flex; flex-direction: column; padding: 85px 20px 20px 20px; }
-        .mobile-overlay.open { right: 0; }
-        .mobile-nav-link { color: white; text-decoration: none; font-family: 'Open Sans', sans-serif; font-size: 1.05rem; font-weight: 600; padding: 14px 15px; border-bottom: 1px solid rgba(255,255,255,0.05); transition: all 0.3s ease; }
-        .mobile-nav-link:hover { background-color: rgba(255,255,255,0.05); color: #ff6b6b; padding-left: 25px; }
-        .mobile-backdrop { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 1998; display: none; opacity: 0; transition: opacity 0.3s ease; }
-        .mobile-backdrop.open { display: block; opacity: 1; }
-        @media (max-width: 768px) { .name { font-size: 1.8rem; } .tagline { font-size: 1.5rem; } .mobile-menu-btn { display: flex; } }
-    </style>
-    <style>
-        /* Iconos de línea en lugar de emojis (Lucide, licencia ISC; WhatsApp, Facebook e Instagram: logotipos oficiales) */
-        svg.jh-i { display: inline-block; width: 1.1em; height: 1.1em; margin-right: 0.35em; vertical-align: -0.18em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
-        svg.jh-solo { display: inline-block; width: 0.85em; height: 0.85em; color: #6c4bc4; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; vertical-align: middle; }
-        .jh-solo + .jh-solo { margin-left: 0.25em; }
-        .ico .jh-solo { width: 20px; height: 20px; color: inherit; }
-        svg.jh-fill { fill: currentColor; stroke: none; }
-    </style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seguro de Hogar | Protege tu casa y patrimonio – JH Seguros</title>
+<meta name="description" content="Conoce opciones de seguro para proteger tu casa, contenidos y responsabilidad familiar. Revisa coberturas para robo, daños eléctricos, fenómenos naturales y paneles solares.">
+<link rel="canonical" href="https://jhseguros.mx/hogar/">
+<meta name="author" content="Rafael Jiménez Sánchez"><meta name="robots" content="index, follow">
+<meta property="og:title" content="Seguro de Hogar | JH Seguros"><meta property="og:description" content="Protege tu casa, tus pertenencias y tu patrimonio con una asesoría que considera tus necesidades."><meta property="og:type" content="website"><meta property="og:url" content="https://jhseguros.mx/hogar/"><meta property="og:image" content="https://jhseguros.mx/imagenes/og-hogar.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Seguro de Hogar | JH Seguros">
+<link rel="icon" href="/rafael-perfil.jpg" type="image/jpeg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Se conservan los identificadores actuales de medición -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3GLCDV4F8"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-Z3GLCDV4F8');gtag('config','AW-18520948891');</script>
+<style>
+:root{--navy:#101d3a;--blue:#244a83;--purple:#6c4bc4;--ink:#202b3d;--muted:#647084;--pale:#f4f6fb;--line:#e5e9f1;--shadow:0 18px 48px #101d3a19;--radius:22px}*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:'Open Sans',sans-serif;color:var(--ink);line-height:1.65}img{max-width:100%;display:block}a{color:inherit}.container{width:min(1160px,calc(100% - 40px));margin:auto}h1,h2,h3{font-family:Montserrat,sans-serif;line-height:1.18}h2{font-size:clamp(1.8rem,3.3vw,2.65rem);color:var(--navy);letter-spacing:-.035em}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--purple);font-size:.78rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase}.eyebrow:before{content:"";width:25px;height:2px;background:currentColor}.section{padding:82px 0}.soft{background:var(--pale)}.head{text-align:center;max-width:780px;margin:0 auto 40px}.head .eyebrow{justify-content:center}.intro{max-width:720px;color:var(--muted);font-size:1.02rem;margin:14px auto 0}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 23px;border-radius:999px;text-decoration:none;font-weight:800;font-size:.93rem;transition:.2s}.primary{background:linear-gradient(110deg,var(--purple),#4d65b7);color:#fff;box-shadow:0 10px 24px #6c4bc440}.primary:hover{transform:translateY(-3px)}.light{background:#fff;color:var(--navy)}.wa{background:#25d366;color:#fff;box-shadow:0 10px 24px #25d36645}.wa:hover{transform:translateY(-3px);background:#1fb85a}.wa-ico{width:20px;height:20px;fill:currentColor;flex-shrink:0}
+.hero{position:relative;isolation:isolate;overflow:hidden;padding:82px 0;color:#fff;background:linear-gradient(115deg,#101d3a,#1d3767 58%,#4e3d88)}.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#0c183af5,#112244e8 55%,#16244570),url('/imagenes/og-hogar.png') center right/cover no-repeat}.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:42px;align-items:center}.hero .eyebrow{color:#d7caff}.hero h1{font-size:clamp(2.1rem,4.2vw,3.5rem);letter-spacing:-.055em;margin:20px 0;max-width:700px}.hero h1 span{color:#c5b2ff}.hero-copy{max-width:610px;color:#e3e9f5;font-size:1.08rem}.actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:28px}.note{font-size:.8rem;color:#d3dced;margin-top:16px}.hero-card{padding:27px;border:1px solid #ffffff35;background:#ffffff18;backdrop-filter:blur(8px);border-radius:25px}.hero-card small{color:#d8ccff;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.hero-card h2{font-size:1.4rem;color:#fff;margin:12px 0 18px}.points{list-style:none;display:grid;gap:13px}.points li{display:flex;gap:12px;color:#f1f4fb;font-size:.93rem}.check{flex:0 0 23px;height:23px;border-radius:50%;display:grid;place-items:center;background:#bda9ff;color:#1a2450;font-weight:900}.trust{border-bottom:1px solid var(--line)}.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;padding:20px 0}.trust-grid div{text-align:center;color:var(--navy);font-weight:700;font-size:.9rem}.trust-grid b{color:var(--purple);font-size:1.15rem;margin-right:8px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{padding:25px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);transition:.2s}.card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#d5cafa}.ico{width:47px;height:47px;border-radius:15px;background:#f0ebff;color:var(--purple);display:grid;place-items:center;font-size:1.3rem;margin-bottom:17px}.card h3,.optional h3{font-size:1.04rem;color:var(--navy);margin-bottom:9px}.card p,.optional p{color:var(--muted);font-size:.9rem}.tag{display:inline-block;margin-top:14px;padding:5px 10px;border-radius:999px;background:#f0ebff;color:#5b43a5;font-size:.7rem;font-weight:800}
+.feature{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}.feature h2{margin:14px 0}.feature p{color:var(--muted);margin-bottom:14px}.feature ul{list-style:none;display:grid;gap:9px;margin:18px 0}.feature li{font-size:.92rem;color:#344156}.feature li:before{content:'✓';color:var(--purple);font-weight:900;margin-right:9px}.photo{border-radius:25px;overflow:hidden;box-shadow:var(--shadow);background:#e8edf5}.photo img{width:100%;height:370px;object-fit:cover}.caption{padding:12px 16px;background:#fff;color:var(--muted);font-size:.78rem}.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}.pair img{width:100%;height:145px;object-fit:cover;border-radius:14px}
+.option-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.optional{display:flex;gap:15px;padding:20px;background:#fff;border:1px solid var(--line);border-radius:18px}.optional .ico{flex:0 0 43px;width:43px;height:43px;margin:0}.optional h3{font-size:.97rem;margin:2px 0 6px}.optional p{font-size:.86rem}.rent{display:grid;grid-template-columns:1fr auto;align-items:center;gap:22px;margin-top:25px;padding:32px;border-radius:24px;background:linear-gradient(110deg,#172b52,#443879);color:#fff}.rent h3{font-size:1.3rem;margin-bottom:7px}.rent p{color:#e0e5f2;font-size:.9rem;max-width:730px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:n}.step{padding:25px;border:1px solid var(--line);border-radius:19px}.step:before{counter-increment:n;content:'0' counter(n);display:block;color:var(--purple);font:800 1.6rem Montserrat;margin-bottom:12px}.step h3{font-size:1rem;color:var(--navy);margin-bottom:8px}.step p{font-size:.88rem;color:var(--muted)}.faqs{max-width:850px;margin:auto;display:grid;gap:11px}.faqs details{background:#fff;border:1px solid var(--line);border-radius:15px;padding:18px 21px}.faqs summary{cursor:pointer;list-style:none;color:var(--navy);font-family:Montserrat;font-weight:700;padding-right:24px;position:relative}.faqs summary::-webkit-details-marker{display:none}.faqs summary:after{content:'+';position:absolute;right:0;color:var(--purple);font-size:1.3rem}.faqs details[open] summary:after{content:'−'}.faqs p{color:var(--muted);font-size:.9rem;margin-top:11px}.disclaimer{max-width:900px;margin:30px auto 0;color:#7a8494;font-size:.76rem;line-height:1.7;text-align:center}.final{padding:72px 0;text-align:center;color:#fff;background:linear-gradient(115deg,#101d3a,#293e72 60%,#57458f)}.final h2{color:#fff;max-width:760px;margin:15px auto}.final p{color:#e0e6f2;max-width:680px;margin:0 auto 24px}.final .eyebrow{color:#d5c9ff;justify-content:center}.whatsapp-float{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#25d366;color:white;display:grid;place-items:center;z-index:1500;box-shadow:0 5px 20px #0003}.whatsapp-float svg{width:31px;height:31px;fill:currentColor}
+.mobile-menu-btn{display:none;position:fixed;top:16px;right:16px;width:50px;height:50px;border:0;border-radius:50%;background:var(--navy);color:white;z-index:2000;box-shadow:0 4px 14px #0003;cursor:pointer}.mobile-menu-btn svg{width:23px;height:23px;fill:currentColor}.mobile-overlay{position:fixed;top:0;right:-100%;width:min(310px,86vw);height:100%;background:var(--navy);z-index:1999;display:flex;flex-direction:column;padding:80px 20px 20px;transition:right .3s}.mobile-overlay.open{right:0}.mobile-nav-link{padding:13px;color:white;text-decoration:none;border-bottom:1px solid #ffffff18;font-weight:700}.mobile-backdrop{display:none;position:fixed;inset:0;background:#08132999;z-index:1998}.mobile-backdrop.open{display:block}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-card{max-width:600px}.cards{grid-template-columns:repeat(2,1fr)}}@media(max-width:650px){.container{width:calc(100% - 30px)}.hero{padding:76px 0 58px}.hero h1{font-size:2.05rem}.hero-copy{font-size:1rem}.actions{display:grid}.btn{width:100%}.trust-grid{grid-template-columns:1fr;gap:8px}.trust-grid div{text-align:left}.section{padding:60px 0}.cards,.option-grid,.feature,.steps{grid-template-columns:1fr}.photo img{height:265px}.pair img{height:125px}.rent{grid-template-columns:1fr;padding:25px}.mobile-menu-btn{display:grid;place-items:center}.head{margin-bottom:29px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
 </head>
 <body>
-    {% include header.html %}
-    
-    <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20me%20interesa%20cotizar%20un%20seguro%20para%20mi%20hogar" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Cotizar en WhatsApp">
-        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.081-.1.115-.173.171-.292.059-.115.03-.217-.015-.307-.045-.1-.445-1.074-.61-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
-    </a>
-
-    <button class="mobile-menu-btn" id="menuToggle" aria-label="Abrir menú">
-        <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-    </button>
-    <div class="mobile-backdrop" id="menuBackdrop"></div>
-    <div class="mobile-overlay" id="menuOverlay">
-        <a href="/" class="mobile-nav-link">Inicio</a>
-        <a href="/danos/" class="mobile-nav-link">Módulo Autos y Daños</a>
-        <a href="/productos-vida/" class="mobile-nav-link">Vida y Gastos Médicos</a>
-        <a href="/autorizaciones/" class="mobile-nav-link">Autorizaciones / Certificaciones</a>
-        <a href="/hospitales/" class="mobile-nav-link">Servicios Hospitalarios</a>
-        <a href="/recursos/" class="mobile-nav-link">Respuestas sobre Seguros</a>
-        <a href="/redes/" class="mobile-nav-link">Redes Sociales</a>
-        <a href="/contacto-form/" class="mobile-nav-link">Contacto Directo</a>
-    </div>
-
-    <header>
-        <div class="container">
-            <div class="profile-container">
-                <h1 class="name">Seguro de Hogar</h1>
-                <p class="tagline">Protección principal que resguarda la estructura de tu casa y tu estilo de vida</p>
-            </div>
-        </div>
-    </header>
-    
-    <section class="services">
-        <div class="container">
-            <div class="detail-content text-start">
-                
-                <h2 style="color: #2a5298; font-family: 'Montserrat', sans-serif; font-size: 1.4rem; margin-bottom: 15px; border-bottom: 2px solid #f0f0f0; padding-bottom: 5px;">COBERTURAS BÁSICAS</h2>
-                <p style="color: #666; margin-bottom: 15px;">Estas son las protecciones principales que resguardan la estructura de tu casa y tu estilo de vida:</p>
-                <ul style="margin-left: 20px; margin-bottom: 25px; list-style-type: disc;">
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Daños Materiales a la Estructura (Edificio):</strong> Protege la construcción física de tu vivienda (paredes, techos, pisos, cimientos) e instalaciones fijas (agua, gas, energía eléctrica, aire acondicionado) contra riesgos fundamentales como incendio, rayo o explosión.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Daños Materiales a los Contenidos:</strong> Ampara todos los bienes que están dentro de tu hogar, incluyendo muebles, ropa, electrodomésticos, electrónicos y objetos personales, en caso de incendio, rayo o explosión.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Responsabilidad Civil Familiar y Doméstica:</strong> Cuida tu patrimonio si tú, tu familia, tus mascotas o tus trabajadores domésticos causan accidentalmente un daño material o físico a un tercero (por ejemplo, vecinos o visitas). También te respalda legalmente ante accidentes de trabajo que sufra tu personal de apoyo en el hogar.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Robo con Violencia y/o Asalto:</strong> Te indemniza por el robo de tus pertenencias (muebles, electrónicos, joyas, arte o equipo deportivo) del interior de la casa, siempre que existan señales visibles de violencia física o forcejeo en el inmueble.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Rotura de Cristales:</strong> Cubre la reposición e instalación de cristales, lunas, espejos o cubiertas de mesa que se rompan de forma accidental, súbita o por actos de vandalismo dentro de la propiedad.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Fallas Eléctricas en Equipos y Electrodomésticos:</strong> Protege tus aparatos electrodomésticos y electrónicos contra los daños causados por variaciones de voltaje, cortocircuitos o accidentes en su operación corriente.
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px; max-width: 880px; margin: 16px auto 4px;">
-                            <img src="/imagenes/electrodomesticos.webp" alt="Refrigerador, lavadora y secadora con chispas y humo por una falla eléctrica" width="720" height="540" loading="lazy" decoding="async" onerror="this.parentNode.remove()" style="display: block; width: 100%; height: auto; border-radius: 8px;">
-                            <img src="/imagenes/minisplit.webp" alt="Minisplit con chispas y humo por una falla eléctrica" width="720" height="540" loading="lazy" decoding="async" onerror="this.parentNode.remove()" style="display: block; width: 100%; height: auto; border-radius: 8px;">
-                        </div>
-                    </li>
-                </ul>
-                
-                <h2 style="color: #2a5298; font-family: 'Montserrat', sans-serif; font-size: 1.4rem; margin-top: 30px; margin-bottom: 15px; border-bottom: 2px solid #f0f0f0; padding-bottom: 5px;">COBERTURAS ADICIONALES (OPCIONALES)</h2>
-                <p style="color: #666; margin-bottom: 15px;">Módulos diseñados para robustecer tu póliza de acuerdo con la ubicación geográfica de tu casa o tus necesidades particulares:</p>
-                <ul style="margin-left: 20px; margin-bottom: 20px; list-style-type: disc;">
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Terremoto y/o Erupción Volcánica:</strong> Extiende la protección de la estructura física y de tus contenidos internos ante los daños directos causados por sismos, temblores, maremotos o actividad volcánica.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Fenómenos Hidrometeorológicos:</strong> Resguarda tu casa y pertenencias contra pérdidas ocasionadas por eventos climáticos extremos como huracanes, inundaciones, vientos tempestuosos, granizo o nevadas.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Gastos Logísticos por Siniestro (Remoción de Escombros, Renta y Mudanza):</strong> En caso de que la casa quede inhabitable por un siniestro, esta cobertura paga la limpieza y el acarreo de escombros, además de otorgarte un presupuesto para la mudanza y el pago de la renta de una vivienda temporal.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Protección Fuera del Hogar (Efectivo y Objetos Personales):</strong> Extiende la seguridad fuera de casa, cubriendo el robo con violencia de dinero en efectivo (incluso en cajeros automáticos) y de tus pertenencias personales (relojes, bolsas, celulares, ropa) en cualquier parte del mundo, según las condiciones de la póliza.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Módulo para Propiedades Rentadas (Inquilino / Arrendador):</strong> Si eres inquilino, te protege legalmente por daños involuntarios de incendio que le causes a la propiedad ajena. Si eres dueño y rentas la casa, te compensa el dinero de las rentas que dejes de percibir si el inmueble queda inhabitable tras un siniestro.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Servicios de Asistencia en el Hogar y Mantenimiento:</strong> Te brinda el envío de técnicos especializados (plomeros, cerrajeros, electricistas y vidrieros) para atender emergencias domésticas urgentes, incluyendo el diagnóstico y reparación de tuberías dañadas por corrosión.</li>
-                    <li style="margin-bottom: 10px; color: #444;"><strong style="color: #2a5298;">Cobertura de Bienes a la Intemperie (Sistemas de Generación de Electricidad / Paneles Solares):</strong> Protege la inversión verde de tus paneles solares o de tu sistema de generación de electricidad al incluirlos en tu póliza. Según la aseguradora y el plan contratado, puede amparar daños por viento, granizo, lluvia, rayo o caída de árboles y ramas e inlcuso cortocircuitos. Para que estén protegidos, el equipo debe declararse en la póliza con su valor, y la cobertura está sujeta a las condiciones generales, límites, deducibles y exclusiones de cada aseguradora.
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px; max-width: 880px; margin: 16px auto 4px;">
-                            <img src="/imagenes/paneles-solares-tormenta.webp" alt="Casa con paneles solares en el techo durante una tormenta eléctrica, con una rama caída sobre ellos" width="720" height="540" loading="lazy" decoding="async" style="display: block; width: 100%; height: auto; border-radius: 8px;">
-                            <img src="/imagenes/paneles-solares-rama.webp" alt="Paneles solares dañados por la caída de una rama durante una tormenta con viento y rayos" width="720" height="540" loading="lazy" decoding="async" style="display: block; width: 100%; height: auto; border-radius: 8px;">
-                        </div>
-                    </li>
-                </ul>
-                
-                <p style="margin-top: 30px; margin-bottom: 35px; color: #444; font-size: 0.9rem; text-align: justify; line-height: 1.6;"><svg class="jh-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" /> <path d="m16 9-5.5 5.5L8 12" /></svg>Esta guía informativa ha sido redactada, revisada y validada por Rafael Jiménez Sánchez, Intermediario Profesional de Seguros autorizado y certificado ante la Comisión Nacional de Seguros y Fianzas (<strong>CNSF</strong>). Operando bajo las Cédulas Oficiales Tipo A1 y Tipo B con números de registro H382035 y Y415335, respectivamente. Tu tranquilidad, salud y patrimonio están respaldados bajo el marco regulatorio del sector asegurador en México.</p>
-
-                {% include contacto-cta.html titulo="¿Te quedaron dudas sobre esta consulta?" texto="No te la juegues con tu patrimonio o tu salud. Habla directamente con un asesor de JH Seguros para revisar tu caso." wa="https://wa.me/528343117556?text=Hola%20Rafael,%20me%20interesa%20cotizar%20un%20seguro%20para%20mi%20hogar" %}
-
-                <div style="text-align: center; margin-top: 30px;">
-                    <a href="/" class="back-to-top" style="background-color: #1a1a2e; margin-right: 15px;">Ir al Menú Principal</a>
-                    <a href="/danos/" class="back-to-top">Volver a Daños</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-     <!-- FOOTER CON RUTAS ABSOLUTAS -->
-    {% include footer.html %}
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const btn = document.getElementById('menuToggle');
-            const overlay = document.getElementById('menuOverlay');
-            const backdrop = document.getElementById('menuBackdrop');
-            function toggleMenu() {
-                if (!overlay || !backdrop || !btn) return;
-                overlay.classList.toggle('open');
-                backdrop.classList.toggle('open');
-                btn.innerHTML = overlay.classList.contains('open') 
-                    ? '<svg viewBox="0 0 24 24" style="width:24px;height:24px;fill:currentColor;"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>'
-                    : '<svg viewBox="0 0 24 24" style="width:24px;height:24px;fill:currentColor;"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>';
-            }
-            if (btn && overlay && backdrop) {
-                btn.addEventListener('click', toggleMenu);
-                backdrop.addEventListener('click', toggleMenu);
-            }
-        });
-    </script>
-</body>
-</html>
+{% include header.html %}
+<button class="mobile-menu-btn" id="menuToggle" aria-label="Abrir menú" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></button><div class="mobile-backdrop" id="menuBackdrop"></div>
+<nav class="mobile-overlay" id="menuOverlay" aria-label="Menú móvil"><a href="/" class="mobile-nav-link">Inicio</a><a href="/danos/" class="mobile-nav-link">Módulo Autos y Daños</a><a href="/hogar/" class="mobile-nav-link">Seguro de Hogar</a><a href="/productos-vida/" class="mobile-nav-link">Vida y Gastos Médicos</a><a href="/autorizaciones/" class="mobile-nav-link">Autorizaciones / Certificaciones</a><a href="/hospitales/" class="mobile-nav-link">Servicios Hospitalarios</a><a href="/recursos/" class="mobile-nav-link">Respuestas sobre Seguros</a><a href="/redes/" class="mobile-nav-link">Redes Sociales</a><a href="/contacto-form/" class="mobile-nav-link">Contacto Directo</a></nav>
+<main>
+<section class="hero"><div class="container hero-grid"><div><span class="eyebrow">Protección para tu patrimonio</span><h1>Tu hogar y tus paneles solares son mucho más que una casa: son tu patrimonio. <span>Protégelos.</span></h1><p class="hero-copy">Tu vivienda guarda tus proyectos, tus recuerdos y gran parte de lo que has construido. Una asesoría adecuada te ayuda a revisar cómo proteger la construcción, tus pertenencias y tu responsabilidad frente a terceros.</p><div class="actions"><a class="btn wa" href="https://wa.me/528343117556?text=Hola%20Rafael,%20quiero%20revisar%20opciones%20para%20proteger%20mi%20hogar" target="_blank" rel="noopener noreferrer"><svg class="wa-ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.081-.1.115-.173.171-.292.059-.115.03-.217-.015-.307-.045-.1-.445-1.074-.61-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>Quiero proteger mi hogar</a><a class="btn light" href="#coberturas">Conocer las protecciones</a></div><p class="note">La protección y disponibilidad de cada cobertura dependen del plan, la aseguradora y las condiciones contratadas.</p></div><aside class="hero-card"><small>Una protección integral puede contemplar</small><h2>Lo que está dentro, fuera y alrededor de tu casa.</h2><ul class="points"><li><span class="check">✓</span>La construcción y las instalaciones fijas.</li><li><span class="check">✓</span>Muebles, electrodomésticos y pertenencias.</li><li><span class="check">✓</span>Responsabilidad civil familiar y daños a terceros.</li><li><span class="check">✓</span>Opciones para riesgos naturales, paneles solares y asistencia.</li></ul></aside></div></section>
+<div class="trust"><div class="container trust-grid"><div><b>⌂</b> Protección de tu vivienda</div><div><b>◇</b> Alternativas para tus pertenencias</div><div><b>✓</b> Asesoría durante la elección</div></div></div>
+<section class="section" id="coberturas"><div class="container"><div class="head"><span class="eyebrow">Protecciones principales</span><h2>¿Qué partes de tu patrimonio puedes proteger?</h2><p class="intro">La póliza puede integrar distintas protecciones. Estas son algunas de las coberturas que conviene revisar al diseñar una solución para tu vivienda.</p></div><div class="cards">
+<article class="card"><div class="ico">☀</div><h3>Paneles solares</h3><p>Protección para tu sistema fotovoltaico (paneles, inversor y estructura) ante incendio, cortocircuito, fenómenos hidrometeorológicos como granizo, huracán y vientos fuertes, golpe o caída de objetos como ramas, y robo con violencia, cuando se declaran en la póliza.</p><span class="tag">Bienes a la intemperie</span></article>
+<article class="card"><div class="ico">⌂</div><h3>Edificio y estructura</h3><p>Protección para paredes, techos, pisos, cimientos e instalaciones fijas frente a riesgos como incendio, rayo o explosión, conforme a la póliza.</p><span class="tag">Construcción</span></article>
+<article class="card"><div class="ico">▣</div><h3>Contenidos del hogar</h3><p>Puede amparar muebles, ropa, electrodomésticos, equipos electrónicos y otros bienes dentro de la vivienda.</p><span class="tag">Tus pertenencias</span></article>
+<article class="card"><div class="ico">⌑</div><h3>Robo con violencia</h3><p>Puede proteger determinados bienes sustraídos del interior de la vivienda cuando se cumplen las condiciones del contrato.</p><span class="tag">Bienes asegurados</span></article>
+<article class="card"><div class="ico">◇</div><h3>Rotura de cristales</h3><p>Opción para cubrir la rotura accidental de cristales, lunas, espejos y otros elementos contemplados en la póliza.</p><span class="tag">Cristales</span></article>
+<article class="card"><div class="ico">ϟ</div><h3>Electrodomésticos y electrónicos</h3><p>Protección para ciertos daños en aparatos y equipos por variaciones de voltaje, cortocircuitos u otros eventos cubiertos.</p><span class="tag">Equipos y electrodomésticos</span></article>
+</div></div></section>
+<section class="section soft"><div class="container feature"><div><span class="eyebrow">Cuida lo que hace funcionar tu casa</span><h2>Una falla eléctrica puede afectar más que un aparato.</h2><p>Refrigerador, lavadora, secadora, minisplit y otros equipos representan una inversión importante. Revisa si la póliza contempla daños eléctricos y qué bienes, causas y límites reconoce.</p><ul><li>Identificar qué aparatos pueden declararse o incluirse.</li><li>Revisar suma asegurada, deducible y exclusiones.</li><li>Confirmar qué eventos eléctricos están contemplados.</li></ul></div><div class="photo"><img src="/imagenes/electrodomesticos.webp" alt="Electrodomésticos afectados por una falla eléctrica" width="720" height="540" loading="lazy" decoding="async" onerror="this.closest('.photo').style.display='none'"><div class="caption">Ejemplo ilustrativo. La cobertura depende de las condiciones contratadas.</div></div></div></section>
+<section class="section"><div class="container feature"><div class="photo"><img src="/imagenes/paneles-solares-tormenta.webp" alt="Vivienda con paneles solares durante una tormenta" width="720" height="540" loading="lazy" decoding="async" onerror="this.closest('.photo').style.display='none'"><div class="caption">Los sistemas solares deben declararse y asegurarse conforme a los requisitos de la compañía.</div></div><div><span class="eyebrow">Una inversión que también merece protección</span><h2>¿Tu casa tiene paneles solares?</h2><p>Los paneles y sistemas de generación eléctrica pueden requerir una cobertura específica o su inclusión expresa en la póliza. Es importante revisar cómo se aseguran y bajo qué riesgos.</p><ul><li>Daños por viento, granizo, lluvia o caída de ramas, si están contemplados.</li><li>Daños eléctricos o cortocircuitos, según el producto.</li><li>Declaración del equipo, valor y características de instalación.</li></ul><div class="pair"><img src="/imagenes/paneles-solares-rama.webp" alt="Paneles solares con daños por caída de una rama" loading="lazy" onerror="this.style.display='none'"><img src="/imagenes/minisplit.webp" alt="Equipo minisplit con daño eléctrico ilustrativo" loading="lazy" onerror="this.style.display='none'"></div></div></div></section>
+<section class="section soft"><div class="container"><div class="head"><span class="eyebrow">Opciones adicionales</span><h2>Refuerza la protección según tu vivienda y tus necesidades.</h2><p class="intro">Algunas protecciones se contratan como adicionales o están disponibles solo en determinados planes. Conviene revisar cuáles tienen sentido para tu ubicación y tipo de inmueble.</p></div><div class="option-grid">
+<article class="optional"><div class="ico">⌁</div><div><h3>Terremoto y actividad volcánica</h3><p>Extensión para daños directos por sismo y actividad volcánica, cuando se contrata expresamente.</p></div></article>
+<article class="optional"><div class="ico">☂</div><div><h3>Fenómenos hidrometeorológicos</h3><p>Opciones ante huracán, inundación, vientos, granizo y otros fenómenos definidos en el contrato.</p></div></article>
+<article class="optional"><div class="ico">⌂</div><div><h3>Gastos posteriores a un siniestro</h3><p>Puede contemplar remoción de escombros, mudanza o renta temporal si la vivienda queda inhabitable.</p></div></article>
+<article class="optional"><div class="ico">◎</div><div><h3>Responsabilidad civil familiar</h3><p>Respaldo ante ciertos daños materiales o lesiones que tú o integrantes de tu familia ocasionen accidentalmente a terceros, incluso a tus vecinos.</p></div></article>
+<article class="optional"><div class="ico">⚒</div><div><h3>Asistencia en el hogar</h3><p>Servicios de apoyo como plomería, cerrajería, electricidad o vidriería, conforme al programa.</p></div></article>
+<article class="optional"><div class="ico">▱</div><div><h3>Paneles solares y bienes a la intemperie</h3><p>Protección que puede requerir declaración expresa, descripción del equipo, valor y condiciones de instalación.</p></div></article>
+</div><div class="rent"><div><h3>¿Eres propietario y rentas tu casa, o vives en una vivienda rentada?</h3><p>Hay soluciones que pueden contemplar responsabilidad del inquilino, daños al inmueble o pérdida de rentas para el propietario. La opción adecuada depende de tu papel y del riesgo que quieras proteger.</p></div><a class="btn light" href="https://wa.me/528343117556?text=Hola%20Rafael,%20quiero%20revisar%20un%20seguro%20para%20una%20casa%20rentada" target="_blank" rel="noopener noreferrer">Revisar mi caso →</a></div></div></section>
+<section class="section"><div class="container"><div class="head"><span class="eyebrow">Asesoría JH Seguros</span><h2>Primero entendemos tu vivienda. Después revisamos opciones.</h2><p class="intro">No todas las casas necesitan la misma protección. La ubicación, el tipo de construcción, el uso del inmueble y el valor de los contenidos influyen en la propuesta.</p></div><div class="steps"><article class="step"><h3>Conocemos tu inmueble</h3><p>Revisamos si es casa propia o rentada, sus características, ubicación y qué deseas proteger.</p></article><article class="step"><h3>Comparamos protecciones</h3><p>Identificamos coberturas disponibles, límites, deducibles, exclusiones y requisitos relevantes.</p></article><article class="step"><h3>Decides con claridad</h3><p>Te explicamos las alternativas para que puedas elegir con información y sin presiones.</p></article></div></div></section>
+<section class="section soft"><div class="container"><div class="head"><span class="eyebrow">Preguntas frecuentes</span><h2>Antes de contratar un seguro de hogar</h2></div><div class="faqs">
+<details><summary>¿El seguro protege tanto la construcción como mis muebles?</summary><p>Puede proteger edificio y contenidos, pero son conceptos y sumas aseguradas distintas. Es importante indicar qué deseas asegurar y revisar que ambos aparezcan en la propuesta y póliza.</p></details>
+<details><summary>¿Sismo, huracán e inundación vienen incluidos?</summary><p>No necesariamente. Son riesgos que pueden requerir contratación adicional, tener deducibles o coaseguros específicos, límites y exclusiones. Deben confirmarse en las condiciones del plan elegido.</p></details>
+<details><summary>¿Puedo asegurar paneles solares?</summary><p>Tenemos opciones para incluirlos o asegurarlos mediante una cobertura específica. La compañía puede solicitar datos del sistema, valor, factura, instalación y medidas de seguridad.</p></details>
+<details><summary>¿El seguro cubre cualquier robo?</summary><p>No. La cobertura de robo suele establecer requisitos sobre el tipo de robo, señales de violencia, bienes cubiertos, límites y documentación. Hay que revisar el texto contractual.</p></details>
+<details><summary>¿Cómo se determina el costo?</summary><p>Depende, entre otros factores, de la ubicación, características y valor de la construcción, contenidos, coberturas elegidas, sumas aseguradas y deducibles.</p></details>
+</div><p class="disclaimer">Información general para orientación. No constituye oferta, cotización ni garantía de cobertura. La disponibilidad, alcances, bienes asegurables, límites, deducibles, coaseguros, exclusiones y requisitos varían según la aseguradora y el producto. La cobertura aplicable será únicamente la indicada en la póliza y sus condiciones generales y particulares.</p></div></section>
+<section class="final"><div class="container"><span class="eyebrow">Hablemos de tu hogar</span><h2>Tu patrimonio merece una protección bien pensada.</h2><p>Cuéntame qué tipo de vivienda quieres proteger y revisamos qué alternativas pueden ajustarse a tus necesidades.</p><a class="btn primary" href="https://wa.me/528343117556?text=Hola%20Rafael,%20quiero%20recibir%20asesor%C3%ADa%20para%20proteger%20mi%20hogar" target="_blank" rel="noopener noreferrer">Solicitar asesoría por WhatsApp →</a></div></section>
+{% include contacto-cta.html titulo="¿Quieres revisar la protección de tu vivienda?" texto="Hablemos de las características de tu casa y de las alternativas disponibles para proteger tu patrimonio." wa="https://wa.me/528343117556?text=Hola%20Rafael,%20quiero%20revisar%20opciones%20para%20proteger%20mi%20hogar" %}
+</main>
+<a href="https://wa.me/528343117556?text=Hola%20Rafael,%20me%20interesa%20cotizar%20un%20seguro%20para%20mi%20hogar" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp"><svg viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.081-.1.115-.173.171-.292.059-.115.03-.217-.015-.307-.045-.1-.445-1.074-.61-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg></a>
+{% include footer.html %}
+<script>document.addEventListener('DOMContentLoaded',function(){const b=document.getElementById('menuToggle'),o=document.getElementById('menuOverlay'),d=document.getElementById('menuBackdrop');if(!b||!o||!d)return;function close(){o.classList.remove('open');d.classList.remove('open');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Abrir menú');b.innerHTML='<svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>'}function toggle(){if(o.classList.contains('open')){close();return}o.classList.add('open');d.classList.add('open');b.setAttribute('aria-expanded','true');b.setAttribute('aria-label','Cerrar menú');b.innerHTML='<svg viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>'}b.addEventListener('click',toggle);d.addEventListener('click',close);o.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));document.addEventListener('keydown',e=>{if(e.key==='Escape')close()})});</script>
+</body></html>
