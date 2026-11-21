@@ -1,187 +1,319 @@
 ---
 layout: null
-title: Respuestas Claras sobre Seguros en México | JH Seguros
-description: Respuestas sobre gastos médicos, retiro (PPR), seguro de vida, SeguBeca y más, explicadas con claridad por Rafael Jiménez Sánchez, agente de seguros con atención en todo México.
+title: Guías de Seguros en México explicadas con claridad | JH Seguros
+description: Guías sobre gastos médicos mayores, retiro (PPR), seguro educativo, vida, auto y hogar, explicadas con claridad por Rafael Jiménez Sánchez, agente de seguros con atención en todo México.
 permalink: /recursos/
 ---
+{% comment %}
+=========================================================
+RECURSOS Y GUÍAS · JH Seguros (la URL /recursos/ no cambia)
+- Diseño homologado con /auto/ (página modelo).
+- El listado se arma solo con todas las páginas que usan "layout: guia":
+  cada tarjeta enlaza a la URL original de la guía (g.url); no se crean rutas nuevas.
+- Las categorías (nombre, foto y página del seguro) están en _data/categorias_guias.yml
+  y cada guía indica la suya con "categoria:" en su encabezado.
+=========================================================
+{% endcomment %}
+{% assign guias = site.pages | where: "layout", "guia" | sort: "permalink" %}
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
-    <meta name="description" content="{{ page.description }}">
-    <link rel="canonical" href="https://jhseguros.mx/recursos/">
-    <meta name="author" content="Rafael Jiménez Sánchez">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="{{ page.title }}">
-    <meta property="og:description" content="{{ page.description }}">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jhseguros.mx/recursos/">
-    <meta property="og:image" content="https://jhseguros.mx/imagenes/og-recursos.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Respuestas claras sobre seguros | JH Seguros">
-    <link rel="icon" href="/rafael-perfil.jpg" type="image/jpeg">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3GLCDV4F8"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-Z3GLCDV4F8');
-      gtag('config', 'AW-18520948891');
-    </script>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Open Sans', sans-serif; line-height: 1.6; color: #333; background-color: #f8f9fa; scroll-behavior: smooth; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        header { position: relative; background: linear-gradient(135deg, #1e3c72 90%, #2a5298 100%); color: white; padding: 3rem 0; text-align: center; overflow: hidden; z-index: 1; }
-        header::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('/rafael-perfil.jpg'); background-size: cover; background-position: center; opacity: 0.15; filter: grayscale(100%); mix-blend-mode: luminosity; z-index: -1; }
-        .profile-container { display: flex; flex-direction: column; align-items: center; margin-bottom: 1.5rem; }
-        .name { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; font-weight: 700; margin-bottom: 0.5rem; }
-        .tagline { font-size: 1.4rem; margin: 1rem 0; font-weight: 500; max-width: 800px; margin-left: auto; margin-right: auto; }
-        .detail-section { padding: 3rem 0; background-color: #f0f0f5; min-height: 60vh; }
-        .detail-content { background: white; padding: 2.5rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); margin-bottom: 2rem; text-align: justify; color: #444; }
-        .detail-content h2, .detail-content h3 { color: #2a5298; margin-bottom: 12px; margin-top: 20px; font-family: 'Montserrat', sans-serif; font-size: 1.3rem; }
-        .detail-content p { margin-bottom: 1rem; line-height: 1.7; }
-        .detail-content ul, .detail-content ol { margin-left: 25px; margin-bottom: 1.2rem; }
-        .detail-content li { margin-bottom: 0.5rem; line-height: 1.6; }
-        .detail-content strong { color: #1e3c72; }
-        .detail-content hr { border: 0; border-top: 1px solid #eee; margin: 25px 0; }
-        .back-to-top { display: inline-block; background-color: #2a5298; color: white; padding: 0.5rem 1.2rem; font-size: 0.9rem; border-radius: 20px; text-decoration: none; font-weight: 600; transition: background-color 0.3s; }
-        .back-to-top:hover { background-color: #1e3c72; }
-        .cta-button { display: inline-block; background-color: #ff6b6b; color: white; padding: 0.8rem 2rem; border-radius: 30px; text-decoration: none; font-weight: 600; margin: 10px 0 15px; }
-        footer { background-color: #1a1a2e; color: white; padding: 3rem 0 5rem; text-align: center; }
-        .brand { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; margin-bottom: 1rem; color: #ff6b6b; }
-        .social-links { display: flex; justify-content: center; gap: 1rem; margin: 1.5rem 0; }
-        .social-icon { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background-color: rgba(255, 255, 255, 0.1); border-radius: 50%; color: white; text-decoration: none; }
-        .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 20px; right: 20px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; font-size: 35px; box-shadow: 2px 2px 3px #999; z-index: 1000; display: flex; align-items: center; justify-content: center; text-decoration: none; }
-        .mobile-menu-btn { display: none; position: fixed; top: 20px; right: 20px; width: 52px; height: 52px; background-color: #1e3c72; color: white; border-radius: 50%; border: 2px solid rgba(255, 255, 255, 0.2); z-index: 2000; cursor: pointer; align-items: center; justify-content: center; }
-        .mobile-menu-btn svg { width: 24px; height: 24px; fill: currentColor; }
-        .mobile-overlay { position: fixed; top: 0; right: -100%; width: 280px; height: 100%; background-color: #1a1a2e; z-index: 1999; transition: right 0.4s; display: flex; flex-direction: column; padding: 85px 20px 20px; }
-        .mobile-overlay.open { right: 0; }
-        .mobile-nav-link { color: white; text-decoration: none; font-size: 1.05rem; font-weight: 600; padding: 14px 15px; border-bottom: 1px solid rgba(255,255,255,0.05); }
-        .mobile-backdrop { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 1998; display: none; opacity: 0; transition: opacity 0.3s; }
-        .mobile-backdrop.open { display: block; opacity: 1; }
-        @media (max-width: 768px) { .name { font-size: 1.8rem; } .tagline { font-size: 1.2rem; } .mobile-menu-btn { display: flex; } }
-    
-        .intro-box { background: white; padding: 1.5rem 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 1.5rem; }
-        #buscador { width: 100%; padding: 12px 18px; border: 2px solid #e2e8f0; border-radius: 30px; font-size: 1rem; font-family: inherit; outline: none; margin-top: 1rem; }
-        #buscador:focus { border-color: #2a5298; }
-        ul.guias { list-style: none; margin: 0; padding: 0; background: white; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); overflow: hidden; }
-        ul.guias li { border-bottom: 1px solid #eef0f4; }
-        ul.guias li:last-child { border-bottom: none; }
-        ul.guias a { display: block; padding: 14px 20px; color: #1e3c72; font-weight: 600; text-decoration: none; }
-        ul.guias a:hover { background: #f0f0f5; color: #2a5298; }
-        .contador { color: #64748b; font-size: 0.9rem; margin: 0.8rem 0; }
-        .name-guia { font-family: 'Montserrat', sans-serif; font-size: 1.9rem; font-weight: 700; max-width: 900px; margin: 0 auto 0.5rem; line-height: 1.3; }
-        .card-resumen { margin-bottom: 1.5rem; padding: 16px 18px; background: #f0f0f5; border-left: 5px solid #2a5298; border-radius: 4px; font-weight: 600; color: #1e3c72; text-align: left; }
-        .nota-box { margin-top: 2rem; padding: 14px 16px; background: #f8f9fa; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 0.85rem; color: #475569; text-align: left; }
-        .cta-box { margin-top: 2rem; padding: 1.5rem; background: #f8f9fa; border: 1px solid #e2e8f0; border-radius: 8px; text-align: center; }
-        .cta-box h3 { margin-top: 0; }
-        @media (max-width: 768px) { .name-guia { font-size: 1.45rem; } .detail-content { padding: 1.5rem; } }
-    </style>
-    <style>
-        /* Iconos de línea en lugar de emojis (Lucide, licencia ISC; WhatsApp, Facebook e Instagram: logotipos oficiales) */
-        svg.jh-i { display: inline-block; width: 1.1em; height: 1.1em; margin-right: 0.35em; vertical-align: -0.18em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
-        svg.jh-solo { display: inline-block; width: 0.85em; height: 0.85em; color: #6c4bc4; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; vertical-align: middle; }
-        .jh-solo + .jh-solo { margin-left: 0.25em; }
-        .ico .jh-solo { width: 20px; height: 20px; color: inherit; }
-        svg.jh-fill { fill: currentColor; stroke: none; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }}</title>
+  <meta name="description" content="{{ page.description }}">
+  <link rel="canonical" href="https://jhseguros.mx/recursos/">
+  <meta name="author" content="Rafael Jiménez Sánchez">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:site_name" content="JH Seguros">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ page.description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jhseguros.mx/recursos/">
+  <meta property="og:image" content="https://jhseguros.mx/imagenes/og-recursos.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Guías de seguros explicadas con claridad | JH Seguros">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/rafael-perfil.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Se conservan los identificadores de medición existentes -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3GLCDV4F8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Z3GLCDV4F8');
+    gtag('config', 'AW-18520948891');
+  </script>
+  <!-- Datos estructurados: colección de guías con la lista de sus URL + ruta de navegación -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "name": {{ page.title | jsonify }},
+        "description": {{ page.description | jsonify }},
+        "url": "https://jhseguros.mx/recursos/",
+        "inLanguage": "es-MX",
+        "author": { "@type": "Person", "name": "Rafael Jiménez Sánchez", "jobTitle": "Agente de Seguros", "url": "https://jhseguros.mx/sobre-mi/" },
+        "mainEntity": {
+          "@type": "ItemList",
+          "numberOfItems": {{ guias | size }},
+          "itemListElement": [
+            {% for g in guias %}{ "@type": "ListItem", "position": {{ forloop.index }}, "url": "https://jhseguros.mx{{ g.url }}", "name": {{ g.title | jsonify }} }{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+          ]
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://jhseguros.mx/" },
+          { "@type": "ListItem", "position": 2, "name": "Recursos y guías", "item": "https://jhseguros.mx/recursos/" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root{--navy:#12264f;--blue:#1e3c72;--purple:#6c4bc4;--ink:#202b3c;--muted:#64748b;--pale:#f3f6fb;--line:#e4eaf2;--green:#20b96b}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Open Sans',sans-serif;color:var(--ink);line-height:1.65;background:#fff;font-size:1.05rem}
+    a{color:inherit}
+    img{max-width:100%;display:block}
+    .wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+    h1,h2,h3{font-family:Montserrat,sans-serif;line-height:1.18}
+    .eyebrow{display:inline-block;font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--purple)}
+    .wa-ico{width:20px;height:20px;fill:currentColor;flex-shrink:0}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 22px;border-radius:9px;text-decoration:none;font-weight:800;transition:.2s;border:0}
+    .btn:hover{transform:translateY(-2px);filter:brightness(.97)}
+    .btn-wa{background:var(--green);color:#fff;box-shadow:0 8px 22px #20b96b38}
+    .btn-outline{border:1px solid #ffffff80;color:#fff;background:#ffffff12}
+
+    /* Encabezado: texto a la izquierda y foto de Rafael a la derecha (confianza: quién escribe las guías) */
+    .hero{position:relative;overflow:hidden;color:#fff;background:radial-gradient(circle at 80% 15%,#6c4bc455,transparent 32%),linear-gradient(120deg,#10254d 0%,#1e3c72 58%,#293d79 100%);padding:70px 0 84px}
+    .hero:after{content:"";position:absolute;width:430px;height:430px;border:1px solid #ffffff20;border-radius:50%;right:-120px;bottom:-250px;box-shadow:0 0 0 45px #ffffff08,0 0 0 90px #ffffff06}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:44px;align-items:center;position:relative;z-index:1}
+    .hero .eyebrow{color:#c7b8ff}
+    .hero h1{font-size:clamp(2.2rem,4.6vw,3.8rem);font-weight:800;letter-spacing:-.04em;margin:14px 0 16px}
+    .hero h1 span{color:#c7b8ff}
+    .hero-copy{font-size:1.12rem;color:#e3eaf7;max-width:640px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 16px}
+    .micro{font-size:.88rem;color:#c7d3e8}
+    .hero-visual{position:relative;border:1px solid #ffffff35;border-radius:24px;background:linear-gradient(145deg,#ffffff18,#ffffff08);padding:14px;box-shadow:0 24px 65px #07142d55}
+    .hero-visual img{width:100%;height:340px;object-fit:cover;object-position:top;border-radius:15px}
+    .visual-label{position:absolute;left:28px;bottom:28px;right:28px;background:#fff;color:var(--navy);border-radius:12px;padding:11px 15px;font-size:.86rem;font-weight:800;box-shadow:0 10px 30px #0003;line-height:1.35}
+    .visual-label small{display:block;font-weight:600;color:var(--muted)}
+
+    /* Buscador */
+    .search-wrap{position:relative;margin-top:-34px;z-index:2}
+    .search-panel{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px 22px;box-shadow:0 14px 36px #12264f1f}
+    .search-panel label{display:block;font-family:Montserrat,sans-serif;font-weight:800;color:var(--navy);margin-bottom:8px}
+    #buscador{width:100%;padding:15px 18px;border:1px solid #cbd5e1;border-radius:10px;font:inherit;outline:none}
+    #buscador:focus{border-color:var(--purple);box-shadow:0 0 0 3px #6c4bc41f}
+
+    section{padding:60px 0}
+    .section-head{max-width:760px;margin-bottom:26px}
+    .section-head h2{font-size:clamp(1.65rem,3vw,2.3rem);color:var(--navy);letter-spacing:-.025em;margin-top:8px}
+    .section-head p{color:var(--muted);margin-top:8px}
+
+    /* Tarjetas de categoría con foto real */
+    .category-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+    .category-card{position:relative;min-height:220px;border-radius:15px;overflow:hidden;background:var(--navy);color:#fff;display:flex;align-items:flex-end;text-decoration:none;isolation:isolate;box-shadow:0 9px 25px #12264f1f}
+    .category-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;z-index:-2;transition:transform .35s}
+    .category-card:before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#08142cf0,#08142c10 85%);z-index:-1}
+    .category-card:hover img{transform:scale(1.05)}
+    .category-copy{padding:18px}
+    .category-copy small{display:inline-block;background:#ffffff26;border-radius:20px;padding:2px 10px;font-weight:800;font-size:.75rem}
+    .category-copy h3{font-size:1.15rem;margin:7px 0 4px}
+    .category-copy span{font-size:.9rem;color:#e5edf7}
+
+    /* Catálogo */
+    .catalog{background:var(--pale)}
+    .filter-row{display:flex;gap:9px;flex-wrap:wrap;margin:0 0 20px}
+    .filter-btn{border:1px solid #d4dce8;background:#fff;color:#35445a;padding:9px 15px;border-radius:30px;font:600 .92rem 'Open Sans',sans-serif;cursor:pointer}
+    .filter-btn[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+    .catalog-meta{color:var(--muted);font-size:.95rem;margin-bottom:14px}
+    .guide-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+    .guide-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:13px;padding:18px;display:flex;flex-direction:column;box-shadow:0 4px 14px #12264f09;transition:transform .2s,box-shadow .2s}
+    .guide-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px #12264f17}
+    .guide-card[hidden]{display:none}
+    .guide-tag{align-self:flex-start;color:#5d45a7;background:#f1edfb;border-radius:20px;padding:3px 10px;font-size:.74rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em;margin-bottom:9px}
+    .guide-card h3{font-size:1.02rem;color:var(--navy);line-height:1.4}
+    .guide-card h3 a{text-decoration:none}
+    .guide-card h3 a:after{content:"";position:absolute;inset:0}   /* Toda la tarjeta abre la guía */
+    .guide-card p{font-size:.92rem;color:var(--muted);margin-top:8px}
+    .guide-card .arrow{margin-top:auto;padding-top:12px;color:var(--purple);font-size:.88rem;font-weight:800}
+    .guide-card:hover h3{color:var(--purple)}
+    .empty-state{display:none;background:#fff;padding:24px;border-radius:12px;text-align:center;color:var(--muted)}
+
+    /* Seguros relacionados */
+    .product-links{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .product-link{display:grid;grid-template-columns:96px 1fr;gap:14px;align-items:center;border:1px solid var(--line);border-radius:13px;padding:12px;background:#fff;text-decoration:none;transition:box-shadow .2s}
+    .product-link:hover{box-shadow:0 10px 24px #12264f17}
+    .product-link img{width:96px;height:72px;object-fit:cover;object-position:center 30%;border-radius:9px}
+    .product-link strong{display:block;color:var(--navy);font-family:Montserrat,sans-serif;margin-bottom:3px}
+    .product-link span{font-size:.9rem;color:var(--muted)}
+    .trust-note{background:#fff;border:1px solid var(--line);border-left:5px solid var(--purple);padding:18px 22px;border-radius:10px;color:#4b5b70}
+    .whatsapp-float{position:fixed;width:58px;height:58px;bottom:20px;right:20px;background:#25d366;color:#fff;border-radius:50%;z-index:1000;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.22);text-decoration:none}
+
+    @media(max-width:980px){.hero-grid{grid-template-columns:1fr}.hero-visual{max-width:460px}.category-grid{grid-template-columns:repeat(2,1fr)}.guide-grid,.product-links{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:600px){.wrap{width:calc(100% - 32px)}.hero{padding:40px 0 66px}.hero-visual img{height:230px}.guide-grid,.product-links{grid-template-columns:1fr}.category-grid{gap:10px}.category-card{min-height:150px}.category-copy{padding:12px}.category-copy h3{font-size:1rem}.category-copy span{display:none}.search-panel{padding:16px}}   /* Celular: categorías en 2 columnas compactas */
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+  </style>
 </head>
 <body>
-    {% include header.html %}
-    <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20tengo%20una%20duda%20sobre%20seguros" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.081-.1.115-.173.171-.292.059-.115.03-.217-.015-.307-.045-.1-.445-1.074-.61-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
-    </a>
+  {% include header.html %}
 
-    <button class="mobile-menu-btn" id="menuToggle" aria-label="Abrir menú">
-        <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-    </button>
-    <div class="mobile-backdrop" id="menuBackdrop"></div>
-    <div class="mobile-overlay" id="menuOverlay">
-        <a href="/" class="mobile-nav-link">Inicio</a>
-        <a href="/danos/" class="mobile-nav-link">Módulo Autos y Daños</a>
-        <a href="/productos-vida/" class="mobile-nav-link">Vida y Gastos Médicos</a>
-        <a href="/autorizaciones/" class="mobile-nav-link">Autorizaciones / Certificaciones</a>
-        <a href="/hospitales/" class="mobile-nav-link">Servicios Hospitalarios</a>
-        <a href="/recursos/" class="mobile-nav-link">Respuestas sobre Seguros</a>
-        <a href="/redes/" class="mobile-nav-link">Redes Sociales</a>
-        <a href="/contacto-form/" class="mobile-nav-link">Contacto Directo</a>
-    </div>
+  <a href="https://wa.me/528343117556?text=Hola%20Rafael,%20tengo%20una%20duda%20sobre%20seguros" class="whatsapp-float js-wa" data-origen="flotante_recursos" data-track="cta_whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 16 16" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.081-.1.115-.173.171-.292.059-.115.03-.217-.015-.307-.045-.1-.445-1.074-.61-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+  </a>
 
-    <header>
-        <div class="container">
-            <div class="profile-container">
-                <h1 class="name">Respuestas Claras sobre Seguros</h1>
-                <p class="tagline">Guías de Rafael Jiménez Sánchez - Agente de Seguros Cédula A1 H382035 y B Y415335 (CNSF)</p>
-            </div>
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">Recursos y guías · JH Seguros</span>
+          <h1>Entiende tu seguro <span>antes de contratarlo.</span></h1>
+          <p class="hero-copy">{{ guias | size }} guías sobre gastos médicos mayores, retiro, seguro educativo, vida, auto y hogar. Respuestas claras a las dudas más comunes, para que decidas con información y sin letras chiquitas.</p>
+          <div class="hero-actions">
+            <a class="btn btn-wa js-wa" data-origen="hero_recursos" data-track="cta_whatsapp" href="https://wa.me/528343117556?text=Hola%20Rafael,%20quiero%20orientaci%C3%B3n%20sobre%20un%20seguro" target="_blank" rel="noopener noreferrer"><svg class="wa-ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592z"/></svg>Pregúntame por WhatsApp</a>
+            <a class="btn btn-outline" href="#catalogo">Ver todas las guías</a>
+          </div>
+          <p class="micro">Atención en todo México · Explicaciones basadas en las condiciones generales de cada aseguradora</p>
         </div>
-    </header>
-
-    <section class="detail-section">
-        <div class="container">
-            <div class="intro-box">
-                <p>Resolvemos dudas frecuentes sobre gastos médicos mayores, retiro (PPR), seguro de vida, SeguBeca, auto y más. Busca tu tema o elige una guía.</p>
-                <input type="text" id="buscador" placeholder="Buscar por tema (ej. deducible, maternidad, PPR, auto)..." aria-label="Buscar guía">
-            </div>
-            {% assign guias = site.pages | where: "layout", "guia" | sort: "permalink" %}
-            <p class="contador"><span id="total">{{ guias | size }}</span> guías disponibles</p>
-            <ul class="guias" id="lista">
-                {% for g in guias %}
-                <li><a href="{{ g.url }}">{{ g.title }}</a></li>
-                {% endfor %}
-            </ul>
-
-            {% include contacto-cta.html titulo="¿Te quedaron dudas sobre esta consulta?" texto="No te la juegues con tu patrimonio o tu salud. Habla directamente con un asesor de JH Seguros para revisar tu caso." wa="https://wa.me/528343117556?text=Hola%20Rafael,%20me%20interesa%20una%20p%C3%B3liza%20de%20responsabilidad%20civil" %}
-            
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="/" class="back-to-top">Volver al Menú Principal</a>
-            </div>
+        <div class="hero-visual">
+          <img src="/imagenes/rafael-sobre-mi.webp" alt="Rafael Jiménez Sánchez, agente de seguros" width="732" height="1032" fetchpriority="high">
+          <div class="visual-label">Rafael Jiménez Sánchez · Agente de Seguros<small>Cédulas CNSF A1 H382035 y B Y415335</small></div>
         </div>
+      </div>
     </section>
 
-         <!-- FOOTER CON RUTAS ABSOLUTAS -->
-    {% include footer.html %}
+    <div class="wrap search-wrap">
+      <div class="search-panel">
+        <label for="buscador">¿Qué duda tienes?</label>
+        <input type="search" id="buscador" placeholder="Ej. deducible, maternidad, PPR, universidad, beneficiarios, auto..." autocomplete="off">
+      </div>
+    </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const btn = document.getElementById('menuToggle');
-            const overlay = document.getElementById('menuOverlay');
-            const backdrop = document.getElementById('menuBackdrop');
-            function toggleMenu() {
-                if (!overlay || !backdrop || !btn) return;
-                overlay.classList.toggle('open');
-                backdrop.classList.toggle('open');
-                btn.innerHTML = overlay.classList.contains('open') 
-                    ? '<svg viewBox="0 0 24 24" style="width:24px;height:24px;fill:currentColor;"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>'
-                    : '<svg viewBox="0 0 24 24" style="width:24px;height:24px;fill:currentColor;"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>';
-            }
-            if (btn && overlay && backdrop) {
-                btn.addEventListener('click', toggleMenu);
-                backdrop.addEventListener('click', toggleMenu);
-            }
+    <section id="categorias">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Por tema</span>
+          <h2>Elige lo que quieres proteger</h2>
+        </div>
+        <div class="category-grid">
+          {% for c in site.data.categorias_guias %}
+          {% assign de_cat = guias | where: "categoria", c.clave %}
+          <a class="category-card" href="?tema={{ c.clave }}#catalogo" data-jump-category="{{ c.clave }}">
+            <img src="{{ c.foto }}" alt="{{ c.nombre }}: {{ c.lema }}" width="720" height="540" loading="lazy">
+            <div class="category-copy"><small>{{ de_cat | size }} {% if de_cat.size == 1 %}guía{% else %}guías{% endif %}</small><h3>{{ c.nombre }}</h3><span>{{ c.lema }}</span></div>
+          </a>
+          {% endfor %}
+          <a class="category-card" href="#catalogo" data-jump-category="all">
+            <img src="/imagenes/gmm-02-terapias.webp" alt="Asesoría para elegir la protección adecuada" width="720" height="540" loading="lazy">
+            <div class="category-copy"><small>{{ guias | size }} guías</small><h3>Todas las guías</h3><span>Explora la biblioteca completa</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog" id="catalogo">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Biblioteca</span>
+          <h2>Todas las guías</h2>
+        </div>
+        <div class="filter-row" role="group" aria-label="Filtrar guías por tema">
+          <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">Todas</button>
+          {% for c in site.data.categorias_guias %}
+          <button class="filter-btn" type="button" data-filter="{{ c.clave }}" aria-pressed="false">{{ c.nombre }}</button>
+          {% endfor %}
+        </div>
+        <p class="catalog-meta"><strong id="total">{{ guias | size }}</strong> guías</p>
+        <div class="guide-grid" id="lista">
+          {% for g in guias %}
+          {% assign clave_g = g.categoria | default: "asesoria" %}
+          {% assign cg = site.data.categorias_guias | where: "clave", clave_g | first %}
+          <article class="guide-card" data-category="{{ clave_g }}" data-search="{{ g.title | escape }} {{ g.description | escape }} {{ cg.nombre | escape }}">
+            <span class="guide-tag">{{ cg.nombre | default: "Asesoría y Trámites" }}</span>
+            <h3><a href="{{ g.url }}">{{ g.title }}</a></h3>
+            {% if g.description %}<p>{{ g.description | strip_html | truncate: 130 }}</p>{% endif %}
+            <span class="arrow">Leer guía →</span>
+          </article>
+          {% endfor %}
+        </div>
+        <div class="empty-state" id="sinResultados">No encontré guías con esa palabra. Prueba con otra o escríbeme por WhatsApp y te respondo.</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Seguros</span>
+          <h2>¿Ya sabes qué necesitas?</h2>
+          <p>Conoce las opciones de cada seguro y cotiza con asesoría personalizada.</p>
+        </div>
+        <div class="product-links">
+          {% for c in site.data.categorias_guias %}{% if c.clave != "asesoria" %}
+          <a class="product-link" href="{{ c.producto }}"><img src="{{ c.foto }}" alt="{{ c.nombre }}" width="720" height="540" loading="lazy"><div><strong>{{ c.nombre }}</strong><span>{{ c.boton }} →</span></div></a>
+          {% endif %}{% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <p class="trust-note"><strong>Información orientativa.</strong> Las coberturas, beneficios, exclusiones y condiciones definitivas dependen de la póliza contratada y de las condiciones generales y particulares de cada aseguradora.</p>
+      {% include contacto-cta.html titulo="¿No encontraste tu respuesta?" texto="Escríbeme o llámame y la revisamos juntos, con la póliza en la mano." wa="https://wa.me/528343117556?text=Hola%20Rafael,%20no%20encontr%C3%A9%20mi%20respuesta%20en%20las%20gu%C3%ADas%20y%20quiero%20preguntarte" %}
+      <div style="height:60px"></div>
+    </div>
+  </main>
+
+  {% include footer.html %}
+
+  <script>
+    // Buscador + filtros por tema (ignora acentos y mayúsculas). "?tema=gmm" abre el listado ya filtrado.
+    (function(){
+      var cards = Array.prototype.slice.call(document.querySelectorAll('.guide-card'));
+      var search = document.getElementById('buscador');
+      var total = document.getElementById('total');
+      var empty = document.getElementById('sinResultados');
+      var buttons = Array.prototype.slice.call(document.querySelectorAll('[data-filter]'));
+      var active = 'all';
+      function normal(v){ return (v || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }
+      function actualizar(){
+        var q = normal(search.value.trim()), n = 0;
+        cards.forEach(function(card){
+          var ok = (active === 'all' || card.dataset.category === active) && (!q || normal(card.textContent + ' ' + card.dataset.search).indexOf(q) !== -1);
+          card.hidden = !ok;
+          if (ok) n++;
         });
-    </script>
-    <script>
-        // Buscador: filtra la lista ignorando acentos y mayúsculas
-        (function () {
-            var campo = document.getElementById('buscador');
-            var items = document.querySelectorAll('#lista li');
-            var total = document.getElementById('total');
-            function limpiar(s) { return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); }
-            campo.addEventListener('input', function () {
-                var q = limpiar(campo.value), n = 0;
-                items.forEach(function (li) {
-                    var ok = limpiar(li.textContent).indexOf(q) !== -1;
-                    li.style.display = ok ? '' : 'none';
-                    if (ok) n++;
-                });
-                total.textContent = n;
-            });
-        })();
-    </script>
+        total.textContent = n;
+        empty.style.display = n ? 'none' : 'block';
+      }
+      function elegir(tema){
+        active = buttons.some(function(b){ return b.dataset.filter === tema; }) ? tema : 'all';
+        buttons.forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.filter === active)); });
+        actualizar();
+      }
+      buttons.forEach(function(b){ b.addEventListener('click', function(){ elegir(b.dataset.filter); }); });
+      document.querySelectorAll('[data-jump-category]').forEach(function(a){
+        a.addEventListener('click', function(e){
+          e.preventDefault();
+          elegir(a.dataset.jumpCategory);
+          document.getElementById('catalogo').scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+      search.addEventListener('input', actualizar);
+      var tema = new URLSearchParams(location.search).get('tema');
+      if (tema) elegir(tema);
+    })();
+  </script>
 </body>
 </html>

@@ -5,6 +5,7 @@ description: "Descubre si tu seguro de auto mexicano te cubre al cruzar a Texas:
 resumen: "Evita multas en EE.UU. Descubre si tu seguro de auto mexicano incluye la Responsabilidad Civil Extranjera (RC USA) para viajar a Texas este verano."
 aseguradoras: CHUBB, HDI
 permalink: /recursos/jhs-053___seguro-de-auto-para-viajar-a-texas-2026-sirve-mi-poliza/
+categoria: auto
 ---
 
 Por regla general, una póliza ordinaria de auto emitida en México no tiene validez operativa ni reconocimiento legal automático en Estados Unidos. 

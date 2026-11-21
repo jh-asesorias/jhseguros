@@ -7,6 +7,7 @@ aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-039___puedo-asegurar-alguna-parte-u-organo-de-mi-cuerpo/
 redirect_from:
   - /recursos/jhs-037___puedo-asegurar-alguna-parte-u-organo-de-mi-cuerpo/
+categoria: vida
 ---
 
 No es posible asegurar un órgano o extremidad de forma aislada a través de una póliza convencional individual o de gastos médicos masivos en México, ya que estos contratos cubren la vida humana general y diagnósticos médicos globales.

@@ -5,6 +5,7 @@ description: Descubre si tu seguro de gastos médicos mayores cubre enfermedades
 resumen: Conoce si los seguros de gastos médicos mayores cubren padecimientos preexistentes en México, sus exclusiones, evaluaciones médicas y periodos de espera.
 aseguradoras: AXA, Seguros Monterrey New York Life, HDI, CHUBB
 permalink: /recursos/jhs-006___mi-seguro-cubre-padecimientos-preexistentes/
+categoria: gmm
 ---
 
 Por regla general en el mercado mexicano, las enfermedades o lesiones que ya existían o se conocían antes de la contratación de la póliza están permanentemente excluidas.

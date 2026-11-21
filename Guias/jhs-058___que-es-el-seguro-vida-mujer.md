@@ -5,6 +5,7 @@ description: "Descubre cómo funciona el seguro Vida Mujer: plan dotal a 20 año
 resumen: "Descubre el seguro Vida Mujer: plan dotal a 20 años en UDIS/USD con ahorro, retorno del 115% y protección por padecimientos femeninos, vida e invalidez."
 aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-058___que-es-el-seguro-vida-mujer/
+categoria: vida
 ---
 
 **Vida Mujer** es un seguro de vida dotal (con un esquema de ahorro integrado) diseñado por **Seguros Monterrey New York Life** para brindar un apoyo real e integral a la mujer. Estructurado bajo un horizonte de 20 años, combina de forma sólida la protección financiera por fallecimiento con coberturas especializadas en la salud femenina.

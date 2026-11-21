@@ -5,6 +5,7 @@ description: "Conoce a qué edad puedes retirar tu fondo de PPR en México segú
 resumen: Conoce a qué edad puedes retirar el fondo de tu PPR y las opciones disponibles según la ley (un solo pago en efectivo o mediante rentas mensuales vitalicias).
 aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-026___a-que-edad-puedo-retirar-mi-dinero-y-como-me-lo-entregan/
+categoria: ppr
 ---
 
 Para conservar la totalidad de los beneficios fiscales y exenciones previstos en la Ley del Impuesto sobre la Renta (LISR), la edad estipulada de retiro y vencimiento de la póliza suele fijarse a los **65 años** (o un mínimo de 60 años según el artículo fiscal y el diseño contractual específico de la póliza).

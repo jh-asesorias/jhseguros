@@ -5,6 +5,7 @@ description: Conoce cómo funcionan las redes y niveles hospitalarios en tu segu
 resumen: ¿Puedo ir a cualquier hospital privado con mi seguro médico? Conoce los niveles hospitalarios, redes médicas y cómo evitar penalizaciones en tu coaseguro.
 aseguradoras: AXA, Seguros Monterrey New York Life, HDI, CHUBB
 permalink: /recursos/jhs-009___puedo-atenderme-en-cualquier-hospital-de-mexico/
+categoria: gmm
 ---
 
 Dependerá directamente del tipo de plan y del nivel de cobertura hospitalaria que hayas contratado en tu póliza.

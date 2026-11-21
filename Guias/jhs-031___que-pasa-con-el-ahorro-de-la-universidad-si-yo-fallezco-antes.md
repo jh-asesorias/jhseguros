@@ -7,6 +7,7 @@ aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-031___que-pasa-con-el-ahorro-de-la-universidad-si-yo-fallezco-antes/
 redirect_from:
   - /recursos/jhs-029___que-pasa-con-el-ahorro-de-la-universidad-si-yo-fallezco-antes/
+categoria: educacion
 ---
 
 El núcleo de protección de un seguro educativo (como *SeguBeca*) es buscar que el proyecto profesional y universitario de tus hijos se concrete aun ante tu fallecimiento o invalidez.

@@ -2,9 +2,10 @@
 layout: guia
 title: ¿Cuál es la diferencia entre mi AFORE y un Plan Personal de Retiro (PPR)?
 description: Comparamos AFORE vs. PPR. Conoce las diferencias en rendimientos, flexibilidad de inversión y ventajas fiscales de un plan de retiro privado en México.
-resumen: Comparamos AFORE vs. PPR: Conoce las diferencias en rendimientos, flexibilidad de portafolios de inversión y las ventajas fiscales exclusivas de un plan privado.
+resumen: "Comparamos AFORE vs. PPR: Conoce las diferencias en rendimientos, flexibilidad de portafolios de inversión y las ventajas fiscales exclusivas de un plan privado."
 aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-019___cual-es-la-diferencia-entre-mi-afore-y-un-plan-personal-de-retiro-ppr/
+categoria: ppr
 ---
 
 Aunque ambos buscan el mismo fin (proteger tu futuro financiero para la vejez), operan bajo esquemas complementarios muy distintos.

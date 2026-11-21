@@ -5,6 +5,7 @@ description: Consulta qué enfermedades tienen periodos de espera en los seguros
 resumen: Consulta qué enfermedades tienen periodos de espera en los seguros de gastos médicos (cáncer, hernias, rodillas) y por qué es vital la antigüedad de tu póliza.
 aseguradoras: AXA, Seguros Monterrey New York Life, HDI, CHUBB
 permalink: /recursos/jhs-010___que-enfermedades-tienen-periodo-de-espera/
+categoria: gmm
 ---
 
 El **periodo de espera** es el tiempo continuo que debe transcurrir desde la contratación antes de que ciertas coberturas sean válidas, un mecanismo que protege al sistema solidario de seguros contra fraudes por enfermedades preexistentes ocultas.

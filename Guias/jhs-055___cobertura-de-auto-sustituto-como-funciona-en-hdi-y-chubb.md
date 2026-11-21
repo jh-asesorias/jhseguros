@@ -5,6 +5,7 @@ description: "Descubre cómo activar la cobertura de auto sustituto o auto relev
 resumen: "¿Chocaste o te robaron el auto? Descubre cómo activar la cobertura de auto sustituto o auto relevo en tu póliza de auto, sin pagar deducible, según las condiciones de cada aseguradora."
 aseguradoras: CHUBB, HDI
 permalink: /recursos/jhs-055___cobertura-de-auto-sustituto-como-funciona-en-hdi-y-chubb/
+categoria: auto
 ---
 
 Cuando un vehículo entra al taller de hojalatería o queda detenido por un proceso legal tras un choque o robo, surge un costo imprevisto inmediato: taxis, traslados por aplicación o rentas particulares de coches. La cobertura de **auto sustituto** (o auto relevo) evita ese desfalco diario entregándote un vehículo temporal para no frenar tus actividades cotidianas.

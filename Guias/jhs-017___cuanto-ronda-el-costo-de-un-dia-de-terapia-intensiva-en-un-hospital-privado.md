@@ -5,6 +5,7 @@ description: Descubre cuánto cuesta un día de terapia intensiva en un hospital
 resumen: Descubre cuánto cuesta un día de terapia intensiva en un hospital privado en México y por qué un seguro de gastos médicos mayores es vital ante emergencias.
 aseguradoras: AXA, Seguros Monterrey New York Life, HDI, CHUBB
 permalink: /recursos/jhs-017___cuanto-ronda-el-costo-de-un-dia-de-terapia-intensiva-en-un-hospital-privado/
+categoria: gmm
 ---
 
 Ingresar a una Unidad de Terapia Intensiva (UTI o UCI) representa uno de los gastos más severos en la salud privada y es, fundamentalmente, la razón de ser de un Seguro de Gastos Médicos Mayores (SGMM).

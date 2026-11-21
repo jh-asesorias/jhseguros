@@ -5,6 +5,7 @@ description: Descubre si tu seguro de gastos médicos mayores cubre medicamentos
 resumen: Descubre si tu seguro médico cubre medicamentos fuera del hospital y cómo tramitar el reembolso o adquirirlos mediante farmacias en convenio.
 aseguradoras: AXA, Seguros Monterrey New York Life, HDI, CHUBB
 permalink: /recursos/jhs-012___cubre-medicamentos-fuera-del-hospital/
+categoria: gmm
 ---
 
 Los medicamentos que te sean suministrados durante un internamiento u hospitalización estarán cubiertos dentro de la suma asegurada general de tu póliza, conforme a sus condiciones. 

@@ -5,6 +5,7 @@ description: "Descubre cómo funciona la exención de primas por desempleo en Se
 resumen: "Descubre cómo funciona la exención de pagos por desempleo en el seguro educativo SeguBeca. Conoce cómo ayuda a proteger la universidad de tus hijos ante un despido."
 aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-056___que-es-la-exencion-de-primas-por-desempleo-en-una-segubeca/
+categoria: educacion
 ---
 
 Estructurar un fondo para la educación superior de los hijos mediante un seguro educativo como **SeguBeca** (de Seguros Monterrey New York Life) requiere constancia a lo largo de varios años. Uno de los mayores temores de los padres de familia es enfrentar una pérdida imprevista de ingresos por reestructuraciones o recortes laborales, poniendo en riesgo la continuidad de los pagos y la meta universitaria del menor al cumplir los 18 años.

@@ -5,6 +5,7 @@ description: Aprende qué es el deducible y coaseguro en un seguro de gastos mé
 resumen: Aprende qué es el deducible y el coaseguro en un seguro de gastos médicos y cómo influyen directamente en la prima anual y en tu pago final ante un siniestro.
 aseguradoras: AXA, Seguros Monterrey New York Life, HDI, CHUBB
 permalink: /recursos/jhs-004___que-es-el-deducible-y-coaseguro-en-gastos-medicos-mayores-gmm/
+categoria: gmm
 ---
 
 Son los dos conceptos clave mediante los cuales participa el asegurado para moderar el costo de la prima anual y fomentar un uso responsable de la póliza.

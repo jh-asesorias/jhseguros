@@ -5,6 +5,7 @@ description: "Aprende a verificar la autenticidad de tu póliza de seguro en Mé
 resumen: "Aprende cómo verificar que tu póliza de seguro es real y está vigente en el portal oficial de la CNSF o llamando directamente a los números de la aseguradora."
 aseguradoras: AXA, CHUBB, HDI, Seguros Monterrey New York Life
 permalink: /recursos/jhs-048___como-se-que-mi-poliza-es-real-y-estoy-protegido/
+categoria: asesoria
 ---
 
 Para validar con certeza jurídica que tu contrato de seguro es auténtico, cuenta con respaldo financiero sólido y está debidamente registrado en México, verifica estos cinco elementos clave:

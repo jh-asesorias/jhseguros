@@ -5,6 +5,7 @@ description: "Conoce qué pasa si dejas de pagar tu seguro de vida en México: p
 resumen: "¿Qué pasa si ya no puedes pagar tu seguro de vida? Conoce el periodo de gracia, los valores garantizados y la opción de rescate de efectivo de tu póliza."
 aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-045___que-pasa-si-ya-no-puedo-pagar-mi-seguro-de-vida/
+categoria: vida
 ---
 
 Las implicaciones de suspender los pagos dependen directamente del tipo de seguro que tengas contratado y de la antigüedad acumulada en tu plan.

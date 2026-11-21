@@ -5,6 +5,7 @@ description: Descubre cómo deducir tus aportaciones al PPR (Plan Personal de Re
 resumen: ¡Haz que el SAT te devuelva dinero! Descubre cómo deducir tus aportaciones al PPR bajo el artículo 151 de la LISR y obtén saldo a favor en tu declaración anual.
 aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-020___es-verdad-que-el-sat-me-devuelve-dinero-si-ahorro-para-mi-retiro/
+categoria: ppr
 ---
 
 Sí, es un derecho totalmente real operado a través del mecanismo de **deducciones personales**. 

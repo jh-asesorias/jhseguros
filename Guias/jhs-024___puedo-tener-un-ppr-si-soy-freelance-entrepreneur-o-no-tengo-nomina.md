@@ -7,6 +7,7 @@ aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-024___puedo-tener-un-ppr-si-soy-freelance-entrepreneur-o-no-tengo-nomina/
 redirect_from:
   - /recursos/jhs-023___puedo-tener-un-ppr-si-soy-freelance-entrepreneur-o-no-tengo-nomina/
+categoria: ppr
 ---
 
 Sí, por supuesto, y de hecho es una herramienta fundamental y altamente recomendable para quienes trabajan de forma independiente o por cuenta propia.

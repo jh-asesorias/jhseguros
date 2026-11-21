@@ -5,6 +5,7 @@ description: Descubre cuál es la edad máxima para contratar un seguro de gasto
 resumen: Descubre cuál es la edad máxima para contratar un seguro de gastos médicos mayores en México y los beneficios de mantener tu renovación automática vitalicia.
 aseguradoras: AXA, Seguros Monterrey New York Life, HDI, CHUBB
 permalink: /recursos/jhs-014___hasta-que-edad-puedo-contratar-un-seguro-de-gastos-medicos-mayores/
+categoria: gmm
 ---
 
 Los límites de edad para una primera contratación varían según la aseguradora y el plan, pero en el mercado mexicano la regla más extendida permite ingresar como nuevo asegurado hasta los **64 años con 11 meses (64.99 años)**.

@@ -5,6 +5,7 @@ description: Conoce qué es el tope de coaseguro en tu seguro de gastos médicos
 resumen: Aprende qué es el tope de coaseguro en tu seguro de gastos médicos y cómo funciona esta cantidad máxima para proteger tu patrimonio ante una cuenta alta.
 aseguradoras: AXA, Seguros Monterrey New York Life, HDI, CHUBB
 permalink: /recursos/jhs-015___que-es-el-tope-de-coaseguro-en-seguros-de-gastos-medicos-mayores/
+categoria: gmm
 ---
 
 El **tope de coaseguro** es el monto máximo en pesos que el asegurado tendrá que pagar por concepto de coaseguro ante una misma enfermedad o evento hospitalario, sin importar qué tan alta resulte la factura final del hospital.

@@ -5,6 +5,7 @@ description: Descubre si debes pagar deducible ante un accidente en tu seguro de
 resumen: Descubre si debes pagar deducible en caso de sufrir un accidente. Conoce la cláusula de eliminación de deducible por accidente en seguros de gastos médicos mayores.
 aseguradoras: AXA, Seguros Monterrey New York Life, HDI, CHUBB
 permalink: /recursos/jhs-005___que-sucede-si-tengo-un-accidente-tengo-que-pagar-deducible/
+categoria: gmm
 ---
 
 En caso de accidente cubierto, la atención médica tiene cobertura inmediata desde el primer día.

@@ -5,6 +5,7 @@ description: Conoce cómo funciona la cobertura de maternidad, parto o cesárea 
 resumen: ¿El seguro de gastos médicos mayores cubre el embarazo, parto o cesárea? Conoce los requisitos de la ayuda por maternidad y el periodo de espera obligatorio.
 aseguradoras: AXA, Seguros Monterrey New York Life, HDI, CHUBB
 permalink: /recursos/jhs-008___el-seguro-cubre-maternidad-parto-o-cesarea/
+categoria: gmm
 ---
 
 Sí, muchos planes contemplan una indemnización o ayuda económica para maternidad, cubriendo el parto o la cesárea dentro de la red de hospitales en convenio (en algunos planes después del 5.° año de renovación a través de evento programado).

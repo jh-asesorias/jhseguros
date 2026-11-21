@@ -7,6 +7,7 @@ aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-028___el-dinero-de-mi-retiro-se-puede-heredar-si-fallezco-antes-de-cobrarlo/
 redirect_from:
   - /recursos/jhs-026___el-dinero-de-mi-retiro-se-puede-heredar-si-fallezco-antes-de-cobrarlo/
+categoria: ppr
 ---
 
 Sí, totalmente. De hecho, la transmisión patrimonial directa representa una de las mayores fortalezas legales de los planes para el retiro estructurados mediante aseguradoras.
