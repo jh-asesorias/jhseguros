@@ -5,6 +5,7 @@ description: Descubre si el seguro de gastos médicos mayores en México cubre d
 resumen: ¿Los seguros de gastos médicos mayores incluyen cobertura dental? Conoce los tratamientos preventivos que cubre y cuándo contratar un plan dental avanzado.
 aseguradoras: AXA, Seguros Monterrey New York Life, HDI, CHUBB
 permalink: /recursos/jhs-013___la-poliza-incluye-servicio-dental/
+categoria: gmm
 ---
 
 Por regla general, los seguros de Gastos Médicos Mayores **no** están diseñados para cubrir tratamientos dentales u odontológicos convencionales (como caries, endodoncias o implantes).

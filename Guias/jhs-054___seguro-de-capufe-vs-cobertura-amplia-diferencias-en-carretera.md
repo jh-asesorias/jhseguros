@@ -5,6 +5,7 @@ description: "Comparamos el seguro de caseta de CAPUFE contra una póliza de cob
 resumen: "¿El seguro de la caseta de CAPUFE es suficiente? Comparamos sus límites contra una póliza de cobertura amplia para tus vacaciones de verano."
 aseguradoras: AXA, CHUBB, HDI
 permalink: /recursos/jhs-054___seguro-de-capufe-vs-cobertura-amplia-diferencias-en-carretera/
+categoria: auto
 ---
 
 Existe la creencia extendida de que el ticket de peaje en las autopistas de Caminos y Puentes Federales (CAPUFE) funciona como un seguro de auto completo. En la práctica, son figuras totalmente distintas y no intercambiables.

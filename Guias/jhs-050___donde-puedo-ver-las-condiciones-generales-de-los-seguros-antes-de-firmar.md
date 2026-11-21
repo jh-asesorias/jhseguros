@@ -5,6 +5,7 @@ description: "Aprende dónde consultar las condiciones generales de un seguro en
 resumen: "¿Dónde consultar las condiciones generales de un seguro antes de contratar? Accede al portal RECA de la CONDUSEF o solicítalas de forma digital y transparente."
 aseguradoras: AXA, CHUBB, HDI, Seguros Monterrey New York Life
 permalink: /recursos/jhs-050___donde-puedo-ver-las-condiciones-generales-de-los-seguros-antes-de-firmar/
+categoria: asesoria
 ---
 
 En México, conocer a detalle las **Condiciones Generales** antes de firmar o pagar una póliza es un derecho irrenunciable garantizado por la Ley sobre el Contrato de Seguro.

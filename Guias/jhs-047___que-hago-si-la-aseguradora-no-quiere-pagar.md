@@ -5,6 +5,7 @@ description: "Descubre qué hacer ante el rechazo de un siniestro en México: re
 resumen: "¿La aseguradora rechazó tu siniestro o reembolso? Conoce qué hacer, cómo impugnar técnicamente con tu agente y cuándo recurrir al proceso ante la CONDUSEF."
 aseguradoras: AXA, CHUBB, HDI, Seguros Monterrey New York Life
 permalink: /recursos/jhs-047___que-hago-si-la-aseguradora-no-quiere-pagar/
+categoria: asesoria
 ---
 
 Si enfrentas la negativa o un retraso injustificado en la indemnización de un siniestro en México, existe una ruta formal y técnica para defender tus derechos como asegurado o beneficiario:

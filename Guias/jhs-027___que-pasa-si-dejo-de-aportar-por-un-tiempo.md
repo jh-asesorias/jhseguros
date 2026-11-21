@@ -7,6 +7,7 @@ aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-027___que-pasa-si-dejo-de-aportar-por-un-tiempo/
 redirect_from:
   - /recursos/jhs-025___que-pasa-si-dejo-de-aportar-por-un-tiempo/
+categoria: ppr
 ---
 
 Si atraviesas un bache económico y dejas de aportar a tu plan, las consecuencias dependerán directamente del tiempo que lleve contratada tu póliza y de las condiciones particulares del contrato.

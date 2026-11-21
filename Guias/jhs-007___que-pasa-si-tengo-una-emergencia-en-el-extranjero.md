@@ -5,6 +5,7 @@ description: Descubre cómo funciona la cobertura de emergencia médica en el ex
 resumen: Descubre cómo funciona la cobertura de emergencia médica en el extranjero de tu seguro de gastos médicos mayores y qué pasos seguir si enfermas viajando.
 aseguradoras: AXA, Seguros Monterrey New York Life, HDI, CHUBB
 permalink: /recursos/jhs-007___que-pasa-si-tengo-una-emergencia-en-el-extranjero/
+categoria: gmm
 ---
 
 Muchos planes de Gastos Médicos Mayores en México incluyen una cobertura de emergencias médicas en el extranjero para cuando sales de viaje.

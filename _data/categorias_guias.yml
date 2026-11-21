@@ -1,0 +1,61 @@
+# =========================================================
+# CATEGORÍAS DE LAS GUÍAS (Recursos)
+# Cada guía lleva en su encabezado "categoria: gmm" (o ppr, educacion, vida, auto, hogar, asesoria).
+# Aquí se define, una sola vez, cómo se ve cada categoría:
+#   nombre   = texto de la etiqueta y del filtro
+#   lema     = frase corta de la tarjeta de categoría
+#   foto     = imagen de la carpeta /imagenes/ (sin texto ni logos)
+#   og       = imagen para compartir en redes (Facebook, WhatsApp)
+#   producto = página del seguro relacionado (no se cambia ninguna URL)
+#   boton    = texto del botón hacia esa página
+# El orden de esta lista es el orden en que aparecen en /recursos/.
+# =========================================================
+- clave: gmm
+  nombre: Gastos Médicos Mayores
+  lema: Deducible, coaseguro, hospitales y coberturas
+  foto: /imagenes/gmm-01-hospital.webp
+  og: /imagenes/og-gmm.png
+  producto: /gmm/
+  boton: Conocer el Seguro de Gastos Médicos Mayores
+- clave: ppr
+  nombre: Retiro y PPR
+  lema: Ahorro en UDIS, beneficio fiscal y retiro
+  foto: /imagenes/retiro-pareja.webp
+  og: /imagenes/og-ppr.png
+  producto: /ppr/
+  boton: Conocer el Plan Personal de Retiro
+- clave: educacion
+  nombre: Seguro Educativo
+  lema: SeguBeca y el futuro universitario de tus hijos
+  foto: /imagenes/padres-cielo.webp
+  og: /imagenes/og-educacion.png
+  producto: /educacion/
+  boton: Conocer el Seguro Educativo
+- clave: vida
+  nombre: Vida e Invalidez
+  lema: Beneficiarios, invalidez y respaldo familiar
+  foto: /imagenes/vida-familia.webp
+  og: /imagenes/og-vida.png
+  producto: /vida/
+  boton: Conocer el Seguro de Vida
+- clave: auto
+  nombre: Autos
+  lema: Coberturas, carretera y auto sustituto
+  foto: /imagenes/auto-hero.jpg
+  og: /imagenes/og-auto.png
+  producto: /auto/
+  boton: Conocer el Seguro de Auto
+- clave: hogar
+  nombre: Hogar y Patrimonio
+  lema: Casa, huracanes y protección de tu patrimonio
+  foto: /imagenes/paneles-solares-tormenta.webp
+  og: /imagenes/og-hogar.png
+  producto: /hogar/
+  boton: Conocer el Seguro de Hogar
+- clave: asesoria
+  nombre: Asesoría y Trámites
+  lema: Reclamaciones, reembolsos y cómo elegir bien
+  foto: /imagenes/asesoria-poliza.webp
+  og: /imagenes/og-jhseguros.png
+  producto: /servicios/
+  boton: Conocer mis servicios de asesoría

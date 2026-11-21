@@ -5,6 +5,7 @@ description: Conoce cómo funciona un Plan Personal de Retiro (PPR) en México, 
 resumen: ¿Qué es un PPR (Plan Personal de Retiro)? Conoce cómo funciona este fondo de inversión privado y cómo construir una jubilación sólida.
 aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-018___que-es-un-plan-personal-de-retiro-ppr/
+categoria: ppr
 ---
 
 Un Plan Personal de Retiro (**PPR**) es un instrumento de ahorro e inversión privado a largo plazo, regulado por la **CNSF** y diseñado específicamente para construir el capital necesario que garantice una jubilación digna.

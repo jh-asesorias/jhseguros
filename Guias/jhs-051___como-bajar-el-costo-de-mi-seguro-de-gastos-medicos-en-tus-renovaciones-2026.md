@@ -7,6 +7,7 @@ aseguradoras: AXA, Seguros Monterrey New York Life
 permalink: /recursos/jhs-051___como-bajar-el-costo-de-tu-seguro-de-gastos-medicos-en-tus-renovaciones/
 redirect_from:
   - /recursos/jhs-051___como-bajar-el-costo-de-tu-seguro-de-gastos-medicos-en-tus-renovaciones-2026/
+categoria: gmm
 ---
 
 Para contrarrestar el impacto de la inflación médica y optimizar la prima de tu Seguro de Gastos Médicos Mayores (SGMM) al momento de renovar sin desproteger tu salud, existen cinco ajustes técnicos que puedes evaluar con tu asesor:

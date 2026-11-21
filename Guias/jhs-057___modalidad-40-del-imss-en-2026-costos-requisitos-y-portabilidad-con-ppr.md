@@ -7,6 +7,7 @@ aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-057___modalidad-40-del-imss-en-2026-costos-requisitos-y-estrategia-con-ppr/
 redirect_from:
   - /recursos/jhs-057___modalidad-40-del-imss-en-2026-costos-requisitos-y-portabilidad-con-ppr/
+categoria: ppr
 ---
 
 La Continuación Voluntaria en el Régimen Obligatorio, mejor conocida como **Modalidad 40 del IMSS**, es la estrategia previsional más efectiva para los trabajadores en México que cotizaron bajo la Ley del Seguro Social de 1973 (Ley 73). 

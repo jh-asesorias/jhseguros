@@ -7,6 +7,7 @@ aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-040___si-fallezco-mis-beneficiarios-tienen-que-pagar-impuestos/
 redirect_from:
   - /recursos/jhs-038___si-fallezco-mis-beneficiarios-tienen-que-pagar-impuestos/
+categoria: vida
 ---
 
 En México, las indemnizaciones pagadas por instituciones de seguros debidamente autorizadas con motivo del fallecimiento del titular gozan de un tratamiento fiscal altamente favorable.

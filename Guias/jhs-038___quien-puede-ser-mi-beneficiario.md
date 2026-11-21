@@ -7,6 +7,7 @@ aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-038___quien-puede-ser-mi-beneficiario/
 redirect_from:
   - /recursos/jhs-036___quien-puede-ser-mi-beneficiario/
+categoria: vida
 ---
 
 Conforme al artículo 174 de la Ley sobre el Contrato de Seguro (LCS) en México, gozas de **total libertad legal** para designar a quien tú decidas como beneficiario de tu póliza de vida, sin obligación de parentesco forzoso.

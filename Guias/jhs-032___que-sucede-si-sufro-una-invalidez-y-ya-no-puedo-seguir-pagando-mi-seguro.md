@@ -5,6 +5,7 @@ description: "Conoce la exención de primas por invalidez total y permanente en 
 resumen: "¿Qué pasa con el seguro universitario si sufres una invalidez total? Conoce la cláusula que te exime de pagos y busca asegurar la entrega del dinero a tu hijo."
 aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-032___que-sucede-si-sufro-una-invalidez-y-ya-no-puedo-seguir-pagando/
+categoria: educacion
 ---
 
 Los seguros educativos profesionales (como *SeguBeca* u *Objetivo Universidad*) contemplan este escenario mediante la cobertura de **Exención de Pago de Primas por Invalidez Total y Permanente (BITP)** del contratante.

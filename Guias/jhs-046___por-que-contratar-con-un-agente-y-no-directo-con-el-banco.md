@@ -5,6 +5,7 @@ description: "Descubre por qué conviene contratar con un agente de seguros cert
 resumen: "Comparamos: Contratar seguros con agente certificado vs. ventanilla del banco. Conoce las ventajas en asesoría personalizada, costos y soporte ante siniestros."
 aseguradoras: AXA, CHUBB, HDI, Seguros Monterrey New York Life
 permalink: /recursos/jhs-046___por-que-contratar-con-un-agente-y-no-directo-con-el-banco/
+categoria: asesoria
 ---
 
 Contratar a través de un **agente de seguros certificado y acreditado ante la CNSF** ofrece ventajas patrimoniales decisivas frente a la compra en ventanilla bancaria o mediante canales masivos.

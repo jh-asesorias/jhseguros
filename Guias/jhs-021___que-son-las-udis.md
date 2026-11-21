@@ -5,6 +5,7 @@ description: Descubre qué son las UDIS en México, cómo las actualiza el Banco
 resumen: Descubre qué son las UDIS (Unidades de Inversión) en México y por qué ayudan a proteger el poder adquisitivo frente a la inflación en planes de ahorro y seguros.
 aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-021___que-son-las-udis/
+categoria: ppr
 ---
 
 Las **UDIS (Unidades de Inversión)** son una unidad de valor creada en México en 1995. Su valor en pesos se actualiza y publica diariamente por el Banco de México (Banxico) en el Diario Oficial de la Federación, basándose estrictamente en el comportamiento de la inflación (Índice Nacional de Precios al Consumidor, INPC).

@@ -5,6 +5,7 @@ description: "Descubre qué cubre la cobertura de fenómenos hidrometeorológico
 resumen: "¿Qué cubre el seguro contra huracanes en México este 2026? Conoce los alcances de la cobertura de riesgos hidrometeorológicos para cuidar tu patrimonio."
 aseguradoras: AXA, CHUBB
 permalink: /recursos/jhs-052___seguro-de-huracanes-2026-tu-casa-o-pyme-esta-protegida/
+categoria: hogar
 ---
 
 Debido a la alta exposición geográfica de México ante ciclones tropicales y depresiones atmosféricas en el Golfo y el Pacífico (con impacto directo en entidades como Tamaulipas, Veracruz, Quintana Roo, Guerrero o Sinaloa), contar con una protección patrimonial para tu inmueble residencial o comercial es muy recomendable.

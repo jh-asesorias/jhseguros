@@ -5,6 +5,7 @@ description: Descubre los errores más comunes al contratar un Plan Personal par
 resumen: Descubre los errores más comunes al contratar un Plan Personal para el Retiro (PPR) en México y aprende cómo hacer tus aportaciones deducibles ante el SAT.
 aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-023___errores-al-contratar-un-ppr-como-evitar-perder-dinero/
+categoria: ppr
 ---
 
 Muchas personas inician su ahorro para el retiro con buenas intenciones, pero cometen errores financieros que reducen significativamente el valor final de su patrimonio.

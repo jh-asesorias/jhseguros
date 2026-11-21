@@ -7,6 +7,7 @@ aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-042___el-seguro-vida-mujer-es-diferente-a-uno-normal/
 redirect_from:
   - /recursos/jhs-040___el-seguro-vida-mujer-es-diferente-a-uno-normal/
+categoria: vida
 ---
 
 Sí, el plan **Vida Mujer** (de Seguros Monterrey New York Life) es un producto integral diseñado específicamente para atender las necesidades financieras y de salud de la mujer, marcando una clara diferencia frente a un seguro de vida convencional.

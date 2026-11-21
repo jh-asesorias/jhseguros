@@ -5,6 +5,7 @@ description: Descubre si el SGMM en México cubre cirugías oncológicas, quimio
 resumen: ¿El seguro de gastos médicos cubre el tratamiento de cáncer, quimioterapias y radioterapias? Conoce los alcances de la cobertura oncológica en México.
 aseguradoras: AXA, Seguros Monterrey New York Life, HDI, CHUBB
 permalink: /recursos/jhs-011___el-seguro-cubre-tratamientos-de-cancer-quimioterapias-y-radioterapias/
+categoria: gmm
 ---
 
 Sí, la mayoría de los planes en México incluyen cobertura oncológica, pero el alcance y los límites pueden variar considerablemente dependiendo del diseño de la póliza. 

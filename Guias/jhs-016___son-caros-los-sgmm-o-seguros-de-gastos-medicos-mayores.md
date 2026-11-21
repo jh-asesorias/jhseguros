@@ -5,6 +5,7 @@ description: Analizamos el costo promedio de un seguro de gastos médicos mayore
 resumen: ¿Es caro un seguro de gastos médicos mayores? Analizamos cómo se calcula el costo de la prima y las opciones accesibles para proteger tu salud y patrimonio.
 aseguradoras: AXA, Seguros Monterrey New York Life, HDI, CHUBB
 permalink: /recursos/jhs-016___son-caros-los-sgmm-o-seguros-de-gastos-medicos-mayores/
+categoria: gmm
 ---
 
 El costo de un Seguro de Gastos Médicos Mayores (SGMM) en México siempre debe analizarse en proporción directa al riesgo patrimonial que está cubriendo y al altísimo costo que implica **no tenerlo**.

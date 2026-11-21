@@ -8,6 +8,7 @@ permalink: /recursos/jhs-037___que-es-un-seguro-de-vida-y-o-seguro-de-invalidez/
 redirect_from:
   - /recursos/jhs-037___que-es-un-seguro-de-vida-yo-seguro-de-invalidez/
   - /recursos/jhs-035___que-es-un-seguro-de-vida-y-o-seguro-de-invalidez/
+categoria: vida
 ---
 
 Un **seguro de vida** es un contrato financiero regulado ante la CNSF (bajo la Ley sobre el Contrato de Seguro), mediante el cual la compañía aseguradora se obliga a pagar una cantidad de dinero pactada (Suma Asegurada) a los beneficiarios que hayas designado, en caso de que ocurra tu fallecimiento durante la vigencia del plan.

@@ -7,6 +7,7 @@ aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-044___que-pasa-si-me-diagnostican-enfermedad-terminal/
 redirect_from:
   - /recursos/jhs-042___que-pasa-si-me-diagnostican-enfermedad-terminal/
+categoria: vida
 ---
 
 Muchos seguros de vida modernos (como las pólizas de Seguros Monterrey New York Life) incorporan el beneficio de **Anticipo por Enfermedad Terminal** o cláusula de aceleración de beneficios.

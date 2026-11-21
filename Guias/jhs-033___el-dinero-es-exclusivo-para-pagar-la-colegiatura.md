@@ -7,6 +7,7 @@ aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-033___el-dinero-es-exclusivo-para-pagar-la-colegiatura/
 redirect_from:
   - /recursos/jhs-031___el-dinero-es-exclusivo-for-pagar-la-colegiatura/
+categoria: educacion
 ---
 
 No, en la práctica general del mercado mexicano, el dinero acumulado al vencimiento de un seguro educativo (como *SeguBeca*) se entrega al contratante o al beneficiario como un **capital libre de uso**, sin candados contractuales ni la obligación legal de comprobar o facturar gastos ante la aseguradora.

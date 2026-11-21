@@ -7,6 +7,7 @@ aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-030___que-beneficios-tiene-un-seguro-educativo/
 redirect_from:
   - /recursos/jhs-028___que-beneficios-tiene-un-seguro-educativo/
+categoria: educacion
 ---
 
 Un seguro educativo robusto (como el plan *SeguBeca*) ofrece una protección integral, combinando disciplina de ahorro a largo plazo y protección del patrimonio familiar.

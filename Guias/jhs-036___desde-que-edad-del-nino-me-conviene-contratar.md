@@ -7,6 +7,7 @@ aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-036___desde-que-edad-del-nino-me-conviene-contratar/
 redirect_from:
   - /recursos/jhs-034___desde-que-edad-del-nino-me-conviene-contratar/
+categoria: educacion
 ---
 
 La regla matemática y de planificación financiera en este rubro es contundente: **entre más pequeño sea el niño al momento de contratar, mayores serán los beneficios del plan**.

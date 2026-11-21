@@ -5,6 +5,7 @@ description: Analizamos qué conviene más para proteger tu seguro de vida, PPR 
 resumen: ¿UDIS o Dólares? Analizamos qué opción conviene más para proteger tu seguro de vida o retiro frente a la inflación y la devaluación.
 aseguradoras: Seguros Monterrey New York Life
 permalink: /recursos/jhs-025___conviene-mas-ahorrar-en-udis-o-dolares/
+categoria: ppr
 ---
 
 **UDIS vs Dólares: Estrategias de preservación del patrimonio**
