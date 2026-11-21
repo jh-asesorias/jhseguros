@@ -224,6 +224,21 @@ RECURSOS Y GUÍAS · JH Seguros (la URL /recursos/ no cambia)
       </div>
     </section>
 
+    <section style="padding-top:10px">   <!-- Antes de la biblioteca: muchos entran desde los temas y no bajan hasta el final -->
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Seguros</span>
+          <h2>¿Ya sabes qué necesitas?</h2>
+          <p>Conoce las opciones de cada seguro y cotiza con asesoría personalizada.</p>
+        </div>
+        <div class="product-links">
+          {% for c in site.data.categorias_guias %}{% if c.clave != "asesoria" %}
+          <a class="product-link" href="{{ c.producto }}"><img src="{{ c.foto }}" alt="{{ c.nombre }}" width="720" height="540" loading="lazy"><div><strong>{{ c.nombre }}</strong><span>{{ c.boton }} →</span></div></a>
+          {% endif %}{% endfor %}
+        </div>
+      </div>
+    </section>
+
     <section class="catalog" id="catalogo">
       <div class="wrap">
         <div class="section-head">
@@ -253,20 +268,6 @@ RECURSOS Y GUÍAS · JH Seguros (la URL /recursos/ no cambia)
       </div>
     </section>
 
-    <section>
-      <div class="wrap">
-        <div class="section-head">
-          <span class="eyebrow">Seguros</span>
-          <h2>¿Ya sabes qué necesitas?</h2>
-          <p>Conoce las opciones de cada seguro y cotiza con asesoría personalizada.</p>
-        </div>
-        <div class="product-links">
-          {% for c in site.data.categorias_guias %}{% if c.clave != "asesoria" %}
-          <a class="product-link" href="{{ c.producto }}"><img src="{{ c.foto }}" alt="{{ c.nombre }}" width="720" height="540" loading="lazy"><div><strong>{{ c.nombre }}</strong><span>{{ c.boton }} →</span></div></a>
-          {% endif %}{% endfor %}
-        </div>
-      </div>
-    </section>
 
     <div class="wrap">
       <p class="trust-note"><strong>Información orientativa.</strong> Las coberturas, beneficios, exclusiones y condiciones definitivas dependen de la póliza contratada y de las condiciones generales y particulares de cada aseguradora.</p>
