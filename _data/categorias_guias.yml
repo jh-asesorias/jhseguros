@@ -20,7 +20,7 @@
 - clave: ppr
   nombre: Retiro y PPR
   lema: Ahorro en UDIS, beneficio fiscal y retiro
-  foto: /imagenes/padre-indemnizacion.webp
+  foto: /imagenes/retiro-pareja.webp
   og: /imagenes/og-ppr.png
   producto: /ppr/
   boton: Conocer el Plan Personal de Retiro
@@ -34,7 +34,7 @@
 - clave: vida
   nombre: Vida e Invalidez
   lema: Beneficiarios, invalidez y respaldo familiar
-  foto: /imagenes/padre-incapacidad.webp
+  foto: /imagenes/vida-familia.webp
   og: /imagenes/og-vida.png
   producto: /vida/
   boton: Conocer el Seguro de Vida
@@ -55,7 +55,7 @@
 - clave: asesoria
   nombre: Asesoría y Trámites
   lema: Reclamaciones, reembolsos y cómo elegir bien
-  foto: /imagenes/rafael-sobre-mi.webp
+  foto: /imagenes/asesoria-poliza.webp
   og: /imagenes/og-jhseguros.png
   producto: /servicios/
   boton: Conocer mis servicios de asesoría
