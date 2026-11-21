@@ -148,7 +148,9 @@
         /* SERVICIOS */
         .services { padding: 3rem 0; background-color: white; }
         .section-title { text-align: center; font-family: 'Montserrat', sans-serif; font-size: 1.8rem; margin-bottom: 2rem; color: #2a5298; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 2rem auto 0; max-width: 1000px; }   /* 3 tarjetas por renglón, mismo ancho que el texto de presentación */
+        @media (max-width: 1024px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+        .intro-jh p { margin-bottom: 1rem; }   /* Espacio entre párrafos de la presentación */
         .service-card {
             background: white; border-radius: 8px; padding: 1.5rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s, box-shadow 0.3s; text-align: center; border-top: 4px solid #2a5298;
@@ -251,7 +253,11 @@ summary::after {
             .tagline { font-size: 1.5rem; }
             .services-grid { grid-template-columns: 1fr; }
             .profile-image { width: 150px; height: 150px; }
-            .mv-container { flex-direction: column; align-items: center; gap: 2rem; }
+            /* Filosofía en celular: los 3 íconos en una sola línea y más pequeños */
+            .mv-container { flex-direction: row; flex-wrap: nowrap; justify-content: center; gap: 0.8rem; }
+            .mv-item { width: 30%; max-width: 110px; }
+            .mv-icon { width: 64px; height: 64px; font-size: 2rem; border-width: 2px; margin-bottom: 0.5rem; }
+            .mv-name { font-size: 0.95rem; }
         }
         /* Estilos para el Acordeón y Numeración Automática */
 .faq-section {
@@ -518,7 +524,7 @@ details[open] summary ~ * {
                 </p>
             </div>
         </header>
-            <section class="intro-jh" style="max-width: 820px; margin: 0 auto; padding: 2.5rem 20px 1rem; line-height: 1.75; color: #374151; font-size: 1.05rem;">
+            <section class="intro-jh" style="max-width: 1000px; margin: 0 auto; padding: 2.5rem 20px 1rem; line-height: 1.75; color: #374151; font-size: 1.05rem;">
             <h2 style="color: #1e3c72; font-family: 'Montserrat', sans-serif; font-size: 1.5rem; margin-bottom: 1rem;">Protege a tu familia y tu patrimonio, con claridad</h2>
             <p>Un imprevisto de salud, un accidente o la llegada del retiro pueden afectar el patrimonio de toda una vida. Contar con la protección adecuada, contratada con tiempo, ayuda a que tu familia no tenga que enfrentar esos gastos sola.</p>
                         <p>Soy Rafael Jiménez Sánchez, agente de seguros certificado ante la Comisión Nacional de Seguros y Fianzas (CNSF). Trabajo con aseguradoras como AXA, CHUBB y HDI Seguros, Qualitas Compañia de Seguros y Seguros Monterrey New York Life, te explico en palabras claras qué cubre cada póliza, qué no cubre y qué implica: <a href="/gmm/">Gastos Médicos Mayores</a>, <a href="/ppr/">Planes Personales de Retiro</a>, <a href="/vida/">Seguro de Vida</a>, <a href="/educacion/">ahorro educativo para tus hijos</a>, <a href="/mujer/">protección para la mujer</a>, así como seguros para <a href="/auto/">autos</a>, <a href="/embarcaciones/">embarcaciones</a>, <a href="/hogar/">hogar</a>, <a href="/negocio/">empresas</a> y escuelas, entre otros. Antes de contratar conviene conocer el deducible, el coaseguro y las exclusiones; por eso mis <a href="/recursos/">guías</a> los explican con ejemplos sencillos.</p>
