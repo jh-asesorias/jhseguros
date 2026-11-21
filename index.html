@@ -155,6 +155,11 @@
             display: flex; flex-direction: column; height: 100%;
         }
         .service-card:hover { transform: translateY(-5px); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12); }
+        /* Foto de cada tarjeta del menú: franja arriba, nítida, sin texto encima (mismo orden visual que /recursos/) */
+        .service-card { overflow: hidden; }
+        .service-foto { margin: -1.5rem -1.5rem 1.2rem; height: 170px; overflow: hidden; }
+        .service-foto img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; display: block; transition: transform 0.35s; }
+        .service-card:hover .service-foto img { transform: scale(1.05); }
         
         /* ICONOS SVG PROFESIONALES */
         .service-icon { margin-bottom: 1rem; color: #2a5298; display: flex; justify-content: center; }
@@ -546,54 +551,42 @@ details[open] summary ~ * {
                 <div class="services-grid">
                     
                     <div class="service-card">
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24"><path d="M12 2L2 7v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 18c-3.95-1.13-7-5.55-7-9.5V8.3l7-3.15 7 3.15V11c0 3.95-3.05 8.3-7 9.5z"/></svg>
-                        </div>
+                        <div class="service-foto"><img src="/imagenes/auto-hero.jpg" alt="Automóvil circulando por una avenida" width="1200" height="760" loading="lazy"></div>
                         <h3 class="service-title">Módulo Autos y Daños</h3>
                         <p class="service-description">Protege lo que con tanto esfuerzo has construido: tu auto contra choques e inundaciones, tu hogar, embarcaciones o tu empresa ante los riesgos cubiertos por tu póliza y Responsabilidad Civil.</p>
                         <a href="/danos/" class="service-link">Acceder al Portafolio</a>
                     </div>
 
                     <div class="service-card">
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
-                        </div>
+                        <div class="service-foto"><img src="/imagenes/vida-familia.webp" alt="Familia mexicana abrazada frente a su casa" width="720" height="540" loading="lazy"></div>
                         <h3 class="service-title">Productos Vida y Gastos Médicos</h3>
                         <p class="service-description">Asegura la universidad de tus hijos, construye un retiro con las deducciones que permite la LISR, dentro de sus límites, y accede a hospitales privados con un seguro de gastos médicos.</p>
                         <a href="/productos-vida/" class="service-link">Acceder al Portafolio</a>
                     </div>
 
                     <div class="service-card">
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24"><path d="M12 2C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V22l4-2 4 2v-7.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2 15.38L12 14l-2 1.38V12c.63.24 1.3.38 2 .38s1.37-.14 2-.38v3.38zM12 11c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg>
-                        </div>
+                        <div class="service-foto"><img src="/imagenes/certificaciones.webp" alt="Escritorio de oficina con un diploma enmarcado" width="720" height="540" loading="lazy"></div>
                         <h3 class="service-title">Autorizaciones y Certificaciones</h3>
                         <p class="service-description">Cédulas A1 H382035 y B Y415335 otorgadas por la Comisión Nacional de Seguros y Fianzas (CNSF), con verificación en línea, además de diplomados y certificaciones en materia fiscal, financiera y de seguros.</p>
                         <a href="/autorizaciones/" class="service-link">Verificar y conocer más</a>
                     </div>
 
                     <div class="service-card">
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z"/></svg>
-                        </div>
+                        <div class="service-foto"><img src="/imagenes/gmm-01-hospital.webp" alt="Pasillo de hospital con paciente y personal médico" width="720" height="540" loading="lazy"></div>
                         <h3 class="service-title">Directorio de Servicios hospitalarios</h3>
                         <p class="service-description">Accede a los buscadores de hospitales y médicos en convenio de las aseguradoras con las que trabajamos.</p>
                         <a href="/hospitales/" class="service-link">Buscar Servicios</a>
                     </div>
 
                     <div class="service-card">
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/></svg>
-                        </div>
+                        <div class="service-foto"><img src="/imagenes/asesoria-poliza.webp" alt="Asesor de seguros explicando una póliza a un cliente" width="720" height="540" loading="lazy"></div>
                         <h3 class="service-title">Respuestas claras sobre seguros en México</h3>
                         <p class="service-description">Resuelve tus dudas en minutos: descubre qué cubre tu póliza, cómo funcionan los deducibles, coaseguros y cómo recuperar tu dinero en planes de ahorro.</p>
                         <a href="/recursos/" class="service-link">Ver las guías</a>
                     </div>
 
                     <div class="service-card">
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-                        </div>
+                        <div class="service-foto"><img src="/imagenes/redes-sociales.webp" alt="Mujer revisando redes sociales en su celular" width="720" height="540" loading="lazy"></div>
                         <h3 class="service-title">Redes Sociales</h3>
                         <p class="service-description">Conéctate directamente conmigo. Sígueme en Facebook, Instagram, WhatsApp o escríbeme por correo electrónico.</p>
                         <a href="/redes/" class="service-link">Conectarse</a>
